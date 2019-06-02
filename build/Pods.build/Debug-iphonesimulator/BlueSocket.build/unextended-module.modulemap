@@ -1,0 +1,10 @@
+framework module Socket {
+  umbrella header "BlueSocket-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Socket.__Swift {
+    exclude header "Socket-Swift.h"
+}

@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "bd1a46f06a0277b4fa5e2969a8f40137"
+build_time: [1559392213, 156084000]
+inputs:
+  "/Users/river/Desktop/2019_ios_final/Pods/BlueSocket/Sources/Socket/Socket.swift": [1559391606, 0]
+  "/Users/river/Desktop/2019_ios_final/Pods/BlueSocket/Sources/Socket/SocketProtocols.swift": [1559391606, 0]
+  "/Users/river/Desktop/2019_ios_final/Pods/BlueSocket/Sources/Socket/SocketUtils.swift": [1559391606, 0]
