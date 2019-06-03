@@ -33,4 +33,16 @@ struct Friend: Codable {
         }
     }
     
+    static func getPropic(name: String) -> String? {
+        if let friends = readFromFile() {
+            for friend in friends {
+                if friend.name == name {
+                    return friend.propic
+                }
+                
+            }
+        }
+        return nil
+    }
+    
 }

@@ -23,7 +23,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendTableViewCell
         cell.nameLabel.text = friendList[indexPath.row].name
-        if let image = UIImage(named: friendList[indexPath.row].propic) {
+        if let image = Image.readImageFromFile(imageName: friendList[indexPath.row].propic) {
             cell.propic.image = image
         }
         return cell
@@ -38,18 +38,18 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
         friendTable.delegate = self
         friendTable.dataSource = self
         
-        /*NetworkController.shared.getFriendList { (friendList: [String]) in
-         self.friendList = friendList
-         DispatchQueue.main.async {
-         self.friendTable.reloadData()
-         }
-         }*/
-        
-        if let friends = Friend.readFromFile() {
-            friendList = friends
+        NetworkController.shared.getFriendList { (friendList: [Friend]?) in
+            if let friendList = friendList {
+                self.friendList = friendList
+            } else if let friendList = Friend.readFromFile() {
+                self.friendList = friendList
+            }
+            DispatchQueue.main.async {
+                self.friendTable.reloadData()
+                Friend.saveTofile(friends: self.friendList)
+
+            }
         }
-        Friend.saveTofile(friends: friendList)
-        self.friendTable.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

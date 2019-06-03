@@ -296,14 +296,14 @@
                                             <outlet property="propic" destination="Vxb-BN-W7Z" id="z6v-UH-H4U"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RightImageCell" rowHeight="184" id="liU-pq-t3B" customClass="RightImageTableViewCell" customModule="_019_ios_final" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RightImageCell" rowHeight="184" id="liU-pq-t3B" customClass="RightImageTableViewCell" customModule="_019_ios_final" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="373" width="375" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="liU-pq-t3B" id="m4j-pX-shB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxs-jz-pfF">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxs-jz-pfF">
                                                     <rect key="frame" x="25" y="21" width="325" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="Lkj-cW-x2K"/>
@@ -405,14 +405,16 @@
                         <viewLayoutGuide key="safeArea" id="dp5-Rm-XBQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="J97-lP-fVt">
-                        <barButtonItem key="rightBarButtonItem" title="all" id="PWU-r3-m9F">
+                        <barButtonItem key="rightBarButtonItem" image="all" id="PWU-r3-m9F">
                             <connections>
-                                <segue destination="RYB-b7-DGx" kind="show" identifier="showAllImages" id="388-Ss-ulV"/>
+                                <action selector="showAllImages:" destination="Tbh-69-uDd" id="xPw-jy-B1u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameLabel" destination="J97-lP-fVt" id="Dca-OW-ISi"/>
                         <outlet property="singalImage" destination="t4X-IU-rpq" id="G8j-G0-Inf"/>
+                        <segue destination="RYB-b7-DGx" kind="show" identifier="showAllImages" id="byR-7F-Y09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AqO-mC-MOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -461,6 +463,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Iy7-iu-dSS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MNy-7g-cqk"/>
                     <connections>
                         <outlet property="imagesCollection" destination="DH3-9E-x5t" id="9dH-Zt-wdb"/>
                     </connections>
@@ -593,6 +596,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="all" width="40" height="40"/>
         <image name="chat" width="37.5" height="37.5"/>
         <image name="friend" width="40" height="40"/>
         <image name="image" width="37.5" height="37.5"/>

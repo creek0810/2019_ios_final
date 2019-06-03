@@ -104,6 +104,7 @@ depends-member:
 - !private ["Se", "init"]
 - !private ["Se", "name"]
 - !private ["Se", "propic"]
+- !private ["Se", "readFromFile"]
 - !private ["Se", "write"]
 - !private ["s7DecoderP", "container"]
 - !private ["SE", "Data"]
@@ -122,6 +123,7 @@ depends-member:
 - !private ["SE", "init"]
 - !private ["SE", "name"]
 - !private ["SE", "propic"]
+- !private ["SE", "readFromFile"]
 - !private ["SE", "write"]
 - !private ["s7EncoderP", "container"]
 - !private ["SQ", ""]
@@ -162,6 +164,7 @@ depends-member:
 - ["14_019_ios_final6FriendV", "deinit"]
 - ["14_019_ios_final6FriendV", "documentsDirectory"]
 - ["14_019_ios_final6FriendV", "encode"]
+- ["14_019_ios_final6FriendV", "getPropic"]
 - ["14_019_ios_final6FriendV", "init"]
 - ["14_019_ios_final6FriendV", "name"]
 - ["14_019_ios_final6FriendV", "propic"]
@@ -367,4 +370,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3cc23b9d68195694c5e5f66d9cf52990"
+interface-hash: "b0d7acebf26d02dff194b4517c7c272e"

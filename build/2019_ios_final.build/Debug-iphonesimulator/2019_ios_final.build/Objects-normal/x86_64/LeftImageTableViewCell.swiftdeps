@@ -49,7 +49,6 @@ depends-member:
 - ["14_019_ios_final22LeftImageTableViewCellC", "Bool"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "UIImageView"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "awakeFromNib"]
-- ["14_019_ios_final22LeftImageTableViewCellC", "deinit"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "imageButton"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "init"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "propic"]

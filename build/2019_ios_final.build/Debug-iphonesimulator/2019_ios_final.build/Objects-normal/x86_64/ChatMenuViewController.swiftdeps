@@ -10,19 +10,22 @@ provides-dynamic-lookup:
 - "prepare"
 - "tableView"
 - "viewDidLoad"
+- "viewWillAppear"
 depends-top-level:
 - !private "=="
+- !private "??"
 - "AssignmentPrecedence"
+- "Bool"
 - "CastingPrecedence"
 - "Chat"
 - "ChatMenuViewController"
 - !private "ChatTableViewCell"
 - !private "ChatViewController"
 - !private "Friend"
+- !private "Image"
 - "IndexPath"
 - "Int"
-- "StringLiteralType"
-- !private "UIImage"
+- !private "StringLiteralType"
 - "UIStoryboardSegue"
 - "UITableView"
 - "UITableViewCell"
@@ -31,12 +34,14 @@ depends-top-level:
 - "UIViewController"
 depends-member:
 - !private ["Sa", "count"]
+- ["Sa", "init"]
 - !private ["Sa", "subscript"]
 - !private ["s13ArrayProtocolP", "count"]
+- ["s13ArrayProtocolP", "init"]
 - !private ["s13ArrayProtocolP", "subscript"]
 - !private ["SK", "count"]
 - ["SK", "init"]
-- ["SK", "init"]
+- !private ["SK", "init"]
 - !private ["SK", "row"]
 - !private ["SK", "subscript"]
 - !private ["Sb", "_getBuiltinLogicValue"]
@@ -47,10 +52,11 @@ depends-member:
 - !private ["So15CALayerDelegateP", "messageLabel"]
 - !private ["So15CALayerDelegateP", "nameLabel"]
 - !private ["So15CALayerDelegateP", "propic"]
+- !private ["So15CALayerDelegateP", "reloadData"]
 - !private ["So15CALayerDelegateP", "text"]
 - ["s7CVarArgP", "Chat"]
 - !private ["s7CVarArgP", "Friend"]
-- !private ["s7CVarArgP", "UIImage"]
+- !private ["s7CVarArgP", "Image"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "chatList"]
@@ -65,7 +71,7 @@ depends-member:
 - ["s7CVarArgP", "indexPathForPreferredFocusedView"]
 - ["s7CVarArgP", "indexPathForPreferredFocusedViewInTableView"]
 - ["s7CVarArgP", "init"]
-- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "messageLabel"]
 - !private ["s7CVarArgP", "nameLabel"]
 - ["s7CVarArgP", "numberOfSections"]
@@ -73,6 +79,7 @@ depends-member:
 - !private ["s7CVarArgP", "performSegue"]
 - !private ["s7CVarArgP", "propic"]
 - !private ["s7CVarArgP", "receiver"]
+- !private ["s7CVarArgP", "reloadData"]
 - ["s7CVarArgP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s7CVarArgP", "scrollViewDidEndDecelerating"]
 - ["s7CVarArgP", "scrollViewDidEndDragging"]
@@ -94,18 +101,17 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
-- ["14_019_ios_final4ChatV", "deinit"]
-- ["14_019_ios_final4ChatV", "init"]
 - !private ["14_019_ios_final4ChatV", "message"]
 - !private ["14_019_ios_final4ChatV", "name"]
-- !private ["14_019_ios_final4ChatV", "propic"]
+- !private ["14_019_ios_final4ChatV", "readFromFile"]
+- ["14_019_ios_final22ChatMenuViewControllerC", "Bool"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "Chat"]
 - !private ["14_019_ios_final22ChatMenuViewControllerC", "ChatTableViewCell"]
 - !private ["14_019_ios_final22ChatMenuViewControllerC", "ChatViewController"]
 - !private ["14_019_ios_final22ChatMenuViewControllerC", "Friend"]
+- !private ["14_019_ios_final22ChatMenuViewControllerC", "Image"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "IndexPath"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "Int"]
-- !private ["14_019_ios_final22ChatMenuViewControllerC", "UIImage"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "UIStoryboardSegue"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "UITableView"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "UITableViewCell"]
@@ -138,21 +144,22 @@ depends-member:
 - ["14_019_ios_final22ChatMenuViewControllerC", "viewDidLoad"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "viewForZooming"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "viewForZoomingInScrollView"]
+- ["14_019_ios_final22ChatMenuViewControllerC", "viewWillAppear"]
 - !private ["14_019_ios_final17ChatTableViewCellC", "messageLabel"]
 - !private ["14_019_ios_final17ChatTableViewCellC", "nameLabel"]
 - !private ["14_019_ios_final17ChatTableViewCellC", "propic"]
 - !private ["14_019_ios_final18ChatViewControllerC", "receiver"]
 - !private ["Sl", "count"]
 - ["Sl", "init"]
-- ["Sl", "init"]
+- !private ["Sl", "init"]
 - !private ["Sl", "row"]
 - !private ["Sl", "subscript"]
-- ["SL", "init"]
-- ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
 - !private ["SL", "row"]
 - ["s28CustomDebugStringConvertibleP", "Chat"]
 - !private ["s28CustomDebugStringConvertibleP", "Friend"]
-- !private ["s28CustomDebugStringConvertibleP", "UIImage"]
+- !private ["s28CustomDebugStringConvertibleP", "Image"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "chatList"]
 - !private ["s28CustomDebugStringConvertibleP", "chatMenuTable"]
@@ -166,7 +173,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "messageLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "nameLabel"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSections"]
@@ -174,6 +181,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "performSegue"]
 - !private ["s28CustomDebugStringConvertibleP", "propic"]
 - !private ["s28CustomDebugStringConvertibleP", "receiver"]
+- !private ["s28CustomDebugStringConvertibleP", "reloadData"]
 - !private ["s28CustomDebugStringConvertibleP", "row"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s28CustomDebugStringConvertibleP", "scrollViewDidEndDecelerating"]
@@ -197,21 +205,22 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "viewForZooming"]
 - ["s28CustomDebugStringConvertibleP", "viewForZoomingInScrollView"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "dataSource"]
 - !private ["s17CustomReflectableP", "delegate"]
 - !private ["s17CustomReflectableP", "image"]
 - ["s17CustomReflectableP", "init"]
-- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "reloadData"]
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "text"]
 - ["s23CustomStringConvertibleP", "Chat"]
 - !private ["s23CustomStringConvertibleP", "Friend"]
-- !private ["s23CustomStringConvertibleP", "UIImage"]
+- !private ["s23CustomStringConvertibleP", "Image"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "chatList"]
@@ -226,7 +235,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
 - ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "messageLabel"]
 - !private ["s23CustomStringConvertibleP", "nameLabel"]
 - ["s23CustomStringConvertibleP", "numberOfSections"]
@@ -234,6 +243,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "performSegue"]
 - !private ["s23CustomStringConvertibleP", "propic"]
 - !private ["s23CustomStringConvertibleP", "receiver"]
+- !private ["s23CustomStringConvertibleP", "reloadData"]
 - !private ["s23CustomStringConvertibleP", "row"]
 - ["s23CustomStringConvertibleP", "scrollViewDidChangeAdjustedContentInset"]
 - ["s23CustomStringConvertibleP", "scrollViewDidEndDecelerating"]
@@ -260,12 +270,15 @@ depends-member:
 - !private ["Se", "count"]
 - !private ["Se", "dataSource"]
 - !private ["Se", "delegate"]
+- !private ["Se", "getPropic"]
 - !private ["Se", "image"]
 - ["Se", "init"]
-- ["Se", "init"]
+- !private ["Se", "init"]
 - !private ["Se", "message"]
 - !private ["Se", "name"]
-- !private ["Se", "propic"]
+- !private ["Se", "readFromFile"]
+- !private ["Se", "readImageFromFile"]
+- !private ["Se", "reloadData"]
 - !private ["Se", "row"]
 - !private ["Se", "subscript"]
 - !private ["Se", "text"]
@@ -273,18 +286,21 @@ depends-member:
 - !private ["SE", "count"]
 - !private ["SE", "dataSource"]
 - !private ["SE", "delegate"]
+- !private ["SE", "getPropic"]
 - !private ["SE", "image"]
 - ["SE", "init"]
-- ["SE", "init"]
+- !private ["SE", "init"]
 - !private ["SE", "message"]
 - !private ["SE", "name"]
-- !private ["SE", "propic"]
+- !private ["SE", "readFromFile"]
+- !private ["SE", "readImageFromFile"]
+- !private ["SE", "reloadData"]
 - !private ["SE", "row"]
 - !private ["SE", "subscript"]
 - !private ["SE", "text"]
 - ["SQ", "Chat"]
 - !private ["SQ", "Friend"]
-- !private ["SQ", "UIImage"]
+- !private ["SQ", "Image"]
 - ["SQ", ""]
 - !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "chatList"]
@@ -299,7 +315,7 @@ depends-member:
 - ["SQ", "indexPathForPreferredFocusedView"]
 - ["SQ", "indexPathForPreferredFocusedViewInTableView"]
 - ["SQ", "init"]
-- ["SQ", "init"]
+- !private ["SQ", "init"]
 - !private ["SQ", "messageLabel"]
 - !private ["SQ", "nameLabel"]
 - ["SQ", "numberOfSections"]
@@ -307,6 +323,7 @@ depends-member:
 - !private ["SQ", "performSegue"]
 - !private ["SQ", "propic"]
 - !private ["SQ", "receiver"]
+- !private ["SQ", "reloadData"]
 - !private ["SQ", "row"]
 - ["SQ", "scrollViewDidChangeAdjustedContentInset"]
 - ["SQ", "scrollViewDidEndDecelerating"]
@@ -330,24 +347,27 @@ depends-member:
 - ["SQ", "viewForZooming"]
 - ["SQ", "viewForZoomingInScrollView"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "dataSource"]
 - !private ["s23ExpressibleByNilLiteralP", "delegate"]
 - !private ["s23ExpressibleByNilLiteralP", "image"]
+- !private ["s23ExpressibleByNilLiteralP", "reloadData"]
 - !private ["s23ExpressibleByNilLiteralP", "text"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["14_019_ios_final6FriendV", "deinit"]
+- !private ["14_019_ios_final6FriendV", "getPropic"]
 - !private ["14_019_ios_final6FriendV", "init"]
 - ["SH", "Chat"]
 - !private ["SH", "Friend"]
-- !private ["SH", "UIImage"]
+- !private ["SH", "Image"]
 - ["SH", ""]
 - !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "chatList"]
@@ -362,7 +382,7 @@ depends-member:
 - ["SH", "indexPathForPreferredFocusedView"]
 - ["SH", "indexPathForPreferredFocusedViewInTableView"]
 - ["SH", "init"]
-- ["SH", "init"]
+- !private ["SH", "init"]
 - !private ["SH", "messageLabel"]
 - !private ["SH", "nameLabel"]
 - ["SH", "numberOfSections"]
@@ -370,6 +390,7 @@ depends-member:
 - !private ["SH", "performSegue"]
 - !private ["SH", "propic"]
 - !private ["SH", "receiver"]
+- !private ["SH", "reloadData"]
 - !private ["SH", "row"]
 - ["SH", "scrollViewDidChangeAdjustedContentInset"]
 - ["SH", "scrollViewDidEndDecelerating"]
@@ -392,18 +413,20 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - ["SH", "viewForZooming"]
 - ["SH", "viewForZoomingInScrollView"]
+- !private ["14_019_ios_final5ImageV", "readImageFromFile"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s10MirrorPathP", "init"]
-- ["s10MirrorPathP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["SM", "count"]
+- ["SM", "init"]
 - !private ["SM", "row"]
 - !private ["SM", "subscript"]
 - ["So8NSCodingP", "Chat"]
 - !private ["So8NSCodingP", "Friend"]
-- !private ["So8NSCodingP", "UIImage"]
+- !private ["So8NSCodingP", "Image"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "chatList"]
 - !private ["So8NSCodingP", "chatMenuTable"]
@@ -422,6 +445,7 @@ depends-member:
 - !private ["So8NSCodingP", "performSegue"]
 - !private ["So8NSCodingP", "propic"]
 - !private ["So8NSCodingP", "receiver"]
+- !private ["So8NSCodingP", "reloadData"]
 - ["So8NSCodingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSCodingP", "scrollViewDidEndDecelerating"]
 - ["So8NSCodingP", "scrollViewDidEndDragging"]
@@ -444,7 +468,7 @@ depends-member:
 - ["So8NSCodingP", "viewForZoomingInScrollView"]
 - ["So26NSExtensionRequestHandlingP", "Chat"]
 - !private ["So26NSExtensionRequestHandlingP", "Friend"]
-- !private ["So26NSExtensionRequestHandlingP", "UIImage"]
+- !private ["So26NSExtensionRequestHandlingP", "Image"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "chatList"]
 - !private ["So26NSExtensionRequestHandlingP", "chatMenuTable"]
@@ -475,15 +499,14 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", "viewForZooming"]
 - ["So26NSExtensionRequestHandlingP", "viewForZoomingInScrollView"]
-- !private ["So21NSItemProviderReadingP", "init"]
-- !private ["So21NSItemProviderWritingP", "init"]
+- ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Chat"]
 - !private ["So8NSObjectC", "ChatTableViewCell"]
 - !private ["So8NSObjectC", "ChatViewController"]
 - !private ["So8NSObjectC", "Friend"]
+- !private ["So8NSObjectC", "Image"]
 - ["So8NSObjectC", "IndexPath"]
 - ["So8NSObjectC", "Int"]
-- !private ["So8NSObjectC", "UIImage"]
 - ["So8NSObjectC", "UIStoryboardSegue"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
@@ -507,6 +530,7 @@ depends-member:
 - ["So8NSObjectC", "prepare"]
 - !private ["So8NSObjectC", "propic"]
 - !private ["So8NSObjectC", "receiver"]
+- !private ["So8NSObjectC", "reloadData"]
 - ["So8NSObjectC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSObjectC", "scrollViewDidEndDecelerating"]
 - ["So8NSObjectC", "scrollViewDidEndDragging"]
@@ -527,9 +551,10 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewForZooming"]
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
+- ["So8NSObjectC", "viewWillAppear"]
 - ["So8NSObjectP", "Chat"]
 - !private ["So8NSObjectP", "Friend"]
-- !private ["So8NSObjectP", "UIImage"]
+- !private ["So8NSObjectP", "Image"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "chatList"]
 - !private ["So8NSObjectP", "chatMenuTable"]
@@ -550,6 +575,7 @@ depends-member:
 - !private ["So8NSObjectP", "performSegue"]
 - !private ["So8NSObjectP", "propic"]
 - !private ["So8NSObjectP", "receiver"]
+- !private ["So8NSObjectP", "reloadData"]
 - ["So8NSObjectP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So8NSObjectP", "scrollViewDidEndDecelerating"]
 - ["So8NSObjectP", "scrollViewDidEndDragging"]
@@ -570,46 +596,47 @@ depends-member:
 - !private ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "viewForZooming"]
 - ["So8NSObjectP", "viewForZoomingInScrollView"]
-- !private ["So14NSSecureCodingP", "init"]
 - !private ["Sq", "dataSource"]
 - !private ["Sq", "delegate"]
 - !private ["Sq", "image"]
+- !private ["Sq", "reloadData"]
 - !private ["Sq", "text"]
 - !private ["Sk", "count"]
+- ["Sk", "init"]
 - !private ["Sk", "row"]
 - !private ["Sk", "subscript"]
 - !private ["Sm", "count"]
 - ["Sm", "init"]
-- ["Sm", "init"]
+- !private ["Sm", "init"]
 - !private ["Sm", "subscript"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["ST", "count"]
 - ["ST", "init"]
-- ["ST", "init"]
+- !private ["ST", "init"]
 - !private ["ST", "row"]
 - !private ["ST", "subscript"]
 - !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
 - !private ["8SocketIO0A4DataP", "count"]
 - ["8SocketIO0A4DataP", "init"]
-- ["8SocketIO0A4DataP", "init"]
+- !private ["8SocketIO0A4DataP", "init"]
 - !private ["8SocketIO0A4DataP", "subscript"]
-- ["SS", "init"]
-- ["SS", "init"]
-- ["Sy", "init"]
-- ["Sy", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["s20TextOutputStreamableP", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - !private ["So29UIAccessibilityIdentificationP", "dataSource"]
 - !private ["So29UIAccessibilityIdentificationP", "delegate"]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
 - !private ["So29UIAccessibilityIdentificationP", "image"]
-- !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "messageLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "nameLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "propic"]
+- !private ["So29UIAccessibilityIdentificationP", "reloadData"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So12UIAppearanceP", "dataSource"]
 - !private ["So12UIAppearanceP", "delegate"]
@@ -618,10 +645,11 @@ depends-member:
 - !private ["So12UIAppearanceP", "messageLabel"]
 - !private ["So12UIAppearanceP", "nameLabel"]
 - !private ["So12UIAppearanceP", "propic"]
+- !private ["So12UIAppearanceP", "reloadData"]
 - !private ["So12UIAppearanceP", "text"]
 - ["So21UIAppearanceContainerP", "Chat"]
 - !private ["So21UIAppearanceContainerP", "Friend"]
-- !private ["So21UIAppearanceContainerP", "UIImage"]
+- !private ["So21UIAppearanceContainerP", "Image"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "chatList"]
 - !private ["So21UIAppearanceContainerP", "chatMenuTable"]
@@ -640,6 +668,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "performSegue"]
 - !private ["So21UIAppearanceContainerP", "propic"]
 - !private ["So21UIAppearanceContainerP", "receiver"]
+- !private ["So21UIAppearanceContainerP", "reloadData"]
 - ["So21UIAppearanceContainerP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So21UIAppearanceContainerP", "scrollViewDidEndDecelerating"]
 - ["So21UIAppearanceContainerP", "scrollViewDidEndDragging"]
@@ -662,7 +691,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "viewForZoomingInScrollView"]
 - ["So18UIContentContainerP", "Chat"]
 - !private ["So18UIContentContainerP", "Friend"]
-- !private ["So18UIContentContainerP", "UIImage"]
+- !private ["So18UIContentContainerP", "Image"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "chatList"]
 - !private ["So18UIContentContainerP", "chatMenuTable"]
@@ -701,10 +730,12 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "messageLabel"]
 - !private ["So17UICoordinateSpaceP", "nameLabel"]
 - !private ["So17UICoordinateSpaceP", "propic"]
+- !private ["So17UICoordinateSpaceP", "reloadData"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So23UIDataSourceTranslatingP", "dataSource"]
 - !private ["So23UIDataSourceTranslatingP", "delegate"]
 - !private ["So23UIDataSourceTranslatingP", "dequeueReusableCell"]
+- !private ["So23UIDataSourceTranslatingP", "reloadData"]
 - !private ["So13UIDynamicItemP", "dataSource"]
 - !private ["So13UIDynamicItemP", "delegate"]
 - !private ["So13UIDynamicItemP", "dequeueReusableCell"]
@@ -712,10 +743,11 @@ depends-member:
 - !private ["So13UIDynamicItemP", "messageLabel"]
 - !private ["So13UIDynamicItemP", "nameLabel"]
 - !private ["So13UIDynamicItemP", "propic"]
+- !private ["So13UIDynamicItemP", "reloadData"]
 - !private ["So13UIDynamicItemP", "text"]
 - ["So18UIFocusEnvironmentP", "Chat"]
 - !private ["So18UIFocusEnvironmentP", "Friend"]
-- !private ["So18UIFocusEnvironmentP", "UIImage"]
+- !private ["So18UIFocusEnvironmentP", "Image"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "chatList"]
 - !private ["So18UIFocusEnvironmentP", "chatMenuTable"]
@@ -734,6 +766,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "performSegue"]
 - !private ["So18UIFocusEnvironmentP", "propic"]
 - !private ["So18UIFocusEnvironmentP", "receiver"]
+- !private ["So18UIFocusEnvironmentP", "reloadData"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidEndDecelerating"]
 - ["So18UIFocusEnvironmentP", "scrollViewDidEndDragging"]
@@ -761,6 +794,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "messageLabel"]
 - !private ["So11UIFocusItemP", "nameLabel"]
 - !private ["So11UIFocusItemP", "propic"]
+- !private ["So11UIFocusItemP", "reloadData"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So20UIFocusItemContainerP", "dataSource"]
 - !private ["So20UIFocusItemContainerP", "delegate"]
@@ -769,22 +803,22 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "messageLabel"]
 - !private ["So20UIFocusItemContainerP", "nameLabel"]
 - !private ["So20UIFocusItemContainerP", "propic"]
+- !private ["So20UIFocusItemContainerP", "reloadData"]
 - !private ["So20UIFocusItemContainerP", "text"]
 - !private ["So30UIFocusItemScrollableContainerP", "dataSource"]
 - !private ["So30UIFocusItemScrollableContainerP", "delegate"]
 - !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCell"]
+- !private ["So30UIFocusItemScrollableContainerP", "reloadData"]
 - !private ["So27UIGestureRecognizerDelegateP", "messageLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "nameLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "propic"]
-- !private ["So7UIImageC", "init"]
 - !private ["So31UIImagePickerControllerDelegateP", "receiver"]
 - !private ["So11UIImageViewC", "image"]
-- !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - !private ["So7UILabelC", "text"]
 - !private ["So30UINavigationControllerDelegateP", "receiver"]
 - ["So30UIPasteConfigurationSupportingP", "Chat"]
 - !private ["So30UIPasteConfigurationSupportingP", "Friend"]
-- !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "Image"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "chatList"]
 - !private ["So30UIPasteConfigurationSupportingP", "chatMenuTable"]
@@ -803,6 +837,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "performSegue"]
 - !private ["So30UIPasteConfigurationSupportingP", "propic"]
 - !private ["So30UIPasteConfigurationSupportingP", "receiver"]
+- !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidEndDecelerating"]
 - ["So30UIPasteConfigurationSupportingP", "scrollViewDidEndDragging"]
@@ -823,13 +858,14 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZooming"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZoomingInScrollView"]
+- ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "Chat"]
 - !private ["So11UIResponderC", "ChatTableViewCell"]
 - !private ["So11UIResponderC", "ChatViewController"]
 - !private ["So11UIResponderC", "Friend"]
+- !private ["So11UIResponderC", "Image"]
 - ["So11UIResponderC", "IndexPath"]
 - ["So11UIResponderC", "Int"]
-- !private ["So11UIResponderC", "UIImage"]
 - ["So11UIResponderC", "UIStoryboardSegue"]
 - ["So11UIResponderC", "UITableView"]
 - ["So11UIResponderC", "UITableViewCell"]
@@ -851,6 +887,7 @@ depends-member:
 - ["So11UIResponderC", "prepare"]
 - !private ["So11UIResponderC", "propic"]
 - !private ["So11UIResponderC", "receiver"]
+- !private ["So11UIResponderC", "reloadData"]
 - ["So11UIResponderC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So11UIResponderC", "scrollViewDidEndDecelerating"]
 - ["So11UIResponderC", "scrollViewDidEndDragging"]
@@ -871,9 +908,10 @@ depends-member:
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewForZooming"]
 - ["So11UIResponderC", "viewForZoomingInScrollView"]
+- ["So11UIResponderC", "viewWillAppear"]
 - ["So30UIResponderStandardEditActionsP", "Chat"]
 - !private ["So30UIResponderStandardEditActionsP", "Friend"]
-- !private ["So30UIResponderStandardEditActionsP", "UIImage"]
+- !private ["So30UIResponderStandardEditActionsP", "Image"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "chatList"]
 - !private ["So30UIResponderStandardEditActionsP", "chatMenuTable"]
@@ -892,6 +930,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "performSegue"]
 - !private ["So30UIResponderStandardEditActionsP", "propic"]
 - !private ["So30UIResponderStandardEditActionsP", "receiver"]
+- !private ["So30UIResponderStandardEditActionsP", "reloadData"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidEndDecelerating"]
 - ["So30UIResponderStandardEditActionsP", "scrollViewDidEndDragging"]
@@ -915,9 +954,10 @@ depends-member:
 - !private ["So12UIScrollViewC", "dataSource"]
 - !private ["So12UIScrollViewC", "delegate"]
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
+- !private ["So12UIScrollViewC", "reloadData"]
 - ["So20UIScrollViewDelegateP", "Chat"]
 - !private ["So20UIScrollViewDelegateP", "Friend"]
-- !private ["So20UIScrollViewDelegateP", "UIImage"]
+- !private ["So20UIScrollViewDelegateP", "Image"]
 - ["So20UIScrollViewDelegateP", ""]
 - !private ["So20UIScrollViewDelegateP", "chatList"]
 - !private ["So20UIScrollViewDelegateP", "chatMenuTable"]
@@ -948,9 +988,10 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "dataSource"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "delegate"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "dequeueReusableCell"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "reloadData"]
 - ["So16UIStateRestoringP", "Chat"]
 - !private ["So16UIStateRestoringP", "Friend"]
-- !private ["So16UIStateRestoringP", "UIImage"]
+- !private ["So16UIStateRestoringP", "Image"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "chatList"]
 - !private ["So16UIStateRestoringP", "chatMenuTable"]
@@ -986,12 +1027,13 @@ depends-member:
 - !private ["So11UITableViewC", "dataSource"]
 - !private ["So11UITableViewC", "delegate"]
 - !private ["So11UITableViewC", "dequeueReusableCell"]
+- !private ["So11UITableViewC", "reloadData"]
 - !private ["So15UITableViewCellC", "messageLabel"]
 - !private ["So15UITableViewCellC", "nameLabel"]
 - !private ["So15UITableViewCellC", "propic"]
 - ["So21UITableViewDataSourceP", "Chat"]
 - !private ["So21UITableViewDataSourceP", "Friend"]
-- !private ["So21UITableViewDataSourceP", "UIImage"]
+- !private ["So21UITableViewDataSourceP", "Image"]
 - ["So21UITableViewDataSourceP", ""]
 - !private ["So21UITableViewDataSourceP", "chatList"]
 - !private ["So21UITableViewDataSourceP", "chatMenuTable"]
@@ -1021,7 +1063,7 @@ depends-member:
 - ["So21UITableViewDataSourceP", "viewForZoomingInScrollView"]
 - ["So19UITableViewDelegateP", "Chat"]
 - !private ["So19UITableViewDelegateP", "Friend"]
-- !private ["So19UITableViewDelegateP", "UIImage"]
+- !private ["So19UITableViewDelegateP", "Image"]
 - ["So19UITableViewDelegateP", ""]
 - !private ["So19UITableViewDelegateP", "chatList"]
 - !private ["So19UITableViewDelegateP", "chatMenuTable"]
@@ -1051,7 +1093,7 @@ depends-member:
 - ["So19UITableViewDelegateP", "viewForZoomingInScrollView"]
 - ["So18UITraitEnvironmentP", "Chat"]
 - !private ["So18UITraitEnvironmentP", "Friend"]
-- !private ["So18UITraitEnvironmentP", "UIImage"]
+- !private ["So18UITraitEnvironmentP", "Image"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "chatList"]
 - !private ["So18UITraitEnvironmentP", "chatMenuTable"]
@@ -1070,6 +1112,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "performSegue"]
 - !private ["So18UITraitEnvironmentP", "propic"]
 - !private ["So18UITraitEnvironmentP", "receiver"]
+- !private ["So18UITraitEnvironmentP", "reloadData"]
 - ["So18UITraitEnvironmentP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UITraitEnvironmentP", "scrollViewDidEndDecelerating"]
 - ["So18UITraitEnvironmentP", "scrollViewDidEndDragging"]
@@ -1092,7 +1135,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "viewForZoomingInScrollView"]
 - ["So23UIUserActivityRestoringP", "Chat"]
 - !private ["So23UIUserActivityRestoringP", "Friend"]
-- !private ["So23UIUserActivityRestoringP", "UIImage"]
+- !private ["So23UIUserActivityRestoringP", "Image"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "chatList"]
 - !private ["So23UIUserActivityRestoringP", "chatMenuTable"]
@@ -1111,6 +1154,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "performSegue"]
 - !private ["So23UIUserActivityRestoringP", "propic"]
 - !private ["So23UIUserActivityRestoringP", "receiver"]
+- !private ["So23UIUserActivityRestoringP", "reloadData"]
 - ["So23UIUserActivityRestoringP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So23UIUserActivityRestoringP", "scrollViewDidEndDecelerating"]
 - ["So23UIUserActivityRestoringP", "scrollViewDidEndDragging"]
@@ -1138,14 +1182,16 @@ depends-member:
 - !private ["So6UIViewC", "messageLabel"]
 - !private ["So6UIViewC", "nameLabel"]
 - !private ["So6UIViewC", "propic"]
+- !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "Chat"]
 - !private ["So16UIViewControllerC", "ChatTableViewCell"]
 - !private ["So16UIViewControllerC", "ChatViewController"]
 - !private ["So16UIViewControllerC", "Friend"]
+- !private ["So16UIViewControllerC", "Image"]
 - ["So16UIViewControllerC", "IndexPath"]
 - ["So16UIViewControllerC", "Int"]
-- !private ["So16UIViewControllerC", "UIImage"]
 - ["So16UIViewControllerC", "UIStoryboardSegue"]
 - ["So16UIViewControllerC", "UITableView"]
 - ["So16UIViewControllerC", "UITableViewCell"]
@@ -1180,6 +1226,7 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
 - ["So16UIViewControllerC", "viewForZoomingInScrollView"]
+- ["So16UIViewControllerC", "viewWillAppear"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dataSource"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
@@ -1187,26 +1234,28 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "messageLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nameLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "propic"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s24_DestructorSafeContainerP", "count"]
+- ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s26_ExpressibleByImageLiteralP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Chat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Friend"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Image"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "chatList"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "chatMenuTable"]
@@ -1227,6 +1276,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "performSegue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "propic"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "receiver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidEndDecelerating"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewDidEndDragging"]
@@ -1253,61 +1303,60 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "delegate"]
 - !private ["s21_ObjectiveCBridgeableP", "image"]
 - ["s21_ObjectiveCBridgeableP", "init"]
-- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "reloadData"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "text"]
-- ["s16_SwiftStringViewP", "init"]
-- ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
-- !private "Sa"
-- !private "s13ArrayProtocolP"
+- "Sa"
+- "s13ArrayProtocolP"
 - "SK"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
-- "14_019_ios_final4ChatV"
+- !private "14_019_ios_final4ChatV"
 - "14_019_ios_final22ChatMenuViewControllerC"
 - !private "14_019_ios_final17ChatTableViewCellC"
 - !private "14_019_ios_final18ChatViewControllerC"
 - "Sl"
-- "SL"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
+- !private "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "Se"
 - "SE"
 - "SQ"
-- !private "s25ExpressibleByArrayLiteralP"
+- "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "14_019_ios_final6FriendV"
 - "SH"
+- !private "14_019_ios_final5ImageV"
 - !private "10Foundation9IndexPathV"
-- "s25LosslessStringConvertibleP"
-- "s10MirrorPathP"
-- !private "SM"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "SM"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
-- !private "So21NSItemProviderReadingP"
-- !private "So21NSItemProviderWritingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So14NSSecureCodingP"
 - !private "Sq"
-- !private "Sk"
+- "Sk"
 - "Sm"
 - !private "10Foundation20ReferenceConvertibleP"
 - "ST"
 - "8SocketIO0A4DataP"
-- "SS"
-- "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
@@ -1322,10 +1371,8 @@ depends-nominal:
 - !private "So20UIFocusItemContainerP"
 - !private "So30UIFocusItemScrollableContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
-- !private "So7UIImageC"
 - !private "So31UIImagePickerControllerDelegateP"
 - !private "So11UIImageViewC"
-- !private "So39UIItemProviderPresentationSizeProvidingP"
 - !private "So7UILabelC"
 - !private "So30UINavigationControllerDelegateP"
 - "So30UIPasteConfigurationSupportingP"
@@ -1345,18 +1392,17 @@ depends-nominal:
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
-- !private "s24_DestructorSafeContainerP"
+- "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s26_ExpressibleByImageLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
-- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
-- "s16_SwiftStringViewP"
+- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -1391,4 +1437,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "da4b3d3fa5812be253d5e0bb87054ff7"
+interface-hash: "653eabc1ce98b262ce72d0a2c6945df7"

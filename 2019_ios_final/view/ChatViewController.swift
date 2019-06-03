@@ -8,8 +8,7 @@
 
 // todo: handle socket
 // todo: adjust image offset
-// todo: offline image
-// todo: right image cell
+// todo: message from another user
 
 import UIKit
 import SocketIO
@@ -47,7 +46,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LeftChatCell", for: indexPath) as! LeftMessageTableViewCell
-                if let image = UIImage(named: receiver.propic) {
+                if let image = Image.readImageFromFile(imageName: receiver.propic) {
                     cell.propic.image = image
                 }
                 cell.messageLabel.text = chatHistory[indexPath.row].message
@@ -56,25 +55,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             if curMessage.sender == User.shared.name {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RightImageCell", for: indexPath) as! RightImageTableViewCell
-                let urlStr = "http://140.121.197.197:6700/image?path=\(chatHistory[indexPath.row].message)"
-                if let url = URL(string: urlStr) {
-                    let data = try? Data(contentsOf: url)
-                    if let imageData = data{
-                        cell.imageButton.image = UIImage(data: imageData)
-                    }
+                if let image = Image.readImageFromFile(imageName: chatHistory[indexPath.row].message) {
+                    cell.imageButton.image = image
                 }
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LeftImageCell", for: indexPath) as! LeftImageTableViewCell
-                
-                let urlStr = "http://140.121.197.197:6700/image?path=\(chatHistory[indexPath.row].message)"
-                if let url = URL(string: urlStr) {
-                    let data = try? Data(contentsOf: url)
-                    if let imageData = data{
-                        cell.imageButton.image = UIImage(data: imageData)
-                    }
+                if let image = Image.readImageFromFile(imageName: chatHistory[indexPath.row].message) {
+                    cell.imageButton.image = image
                 }
-                if let image = UIImage(named: receiver.propic) {
+                if let image = Image.readImageFromFile(imageName: receiver.propic) {
                     cell.propic.image = image
                 }
                 return cell
@@ -128,6 +118,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "showSingalImage", let image = sender as? UIImage {
             let controller = segue.destination as! SingalImageViewController
             controller.tmpImage = image
+            controller.receiver = receiver
         }
     }
 }
@@ -141,6 +132,7 @@ extension ChatViewController {
         socket.on("get msg") { rawData, ack in
             if let data = rawData[0] as? NSDictionary {
                 let message = self.jsonToMessage(data: data)
+                // from cur user
                 if message.receiver == self.receiver.name || message.sender == self.receiver.name {
                     self.chatHistory.append(message)
                     self.chatTable.reloadData()
@@ -149,23 +141,23 @@ extension ChatViewController {
                         socket.emit("get msg success", [
                             "sender": data["sender"] as! String,
                             "receiver": data["receiver"] as! String,
-                            "msg": data["msg"] as! String,
+                            "message": data["message"] as! String,
                             "timeStamp": data["timeStamp"] as! String
                         ])
                     }
                     if message.type == Type.Image {
                         var images: [Image] = [Image]()
-                        let tmpImages = Image.readImagesFromFile(receiver: self.receiver.name)
+                        let tmpImages = Image.readImagesNameFromFile(receiver: self.receiver.name)
                         if let tmpImages = tmpImages {
                             images = tmpImages
                         }
                         images.append(Image(imageName: message.message))
-                        Image.saveImagesToFile(receiver: self.receiver.name, images: images)
-                        
+                        Image.saveImagesNameToFile(receiver: self.receiver.name, images: images)
                     }
-                    
-                    
                 }
+                
+                self.updateChatHistory(message: message)
+
             }
         }
         socket.connect()
@@ -180,6 +172,38 @@ extension ChatViewController {
             return Message(type: Type.Image, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
         } else {
             return Message(type: Type.Text, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
+        }
+    }
+    
+    func updateChatHistory(message: Message) {
+        
+        var chatHistory = Chat.readFromFile()
+        if chatHistory != nil {
+            for i in (0...chatHistory!.count-1) {
+                if chatHistory![i].name == message.sender || chatHistory![i].name == message.receiver {
+                    if message.type == Type.Image {
+                        chatHistory![i].message = "photo"
+                    } else {
+                        chatHistory![i].message = message.message
+                    }
+                    Chat.saveTofile(chatHistory: chatHistory!)
+                    return
+                }
+            }
+            //var result = NSArray(array:originalArray, copyItems: true)
+            
+            let tmpName = (message.sender == User.shared.name) ? message.receiver : message.sender
+            
+            chatHistory!.append(Chat(name: tmpName, message: message.message))
+            Chat.saveTofile(chatHistory: chatHistory!)
+            return
+        } else {
+            chatHistory = [Chat]()
+            let tmpName = (message.sender == User.shared.name) ? message.receiver : message.sender
+            chatHistory!.append(Chat(name: tmpName, message: message.message))
+            Chat.saveTofile(chatHistory: chatHistory!)
+            return
+            
         }
     }
 }

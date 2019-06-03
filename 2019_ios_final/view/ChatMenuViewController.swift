@@ -10,12 +10,7 @@ import UIKit
 
 class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
-    var chatList: [Chat] = [
-        Chat(propic: "", name: "test1", message: "你知道嗎？"),
-        Chat(propic: "test", name: "test2", message: "ldldldldldfdhighehhishvkdhihkenihvdnkhgioehgioherhioeirhoieldldldldldffkkfkfkfkfkfkkfldldldldldldl"),
-    ]
+    var chatList: [Chat] = [Chat]()
     
     @IBOutlet weak var chatMenuTable: UITableView!
     
@@ -28,7 +23,7 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatTableViewCell
         cell.nameLabel.text = curChat.name
         cell.messageLabel.text = curChat.message
-        if let image = UIImage(named: curChat.propic) {
+        if let image = Image.readImageFromFile(imageName: Friend.getPropic(name: curChat.name) ?? "") {
             cell.propic.image = image
         }
         return cell
@@ -42,9 +37,18 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         chatMenuTable.delegate = self
         chatMenuTable.dataSource = self
+        if let chatHistory = Chat.readFromFile() {
+            chatList = chatHistory
+            chatMenuTable.reloadData()
+        }
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        if let chatHistory = Chat.readFromFile() {
+            chatList = chatHistory
+            chatMenuTable.reloadData()
+        }
+    }
     
     // MARK: - Navigation
 
@@ -52,7 +56,7 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showChat", let receiver = sender as? Chat {
             let controller = segue.destination as! ChatViewController
-            controller.receiver = Friend(propic: receiver.propic, name: receiver.name)
+            controller.receiver = Friend(propic: Friend.getPropic(name: receiver.name) ?? "", name: receiver.name)
         }
     }
  

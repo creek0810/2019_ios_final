@@ -6,9 +6,11 @@ provides-nominal:
 provides-member:
 - ["14_019_ios_final23ImageCollectionViewCellC", ""]
 provides-dynamic-lookup:
+- "singalImage"
 depends-top-level:
 - "ImageCollectionViewCell"
 - "UICollectionViewCell"
+- "UIImageView"
 depends-member:
 - ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "init"]
@@ -28,12 +30,16 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
+- ["14_019_ios_final23ImageCollectionViewCellC", "UIImageView"]
 - ["14_019_ios_final23ImageCollectionViewCellC", "init"]
+- ["14_019_ios_final23ImageCollectionViewCellC", "singalImage"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
+- ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "singalImage"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
@@ -46,11 +52,15 @@ depends-member:
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- ["So24UICollectionReusableViewC", "UIImageView"]
 - ["So24UICollectionReusableViewC", "init"]
 - !private ["So24UICollectionReusableViewC", "init"]
+- ["So24UICollectionReusableViewC", "singalImage"]
+- ["So20UICollectionViewCellC", "UIImageView"]
 - ["So20UICollectionViewCellC", ""]
 - ["So20UICollectionViewCellC", "init"]
 - !private ["So20UICollectionViewCellC", "init"]
+- ["So20UICollectionViewCellC", "singalImage"]
 - ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "init"]
@@ -69,8 +79,10 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "singalImage"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
@@ -80,8 +92,10 @@ depends-member:
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
+- ["So6UIViewC", "UIImageView"]
 - ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "init"]
+- ["So6UIViewC", "singalImage"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
@@ -151,4 +165,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8990550e6fc6a45a41da16ba1f51898b"
+interface-hash: "1d75e6a26180af8eca6cf2a0a9cf59c0"

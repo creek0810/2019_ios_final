@@ -19,7 +19,7 @@ struct NetworkController {
     
     struct API {
         static let login = "http://140.121.197.197:6700/login"
-        static let getFriendList = "http://140.121.197.197:6700/get_friendlist"
+        static let getFriendList = "http://140.121.197.197:6700/get_friends"
         static let uploadImage = "http://140.121.197.197:6700/send_image"
         static let sendText = "http://140.121.197.197:6700/send_text"
     }
@@ -74,8 +74,8 @@ struct NetworkController {
             
             data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
             data.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(boundary)\"\r\n".data(using: .utf8)!)
-            data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
-            data.append(image.pngData()!)
+            data.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+            data.append(image.jpegData(compressionQuality: 0.5)!)
             
             data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
             data.append("Content-Disposition: form-data; name=\"receiver\"\r\n\r\n".data(using: .utf8)!)
@@ -108,12 +108,15 @@ struct NetworkController {
         }
     }
     
-    func getFriendList(completion: @escaping ([String]) -> Void){
+    func getFriendList(completion: @escaping ([Friend]?) -> Void){
         if let url = URL(string: API.getFriendList){
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let data = data, let friendList = try? JSONSerialization.jsonObject(with: data, options: []) as! [String] {
+                if let data = data {
+                    let friendList = try? JSONDecoder().decode([Friend].self, from: data)
                     completion(friendList)
+
                 }
+                
             }
             task.resume()
         }

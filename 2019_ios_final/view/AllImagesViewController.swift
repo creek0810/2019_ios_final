@@ -9,7 +9,10 @@
 import UIKit
 
 class AllImagesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     var images: [Image] = [Image]()
+    var receiver: Friend = Friend(propic: "test", name: "")
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
@@ -18,12 +21,9 @@ class AllImagesViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "singalImage", for: indexPath) as! ImageCollectionViewCell
-        let urlStr = "http://140.121.197.197:6700/image?path=\(images[indexPath.row].imageName)"
-        if let url = URL(string: urlStr) {
-            let data = try? Data(contentsOf: url)
-            if let imageData = data{
-                cell.singalImage.image = UIImage(data: imageData)
-            }
+        
+        if let image = Image.readImageFromFile(imageName: images[indexPath.row].imageName) {
+             cell.singalImage.image = image
         }
         return cell
     }
@@ -35,7 +35,8 @@ class AllImagesViewController: UIViewController, UICollectionViewDataSource, UIC
         super.viewDidLoad()
         imagesCollection.delegate = self
         imagesCollection.dataSource = self
-        if let data = Image.readImagesFromFile(receiver: "test") {
+        // need to improve
+        if let data = Image.readImagesNameFromFile(receiver: receiver.name) {
             images = data
             imagesCollection.reloadData()
         }

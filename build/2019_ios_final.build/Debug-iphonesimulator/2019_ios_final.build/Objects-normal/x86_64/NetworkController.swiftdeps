@@ -9,15 +9,16 @@ provides-member:
 - ["14_019_ios_final17NetworkControllerV3APIV", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Array"
 - "AssignmentPrecedence"
 - !private "CastingPrecedence"
 - !private "Data"
 - !private "ExtendedGraphemeClusterType"
+- !private "FloatLiteralType"
+- "Friend"
 - !private "HTTPURLResponse"
 - "Int"
+- !private "JSONDecoder"
 - !private "JSONEncoder"
-- !private "JSONSerialization"
 - "NetworkController"
 - "SendMessage"
 - "String"
@@ -44,8 +45,7 @@ depends-member:
 - !private ["s7CVarArgP", "dataTask"]
 - ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "jsonObject"]
-- !private ["s7CVarArgP", "pngData"]
+- !private ["s7CVarArgP", "jpegData"]
 - !private ["s7CVarArgP", "resume"]
 - !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "statusCode"]
@@ -65,8 +65,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
-- !private ["s28CustomDebugStringConvertibleP", "pngData"]
+- !private ["s28CustomDebugStringConvertibleP", "jpegData"]
 - !private ["s28CustomDebugStringConvertibleP", "resume"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "statusCode"]
@@ -91,8 +90,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "httpMethod"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "jsonObject"]
-- !private ["s23CustomStringConvertibleP", "pngData"]
+- !private ["s23CustomStringConvertibleP", "jpegData"]
 - !private ["s23CustomStringConvertibleP", "resume"]
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "statusCode"]
@@ -120,8 +118,7 @@ depends-member:
 - !private ["SQ", "httpMethod"]
 - ["SQ", "init"]
 - ["SQ", "init"]
-- !private ["SQ", "jsonObject"]
-- !private ["SQ", "pngData"]
+- !private ["SQ", "jpegData"]
 - !private ["SQ", "resume"]
 - !private ["SQ", "shared"]
 - !private ["SQ", "statusCode"]
@@ -137,6 +134,7 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["14_019_ios_final6FriendV", "deinit"]
 - !private ["So17NSHTTPURLResponseC", "statusCode"]
 - !private ["SH", "addValue"]
 - !private ["SH", "append"]
@@ -146,17 +144,17 @@ depends-member:
 - !private ["SH", "httpMethod"]
 - ["SH", "init"]
 - ["SH", "init"]
-- !private ["SH", "jsonObject"]
-- !private ["SH", "pngData"]
+- !private ["SH", "jpegData"]
 - !private ["SH", "resume"]
 - !private ["SH", "shared"]
 - !private ["SH", "statusCode"]
 - !private ["SH", "uploadTask"]
 - !private ["SH", "utf8"]
 - !private ["SH", "uuidString"]
+- !private ["10Foundation11JSONDecoderC", "decode"]
+- !private ["10Foundation11JSONDecoderC", "init"]
 - !private ["10Foundation11JSONEncoderC", "encode"]
 - !private ["10Foundation11JSONEncoderC", "init"]
-- !private ["So19NSJSONSerializationC", "jsonObject"]
 - !private ["s25LosslessStringConvertibleP", "data"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
@@ -166,42 +164,41 @@ depends-member:
 - !private ["SM", "append"]
 - !private ["SM", "init"]
 - !private ["So8NSCodingP", "data"]
-- !private ["So8NSCodingP", "pngData"]
+- !private ["So8NSCodingP", "jpegData"]
 - !private ["So8NSCodingP", "statusCode"]
 - !private ["So9NSCopyingP", "data"]
 - !private ["So9NSCopyingP", "resume"]
 - !private ["So9NSCopyingP", "statusCode"]
 - !private ["So21NSItemProviderReadingP", "data"]
-- !private ["So21NSItemProviderReadingP", "pngData"]
+- !private ["So21NSItemProviderReadingP", "jpegData"]
 - !private ["So21NSItemProviderWritingP", "data"]
-- !private ["So21NSItemProviderWritingP", "pngData"]
+- !private ["So21NSItemProviderWritingP", "jpegData"]
 - !private ["So16NSMutableCopyingP", "data"]
 - !private ["So8NSObjectC", "data"]
 - !private ["So8NSObjectC", "dataTask"]
-- !private ["So8NSObjectC", "jsonObject"]
-- !private ["So8NSObjectC", "pngData"]
+- !private ["So8NSObjectC", "jpegData"]
 - !private ["So8NSObjectC", "resume"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "statusCode"]
 - !private ["So8NSObjectC", "uploadTask"]
 - !private ["So8NSObjectP", "data"]
 - !private ["So8NSObjectP", "dataTask"]
-- !private ["So8NSObjectP", "jsonObject"]
-- !private ["So8NSObjectP", "pngData"]
+- !private ["So8NSObjectP", "jpegData"]
 - !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "statusCode"]
 - !private ["So8NSObjectP", "uploadTask"]
 - !private ["So14NSSecureCodingP", "data"]
-- !private ["So14NSSecureCodingP", "pngData"]
+- !private ["So14NSSecureCodingP", "jpegData"]
 - !private ["So14NSSecureCodingP", "statusCode"]
 - !private ["So8NSStringC", "data"]
 - ["14_019_ios_final17NetworkControllerV", "API"]
 - !private ["14_019_ios_final17NetworkControllerV", "Data"]
+- ["14_019_ios_final17NetworkControllerV", "Friend"]
 - !private ["14_019_ios_final17NetworkControllerV", "HTTPURLResponse"]
 - ["14_019_ios_final17NetworkControllerV", "Int"]
+- !private ["14_019_ios_final17NetworkControllerV", "JSONDecoder"]
 - !private ["14_019_ios_final17NetworkControllerV", "JSONEncoder"]
-- !private ["14_019_ios_final17NetworkControllerV", "JSONSerialization"]
 - ["14_019_ios_final17NetworkControllerV", "NetworkController"]
 - ["14_019_ios_final17NetworkControllerV", "SendMessage"]
 - ["14_019_ios_final17NetworkControllerV", "String"]
@@ -254,9 +251,9 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "data"]
 - ["s20TextOutputStreamableP", "init"]
 - ["s20TextOutputStreamableP", "init"]
-- !private ["So29UIAccessibilityIdentificationP", "pngData"]
-- !private ["So7UIImageC", "pngData"]
-- !private ["So39UIItemProviderPresentationSizeProvidingP", "pngData"]
+- !private ["So29UIAccessibilityIdentificationP", "jpegData"]
+- !private ["So7UIImageC", "jpegData"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "jpegData"]
 - !private ["10Foundation3URLV", "init"]
 - !private ["10Foundation10URLRequestV", "addValue"]
 - !private ["10Foundation10URLRequestV", "httpBody"]
@@ -286,15 +283,14 @@ depends-member:
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
-- !private ["s26_ExpressibleByImageLiteralP", "pngData"]
+- !private ["s26_ExpressibleByImageLiteralP", "jpegData"]
 - !private ["s33_ExpressibleByStringInterpolationP", "data"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "pngData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jpegData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "statusCode"]
@@ -328,10 +324,11 @@ depends-nominal:
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "14_019_ios_final6FriendV"
 - !private "So17NSHTTPURLResponseC"
 - "SH"
+- !private "10Foundation11JSONDecoderC"
 - !private "10Foundation11JSONEncoderC"
-- !private "So19NSJSONSerializationC"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - !private "SM"
@@ -414,4 +411,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "30f549fe3eaabc5e45249dc8cff45fd0"
+interface-hash: "7475bad20f070a0edfeeb52533e77eb9"

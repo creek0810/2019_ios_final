@@ -11,6 +11,8 @@ provides-dynamic-lookup:
 - "items"
 depends-top-level:
 - "AssignmentPrecedence"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NSObject"
 - "SocketAnyEvent"
 - "String"

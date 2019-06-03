@@ -224,6 +224,7 @@ SWIFT_CLASS("_TtC14_019_ios_final22ChatMenuViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -355,8 +356,11 @@ SWIFT_CLASS("_TtC14_019_ios_final25RightMessageTableViewCell")
 
 SWIFT_CLASS("_TtC14_019_ios_final25SingalImageViewController")
 @interface SingalImageViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UINavigationItem * _Null_unspecified nameLabel;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified singalImage;
+- (IBAction)showAllImages:(id _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -16,11 +16,11 @@ depends-top-level:
 - !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
-- !private "FloatLiteralType"
+- "FloatLiteralType"
 - "Hashable"
 - "Hasher"
 - "Int"
-- !private "IntegerLiteralType"
+- "IntegerLiteralType"
 - "Set"
 - "SocketAck"
 - "SocketAckManager"
@@ -161,7 +161,6 @@ depends-member:
 - !private ["8SocketIO0A10AckManagerC", "SocketAckStatus"]
 - !private ["8SocketIO0A10AckManagerC", "acks"]
 - ["8SocketIO0A10AckManagerC", "addAck"]
-- ["8SocketIO0A10AckManagerC", "deinit"]
 - ["8SocketIO0A10AckManagerC", "executeAck"]
 - ["8SocketIO0A10AckManagerC", "init"]
 - ["8SocketIO0A10AckManagerC", "timeoutAck"]
