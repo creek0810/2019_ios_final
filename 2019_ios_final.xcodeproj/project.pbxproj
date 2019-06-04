@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10F9033A8B04777A66E5BC4F /* Pods_2019_ios_finalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715AB6F6F7A89FA5EC878993 /* Pods_2019_ios_finalUITests.framework */; };
 		2FE86378F6103B6CB98C8FC8 /* Pods_2019_ios_final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B2E9A83AD4EA1C93B39CB3 /* Pods_2019_ios_final.framework */; };
+		5707906622A6DA11001C85A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707906522A6DA11001C85A5 /* Image.swift */; };
 		5730D60422A6D120001CA2F3 /* SingalImage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */; };
 		5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A622A14BD5007F5CE1 /* Chat.swift */; };
 		5782F6A922A15F9B007F5CE1 /* LeftImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */; };
@@ -59,6 +60,7 @@
 		0173A9DB3DB13E9F295CAE8E /* Pods-2019_ios_final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2019_ios_final.release.xcconfig"; path = "Target Support Files/Pods-2019_ios_final/Pods-2019_ios_final.release.xcconfig"; sourceTree = "<group>"; };
 		03CEE921C79FD4191A53B46D /* Pods-2019_ios_finalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2019_ios_finalTests.release.xcconfig"; path = "Target Support Files/Pods-2019_ios_finalTests/Pods-2019_ios_finalTests.release.xcconfig"; sourceTree = "<group>"; };
 		2950C720A717BB4FDE56EF77 /* Pods_2019_ios_finalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2019_ios_finalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5707906522A6DA11001C85A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingalImage2ViewController.swift; sourceTree = "<group>"; };
 		5782F6A622A14BD5007F5CE1 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				57E67F0E22A0CF4000D12CDA /* Message.swift */,
+				5707906522A6DA11001C85A5 /* Image.swift */,
 				57E67F0122A0246400D12CDA /* User.swift */,
 				5782F6A622A14BD5007F5CE1 /* Chat.swift */,
 				57E67F1722A127FF00D12CDA /* Friend.swift */,
@@ -484,6 +487,7 @@
 				57E67F1622A1270F00D12CDA /* FriendTableViewCell.swift in Sources */,
 				57E67F1122A0DAC200D12CDA /* LeftMessageTableViewCell.swift in Sources */,
 				5782F6A922A15F9B007F5CE1 /* LeftImageTableViewCell.swift in Sources */,
+				5707906622A6DA11001C85A5 /* Image.swift in Sources */,
 				57E67F0B22A0319F00D12CDA /* ChatMenuViewController.swift in Sources */,
 				57E67F0F22A0CF4000D12CDA /* Message.swift in Sources */,
 				57B3F76422A417D3002420D7 /* RightImageTableViewCell.swift in Sources */,

@@ -28,7 +28,7 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         } else {
             cell.messageLabel.text = curChat.message.message
         }
-        if let image = Image.readImageFromFile(imageName: Friend.getPropic(name: curChat.name) ?? "") {
+        if let image = Image.getImage(imageName: Friend.getPropic(name: curChat.name) ?? "") {
             cell.propic.image = image
         }
         return cell

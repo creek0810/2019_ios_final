@@ -19,14 +19,14 @@ struct Chat: Codable {
     static func saveTofile(chatHistory: [Chat]) {
         let encoder = PropertyListEncoder()
         if let data = try? encoder.encode(chatHistory) {
-            let url = Chat.documentDirectory.appendingPathComponent("chatHistory").appendingPathExtension("plist")
+            let url = Chat.documentDirectory.appendingPathComponent("\(User.shared.name)-chatHistory").appendingPathExtension("plist")
             try? data.write(to: url)
         }
     }
     
     static func readFromFile() -> [Chat]? {
         let decoder = PropertyListDecoder()
-        let url = Chat.documentDirectory.appendingPathComponent("chatHistory").appendingPathExtension("plist")
+        let url = Chat.documentDirectory.appendingPathComponent("\(User.shared.name)-chatHistory").appendingPathExtension("plist")
         if let data = try? Data(contentsOf: url), let chatHistory = try? decoder.decode([Chat].self, from: data) {
             return chatHistory
         } else {

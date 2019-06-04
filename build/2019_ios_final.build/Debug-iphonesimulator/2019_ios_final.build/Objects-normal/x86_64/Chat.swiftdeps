@@ -27,7 +27,7 @@ depends-top-level:
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "String"
-- !private "StringLiteralType"
+- !private "User"
 - !private "~="
 depends-member:
 - ["Sa", "first"]
@@ -56,6 +56,7 @@ depends-member:
 - !private ["14_019_ios_final4ChatV", "PropertyListDecoder"]
 - !private ["14_019_ios_final4ChatV", "PropertyListEncoder"]
 - ["14_019_ios_final4ChatV", "String"]
+- !private ["14_019_ios_final4ChatV", "User"]
 - ["14_019_ios_final4ChatV", "deinit"]
 - ["14_019_ios_final4ChatV", "documentDirectory"]
 - ["14_019_ios_final4ChatV", "encode"]
@@ -82,6 +83,7 @@ depends-member:
 - ["SL", "FileManager"]
 - !private ["SL", "PropertyListDecoder"]
 - !private ["SL", "PropertyListEncoder"]
+- !private ["SL", "User"]
 - ["SL", ""]
 - !private ["SL", "documentDirectory"]
 - ["SL", "encode"]
@@ -145,6 +147,7 @@ depends-member:
 - ["Se", "FileManager"]
 - !private ["Se", "PropertyListDecoder"]
 - !private ["Se", "PropertyListEncoder"]
+- !private ["Se", "User"]
 - ["Se", ""]
 - !private ["Se", "_getBuiltinLogicValue"]
 - !private ["Se", "appendingPathComponent"]
@@ -165,6 +168,7 @@ depends-member:
 - ["SE", "FileManager"]
 - !private ["SE", "PropertyListDecoder"]
 - !private ["SE", "PropertyListEncoder"]
+- !private ["SE", "User"]
 - ["SE", ""]
 - !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "appendingPathComponent"]
@@ -185,6 +189,7 @@ depends-member:
 - ["SQ", "FileManager"]
 - !private ["SQ", "PropertyListDecoder"]
 - !private ["SQ", "PropertyListEncoder"]
+- !private ["SQ", "User"]
 - ["SQ", ""]
 - !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "appendingPathComponent"]
@@ -312,6 +317,8 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["10Foundation3URLV", "appendingPathComponent"]
 - !private ["10Foundation3URLV", "appendingPathExtension"]
+- !private ["14_019_ios_final4UserV", "name"]
+- !private ["14_019_ios_final4UserV", "shared"]
 - ["s24_DestructorSafeContainerP", "first"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -400,6 +407,7 @@ depends-nominal:
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "10Foundation3URLV"
+- !private "14_019_ios_final4UserV"
 - "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"

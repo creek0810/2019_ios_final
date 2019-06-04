@@ -23,7 +23,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendTableViewCell
         cell.nameLabel.text = friendList[indexPath.row].name
-        if let image = Image.readImageFromFile(imageName: friendList[indexPath.row].propic) {
+        if let image = Image.getImage(imageName: friendList[indexPath.row].propic) {
             cell.propic.image = image
         }
         return cell

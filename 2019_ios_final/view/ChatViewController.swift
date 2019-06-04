@@ -46,7 +46,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LeftChatCell", for: indexPath) as! LeftMessageTableViewCell
-                if let image = Image.readImageFromFile(imageName: receiver.propic) {
+                if let image = Image.getImage(imageName: receiver.propic) {
                     cell.propic.image = image
                 }
                 cell.messageLabel.text = chatHistory[indexPath.row].message
@@ -55,13 +55,13 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             if curMessage.sender == User.shared.name {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RightImageCell", for: indexPath) as! RightImageTableViewCell
-                if let image = Image.readImageFromFile(imageName: chatHistory[indexPath.row].message) {
+                if let image = Image.getImage(imageName: chatHistory[indexPath.row].message) {
                     cell.imageButton.image = image
                 }
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LeftImageCell", for: indexPath) as! LeftImageTableViewCell
-                if let image = Image.readImageFromFile(imageName: chatHistory[indexPath.row].message) {
+                if let image = Image.getImage(imageName: chatHistory[indexPath.row].message) {
                     cell.imageButton.setImage(image, for: .normal)
                     cell.imageButton.imageView?.contentMode = .scaleAspectFit
                     cell.imageButton.backgroundColor = UIColor.red
@@ -83,7 +83,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -53, bottom: 0, right: 53)
                     }
                 }
-                if let image = Image.readImageFromFile(imageName: receiver.propic) {
+                if let image = Image.getImage(imageName: receiver.propic) {
                     cell.propic.image = image
                 }
                 return cell

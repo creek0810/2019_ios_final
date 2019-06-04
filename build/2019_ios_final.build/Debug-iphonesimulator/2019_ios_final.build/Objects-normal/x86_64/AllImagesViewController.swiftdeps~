@@ -29,7 +29,6 @@ depends-top-level:
 - "IndexPath"
 - "Int"
 - "IntegerLiteralType"
-- "NilCoalescingPrecedence"
 - !private "SingalImage2ViewController"
 - "StringLiteralType"
 - "UICollectionView"
@@ -325,12 +324,12 @@ depends-member:
 - !private ["Se", "count"]
 - !private ["Se", "dataSource"]
 - !private ["Se", "delegate"]
+- !private ["Se", "getImage"]
 - !private ["Se", "image"]
 - !private ["Se", "imageName"]
 - ["Se", "init"]
 - ["Se", "init"]
 - !private ["Se", "name"]
-- !private ["Se", "readImageFromFile"]
 - !private ["Se", "readImagesNameFromFile"]
 - !private ["Se", "reloadData"]
 - !private ["Se", "row"]
@@ -341,12 +340,12 @@ depends-member:
 - !private ["SE", "count"]
 - !private ["SE", "dataSource"]
 - !private ["SE", "delegate"]
+- !private ["SE", "getImage"]
 - !private ["SE", "image"]
 - !private ["SE", "imageName"]
 - ["SE", "init"]
 - ["SE", "init"]
 - !private ["SE", "name"]
-- !private ["SE", "readImageFromFile"]
 - !private ["SE", "readImagesNameFromFile"]
 - !private ["SE", "reloadData"]
 - !private ["SE", "row"]
@@ -490,8 +489,8 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - ["SH", "viewForZooming"]
 - ["SH", "viewForZoomingInScrollView"]
+- !private ["14_019_ios_final5ImageV", "getImage"]
 - !private ["14_019_ios_final5ImageV", "imageName"]
-- !private ["14_019_ios_final5ImageV", "readImageFromFile"]
 - !private ["14_019_ios_final5ImageV", "readImagesNameFromFile"]
 - !private ["14_019_ios_final23ImageCollectionViewCellC", "singalImage"]
 - !private ["10Foundation9IndexPathV", "row"]

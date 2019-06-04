@@ -27,7 +27,7 @@ class AllImagesViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "singalImage", for: indexPath) as! ImageCollectionViewCell
         
-        if let image = Image.readImageFromFile(imageName: images[indexPath.row].imageName) {
+        if let image = Image.getImage(imageName: images[indexPath.row].imageName) {
              cell.singalImage.image = image
         }
         return cell
