@@ -20,6 +20,13 @@ class SingalImageViewController: UIViewController {
     @IBAction func showAllImages(_ sender: Any) {
         self.performSegue(withIdentifier: "showAllImages", sender: "")
     }
+    
+    @IBAction func download(_ sender: Any) {
+        if let image = singalImage.image{
+            let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         singalImage.image = tmpImage

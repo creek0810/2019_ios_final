@@ -395,11 +395,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-IU-rpq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-bH-GWJ">
+                                <rect key="frame" x="340" y="583" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uXi-bH-GWJ" secondAttribute="height" multiplier="1:1" id="3nA-oV-5AG"/>
+                                    <constraint firstAttribute="width" constant="25" id="B7J-2C-tvR"/>
+                                </constraints>
+                                <state key="normal" image="download"/>
+                                <connections>
+                                    <action selector="download:" destination="Tbh-69-uDd" eventType="touchUpInside" id="JJH-d0-A8q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dp5-Rm-XBQ" firstAttribute="bottom" secondItem="t4X-IU-rpq" secondAttribute="bottom" id="CqL-BL-zRF"/>
+                            <constraint firstItem="dp5-Rm-XBQ" firstAttribute="trailing" secondItem="uXi-bH-GWJ" secondAttribute="trailing" constant="10" id="OxN-cK-N6B"/>
                             <constraint firstItem="t4X-IU-rpq" firstAttribute="top" secondItem="dp5-Rm-XBQ" secondAttribute="top" id="f0Q-KF-Kq4"/>
+                            <constraint firstItem="dp5-Rm-XBQ" firstAttribute="bottom" secondItem="uXi-bH-GWJ" secondAttribute="bottom" constant="10" id="hER-qz-OrY"/>
                             <constraint firstItem="t4X-IU-rpq" firstAttribute="leading" secondItem="dp5-Rm-XBQ" secondAttribute="leading" id="huc-vl-U8Q"/>
                             <constraint firstItem="t4X-IU-rpq" firstAttribute="trailing" secondItem="dp5-Rm-XBQ" secondAttribute="trailing" id="ztO-UJ-wyo"/>
                         </constraints>
@@ -496,13 +509,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UUe-N7-dKX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEb-sD-e11">
+                                <rect key="frame" x="340" y="583" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="c7R-ZB-Tpv"/>
+                                    <constraint firstAttribute="width" secondItem="MEb-sD-e11" secondAttribute="height" multiplier="1:1" id="oGo-Tw-sRB"/>
+                                </constraints>
+                                <state key="normal" image="download"/>
+                                <connections>
+                                    <action selector="download:" destination="DkM-cO-SsF" eventType="touchUpInside" id="jO0-cH-eGU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hRX-V5-vAb" firstAttribute="trailing" secondItem="UUe-N7-dKX" secondAttribute="trailing" id="5nb-jZ-4Bu"/>
+                            <constraint firstItem="hRX-V5-vAb" firstAttribute="bottom" secondItem="MEb-sD-e11" secondAttribute="bottom" constant="10" id="DA1-8r-qzQ"/>
                             <constraint firstItem="UUe-N7-dKX" firstAttribute="top" secondItem="r46-9N-KEy" secondAttribute="topMargin" id="Eol-5g-8TT"/>
                             <constraint firstItem="UUe-N7-dKX" firstAttribute="leading" secondItem="hRX-V5-vAb" secondAttribute="leading" id="WjO-zC-FvL"/>
                             <constraint firstItem="hRX-V5-vAb" firstAttribute="bottom" secondItem="UUe-N7-dKX" secondAttribute="bottom" id="hg4-Vq-g9z"/>
+                            <constraint firstItem="hRX-V5-vAb" firstAttribute="trailing" secondItem="MEb-sD-e11" secondAttribute="trailing" constant="10" id="idr-XH-oMH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hRX-V5-vAb"/>
                     </view>
@@ -651,6 +677,7 @@
     <resources>
         <image name="all" width="40" height="40"/>
         <image name="chat" width="37.5" height="37.5"/>
+        <image name="download" width="37.5" height="37.5"/>
         <image name="friend" width="40" height="40"/>
         <image name="image" width="37.5" height="37.5"/>
     </resources>

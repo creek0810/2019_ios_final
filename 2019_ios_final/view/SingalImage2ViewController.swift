@@ -10,7 +10,16 @@ import UIKit
 
 class SingalImage2ViewController: UIViewController {
     var tmpImage: UIImage = UIImage()
+    
     @IBOutlet weak var singalImage: UIImageView!
+    
+    @IBAction func download(_ sender: Any) {
+        if let image = singalImage.image{
+            let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         singalImage.image = tmpImage

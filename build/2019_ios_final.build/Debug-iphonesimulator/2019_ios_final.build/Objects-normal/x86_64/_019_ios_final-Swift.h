@@ -365,6 +365,7 @@ SWIFT_CLASS("_TtC14_019_ios_final25RightMessageTableViewCell")
 SWIFT_CLASS("_TtC14_019_ios_final26SingalImage2ViewController")
 @interface SingalImage2ViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified singalImage;
+- (IBAction)download:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -376,6 +377,7 @@ SWIFT_CLASS("_TtC14_019_ios_final25SingalImageViewController")
 @property (nonatomic, weak) IBOutlet UINavigationItem * _Null_unspecified nameLabel;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified singalImage;
 - (IBAction)showAllImages:(id _Nonnull)sender;
+- (IBAction)download:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

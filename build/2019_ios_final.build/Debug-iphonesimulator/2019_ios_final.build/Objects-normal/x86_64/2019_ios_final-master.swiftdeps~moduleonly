@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "f13915dfcf46ae4647bf4e5825a110e1"
-build_time: [1559667401, 510677000]
+build_time: [1559671130, 94800000]
 inputs:
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/User.swift": [1559294347, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/LoginViewController.swift": [1559404610, 0]
@@ -15,8 +15,8 @@ inputs:
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/ChatMenuViewController.swift": [1559667289, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/Message.swift": [1559667384, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/RightImageTableViewCell.swift": [1559486876, 0]
-  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/SingalImageViewController.swift": [1559552927, 0]
-  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/SingalImage2ViewController.swift": [1559665300, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/SingalImageViewController.swift": [1559671025, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/SingalImage2ViewController.swift": [1559671040, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/Chat.swift": [1559667108, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/controller/NetworkController.swift": [1559550347, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/RightMessageTableViewCell.swift": [1559307336, 0]

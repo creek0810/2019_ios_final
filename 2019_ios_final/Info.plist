@@ -26,6 +26,8 @@
 	<string>Main</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>此APP將獲的存取相簿之權限  此APP將存取你的相簿</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>此APP將獲的存取相簿之權限  此APP將存取你的相簿</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
