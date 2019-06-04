@@ -237,6 +237,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So26UICollectionViewDataSourceP", "receiver"]
 - !private ["So24UICollectionViewDelegateP", "receiver"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "receiver"]
 - ["So18UIContentContainerP", "Friend"]
 - ["So18UIContentContainerP", "UIImage"]
 - ["So18UIContentContainerP", ""]
@@ -435,6 +436,7 @@ depends-nominal:
 - "So21UIAppearanceContainerP"
 - !private "So26UICollectionViewDataSourceP"
 - !private "So24UICollectionViewDelegateP"
+- !private "So34UICollectionViewDelegateFlowLayoutP"
 - "So18UIContentContainerP"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"

@@ -7,6 +7,7 @@ provides-member:
 - ["14_019_ios_final17ChatTableViewCellC", ""]
 provides-dynamic-lookup:
 - "awakeFromNib"
+- "dateLabel"
 - "messageLabel"
 - "nameLabel"
 - "propic"
@@ -32,6 +33,7 @@ depends-member:
 - ["14_019_ios_final17ChatTableViewCellC", "UIImageView"]
 - ["14_019_ios_final17ChatTableViewCellC", "UILabel"]
 - ["14_019_ios_final17ChatTableViewCellC", "awakeFromNib"]
+- ["14_019_ios_final17ChatTableViewCellC", "dateLabel"]
 - ["14_019_ios_final17ChatTableViewCellC", "init"]
 - ["14_019_ios_final17ChatTableViewCellC", "messageLabel"]
 - ["14_019_ios_final17ChatTableViewCellC", "nameLabel"]
@@ -66,6 +68,7 @@ depends-member:
 - ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "awakeFromNib"]
+- ["So8NSObjectC", "dateLabel"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "messageLabel"]
@@ -131,6 +134,7 @@ depends-member:
 - ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "awakeFromNib"]
+- ["So11UIResponderC", "dateLabel"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "messageLabel"]
@@ -147,6 +151,7 @@ depends-member:
 - ["So15UITableViewCellC", "UILabel"]
 - ["So15UITableViewCellC", ""]
 - ["So15UITableViewCellC", "awakeFromNib"]
+- ["So15UITableViewCellC", "dateLabel"]
 - ["So15UITableViewCellC", "init"]
 - !private ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "messageLabel"]
@@ -167,6 +172,7 @@ depends-member:
 - ["So6UIViewC", "UIImageView"]
 - ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "awakeFromNib"]
+- ["So6UIViewC", "dateLabel"]
 - ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "init"]
 - ["So6UIViewC", "messageLabel"]
@@ -246,4 +252,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e93d3d4f6d0e9e99db36108a55e5b1ca"
+interface-hash: "0f87d75c235b6ebd368cce80240b85e6"

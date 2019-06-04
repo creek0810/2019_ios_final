@@ -11,9 +11,7 @@ depends-top-level:
 - "Codable"
 - !private "Data"
 - "FileManager"
-- !private "FloatLiteralType"
 - "Friend"
-- !private "IntegerLiteralType"
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "String"
@@ -157,7 +155,6 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["So13NSFileManagerC", "default"]
 - ["So13NSFileManagerC", "urls"]
-- !private ["14_019_ios_final6FriendV", "CodingKeys"]
 - !private ["14_019_ios_final6FriendV", "Data"]
 - ["14_019_ios_final6FriendV", "FileManager"]
 - ["14_019_ios_final6FriendV", "Friend"]

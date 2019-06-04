@@ -20,6 +20,7 @@ depends-top-level:
 - "IntegerLiteralType"
 - "LoginViewController"
 - !private "NetworkController"
+- "StringLiteralType"
 - !private "UIAlertAction"
 - !private "UIAlertController"
 - "UIStoryboardSegue"

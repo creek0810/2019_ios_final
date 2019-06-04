@@ -184,16 +184,23 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class UICollectionView;
+@class UICollectionViewFlowLayout;
 @class UICollectionViewCell;
+@class UICollectionViewLayout;
+@class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC14_019_ios_final23AllImagesViewController")
-@interface AllImagesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface AllImagesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified imagesCollection;
+@property (nonatomic, weak) IBOutlet UICollectionViewFlowLayout * _Null_unspecified imagesCollectionLayout;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified imagesCollection;
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)viewDidLoad;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -215,7 +222,6 @@ SWIFT_CLASS("_TtC14_019_ios_final11AppDelegate")
 
 @class UITableView;
 @class UITableViewCell;
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC14_019_ios_final22ChatMenuViewController")
 @interface ChatMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
@@ -352,6 +358,15 @@ SWIFT_CLASS("_TtC14_019_ios_final25RightMessageTableViewCell")
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14_019_ios_final26SingalImage2ViewController")
+@interface SingalImage2ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified singalImage;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
