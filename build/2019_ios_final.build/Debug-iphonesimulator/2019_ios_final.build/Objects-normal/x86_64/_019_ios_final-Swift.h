@@ -238,6 +238,7 @@ SWIFT_CLASS("_TtC14_019_ios_final17ChatTableViewCell")
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified propic;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified messageLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateLabel;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
@@ -299,11 +300,12 @@ SWIFT_CLASS("_TtC14_019_ios_final23ImageCollectionViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
 
 SWIFT_CLASS("_TtC14_019_ios_final22LeftImageTableViewCell")
 @interface LeftImageTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified propic;
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified imageButton;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
@@ -361,6 +363,15 @@ SWIFT_CLASS("_TtC14_019_ios_final25SingalImageViewController")
 - (IBAction)showAllImages:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14_019_ios_final18testViewController")
+@interface testViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified imageButton;
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

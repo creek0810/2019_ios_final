@@ -51,7 +51,6 @@ depends-member:
 - ["14_019_ios_final24LeftMessageTableViewCellC", "UIImageView"]
 - ["14_019_ios_final24LeftMessageTableViewCellC", "UILabel"]
 - ["14_019_ios_final24LeftMessageTableViewCellC", "awakeFromNib"]
-- ["14_019_ios_final24LeftMessageTableViewCellC", "deinit"]
 - ["14_019_ios_final24LeftMessageTableViewCellC", "init"]
 - ["14_019_ios_final24LeftMessageTableViewCellC", "messageLabel"]
 - ["14_019_ios_final24LeftMessageTableViewCellC", "propic"]

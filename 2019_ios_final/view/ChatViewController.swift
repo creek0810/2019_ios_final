@@ -62,7 +62,26 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LeftImageCell", for: indexPath) as! LeftImageTableViewCell
                 if let image = Image.readImageFromFile(imageName: chatHistory[indexPath.row].message) {
-                    cell.imageButton.image = image
+                    cell.imageButton.setImage(image, for: .normal)
+                    cell.imageButton.imageView?.contentMode = .scaleAspectFit
+                    cell.imageButton.backgroundColor = UIColor.red
+                    print(UIScreen.main.bounds)
+                    //cell.imageButton.imageView?.image = image
+                    let frame_height = CGFloat(150)
+                    let frame_width = CGFloat(20)
+                    let tmp = cell.imageButton.frame
+                    let tmp2 = cell.imageButton.imageView?.frame
+                    let widthRatio = frame_width / image.size.width
+                    let heightRatio = frame_height / image.size.height
+                    if widthRatio < heightRatio {
+                        let delta = (frame_height - widthRatio * image.size.height) / 2
+                        print("top delta: \(delta)")
+                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0)
+                    } else {
+                        let delta = (frame_width - heightRatio * image.size.width) / 2
+                        print("left delta: \(delta)")
+                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -53, bottom: 0, right: 53)
+                    }
                 }
                 if let image = Image.readImageFromFile(imageName: receiver.propic) {
                     cell.propic.image = image
@@ -181,26 +200,21 @@ extension ChatViewController {
         if chatHistory != nil {
             for i in (0...chatHistory!.count-1) {
                 if chatHistory![i].name == message.sender || chatHistory![i].name == message.receiver {
-                    if message.type == Type.Image {
-                        chatHistory![i].message = "photo"
-                    } else {
-                        chatHistory![i].message = message.message
-                    }
+                    chatHistory![i].message = message
+                    chatHistory!.sort(by: <)
                     Chat.saveTofile(chatHistory: chatHistory!)
                     return
                 }
             }
-            //var result = NSArray(array:originalArray, copyItems: true)
-            
             let tmpName = (message.sender == User.shared.name) ? message.receiver : message.sender
-            
-            chatHistory!.append(Chat(name: tmpName, message: message.message))
+            chatHistory!.append(Chat(name: tmpName, message: message))
+            chatHistory!.sort(by: <)
             Chat.saveTofile(chatHistory: chatHistory!)
             return
         } else {
             chatHistory = [Chat]()
             let tmpName = (message.sender == User.shared.name) ? message.receiver : message.sender
-            chatHistory!.append(Chat(name: tmpName, message: message.message))
+            chatHistory!.append(Chat(name: tmpName, message: message))
             Chat.saveTofile(chatHistory: chatHistory!)
             return
             

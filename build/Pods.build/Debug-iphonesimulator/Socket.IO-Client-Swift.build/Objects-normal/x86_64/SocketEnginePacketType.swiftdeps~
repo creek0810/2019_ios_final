@@ -8,9 +8,9 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "=="
-- "FloatLiteralType"
+- !private "FloatLiteralType"
 - "Int"
-- "IntegerLiteralType"
+- !private "IntegerLiteralType"
 - "SocketEnginePacketType"
 - !private "unsafeBitCast"
 - !private "~="

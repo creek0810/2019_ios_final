@@ -59,7 +59,7 @@ depends-top-level:
 - "SocketPacket"
 - "SocketRawView"
 - "String"
-- !private "StringLiteralType"
+- "StringLiteralType"
 - "TernaryPrecedence"
 - "UUID"
 - "UnicodeScalarType"

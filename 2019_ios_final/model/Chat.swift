@@ -11,7 +11,7 @@ import UIKit
 
 struct Chat: Codable {
     var name: String
-    var message: String
+    var message: Message
     
     static let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
@@ -32,5 +32,24 @@ struct Chat: Codable {
         } else {
             return nil
         }
+    }
+}
+extension Chat: Comparable {
+    static func == (lhs: Chat, rhs: Chat) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyy-MM-dd HH:mm:ss"
+        if let lhs_date = dateFormatter.date(from: lhs.message.timeStamp), let rhs_date = dateFormatter.date(from: rhs.message.timeStamp) {
+            return lhs_date == rhs_date
+        }
+        return false
+    }
+    
+    static func < (lhs: Chat, rhs: Chat) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyy-MM-dd HH:mm:ss"
+        if let lhs_date = dateFormatter.date(from: lhs.message.timeStamp), let rhs_date = dateFormatter.date(from: rhs.message.timeStamp) {
+            return lhs_date > rhs_date
+        }
+        return false
     }
 }

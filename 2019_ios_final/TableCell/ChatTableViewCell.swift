@@ -13,6 +13,7 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet weak var propic: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -22,7 +22,12 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         let curChat = chatList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatTableViewCell
         cell.nameLabel.text = curChat.name
-        cell.messageLabel.text = curChat.message
+        cell.dateLabel.text = curChat.message.timeStamp
+        if curChat.message.type == Type.Image {
+            cell.messageLabel.text = "Photo"
+        } else {
+            cell.messageLabel.text = curChat.message.message
+        }
         if let image = Image.readImageFromFile(imageName: Friend.getPropic(name: curChat.name) ?? "") {
             cell.propic.image = image
         }

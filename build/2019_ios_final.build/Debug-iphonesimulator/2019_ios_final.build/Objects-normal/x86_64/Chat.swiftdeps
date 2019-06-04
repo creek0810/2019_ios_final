@@ -1,17 +1,29 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "Chat"
+- "=="
+- "<"
 provides-nominal:
 - "14_019_ios_final4ChatV"
 provides-member:
 - ["14_019_ios_final4ChatV", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "<"
+- "<="
 - "=="
+- ">"
+- ">="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
 - "Chat"
 - "Codable"
+- "Comparable"
 - !private "Data"
+- !private "DateFormatter"
 - "FileManager"
+- "Message"
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "String"
@@ -26,14 +38,21 @@ depends-member:
 - !private ["SK", "write"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "date"]
+- !private ["s7CVarArgP", "dateFormat"]
 - ["s7CVarArgP", "default"]
 - ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "urls"]
+- ["14_019_ios_final4ChatV", "<"]
+- ["14_019_ios_final4ChatV", "=="]
+- ["14_019_ios_final4ChatV", "Bool"]
 - ["14_019_ios_final4ChatV", "Chat"]
 - !private ["14_019_ios_final4ChatV", "Data"]
+- !private ["14_019_ios_final4ChatV", "DateFormatter"]
 - ["14_019_ios_final4ChatV", "FileManager"]
+- ["14_019_ios_final4ChatV", "Message"]
 - !private ["14_019_ios_final4ChatV", "PropertyListDecoder"]
 - !private ["14_019_ios_final4ChatV", "PropertyListEncoder"]
 - ["14_019_ios_final4ChatV", "String"]
@@ -57,11 +76,24 @@ depends-member:
 - !private ["Sl", "init"]
 - !private ["Sl", "init"]
 - !private ["Sl", "write"]
+- !private ["SL", "Chat"]
+- !private ["SL", "Data"]
+- !private ["SL", "DateFormatter"]
+- ["SL", "FileManager"]
+- !private ["SL", "PropertyListDecoder"]
+- !private ["SL", "PropertyListEncoder"]
+- ["SL", ""]
+- !private ["SL", "documentDirectory"]
+- ["SL", "encode"]
+- ["SL", "init"]
 - !private ["SL", "init"]
-- !private ["SL", "init"]
+- !private ["SL", "message"]
+- !private ["SL", "name"]
 - !private ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
 - !private ["s28CustomDebugStringConvertibleP", "appendingPathExtension"]
+- !private ["s28CustomDebugStringConvertibleP", "date"]
+- !private ["s28CustomDebugStringConvertibleP", "dateFormat"]
 - ["s28CustomDebugStringConvertibleP", "debugDescription"]
 - ["s28CustomDebugStringConvertibleP", "default"]
 - ["s28CustomDebugStringConvertibleP", "description"]
@@ -88,6 +120,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "appendingPathComponent"]
 - !private ["s23CustomStringConvertibleP", "appendingPathExtension"]
+- !private ["s23CustomStringConvertibleP", "date"]
+- !private ["s23CustomStringConvertibleP", "dateFormat"]
 - ["s23CustomStringConvertibleP", "debugDescription"]
 - ["s23CustomStringConvertibleP", "default"]
 - ["s23CustomStringConvertibleP", "description"]
@@ -102,8 +136,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "write"]
 - !private ["10Foundation4DataV", "init"]
 - !private ["10Foundation4DataV", "write"]
+- !private ["So15NSDateFormatterC", "date"]
+- !private ["So15NSDateFormatterC", "dateFormat"]
+- !private ["So15NSDateFormatterC", "init"]
 - !private ["Se", "Chat"]
 - !private ["Se", "Data"]
+- !private ["Se", "DateFormatter"]
 - ["Se", "FileManager"]
 - !private ["Se", "PropertyListDecoder"]
 - !private ["Se", "PropertyListEncoder"]
@@ -118,10 +156,12 @@ depends-member:
 - !private ["Se", "init"]
 - !private ["Se", "message"]
 - !private ["Se", "name"]
+- !private ["Se", "timeStamp"]
 - !private ["Se", "write"]
 - !private ["s7DecoderP", "container"]
 - !private ["SE", "Chat"]
 - !private ["SE", "Data"]
+- !private ["SE", "DateFormatter"]
 - ["SE", "FileManager"]
 - !private ["SE", "PropertyListDecoder"]
 - !private ["SE", "PropertyListEncoder"]
@@ -136,22 +176,34 @@ depends-member:
 - !private ["SE", "init"]
 - !private ["SE", "message"]
 - !private ["SE", "name"]
+- !private ["SE", "timeStamp"]
 - !private ["SE", "write"]
 - !private ["s7EncoderP", "container"]
-- !private ["SQ", ""]
+- !private ["SQ", "Chat"]
+- !private ["SQ", "Data"]
+- !private ["SQ", "DateFormatter"]
+- ["SQ", "FileManager"]
+- !private ["SQ", "PropertyListDecoder"]
+- !private ["SQ", "PropertyListEncoder"]
+- ["SQ", ""]
 - !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "appendingPathComponent"]
 - !private ["SQ", "appendingPathExtension"]
+- !private ["SQ", "date"]
+- !private ["SQ", "dateFormat"]
 - ["SQ", "debugDescription"]
 - ["SQ", "default"]
 - ["SQ", "description"]
 - ["SQ", "documentDirectory"]
+- ["SQ", "encode"]
 - ["SQ", "first"]
 - ["SQ", "hash"]
 - ["SQ", "hashValue"]
 - ["SQ", "init"]
 - !private ["SQ", "init"]
 - ["SQ", "intValue"]
+- !private ["SQ", "message"]
+- !private ["SQ", "name"]
 - ["SQ", "stringValue"]
 - ["SQ", "urls"]
 - ["SQ", "userDomainMask"]
@@ -167,10 +219,15 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["So13NSFileManagerC", "default"]
 - ["So13NSFileManagerC", "urls"]
+- !private ["So11NSFormatterC", "date"]
+- !private ["So11NSFormatterC", "dateFormat"]
+- !private ["So11NSFormatterC", "init"]
 - !private ["SH", ""]
 - !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "appendingPathComponent"]
 - !private ["SH", "appendingPathExtension"]
+- !private ["SH", "date"]
+- !private ["SH", "dateFormat"]
 - ["SH", "debugDescription"]
 - ["SH", "default"]
 - ["SH", "description"]
@@ -192,14 +249,28 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
+- ["14_019_ios_final7MessageV", "deinit"]
+- !private ["14_019_ios_final7MessageV", "timeStamp"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - ["SM", "first"]
 - !private ["SM", "init"]
 - !private ["SM", "write"]
+- !private ["So8NSCodingP", "date"]
+- !private ["So8NSCodingP", "dateFormat"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "date"]
+- !private ["So9NSCopyingP", "dateFormat"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So8NSObjectC", "date"]
+- !private ["So8NSObjectC", "dateFormat"]
 - ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "urls"]
+- !private ["So8NSObjectP", "date"]
+- !private ["So8NSObjectP", "dateFormat"]
 - ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "urls"]
 - ["s9OptionSetP", "userDomainMask"]
 - !private ["10Foundation19PropertyListDecoderC", "decode"]
@@ -256,7 +327,10 @@ depends-member:
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "urls"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
@@ -276,12 +350,13 @@ depends-nominal:
 - "14_019_ios_final4ChatV"
 - "s9CodingKeyP"
 - "Sl"
-- !private "SL"
+- "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "10Foundation4DataV"
+- !private "So15NSDateFormatterC"
 - "Se"
 - !private "s7DecoderP"
 - "SE"
@@ -293,6 +368,7 @@ depends-nominal:
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "So13NSFileManagerC"
+- !private "So11NSFormatterC"
 - "SH"
 - !private "s6HasherV"
 - !private "s22KeyedDecodingContainerV"
@@ -300,8 +376,11 @@ depends-nominal:
 - !private "s22KeyedEncodingContainerV"
 - !private "s30KeyedEncodingContainerProtocolP"
 - !private "s25LosslessStringConvertibleP"
+- "14_019_ios_final7MessageV"
 - !private "s10MirrorPathP"
 - "SM"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - "s9OptionSetP"
@@ -367,4 +446,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3345991eb4d0bec32cb0a0b7f89773a3"
+interface-hash: "fd0329d2e99d581efe71d1d8f9ff0379"
