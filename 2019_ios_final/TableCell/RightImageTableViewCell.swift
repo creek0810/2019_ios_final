@@ -10,7 +10,7 @@ import UIKit
 
 class RightImageTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imageButton: UIButton!
+    @IBOutlet weak var imageButton: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -11,7 +11,7 @@ import UIKit
 class LeftImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var propic: UIImageView!
-    @IBOutlet weak var imageButton: UIButton!
+    @IBOutlet weak var imageButton: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -65,32 +65,31 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if curMessage.sender == User.shared.name {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RightImageCell", for: indexPath) as! RightImageTableViewCell
                 if let image = Image.getImage(imageName: chatHistory[indexPath.row].message) {
-                    cell.imageButton.setImage(image, for: .normal)
-                    cell.imageButton.imageView?.contentMode = .scaleAspectFit
+                    cell.imageButton.image = image
                     let widthRatio = rightFrameWidth / image.size.width
                     let heightRatio = rightFrameHeight / image.size.height
                     if widthRatio < heightRatio {
                         let delta = (rightFrameHeight - widthRatio * image.size.height) / 2
-                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0)
+                        cell.imageButton.image = image.withAlignmentRectInsets(UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0))
+
                     } else {
                         let delta = (rightFrameWidth - heightRatio * image.size.width) / 2
-                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: delta, bottom: 0, right: -delta)
+                        cell.imageButton.image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -delta, bottom: 0, right: delta))
                     }
                 }
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LeftImageCell", for: indexPath) as! LeftImageTableViewCell
                 if let image = Image.getImage(imageName: chatHistory[indexPath.row].message) {
-                    cell.imageButton.setImage(image, for: .normal)
-                    cell.imageButton.imageView?.contentMode = .scaleAspectFit
+                    cell.imageButton.image = image
                     let widthRatio = leftFrameWidth / image.size.width
                     let heightRatio = leftFrameHeight / image.size.height
                     if widthRatio < heightRatio {
                         let delta = (leftFrameHeight - widthRatio * image.size.height) / 2
-                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0)
+                        cell.imageButton.image = image.withAlignmentRectInsets(UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0))
                     } else {
                         let delta = (leftFrameWidth - heightRatio * image.size.width) / 2
-                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -delta, bottom: 0, right: delta)
+                        cell.imageButton.image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: delta, bottom: 0, right: -delta))
                     }
                 }
                 if let image = Image.getImage(imageName: receiver.propic) {
@@ -104,14 +103,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if chatHistory[indexPath.row].type == Type.Image {
-            if chatHistory[indexPath.row].sender == User.shared.name {
-                let cell = chatTable.cellForRow(at: indexPath) as! RightImageTableViewCell
-                self.performSegue(withIdentifier: "showSingalImage", sender: cell.imageButton.image)
-            } else {
-                let cell = chatTable.cellForRow(at: indexPath) as! LeftImageTableViewCell
-                self.performSegue(withIdentifier: "showSingalImage", sender: cell.imageButton.image)
-            }
-            
+            self.performSegue(withIdentifier: "showSingalImage", sender: chatHistory[indexPath.row].message)
         }
     }
     
@@ -161,7 +153,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSingalImage", let image = sender as? UIImage {
+        if segue.identifier == "showSingalImage", let imageName = sender as? String, let image = Image.getImage(imageName: imageName) {
             let controller = segue.destination as! SingalImageViewController
             controller.tmpImage = image
             controller.receiver = receiver

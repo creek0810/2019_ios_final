@@ -11,12 +11,15 @@ depends-top-level:
 - "Codable"
 - !private "Data"
 - "FileManager"
+- !private "FloatLiteralType"
 - !private "Friend"
 - "Image"
+- !private "IntegerLiteralType"
 - !private "Message"
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "String"
+- !private "StringLiteralType"
 - "UIImage"
 - !private "URL"
 - !private "UnicodeScalarType"
@@ -62,6 +65,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "intValue"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
 - ["s28CustomDebugStringConvertibleP", "stringValue"]
 - ["s28CustomDebugStringConvertibleP", "urls"]
 - !private ["s28CustomDebugStringConvertibleP", "write"]
@@ -70,6 +74,7 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "appendingPathExtension"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "path"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - ["s17CustomReflectableP", "first"]
 - !private ["s17CustomReflectableP", "init"]
@@ -88,6 +93,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "intValue"]
+- !private ["s23CustomStringConvertibleP", "path"]
 - ["s23CustomStringConvertibleP", "stringValue"]
 - ["s23CustomStringConvertibleP", "urls"]
 - !private ["s23CustomStringConvertibleP", "write"]
@@ -100,7 +106,7 @@ depends-member:
 - !private ["Se", "Message"]
 - !private ["Se", "PropertyListDecoder"]
 - !private ["Se", "PropertyListEncoder"]
-- ["Se", "UIImage"]
+- !private ["Se", "UIImage"]
 - !private ["Se", "URL"]
 - !private ["Se", "User"]
 - ["Se", ""]
@@ -114,6 +120,7 @@ depends-member:
 - !private ["Se", "imageName"]
 - ["Se", "init"]
 - !private ["Se", "init"]
+- !private ["Se", "path"]
 - !private ["Se", "write"]
 - !private ["s7DecoderP", "container"]
 - !private ["SE", "Data"]
@@ -123,7 +130,7 @@ depends-member:
 - !private ["SE", "Message"]
 - !private ["SE", "PropertyListDecoder"]
 - !private ["SE", "PropertyListEncoder"]
-- ["SE", "UIImage"]
+- !private ["SE", "UIImage"]
 - !private ["SE", "URL"]
 - !private ["SE", "User"]
 - ["SE", ""]
@@ -137,6 +144,7 @@ depends-member:
 - !private ["SE", "imageName"]
 - ["SE", "init"]
 - !private ["SE", "init"]
+- !private ["SE", "path"]
 - !private ["SE", "write"]
 - !private ["s7EncoderP", "container"]
 - !private ["SQ", ""]
@@ -153,6 +161,7 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "init"]
 - ["SQ", "intValue"]
+- !private ["SQ", "path"]
 - ["SQ", "stringValue"]
 - ["SQ", "urls"]
 - ["SQ", "userDomainMask"]
@@ -183,10 +192,12 @@ depends-member:
 - ["SH", "init"]
 - !private ["SH", "init"]
 - ["SH", "intValue"]
+- !private ["SH", "path"]
 - ["SH", "stringValue"]
 - ["SH", "urls"]
 - !private ["SH", "write"]
 - !private ["s6HasherV", "combine"]
+- !private ["14_019_ios_final5ImageV", "CodingKeys"]
 - !private ["14_019_ios_final5ImageV", "Data"]
 - ["14_019_ios_final5ImageV", "FileManager"]
 - !private ["14_019_ios_final5ImageV", "Friend"]
@@ -201,6 +212,7 @@ depends-member:
 - ["14_019_ios_final5ImageV", "deinit"]
 - ["14_019_ios_final5ImageV", "documentDirectory"]
 - ["14_019_ios_final5ImageV", "encode"]
+- ["14_019_ios_final5ImageV", "getImage"]
 - ["14_019_ios_final5ImageV", "imageName"]
 - ["14_019_ios_final5ImageV", "init"]
 - ["14_019_ios_final5ImageV", "readImagesNameFromFile"]
@@ -218,10 +230,16 @@ depends-member:
 - ["SM", "first"]
 - !private ["SM", "init"]
 - !private ["SM", "write"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
 - ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "urls"]
 - ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "urls"]
+- !private ["So14NSSecureCodingP", "init"]
 - ["s9OptionSetP", "userDomainMask"]
 - !private ["10Foundation19PropertyListDecoderC", "decode"]
 - !private ["10Foundation19PropertyListDecoderC", "init"]
@@ -239,6 +257,7 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
 - !private ["10Foundation20ReferenceConvertibleP", "appendingPathExtension"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "path"]
 - !private ["10Foundation20ReferenceConvertibleP", "write"]
 - ["So21NSSearchPathDirectoryV", "documentDirectory"]
 - ["So22NSSearchPathDomainMaskV", "userDomainMask"]
@@ -260,9 +279,13 @@ depends-member:
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So7UIImageC", "init"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - !private ["10Foundation3URLV", "appendingPathComponent"]
 - !private ["10Foundation3URLV", "appendingPathExtension"]
 - !private ["10Foundation3URLV", "init"]
+- !private ["10Foundation3URLV", "path"]
 - !private ["14_019_ios_final4UserV", "name"]
 - !private ["14_019_ios_final4UserV", "shared"]
 - ["s24_DestructorSafeContainerP", "first"]
@@ -278,10 +301,13 @@ depends-member:
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathExtension"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "path"]
+- !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "urls"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
@@ -289,6 +315,7 @@ depends-member:
 - ["s21_ObjectiveCBridgeableP", "first"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "path"]
 - !private ["s21_ObjectiveCBridgeableP", "write"]
 - !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
@@ -329,8 +356,12 @@ depends-nominal:
 - !private "14_019_ios_final7MessageV"
 - !private "s10MirrorPathP"
 - "SM"
+- !private "So8NSCodingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "So14NSSecureCodingP"
 - "s9OptionSetP"
 - !private "10Foundation19PropertyListDecoderC"
 - !private "10Foundation19PropertyListEncoderC"
@@ -347,6 +378,9 @@ depends-nominal:
 - !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So7UIImageC"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
 - !private "10Foundation3URLV"
 - !private "14_019_ios_final4UserV"
 - "s24_DestructorSafeContainerP"
@@ -356,6 +390,7 @@ depends-nominal:
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s26_ExpressibleByImageLiteralP"
 - !private "s33_ExpressibleByStringInterpolationP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -395,4 +430,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8794e23fd6bd30ab93b7af7319c3ccc4"
+interface-hash: "18610ed6653f32cffe71ad0605e963cb"

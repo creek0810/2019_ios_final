@@ -13,7 +13,6 @@ provides-dynamic-lookup:
 depends-top-level:
 - "Bool"
 - "LeftImageTableViewCell"
-- "UIButton"
 - "UIImageView"
 - "UITableViewCell"
 depends-member:
@@ -48,7 +47,6 @@ depends-member:
 - !private ["SH", "init"]
 - !private ["SH", "setSelected"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "Bool"]
-- ["14_019_ios_final22LeftImageTableViewCellC", "UIButton"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "UIImageView"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "awakeFromNib"]
 - ["14_019_ios_final22LeftImageTableViewCellC", "imageButton"]
@@ -61,7 +59,6 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "setSelected"]
 - ["So8NSObjectC", "Bool"]
-- ["So8NSObjectC", "UIButton"]
 - ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "awakeFromNib"]
 - ["So8NSObjectC", "imageButton"]
@@ -125,7 +122,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So11UIResponderC", "Bool"]
-- ["So11UIResponderC", "UIButton"]
 - ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "awakeFromNib"]
 - ["So11UIResponderC", "imageButton"]
@@ -139,7 +135,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So15UITableViewCellC", "Bool"]
-- ["So15UITableViewCellC", "UIButton"]
 - ["So15UITableViewCellC", "UIImageView"]
 - ["So15UITableViewCellC", ""]
 - ["So15UITableViewCellC", "awakeFromNib"]
@@ -159,7 +154,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "setSelected"]
 - ["So6UIViewC", "Bool"]
-- ["So6UIViewC", "UIButton"]
 - ["So6UIViewC", "UIImageView"]
 - ["So6UIViewC", "awakeFromNib"]
 - ["So6UIViewC", "imageButton"]
@@ -240,4 +234,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9c41401d4ced93ddefc046eead054ee1"
+interface-hash: "3cbe27b38f937adf071bc219ae0b4427"

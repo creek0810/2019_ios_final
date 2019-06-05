@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -280,25 +280,26 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO8-Td-9Rz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5E-gd-3n9">
                                                     <rect key="frame" x="75" y="21" width="275" height="150"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="150" id="yxI-kb-iH4"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="VfS-9g-EES"/>
+                                                        <constraint firstAttribute="height" constant="150" id="vmS-A9-5wJ"/>
                                                     </constraints>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Vxb-BN-W7Z" firstAttribute="top" secondItem="R0v-gP-Slt" secondAttribute="topMargin" constant="10" id="6Bg-9Z-bLO"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="nO8-Td-9Rz" secondAttribute="bottom" constant="10" id="CB4-YX-UVm"/>
+                                                <constraint firstItem="R5E-gd-3n9" firstAttribute="top" secondItem="R0v-gP-Slt" secondAttribute="topMargin" constant="10" id="7Hw-VS-n14"/>
+                                                <constraint firstItem="R5E-gd-3n9" firstAttribute="leading" secondItem="Vxb-BN-W7Z" secondAttribute="trailing" constant="10" id="I1c-in-npR"/>
                                                 <constraint firstItem="Vxb-BN-W7Z" firstAttribute="leading" secondItem="R0v-gP-Slt" secondAttribute="leadingMargin" id="Idd-Bm-Led"/>
-                                                <constraint firstItem="nO8-Td-9Rz" firstAttribute="leading" secondItem="Vxb-BN-W7Z" secondAttribute="trailing" constant="10" id="L7B-5K-amz"/>
-                                                <constraint firstItem="nO8-Td-9Rz" firstAttribute="trailing" secondItem="R0v-gP-Slt" secondAttribute="trailingMargin" constant="-10" id="VMM-lZ-GDp"/>
-                                                <constraint firstItem="nO8-Td-9Rz" firstAttribute="top" secondItem="R0v-gP-Slt" secondAttribute="topMargin" constant="10" id="ig3-Fq-DAe"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="R5E-gd-3n9" secondAttribute="bottom" constant="10" id="aZe-OR-rLC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="R5E-gd-3n9" secondAttribute="trailing" constant="10" id="hpQ-5c-4I3"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Vxb-BN-W7Z" secondAttribute="bottom" constant="10" id="tqz-eI-6UP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageButton" destination="nO8-Td-9Rz" id="pxF-EC-avl"/>
+                                            <outlet property="imageButton" destination="R5E-gd-3n9" id="yuE-5i-8cP"/>
                                             <outlet property="propic" destination="Vxb-BN-W7Z" id="z6v-UH-H4U"/>
                                         </connections>
                                     </tableViewCell>
@@ -309,22 +310,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngZ-07-Wq3">
-                                                    <rect key="frame" x="25" y="21" width="335" height="150"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NnP-gb-2xj">
+                                                    <rect key="frame" x="25" y="21" width="325" height="150"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="150" id="tt7-6r-mNG"/>
+                                                        <constraint firstAttribute="height" constant="150" id="0MS-SR-AWa"/>
                                                     </constraints>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ngZ-07-Wq3" secondAttribute="trailing" id="9jS-Qx-eAs"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ngZ-07-Wq3" secondAttribute="bottom" constant="10" id="GV0-9s-Zeb"/>
-                                                <constraint firstItem="ngZ-07-Wq3" firstAttribute="top" secondItem="m4j-pX-shB" secondAttribute="topMargin" constant="10" id="cht-De-6kO"/>
-                                                <constraint firstItem="ngZ-07-Wq3" firstAttribute="leading" secondItem="m4j-pX-shB" secondAttribute="leadingMargin" constant="10" id="hVO-8D-9qE"/>
+                                                <constraint firstItem="NnP-gb-2xj" firstAttribute="leading" secondItem="m4j-pX-shB" secondAttribute="leadingMargin" constant="10" id="ANc-bu-sPt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NnP-gb-2xj" secondAttribute="bottom" constant="10" id="G8A-1g-WOf"/>
+                                                <constraint firstItem="NnP-gb-2xj" firstAttribute="top" secondItem="m4j-pX-shB" secondAttribute="topMargin" constant="10" id="Ivw-WJ-rTs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NnP-gb-2xj" secondAttribute="trailing" constant="10" id="ana-yR-LLo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageButton" destination="ngZ-07-Wq3" id="BP3-o0-HFG"/>
+                                            <outlet property="imageButton" destination="NnP-gb-2xj" id="gGw-op-uyy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -720,12 +721,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="all" width="25" height="25"/>
-        <image name="broken image" width="170.66667175292969" height="170.66667175292969"/>
-        <image name="chat" width="25" height="25"/>
-        <image name="download" width="25" height="25"/>
-        <image name="friend" width="25" height="25"/>
-        <image name="image" width="25" height="25"/>
+        <image name="all" width="40" height="40"/>
+        <image name="broken image" width="384" height="384"/>
+        <image name="chat" width="37.5" height="37.5"/>
+        <image name="download" width="37.5" height="37.5"/>
+        <image name="friend" width="40" height="40"/>
+        <image name="image" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Bg5-7i-p8k"/>
