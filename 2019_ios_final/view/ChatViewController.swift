@@ -8,10 +8,11 @@
 
 // todo: handle socket
 // todo: adjust image offset
-// todo: message from another user
+// todo: message from another user to notification
 
 import UIKit
 import SocketIO
+
 
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -173,7 +174,7 @@ extension ChatViewController {
         socket.on(clientEvent: .connect) { data, ack in
             socket.emit("post name", ["sender": User.shared.name])
         }
-        // need to deal with the message ffrom another people
+        // need to deal with the message from another people
         socket.on("get msg") { rawData, ack in
             if let data = rawData[0] as? NSDictionary {
                 let message = self.jsonToMessage(data: data)
@@ -183,14 +184,12 @@ extension ChatViewController {
                     let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
                     self.chatTable.insertRows(at: [indexPath], with: .automatic)
                     Message.saveMessagesToFile(receiver: self.receiver.name, msgs: self.chatHistory)
-                    if message.receiver == User.shared.name {
-                        socket.emit("get msg success", [
-                            "sender": data["sender"] as! String,
-                            "receiver": data["receiver"] as! String,
-                            "message": data["message"] as! String,
-                            "timeStamp": data["timeStamp"] as! String
-                        ])
-                    }
+                    
+                    socket.emit("get msg success", [
+                        "sender": User.shared.name,
+                        "timeStamp": data["timeStamp"] as! String
+                    ])
+                    
                     if message.type == Type.Image {
                         var images: [Image] = [Image]()
                         let tmpImages = Image.readImagesNameFromFile(receiver: self.receiver.name)
@@ -200,8 +199,43 @@ extension ChatViewController {
                         images.append(Image(imageName: message.message))
                         Image.saveImagesNameToFile(receiver: self.receiver.name, images: images)
                     }
+                    self.updateChatHistory(receiver: self.receiver.name, message: message)
+
+                } else {
+                    var receiver = ""
+                    if message.receiver == User.shared.name {
+                        receiver = message.sender
+                    } else {
+                        receiver = message.receiver
+                    }
+                    
+                    var tmpChatHistory = Message.readMessagesFromFile(receiver: receiver)
+                    if tmpChatHistory == nil {
+                        tmpChatHistory = [Message]()
+                        tmpChatHistory!.append(message)
+                    } else {
+                        tmpChatHistory!.append(message)
+                    }
+                    
+                    Message.saveMessagesToFile(receiver: receiver, msgs: tmpChatHistory!)
+                    
+                    socket.emit("get msg success", [
+                        "sender": User.shared.name,
+                        "timeStamp": data["timeStamp"] as! String
+                    ])
+                    
+                    if message.type == Type.Image {
+                        var images: [Image] = [Image]()
+                        let tmpImages = Image.readImagesNameFromFile(receiver: self.receiver.name)
+                        if let tmpImages = tmpImages {
+                            images = tmpImages
+                        }
+                        images.append(Image(imageName: message.message))
+                        Image.saveImagesNameToFile(receiver: self.receiver.name, images: images)
+                    }
+                    self.updateChatHistory(receiver: receiver, message: message)
+
                 }
-                self.updateChatHistory(message: message)
             }
         }
         socket.connect()
@@ -219,7 +253,7 @@ extension ChatViewController {
         }
     }
     
-    func updateChatHistory(message: Message) {
+    func updateChatHistory(receiver: String, message: Message) {
         
         var chatHistory = Chat.readFromFile()
         if chatHistory != nil {
