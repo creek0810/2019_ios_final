@@ -16,14 +16,22 @@ import SocketIO
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var receiver: Friend = Friend(propic: "test", name: "")
-    var chatHistory: [Message] = [Message]()
+    var chatHistory: [Message] = [
+        Message(type: Type.Image, sender: "", receiver: User.shared.name, message: "", timeStamp: ""),
+        Message(type: Type.Image, sender: User.shared.name, receiver: "", message: "", timeStamp: "")
+    ]
+    var first = true
     
     let manager = SocketManager(socketURL: URL(string: "http://140.121.197.197:6700")!, config: [.log(true), .compress])
-    
+    let leftFrameHeight = CGFloat(150)
+    var leftFrameWidth = CGFloat(0)
+    let rightFrameHeight = CGFloat(150)
+    var rightFrameWidth = CGFloat(0)
     
     @IBOutlet weak var inputMessage: UITextField!
     @IBOutlet weak var chatTable: UITableView!
     @IBOutlet weak var nameLabel: UINavigationItem!
+    @IBOutlet weak var maskView: UIView!
     
     @IBAction func sendMessage(_ sender: Any) {
         let messageText = inputMessage.text!
@@ -56,7 +64,17 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if curMessage.sender == User.shared.name {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RightImageCell", for: indexPath) as! RightImageTableViewCell
                 if let image = Image.getImage(imageName: chatHistory[indexPath.row].message) {
-                    cell.imageButton.image = image
+                    cell.imageButton.setImage(image, for: .normal)
+                    cell.imageButton.imageView?.contentMode = .scaleAspectFit
+                    let widthRatio = rightFrameWidth / image.size.width
+                    let heightRatio = rightFrameHeight / image.size.height
+                    if widthRatio < heightRatio {
+                        let delta = (rightFrameHeight - widthRatio * image.size.height) / 2
+                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0)
+                    } else {
+                        let delta = (rightFrameWidth - heightRatio * image.size.width) / 2
+                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: delta, bottom: 0, right: -delta)
+                    }
                 }
                 return cell
             } else {
@@ -64,23 +82,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 if let image = Image.getImage(imageName: chatHistory[indexPath.row].message) {
                     cell.imageButton.setImage(image, for: .normal)
                     cell.imageButton.imageView?.contentMode = .scaleAspectFit
-                    cell.imageButton.backgroundColor = UIColor.red
-                    print(UIScreen.main.bounds)
-                    //cell.imageButton.imageView?.image = image
-                    let frame_height = CGFloat(150)
-                    let frame_width = CGFloat(20)
-                    let tmp = cell.imageButton.frame
-                    let tmp2 = cell.imageButton.imageView?.frame
-                    let widthRatio = frame_width / image.size.width
-                    let heightRatio = frame_height / image.size.height
+                    let widthRatio = leftFrameWidth / image.size.width
+                    let heightRatio = leftFrameHeight / image.size.height
                     if widthRatio < heightRatio {
-                        let delta = (frame_height - widthRatio * image.size.height) / 2
-                        print("top delta: \(delta)")
+                        let delta = (leftFrameHeight - widthRatio * image.size.height) / 2
                         cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0)
                     } else {
-                        let delta = (frame_width - heightRatio * image.size.width) / 2
-                        print("left delta: \(delta)")
-                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -53, bottom: 0, right: 53)
+                        let delta = (leftFrameWidth - heightRatio * image.size.width) / 2
+                        cell.imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -delta, bottom: 0, right: delta)
                     }
                 }
                 if let image = Image.getImage(imageName: receiver.propic) {
@@ -126,13 +135,30 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         chatTable.dataSource = self
         nameLabel.title = receiver.name
         connectSocket()
-        if let history = Message.readMessagesFromFile(receiver: receiver.name) {
-            chatHistory = history
-            chatTable.reloadData()
-        }
-        Message.saveMessagesToFile(receiver: receiver.name, msgs: chatHistory)
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if first {
+            first = false
+            let leftCell = chatTable.cellForRow(at: IndexPath(row: 0, section: 0)) as! LeftImageTableViewCell
+            leftFrameWidth = leftCell.imageButton.frame.width
+            
+            let rightCell = chatTable.cellForRow(at: IndexPath(row: 1, section: 0)) as! RightImageTableViewCell
+            rightFrameWidth = rightCell.imageButton.frame.width
+            
+            if let history = Message.readMessagesFromFile(receiver: receiver.name) {
+                chatHistory = history
+            } else {
+                chatHistory = [Message]()
+            }
+            chatTable.reloadData()
+            Message.saveMessagesToFile(receiver: receiver.name, msgs: chatHistory)
+            scrollToBottom()
+            
+            maskView.removeFromSuperview()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSingalImage", let image = sender as? UIImage {
             let controller = segue.destination as! SingalImageViewController
@@ -154,7 +180,8 @@ extension ChatViewController {
                 // from cur user
                 if message.receiver == self.receiver.name || message.sender == self.receiver.name {
                     self.chatHistory.append(message)
-                    self.chatTable.reloadData()
+                    let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
+                    self.chatTable.insertRows(at: [indexPath], with: .automatic)
                     Message.saveMessagesToFile(receiver: self.receiver.name, msgs: self.chatHistory)
                     if message.receiver == User.shared.name {
                         socket.emit("get msg success", [
@@ -174,9 +201,7 @@ extension ChatViewController {
                         Image.saveImagesNameToFile(receiver: self.receiver.name, images: images)
                     }
                 }
-                
                 self.updateChatHistory(message: message)
-
             }
         }
         socket.connect()
@@ -203,6 +228,7 @@ extension ChatViewController {
                     chatHistory![i].message = message
                     chatHistory!.sort(by: <)
                     Chat.saveTofile(chatHistory: chatHistory!)
+                    scrollToBottom()
                     return
                 }
             }
@@ -210,14 +236,22 @@ extension ChatViewController {
             chatHistory!.append(Chat(name: tmpName, message: message))
             chatHistory!.sort(by: <)
             Chat.saveTofile(chatHistory: chatHistory!)
+            scrollToBottom()
             return
         } else {
             chatHistory = [Chat]()
             let tmpName = (message.sender == User.shared.name) ? message.receiver : message.sender
             chatHistory!.append(Chat(name: tmpName, message: message))
             Chat.saveTofile(chatHistory: chatHistory!)
+            scrollToBottom()
             return
-            
+        }
+    }
+    
+    func scrollToBottom() {
+        if chatHistory.count >= 1 {
+            let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
+            self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: false)
         }
     }
 }

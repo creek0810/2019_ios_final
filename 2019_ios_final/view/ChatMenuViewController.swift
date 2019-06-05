@@ -22,7 +22,27 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         let curChat = chatList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatTableViewCell
         cell.nameLabel.text = curChat.name
-        cell.dateLabel.text = curChat.message.timeStamp
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyy-MM-dd HH:mm:ss"
+        if let lastTime = dateFormatter.date(from: curChat.message.timeStamp){
+            let today = Date()
+            let result = today.compare(with: lastTime, only: .day)
+            var dateString = ""
+            if result == 0 {
+                dateFormatter.dateFormat = "HH:mm"
+                dateString = dateFormatter.string(from: lastTime)
+            } else if result == 1 {
+                dateString = "yesterday"
+            } else if today.compare(with: lastTime, only: .year) == 1{
+                dateFormatter.dateFormat = "yyy/MM/dd"
+                dateString = dateFormatter.string(from: lastTime)
+            } else {
+                dateFormatter.dateFormat = "MM/dd"
+                dateString = dateFormatter.string(from: lastTime)
+            }
+            cell.dateLabel.text = dateString
+        }
+        
         if curChat.message.type == Type.Image {
             cell.messageLabel.text = "Photo"
         } else {
@@ -64,6 +84,21 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
             controller.receiver = Friend(propic: Friend.getPropic(name: receiver.name) ?? "", name: receiver.name)
         }
     }
- 
+}
 
+extension Date {
+    
+    func totalDistance(from date: Date, resultIn component: Calendar.Component) -> Int? {
+        return Calendar.current.dateComponents([component], from: self, to: date).value(for: component)
+    }
+    
+    func compare(with date: Date, only component: Calendar.Component) -> Int {
+        let days1 = Calendar.current.component(component, from: self)
+        let days2 = Calendar.current.component(component, from: date)
+        return days1 - days2
+    }
+    
+    func hasSame(_ component: Calendar.Component, as date: Date) -> Bool {
+        return self.compare(with: date, only: component) == 0
+    }
 }

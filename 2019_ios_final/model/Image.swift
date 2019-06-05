@@ -47,6 +47,9 @@ struct Image: Codable {
                 return image
             }
         }
+        if let image = UIImage(named: "broken image") {
+            return image
+        }
         return nil
     }
 }
