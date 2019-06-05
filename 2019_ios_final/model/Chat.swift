@@ -33,7 +33,28 @@ struct Chat: Codable {
             return nil
         }
     }
+    
+    static func updateToFile(receiver: String, data: Message) {
+        if let chatHistory = Chat.readFromFile() {
+            var tmpChatHistory = chatHistory
+            for i in 0...tmpChatHistory.count - 1 {
+                if tmpChatHistory[i].name == receiver {
+                    tmpChatHistory[i].message = data
+                    tmpChatHistory.sort(by: <)
+                    Chat.saveTofile(chatHistory: tmpChatHistory)
+                    return
+                }
+            }
+            tmpChatHistory.append(Chat(name: receiver, message: data))
+            tmpChatHistory.sort(by: <)
+            Chat.saveTofile(chatHistory: tmpChatHistory)
+        } else {
+            let chatHistory = [Chat(name: receiver, message: data)]
+            Chat.saveTofile(chatHistory: chatHistory)
+        }
+    }
 }
+
 extension Chat: Comparable {
     static func == (lhs: Chat, rhs: Chat) -> Bool {
         let dateFormatter = DateFormatter()

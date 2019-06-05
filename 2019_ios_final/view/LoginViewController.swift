@@ -41,7 +41,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NetworkController.shared.socketConnect(sender: User.shared.name)
     }
 }

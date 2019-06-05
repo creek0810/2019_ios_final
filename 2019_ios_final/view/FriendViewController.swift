@@ -37,7 +37,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         friendTable.delegate = self
         friendTable.dataSource = self
-        
+
         NetworkController.shared.getFriendList { (friendList: [Friend]?) in
             if let friendList = friendList {
                 self.friendList = friendList
@@ -47,18 +47,16 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
             DispatchQueue.main.async {
                 self.friendTable.reloadData()
                 Friend.saveTofile(friends: self.friendList)
-
             }
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startChat", let receiver = sender as? Friend {
-            print(receiver)
             let controller = segue.destination as! ChatViewController
             controller.receiver = receiver
         }
     }
-    
-
 }
+
+

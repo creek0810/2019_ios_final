@@ -57,11 +57,13 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showChat", sender: chatList[indexPath.row])
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chatMenuTable.delegate = self
         chatMenuTable.dataSource = self
+        
         if let chatHistory = Chat.readFromFile() {
             chatList = chatHistory
             chatMenuTable.reloadData()
@@ -73,6 +75,7 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
             chatList = chatHistory
             chatMenuTable.reloadData()
         }
+        
     }
     
     // MARK: - Navigation

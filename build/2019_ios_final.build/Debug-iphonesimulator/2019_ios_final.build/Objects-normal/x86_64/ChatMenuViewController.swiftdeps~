@@ -5,6 +5,10 @@ provides-nominal:
 - "14_019_ios_final22ChatMenuViewControllerC"
 provides-member:
 - ["14_019_ios_final22ChatMenuViewControllerC", ""]
+- ["10Foundation4DateV", ""]
+- ["10Foundation4DateV", "totalDistance"]
+- ["10Foundation4DateV", "compare"]
+- ["10Foundation4DateV", "hasSame"]
 provides-dynamic-lookup:
 - "chatMenuTable"
 - "prepare"
@@ -12,19 +16,26 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 - "viewWillAppear"
 depends-top-level:
+- !private "-"
 - !private "=="
 - !private "??"
+- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
+- "Calendar"
 - "CastingPrecedence"
 - "Chat"
 - "ChatMenuViewController"
 - !private "ChatTableViewCell"
 - !private "ChatViewController"
+- "Date"
+- !private "DateFormatter"
+- !private "FloatLiteralType"
 - !private "Friend"
 - !private "Image"
 - "IndexPath"
 - "Int"
+- !private "IntegerLiteralType"
 - !private "StringLiteralType"
 - !private "Type"
 - "UIStoryboardSegue"
@@ -57,6 +68,8 @@ depends-member:
 - !private ["So15CALayerDelegateP", "reloadData"]
 - !private ["So15CALayerDelegateP", "text"]
 - ["s7CVarArgP", "Chat"]
+- !private ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "DateFormatter"]
 - !private ["s7CVarArgP", "Friend"]
 - !private ["s7CVarArgP", "Image"]
 - !private ["s7CVarArgP", "Type"]
@@ -66,6 +79,8 @@ depends-member:
 - !private ["s7CVarArgP", "chatMenuTable"]
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "dataSource"]
+- !private ["s7CVarArgP", "date"]
+- !private ["s7CVarArgP", "dateFormat"]
 - !private ["s7CVarArgP", "dateLabel"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "dequeueReusableCell"]
@@ -99,12 +114,17 @@ depends-member:
 - ["s7CVarArgP", "scrollViewWillEndDragging"]
 - ["s7CVarArgP", "sectionIndexTitles"]
 - ["s7CVarArgP", "sectionIndexTitlesForTableView"]
+- !private ["s7CVarArgP", "string"]
 - !private ["s7CVarArgP", "subscript"]
 - ["s7CVarArgP", "tableView"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
+- ["10Foundation8CalendarV", "Component"]
+- !private ["10Foundation8CalendarV", "component"]
+- !private ["10Foundation8CalendarV", "current"]
+- !private ["10Foundation8CalendarV", "dateComponents"]
 - !private ["14_019_ios_final4ChatV", "message"]
 - !private ["14_019_ios_final4ChatV", "name"]
 - !private ["14_019_ios_final4ChatV", "readFromFile"]
@@ -112,6 +132,8 @@ depends-member:
 - ["14_019_ios_final22ChatMenuViewControllerC", "Chat"]
 - !private ["14_019_ios_final22ChatMenuViewControllerC", "ChatTableViewCell"]
 - !private ["14_019_ios_final22ChatMenuViewControllerC", "ChatViewController"]
+- !private ["14_019_ios_final22ChatMenuViewControllerC", "Date"]
+- !private ["14_019_ios_final22ChatMenuViewControllerC", "DateFormatter"]
 - !private ["14_019_ios_final22ChatMenuViewControllerC", "Friend"]
 - !private ["14_019_ios_final22ChatMenuViewControllerC", "Image"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "IndexPath"]
@@ -160,21 +182,35 @@ depends-member:
 - !private ["Sl", "init"]
 - !private ["Sl", "row"]
 - !private ["Sl", "subscript"]
+- !private ["SL", "Calendar"]
+- !private ["SL", "compare"]
 - !private ["SL", "init"]
 - !private ["SL", "init"]
 - !private ["SL", "message"]
 - !private ["SL", "name"]
 - !private ["SL", "readFromFile"]
 - !private ["SL", "row"]
+- !private ["10Foundation8CalendarV9ComponentO", "day"]
+- !private ["10Foundation8CalendarV9ComponentO", "year"]
+- !private ["s28CustomDebugStringConvertibleP", "Calendar"]
 - ["s28CustomDebugStringConvertibleP", "Chat"]
+- ["s28CustomDebugStringConvertibleP", "Component"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
 - !private ["s28CustomDebugStringConvertibleP", "Friend"]
 - !private ["s28CustomDebugStringConvertibleP", "Image"]
 - !private ["s28CustomDebugStringConvertibleP", "Type"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "chatList"]
 - !private ["s28CustomDebugStringConvertibleP", "chatMenuTable"]
+- !private ["s28CustomDebugStringConvertibleP", "compare"]
+- !private ["s28CustomDebugStringConvertibleP", "component"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "dataSource"]
+- !private ["s28CustomDebugStringConvertibleP", "date"]
+- !private ["s28CustomDebugStringConvertibleP", "dateComponents"]
+- !private ["s28CustomDebugStringConvertibleP", "dateFormat"]
 - !private ["s28CustomDebugStringConvertibleP", "dateLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "dequeueReusableCell"]
@@ -209,18 +245,28 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "scrollViewWillEndDragging"]
 - ["s28CustomDebugStringConvertibleP", "sectionIndexTitles"]
 - ["s28CustomDebugStringConvertibleP", "sectionIndexTitlesForTableView"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - ["s28CustomDebugStringConvertibleP", "tableView"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - ["s28CustomDebugStringConvertibleP", "viewForZooming"]
 - ["s28CustomDebugStringConvertibleP", "viewForZoomingInScrollView"]
+- !private ["s29CustomPlaygroundQuickLookableP", "Calendar"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "compare"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "Calendar"]
+- ["s17CustomReflectableP", "Component"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "compare"]
+- !private ["s17CustomReflectableP", "component"]
 - !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "current"]
 - !private ["s17CustomReflectableP", "dataSource"]
+- !private ["s17CustomReflectableP", "dateComponents"]
 - !private ["s17CustomReflectableP", "delegate"]
 - !private ["s17CustomReflectableP", "image"]
 - ["s17CustomReflectableP", "init"]
@@ -229,7 +275,12 @@ depends-member:
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "text"]
+- !private ["s17CustomReflectableP", "value"]
+- !private ["s23CustomStringConvertibleP", "Calendar"]
 - ["s23CustomStringConvertibleP", "Chat"]
+- ["s23CustomStringConvertibleP", "Component"]
+- !private ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "DateFormatter"]
 - !private ["s23CustomStringConvertibleP", "Friend"]
 - !private ["s23CustomStringConvertibleP", "Image"]
 - !private ["s23CustomStringConvertibleP", "Type"]
@@ -237,8 +288,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "chatList"]
 - !private ["s23CustomStringConvertibleP", "chatMenuTable"]
+- !private ["s23CustomStringConvertibleP", "compare"]
+- !private ["s23CustomStringConvertibleP", "component"]
 - !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "dataSource"]
+- !private ["s23CustomStringConvertibleP", "date"]
+- !private ["s23CustomStringConvertibleP", "dateComponents"]
+- !private ["s23CustomStringConvertibleP", "dateFormat"]
 - !private ["s23CustomStringConvertibleP", "dateLabel"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "dequeueReusableCell"]
@@ -273,16 +330,37 @@ depends-member:
 - ["s23CustomStringConvertibleP", "scrollViewWillEndDragging"]
 - ["s23CustomStringConvertibleP", "sectionIndexTitles"]
 - ["s23CustomStringConvertibleP", "sectionIndexTitlesForTableView"]
+- !private ["s23CustomStringConvertibleP", "string"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - ["s23CustomStringConvertibleP", "tableView"]
 - !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "value"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["s23CustomStringConvertibleP", "viewForZooming"]
 - ["s23CustomStringConvertibleP", "viewForZoomingInScrollView"]
+- ["10Foundation4DateV", "Bool"]
+- ["10Foundation4DateV", "Calendar"]
+- ["10Foundation4DateV", "Date"]
+- ["10Foundation4DateV", "Int"]
+- ["10Foundation4DateV", "compare"]
+- ["10Foundation4DateV", "hasSame"]
+- !private ["10Foundation4DateV", "init"]
+- ["10Foundation4DateV", "totalDistance"]
+- !private ["10Foundation14DateComponentsV", "value"]
+- !private ["So15NSDateFormatterC", "date"]
+- !private ["So15NSDateFormatterC", "dateFormat"]
+- !private ["So15NSDateFormatterC", "init"]
+- !private ["So15NSDateFormatterC", "string"]
+- !private ["Se", "Calendar"]
+- ["Se", "Component"]
 - !private ["Se", "Image"]
 - !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "compare"]
+- !private ["Se", "component"]
 - !private ["Se", "count"]
+- !private ["Se", "current"]
 - !private ["Se", "dataSource"]
+- !private ["Se", "dateComponents"]
 - !private ["Se", "delegate"]
 - !private ["Se", "getImage"]
 - !private ["Se", "getPropic"]
@@ -298,10 +376,17 @@ depends-member:
 - !private ["Se", "text"]
 - !private ["Se", "timeStamp"]
 - !private ["Se", "type"]
+- !private ["Se", "value"]
+- !private ["SE", "Calendar"]
+- ["SE", "Component"]
 - !private ["SE", "Image"]
 - !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "compare"]
+- !private ["SE", "component"]
 - !private ["SE", "count"]
+- !private ["SE", "current"]
 - !private ["SE", "dataSource"]
+- !private ["SE", "dateComponents"]
 - !private ["SE", "delegate"]
 - !private ["SE", "getImage"]
 - !private ["SE", "getPropic"]
@@ -317,7 +402,12 @@ depends-member:
 - !private ["SE", "text"]
 - !private ["SE", "timeStamp"]
 - !private ["SE", "type"]
+- !private ["SE", "value"]
+- !private ["SQ", "Calendar"]
 - ["SQ", "Chat"]
+- ["SQ", "Component"]
+- !private ["SQ", "Date"]
+- !private ["SQ", "DateFormatter"]
 - !private ["SQ", "Friend"]
 - !private ["SQ", "Image"]
 - !private ["SQ", "Type"]
@@ -325,9 +415,16 @@ depends-member:
 - !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "chatList"]
 - !private ["SQ", "chatMenuTable"]
+- !private ["SQ", "compare"]
+- !private ["SQ", "component"]
 - !private ["SQ", "count"]
+- !private ["SQ", "current"]
 - !private ["SQ", "dataSource"]
+- !private ["SQ", "date"]
+- !private ["SQ", "dateComponents"]
+- !private ["SQ", "dateFormat"]
 - !private ["SQ", "dateLabel"]
+- !private ["SQ", "day"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "dequeueReusableCell"]
 - !private ["SQ", "destination"]
@@ -364,12 +461,15 @@ depends-member:
 - ["SQ", "scrollViewWillEndDragging"]
 - ["SQ", "sectionIndexTitles"]
 - ["SQ", "sectionIndexTitlesForTableView"]
+- !private ["SQ", "string"]
 - !private ["SQ", "subscript"]
 - ["SQ", "tableView"]
 - !private ["SQ", "text"]
+- !private ["SQ", "value"]
 - !private ["SQ", "viewDidLoad"]
 - ["SQ", "viewForZooming"]
 - ["SQ", "viewForZoomingInScrollView"]
+- !private ["SQ", "year"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
@@ -386,10 +486,18 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So11NSFormatterC", "date"]
+- !private ["So11NSFormatterC", "dateFormat"]
+- !private ["So11NSFormatterC", "init"]
+- !private ["So11NSFormatterC", "string"]
 - !private ["14_019_ios_final6FriendV", "deinit"]
 - !private ["14_019_ios_final6FriendV", "getPropic"]
 - !private ["14_019_ios_final6FriendV", "init"]
+- !private ["SH", "Calendar"]
 - ["SH", "Chat"]
+- ["SH", "Component"]
+- !private ["SH", "Date"]
+- !private ["SH", "DateFormatter"]
 - !private ["SH", "Friend"]
 - !private ["SH", "Image"]
 - !private ["SH", "Type"]
@@ -397,9 +505,16 @@ depends-member:
 - !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "chatList"]
 - !private ["SH", "chatMenuTable"]
+- !private ["SH", "compare"]
+- !private ["SH", "component"]
 - !private ["SH", "count"]
+- !private ["SH", "current"]
 - !private ["SH", "dataSource"]
+- !private ["SH", "date"]
+- !private ["SH", "dateComponents"]
+- !private ["SH", "dateFormat"]
 - !private ["SH", "dateLabel"]
+- !private ["SH", "day"]
 - !private ["SH", "delegate"]
 - !private ["SH", "dequeueReusableCell"]
 - !private ["SH", "destination"]
@@ -433,12 +548,15 @@ depends-member:
 - ["SH", "scrollViewWillEndDragging"]
 - ["SH", "sectionIndexTitles"]
 - ["SH", "sectionIndexTitlesForTableView"]
+- !private ["SH", "string"]
 - !private ["SH", "subscript"]
 - ["SH", "tableView"]
 - !private ["SH", "text"]
+- !private ["SH", "value"]
 - !private ["SH", "viewDidLoad"]
 - ["SH", "viewForZooming"]
 - ["SH", "viewForZoomingInScrollView"]
+- !private ["SH", "year"]
 - !private ["14_019_ios_final5ImageV", "getImage"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
@@ -454,6 +572,8 @@ depends-member:
 - !private ["SM", "row"]
 - !private ["SM", "subscript"]
 - ["So8NSCodingP", "Chat"]
+- !private ["So8NSCodingP", "Date"]
+- !private ["So8NSCodingP", "DateFormatter"]
 - !private ["So8NSCodingP", "Friend"]
 - !private ["So8NSCodingP", "Image"]
 - !private ["So8NSCodingP", "Type"]
@@ -461,6 +581,8 @@ depends-member:
 - !private ["So8NSCodingP", "chatList"]
 - !private ["So8NSCodingP", "chatMenuTable"]
 - !private ["So8NSCodingP", "dataSource"]
+- !private ["So8NSCodingP", "date"]
+- !private ["So8NSCodingP", "dateFormat"]
 - !private ["So8NSCodingP", "dateLabel"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
@@ -492,12 +614,19 @@ depends-member:
 - ["So8NSCodingP", "scrollViewWillEndDragging"]
 - ["So8NSCodingP", "sectionIndexTitles"]
 - ["So8NSCodingP", "sectionIndexTitlesForTableView"]
+- !private ["So8NSCodingP", "string"]
 - ["So8NSCodingP", "tableView"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", "viewForZooming"]
 - ["So8NSCodingP", "viewForZoomingInScrollView"]
+- !private ["So9NSCopyingP", "date"]
+- !private ["So9NSCopyingP", "dateFormat"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "string"]
 - ["So26NSExtensionRequestHandlingP", "Chat"]
+- !private ["So26NSExtensionRequestHandlingP", "Date"]
+- !private ["So26NSExtensionRequestHandlingP", "DateFormatter"]
 - !private ["So26NSExtensionRequestHandlingP", "Friend"]
 - !private ["So26NSExtensionRequestHandlingP", "Image"]
 - !private ["So26NSExtensionRequestHandlingP", "Type"]
@@ -535,6 +664,8 @@ depends-member:
 - ["So8NSObjectC", "Chat"]
 - !private ["So8NSObjectC", "ChatTableViewCell"]
 - !private ["So8NSObjectC", "ChatViewController"]
+- !private ["So8NSObjectC", "Date"]
+- !private ["So8NSObjectC", "DateFormatter"]
 - !private ["So8NSObjectC", "Friend"]
 - !private ["So8NSObjectC", "Image"]
 - ["So8NSObjectC", "IndexPath"]
@@ -546,6 +677,8 @@ depends-member:
 - ["So8NSObjectC", "chatList"]
 - ["So8NSObjectC", "chatMenuTable"]
 - !private ["So8NSObjectC", "dataSource"]
+- !private ["So8NSObjectC", "date"]
+- !private ["So8NSObjectC", "dateFormat"]
 - !private ["So8NSObjectC", "dateLabel"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
@@ -580,6 +713,7 @@ depends-member:
 - ["So8NSObjectC", "scrollViewWillEndDragging"]
 - ["So8NSObjectC", "sectionIndexTitles"]
 - ["So8NSObjectC", "sectionIndexTitlesForTableView"]
+- !private ["So8NSObjectC", "string"]
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "viewDidLoad"]
@@ -587,6 +721,8 @@ depends-member:
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
 - ["So8NSObjectC", "viewWillAppear"]
 - ["So8NSObjectP", "Chat"]
+- !private ["So8NSObjectP", "Date"]
+- !private ["So8NSObjectP", "DateFormatter"]
 - !private ["So8NSObjectP", "Friend"]
 - !private ["So8NSObjectP", "Image"]
 - !private ["So8NSObjectP", "Type"]
@@ -594,6 +730,8 @@ depends-member:
 - !private ["So8NSObjectP", "chatList"]
 - !private ["So8NSObjectP", "chatMenuTable"]
 - !private ["So8NSObjectP", "dataSource"]
+- !private ["So8NSObjectP", "date"]
+- !private ["So8NSObjectP", "dateFormat"]
 - !private ["So8NSObjectP", "dateLabel"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "dequeueReusableCell"]
@@ -627,11 +765,13 @@ depends-member:
 - ["So8NSObjectP", "scrollViewWillEndDragging"]
 - ["So8NSObjectP", "sectionIndexTitles"]
 - ["So8NSObjectP", "sectionIndexTitlesForTableView"]
+- !private ["So8NSObjectP", "string"]
 - ["So8NSObjectP", "tableView"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "viewForZooming"]
 - ["So8NSObjectP", "viewForZoomingInScrollView"]
+- !private ["14_019_ios_final15NetworkDelegateP", "receiver"]
 - !private ["Sq", "dataSource"]
 - !private ["Sq", "delegate"]
 - !private ["Sq", "image"]
@@ -646,7 +786,15 @@ depends-member:
 - !private ["Sm", "init"]
 - !private ["Sm", "subscript"]
 - !private ["SY", "Image"]
+- !private ["10Foundation20ReferenceConvertibleP", "Calendar"]
+- ["10Foundation20ReferenceConvertibleP", "Component"]
+- !private ["10Foundation20ReferenceConvertibleP", "compare"]
+- !private ["10Foundation20ReferenceConvertibleP", "component"]
+- !private ["10Foundation20ReferenceConvertibleP", "current"]
+- !private ["10Foundation20ReferenceConvertibleP", "dateComponents"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
+- !private ["10Foundation20ReferenceConvertibleP", "value"]
 - !private ["ST", "count"]
 - ["ST", "init"]
 - !private ["ST", "init"]
@@ -689,6 +837,8 @@ depends-member:
 - !private ["So12UIAppearanceP", "reloadData"]
 - !private ["So12UIAppearanceP", "text"]
 - ["So21UIAppearanceContainerP", "Chat"]
+- !private ["So21UIAppearanceContainerP", "Date"]
+- !private ["So21UIAppearanceContainerP", "DateFormatter"]
 - !private ["So21UIAppearanceContainerP", "Friend"]
 - !private ["So21UIAppearanceContainerP", "Image"]
 - !private ["So21UIAppearanceContainerP", "Type"]
@@ -733,6 +883,8 @@ depends-member:
 - ["So21UIAppearanceContainerP", "viewForZooming"]
 - ["So21UIAppearanceContainerP", "viewForZoomingInScrollView"]
 - ["So18UIContentContainerP", "Chat"]
+- !private ["So18UIContentContainerP", "Date"]
+- !private ["So18UIContentContainerP", "DateFormatter"]
 - !private ["So18UIContentContainerP", "Friend"]
 - !private ["So18UIContentContainerP", "Image"]
 - !private ["So18UIContentContainerP", "Type"]
@@ -792,6 +944,8 @@ depends-member:
 - !private ["So13UIDynamicItemP", "reloadData"]
 - !private ["So13UIDynamicItemP", "text"]
 - ["So18UIFocusEnvironmentP", "Chat"]
+- !private ["So18UIFocusEnvironmentP", "Date"]
+- !private ["So18UIFocusEnvironmentP", "DateFormatter"]
 - !private ["So18UIFocusEnvironmentP", "Friend"]
 - !private ["So18UIFocusEnvironmentP", "Image"]
 - !private ["So18UIFocusEnvironmentP", "Type"]
@@ -868,6 +1022,8 @@ depends-member:
 - !private ["So7UILabelC", "text"]
 - !private ["So30UINavigationControllerDelegateP", "receiver"]
 - ["So30UIPasteConfigurationSupportingP", "Chat"]
+- !private ["So30UIPasteConfigurationSupportingP", "Date"]
+- !private ["So30UIPasteConfigurationSupportingP", "DateFormatter"]
 - !private ["So30UIPasteConfigurationSupportingP", "Friend"]
 - !private ["So30UIPasteConfigurationSupportingP", "Image"]
 - !private ["So30UIPasteConfigurationSupportingP", "Type"]
@@ -915,6 +1071,8 @@ depends-member:
 - ["So11UIResponderC", "Chat"]
 - !private ["So11UIResponderC", "ChatTableViewCell"]
 - !private ["So11UIResponderC", "ChatViewController"]
+- !private ["So11UIResponderC", "Date"]
+- !private ["So11UIResponderC", "DateFormatter"]
 - !private ["So11UIResponderC", "Friend"]
 - !private ["So11UIResponderC", "Image"]
 - ["So11UIResponderC", "IndexPath"]
@@ -965,6 +1123,8 @@ depends-member:
 - ["So11UIResponderC", "viewForZoomingInScrollView"]
 - ["So11UIResponderC", "viewWillAppear"]
 - ["So30UIResponderStandardEditActionsP", "Chat"]
+- !private ["So30UIResponderStandardEditActionsP", "Date"]
+- !private ["So30UIResponderStandardEditActionsP", "DateFormatter"]
 - !private ["So30UIResponderStandardEditActionsP", "Friend"]
 - !private ["So30UIResponderStandardEditActionsP", "Image"]
 - !private ["So30UIResponderStandardEditActionsP", "Type"]
@@ -1013,6 +1173,8 @@ depends-member:
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
 - !private ["So12UIScrollViewC", "reloadData"]
 - ["So20UIScrollViewDelegateP", "Chat"]
+- !private ["So20UIScrollViewDelegateP", "Date"]
+- !private ["So20UIScrollViewDelegateP", "DateFormatter"]
 - !private ["So20UIScrollViewDelegateP", "Friend"]
 - !private ["So20UIScrollViewDelegateP", "Image"]
 - !private ["So20UIScrollViewDelegateP", "Type"]
@@ -1048,6 +1210,8 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "dequeueReusableCell"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "reloadData"]
 - ["So16UIStateRestoringP", "Chat"]
+- !private ["So16UIStateRestoringP", "Date"]
+- !private ["So16UIStateRestoringP", "DateFormatter"]
 - !private ["So16UIStateRestoringP", "Friend"]
 - !private ["So16UIStateRestoringP", "Image"]
 - !private ["So16UIStateRestoringP", "Type"]
@@ -1092,6 +1256,8 @@ depends-member:
 - !private ["So15UITableViewCellC", "nameLabel"]
 - !private ["So15UITableViewCellC", "propic"]
 - ["So21UITableViewDataSourceP", "Chat"]
+- !private ["So21UITableViewDataSourceP", "Date"]
+- !private ["So21UITableViewDataSourceP", "DateFormatter"]
 - !private ["So21UITableViewDataSourceP", "Friend"]
 - !private ["So21UITableViewDataSourceP", "Image"]
 - !private ["So21UITableViewDataSourceP", "Type"]
@@ -1123,6 +1289,8 @@ depends-member:
 - ["So21UITableViewDataSourceP", "viewForZooming"]
 - ["So21UITableViewDataSourceP", "viewForZoomingInScrollView"]
 - ["So19UITableViewDelegateP", "Chat"]
+- !private ["So19UITableViewDelegateP", "Date"]
+- !private ["So19UITableViewDelegateP", "DateFormatter"]
 - !private ["So19UITableViewDelegateP", "Friend"]
 - !private ["So19UITableViewDelegateP", "Image"]
 - !private ["So19UITableViewDelegateP", "Type"]
@@ -1154,6 +1322,8 @@ depends-member:
 - ["So19UITableViewDelegateP", "viewForZooming"]
 - ["So19UITableViewDelegateP", "viewForZoomingInScrollView"]
 - ["So18UITraitEnvironmentP", "Chat"]
+- !private ["So18UITraitEnvironmentP", "Date"]
+- !private ["So18UITraitEnvironmentP", "DateFormatter"]
 - !private ["So18UITraitEnvironmentP", "Friend"]
 - !private ["So18UITraitEnvironmentP", "Image"]
 - !private ["So18UITraitEnvironmentP", "Type"]
@@ -1198,6 +1368,8 @@ depends-member:
 - ["So18UITraitEnvironmentP", "viewForZooming"]
 - ["So18UITraitEnvironmentP", "viewForZoomingInScrollView"]
 - ["So23UIUserActivityRestoringP", "Chat"]
+- !private ["So23UIUserActivityRestoringP", "Date"]
+- !private ["So23UIUserActivityRestoringP", "DateFormatter"]
 - !private ["So23UIUserActivityRestoringP", "Friend"]
 - !private ["So23UIUserActivityRestoringP", "Image"]
 - !private ["So23UIUserActivityRestoringP", "Type"]
@@ -1255,6 +1427,8 @@ depends-member:
 - ["So16UIViewControllerC", "Chat"]
 - !private ["So16UIViewControllerC", "ChatTableViewCell"]
 - !private ["So16UIViewControllerC", "ChatViewController"]
+- !private ["So16UIViewControllerC", "Date"]
+- !private ["So16UIViewControllerC", "DateFormatter"]
 - !private ["So16UIViewControllerC", "Friend"]
 - !private ["So16UIViewControllerC", "Image"]
 - ["So16UIViewControllerC", "IndexPath"]
@@ -1323,6 +1497,8 @@ depends-member:
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Chat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DateFormatter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Friend"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Image"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Type"]
@@ -1330,6 +1506,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "chatList"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "chatMenuTable"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSource"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dequeueReusableCell"]
@@ -1363,14 +1541,26 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "scrollViewWillEndDragging"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sectionIndexTitles"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sectionIndexTitlesForTableView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZoomingInScrollView"]
+- ["10Foundation14_MutableBoxingP", "Component"]
+- !private ["10Foundation14_MutableBoxingP", "component"]
+- !private ["10Foundation14_MutableBoxingP", "current"]
+- !private ["10Foundation14_MutableBoxingP", "dateComponents"]
+- !private ["10Foundation14_MutableBoxingP", "value"]
+- !private ["s21_ObjectiveCBridgeableP", "Calendar"]
+- ["s21_ObjectiveCBridgeableP", "Component"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "compare"]
+- !private ["s21_ObjectiveCBridgeableP", "component"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "current"]
 - !private ["s21_ObjectiveCBridgeableP", "dataSource"]
+- !private ["s21_ObjectiveCBridgeableP", "dateComponents"]
 - !private ["s21_ObjectiveCBridgeableP", "delegate"]
 - !private ["s21_ObjectiveCBridgeableP", "image"]
 - ["s21_ObjectiveCBridgeableP", "init"]
@@ -1379,6 +1569,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s21_ObjectiveCBridgeableP", "value"]
 - !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
@@ -1388,16 +1579,21 @@ depends-nominal:
 - !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- "10Foundation8CalendarV"
 - !private "14_019_ios_final4ChatV"
 - "14_019_ios_final22ChatMenuViewControllerC"
 - !private "14_019_ios_final17ChatTableViewCellC"
 - !private "14_019_ios_final18ChatViewControllerC"
 - "Sl"
 - !private "SL"
+- !private "10Foundation8CalendarV9ComponentO"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- "10Foundation4DateV"
+- !private "10Foundation14DateComponentsV"
+- !private "So15NSDateFormatterC"
 - "Se"
 - "SE"
 - "SQ"
@@ -1407,6 +1603,7 @@ depends-nominal:
 - !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So11NSFormatterC"
 - !private "14_019_ios_final6FriendV"
 - "SH"
 - !private "14_019_ios_final5ImageV"
@@ -1416,14 +1613,16 @@ depends-nominal:
 - !private "s10MirrorPathP"
 - "SM"
 - "So8NSCodingP"
+- !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "14_019_ios_final15NetworkDelegateP"
 - !private "Sq"
 - "Sk"
 - "Sm"
 - !private "SY"
-- !private "10Foundation20ReferenceConvertibleP"
+- "10Foundation20ReferenceConvertibleP"
 - "ST"
 - "8SocketIO0A4DataP"
 - !private "SS"
@@ -1475,6 +1674,7 @@ depends-nominal:
 - !private "s33_ExpressibleByStringInterpolationP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation14_MutableBoxingP"
 - "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
@@ -1508,7 +1708,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "653eabc1ce98b262ce72d0a2c6945df7"
+interface-hash: "7e6a788786e25351b53fb36d43c1eb51"

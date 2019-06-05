@@ -9,12 +9,12 @@ provides-dynamic-lookup:
 - "login"
 - "nameTextField"
 - "passwordTextField"
-- "prepare"
+- "viewDidDisappear"
 - "viewDidLoad"
 depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
+- "Bool"
 - !private "DispatchQueue"
 - "FloatLiteralType"
 - "IntegerLiteralType"
@@ -22,7 +22,6 @@ depends-top-level:
 - !private "NetworkController"
 - !private "UIAlertAction"
 - !private "UIAlertController"
-- "UIStoryboardSegue"
 - "UITextField"
 - "UIViewController"
 - !private "User"
@@ -155,11 +154,11 @@ depends-member:
 - !private ["SH", "present"]
 - !private ["SH", "text"]
 - !private ["SH", "viewDidLoad"]
+- ["14_019_ios_final19LoginViewControllerC", "Bool"]
 - !private ["14_019_ios_final19LoginViewControllerC", "DispatchQueue"]
 - !private ["14_019_ios_final19LoginViewControllerC", "NetworkController"]
 - !private ["14_019_ios_final19LoginViewControllerC", "UIAlertAction"]
 - !private ["14_019_ios_final19LoginViewControllerC", "UIAlertController"]
-- ["14_019_ios_final19LoginViewControllerC", "UIStoryboardSegue"]
 - ["14_019_ios_final19LoginViewControllerC", "UITextField"]
 - !private ["14_019_ios_final19LoginViewControllerC", "User"]
 - ["14_019_ios_final19LoginViewControllerC", "init"]
@@ -167,8 +166,8 @@ depends-member:
 - ["14_019_ios_final19LoginViewControllerC", "nameTextField"]
 - ["14_019_ios_final19LoginViewControllerC", "passwordTextField"]
 - !private ["14_019_ios_final19LoginViewControllerC", "performSegue"]
-- ["14_019_ios_final19LoginViewControllerC", "prepare"]
 - !private ["14_019_ios_final19LoginViewControllerC", "present"]
+- ["14_019_ios_final19LoginViewControllerC", "viewDidDisappear"]
 - ["14_019_ios_final19LoginViewControllerC", "viewDidLoad"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
@@ -205,11 +204,11 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "performSegue"]
 - !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "DispatchQueue"]
 - !private ["So8NSObjectC", "NetworkController"]
 - !private ["So8NSObjectC", "UIAlertAction"]
 - !private ["So8NSObjectC", "UIAlertController"]
-- ["So8NSObjectC", "UIStoryboardSegue"]
 - ["So8NSObjectC", "UITextField"]
 - !private ["So8NSObjectC", "User"]
 - !private ["So8NSObjectC", "addAction"]
@@ -221,9 +220,9 @@ depends-member:
 - ["So8NSObjectC", "nameTextField"]
 - ["So8NSObjectC", "passwordTextField"]
 - !private ["So8NSObjectC", "performSegue"]
-- ["So8NSObjectC", "prepare"]
 - !private ["So8NSObjectC", "present"]
 - !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "viewDidDisappear"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "DispatchQueue"]
 - !private ["So8NSObjectP", "NetworkController"]
@@ -244,6 +243,7 @@ depends-member:
 - !private ["So8NSObjectP", "viewDidLoad"]
 - !private ["14_019_ios_final17NetworkControllerV", "login"]
 - !private ["14_019_ios_final17NetworkControllerV", "shared"]
+- !private ["14_019_ios_final17NetworkControllerV", "socketConnect"]
 - !private ["So9OS_objectC", "async"]
 - !private ["So9OS_objectC", "main"]
 - !private ["Sq", "text"]
@@ -337,11 +337,11 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "DispatchQueue"]
 - !private ["So11UIResponderC", "NetworkController"]
 - !private ["So11UIResponderC", "UIAlertAction"]
 - !private ["So11UIResponderC", "UIAlertController"]
-- ["So11UIResponderC", "UIStoryboardSegue"]
 - ["So11UIResponderC", "UITextField"]
 - !private ["So11UIResponderC", "User"]
 - !private ["So11UIResponderC", "addAction"]
@@ -351,9 +351,9 @@ depends-member:
 - ["So11UIResponderC", "nameTextField"]
 - ["So11UIResponderC", "passwordTextField"]
 - !private ["So11UIResponderC", "performSegue"]
-- ["So11UIResponderC", "prepare"]
 - !private ["So11UIResponderC", "present"]
 - !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "viewDidDisappear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "NetworkController"]
@@ -423,11 +423,11 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "DispatchQueue"]
 - !private ["So16UIViewControllerC", "NetworkController"]
 - !private ["So16UIViewControllerC", "UIAlertAction"]
 - !private ["So16UIViewControllerC", "UIAlertController"]
-- ["So16UIViewControllerC", "UIStoryboardSegue"]
 - ["So16UIViewControllerC", "UITextField"]
 - !private ["So16UIViewControllerC", "User"]
 - ["So16UIViewControllerC", ""]
@@ -438,10 +438,11 @@ depends-member:
 - ["So16UIViewControllerC", "nameTextField"]
 - ["So16UIViewControllerC", "passwordTextField"]
 - !private ["So16UIViewControllerC", "performSegue"]
-- ["So16UIViewControllerC", "prepare"]
 - !private ["So16UIViewControllerC", "present"]
+- ["So16UIViewControllerC", "viewDidDisappear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["14_019_ios_final4UserV", "init"]
+- !private ["14_019_ios_final4UserV", "name"]
 - !private ["14_019_ios_final4UserV", "shared"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
@@ -592,7 +593,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9b5041dfe15d5bd7dd7bd22ef901beae"
+interface-hash: "dbf0fa6e2f206c5f737ca01eed836ff1"

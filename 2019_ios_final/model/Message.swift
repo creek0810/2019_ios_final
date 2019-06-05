@@ -41,6 +41,30 @@ struct Message: Codable {
         }
         return nil
     }
+    
+    static func updateToFile(receiver: String, data: Message) {
+        // get history
+        if let chatHistory = Message.readMessagesFromFile(receiver: receiver) {
+            var tmpChatHistory = chatHistory
+            tmpChatHistory.append(data)
+            Message.saveMessagesToFile(receiver: receiver, msgs: tmpChatHistory)
+        } else {
+            let chatHistory = [data]
+            Message.saveMessagesToFile(receiver: receiver, msgs: chatHistory)
+        }
+    }
+    
+    static func decodeFromDict(data: NSDictionary) -> Message {
+        let sender = data["sender"] as! String
+        let receiver = data["receiver"] as! String
+        let message = data["message"] as! String
+        let timeStamp = data["timeStamp"] as! String
+        if data["type"] as! Int == Type.Image.rawValue {
+            return Message(type: Type.Image, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
+        } else {
+            return Message(type: Type.Text, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
+        }
+    }
 }
 
 struct SendMessage: Codable {

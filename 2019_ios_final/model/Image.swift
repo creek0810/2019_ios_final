@@ -34,6 +34,17 @@ struct Image: Codable {
         return nil
     }
     
+    static func updateToFile(receiver: String, data: Image){
+        if let images = Image.readImagesNameFromFile(receiver: receiver){
+            var tmpImages = images
+            tmpImages.append(data)
+            Image.saveImagesNameToFile(receiver: receiver, images: tmpImages)
+        } else {
+            let images = [data]
+            Image.saveImagesNameToFile(receiver: receiver, images: images)
+        }
+    }
+    
     static func getImage(imageName: String) -> UIImage? {
         let localUrl = Image.documentDirectory.appendingPathComponent(imageName)
         let remoteUrl = "http://140.121.197.197:6700/image?path=\(imageName)"

@@ -12,9 +12,10 @@
 
 import UIKit
 import SocketIO
+import UserNotifications
 
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NetworkDelegate {
     
     var receiver: Friend = Friend(propic: "test", name: "")
     var chatHistory: [Message] = [
@@ -123,11 +124,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewDidLoad() {
+        print("view did load!")
         super.viewDidLoad()
         chatTable.delegate = self
         chatTable.dataSource = self
+
+        NetworkController.shared.delegate = self
+
         nameLabel.title = receiver.name
-        connectSocket()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -151,6 +155,24 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             maskView.removeFromSuperview()
         }
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        NetworkController.shared.delegate = nil
+    }
+    
+    func update(data: Message) {
+        print("update!")
+        print(data)
+        if data.sender == receiver.name || data.receiver == receiver.name {
+            self.chatHistory.append(data)
+            let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
+            self.chatTable.insertRows(at: [indexPath], with: .automatic)
+            self.scrollToBottom()
+        } else {
+            NetworkController.shared.sendNoti(data: data)
+        }
+    }
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSingalImage", let imageName = sender as? String, let image = Image.getImage(imageName: imageName) {
@@ -161,119 +183,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 }
 extension ChatViewController {
-    func connectSocket() {
-        let socket = manager.defaultSocket
-        socket.on(clientEvent: .connect) { data, ack in
-            socket.emit("post name", ["sender": User.shared.name])
-        }
-        // need to deal with the message from another people
-        socket.on("get msg") { rawData, ack in
-            if let data = rawData[0] as? NSDictionary {
-                let message = self.jsonToMessage(data: data)
-                // from cur user
-                if message.receiver == self.receiver.name || message.sender == self.receiver.name {
-                    self.chatHistory.append(message)
-                    let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
-                    self.chatTable.insertRows(at: [indexPath], with: .automatic)
-                    Message.saveMessagesToFile(receiver: self.receiver.name, msgs: self.chatHistory)
-                    
-                    socket.emit("get msg success", [
-                        "sender": User.shared.name,
-                        "timeStamp": data["timeStamp"] as! String
-                    ])
-                    
-                    if message.type == Type.Image {
-                        var images: [Image] = [Image]()
-                        let tmpImages = Image.readImagesNameFromFile(receiver: self.receiver.name)
-                        if let tmpImages = tmpImages {
-                            images = tmpImages
-                        }
-                        images.append(Image(imageName: message.message))
-                        Image.saveImagesNameToFile(receiver: self.receiver.name, images: images)
-                    }
-                    self.updateChatHistory(receiver: self.receiver.name, message: message)
 
-                } else {
-                    var receiver = ""
-                    if message.receiver == User.shared.name {
-                        receiver = message.sender
-                    } else {
-                        receiver = message.receiver
-                    }
-                    
-                    var tmpChatHistory = Message.readMessagesFromFile(receiver: receiver)
-                    if tmpChatHistory == nil {
-                        tmpChatHistory = [Message]()
-                        tmpChatHistory!.append(message)
-                    } else {
-                        tmpChatHistory!.append(message)
-                    }
-                    
-                    Message.saveMessagesToFile(receiver: receiver, msgs: tmpChatHistory!)
-                    
-                    socket.emit("get msg success", [
-                        "sender": User.shared.name,
-                        "timeStamp": data["timeStamp"] as! String
-                    ])
-                    
-                    if message.type == Type.Image {
-                        var images: [Image] = [Image]()
-                        let tmpImages = Image.readImagesNameFromFile(receiver: self.receiver.name)
-                        if let tmpImages = tmpImages {
-                            images = tmpImages
-                        }
-                        images.append(Image(imageName: message.message))
-                        Image.saveImagesNameToFile(receiver: self.receiver.name, images: images)
-                    }
-                    self.updateChatHistory(receiver: receiver, message: message)
 
-                }
-            }
-        }
-        socket.connect()
-    }
-
-    func jsonToMessage(data: NSDictionary) -> Message {
-        let sender = data["sender"] as! String
-        let receiver = data["receiver"] as! String
-        let message = data["message"] as! String
-        let timeStamp = data["timeStamp"] as! String
-        if data["type"] as! Int == Type.Image.rawValue {
-            return Message(type: Type.Image, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
-        } else {
-            return Message(type: Type.Text, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
-        }
-    }
-    
-    func updateChatHistory(receiver: String, message: Message) {
-        
-        var chatHistory = Chat.readFromFile()
-        if chatHistory != nil {
-            for i in (0...chatHistory!.count-1) {
-                if chatHistory![i].name == message.sender || chatHistory![i].name == message.receiver {
-                    chatHistory![i].message = message
-                    chatHistory!.sort(by: <)
-                    Chat.saveTofile(chatHistory: chatHistory!)
-                    scrollToBottom()
-                    return
-                }
-            }
-            let tmpName = (message.sender == User.shared.name) ? message.receiver : message.sender
-            chatHistory!.append(Chat(name: tmpName, message: message))
-            chatHistory!.sort(by: <)
-            Chat.saveTofile(chatHistory: chatHistory!)
-            scrollToBottom()
-            return
-        } else {
-            chatHistory = [Chat]()
-            let tmpName = (message.sender == User.shared.name) ? message.receiver : message.sender
-            chatHistory!.append(Chat(name: tmpName, message: message))
-            Chat.saveTofile(chatHistory: chatHistory!)
-            scrollToBottom()
-            return
-        }
-    }
-    
     func scrollToBottom() {
         if chatHistory.count >= 1 {
             let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
@@ -281,3 +192,4 @@ extension ChatViewController {
         }
     }
 }
+

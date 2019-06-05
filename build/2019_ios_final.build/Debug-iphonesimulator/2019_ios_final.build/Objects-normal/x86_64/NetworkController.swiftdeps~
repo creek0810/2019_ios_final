@@ -1,30 +1,52 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "NetworkDelegate"
 - "NetworkController"
 provides-nominal:
+- "14_019_ios_final15NetworkDelegateP"
 - "14_019_ios_final17NetworkControllerV"
 - "14_019_ios_final17NetworkControllerV3APIV"
 provides-member:
+- ["14_019_ios_final15NetworkDelegateP", ""]
 - ["14_019_ios_final17NetworkControllerV", ""]
 - ["14_019_ios_final17NetworkControllerV3APIV", ""]
+- ["14_019_ios_final17NetworkControllerV", "sendNoti"]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "=="
+- "AnyObject"
+- "Array"
 - "AssignmentPrecedence"
+- "BooleanLiteralType"
 - !private "CastingPrecedence"
+- !private "Chat"
 - !private "Data"
+- !private "Dictionary"
 - !private "ExtendedGraphemeClusterType"
-- !private "FloatLiteralType"
+- "FloatLiteralType"
 - "Friend"
 - !private "HTTPURLResponse"
+- !private "Image"
 - "Int"
+- "IntegerLiteralType"
 - !private "JSONDecoder"
 - !private "JSONEncoder"
+- "Message"
+- !private "NSDictionary"
 - "NetworkController"
+- "NetworkDelegate"
 - "SendMessage"
+- "SocketManager"
 - "String"
 - "StringLiteralType"
+- !private "Type"
 - "UIImage"
-- !private "URL"
+- !private "UNMutableNotificationContent"
+- !private "UNNotificationRequest"
+- !private "UNNotificationSound"
+- !private "UNTimeIntervalNotificationTrigger"
+- !private "UNUserNotificationCenter"
+- "URL"
 - !private "URLRequest"
 - !private "URLSession"
 - !private "UUID"
@@ -37,43 +59,83 @@ depends-member:
 - ["14_019_ios_final17NetworkControllerV3APIV", "login"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "sendText"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "uploadImage"]
+- !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "subscript"]
 - !private ["SK", "append"]
 - !private ["SK", "data"]
 - ["SK", "init"]
 - ["SK", "init"]
+- !private ["SK", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "add"]
+- !private ["s7CVarArgP", "badge"]
+- !private ["s7CVarArgP", "body"]
+- !private ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "current"]
 - !private ["s7CVarArgP", "data"]
 - !private ["s7CVarArgP", "dataTask"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "defaultSocket"]
+- !private ["s7CVarArgP", "emit"]
 - ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "jpegData"]
+- !private ["s7CVarArgP", "on"]
 - !private ["s7CVarArgP", "resume"]
 - !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "sound"]
 - !private ["s7CVarArgP", "statusCode"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "subtitle"]
+- !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "uploadTask"]
+- !private ["14_019_ios_final4ChatV", "updateToFile"]
+- ["8SocketIO12ClientOptionP", "compress"]
+- ["8SocketIO12ClientOptionP", "log"]
 - !private ["Sl", "append"]
 - !private ["Sl", "data"]
 - ["Sl", "init"]
 - ["Sl", "init"]
+- !private ["Sl", "subscript"]
 - !private ["SL", "data"]
 - ["SL", "init"]
 - ["SL", "init"]
+- !private ["SL", "updateToFile"]
+- !private ["8SocketIO14ConfigSettableP", "defaultSocket"]
+- ["8SocketIO14ConfigSettableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "add"]
 - !private ["s28CustomDebugStringConvertibleP", "addValue"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "badge"]
+- !private ["s28CustomDebugStringConvertibleP", "body"]
+- !private ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "data"]
 - !private ["s28CustomDebugStringConvertibleP", "dataTask"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "defaultSocket"]
+- !private ["s28CustomDebugStringConvertibleP", "emit"]
 - !private ["s28CustomDebugStringConvertibleP", "httpBody"]
 - !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "jpegData"]
+- !private ["s28CustomDebugStringConvertibleP", "on"]
 - !private ["s28CustomDebugStringConvertibleP", "resume"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "sound"]
 - !private ["s28CustomDebugStringConvertibleP", "statusCode"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "subtitle"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s28CustomDebugStringConvertibleP", "uploadTask"]
 - !private ["s28CustomDebugStringConvertibleP", "uuidString"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "data"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "addValue"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "data"]
@@ -81,50 +143,107 @@ depends-member:
 - !private ["s17CustomReflectableP", "httpMethod"]
 - ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "uuidString"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "add"]
 - !private ["s23CustomStringConvertibleP", "addValue"]
 - !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "badge"]
+- !private ["s23CustomStringConvertibleP", "body"]
+- ["s23CustomStringConvertibleP", "compress"]
+- !private ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "data"]
 - !private ["s23CustomStringConvertibleP", "dataTask"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "defaultSocket"]
+- !private ["s23CustomStringConvertibleP", "emit"]
 - !private ["s23CustomStringConvertibleP", "httpBody"]
 - !private ["s23CustomStringConvertibleP", "httpMethod"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "jpegData"]
+- ["s23CustomStringConvertibleP", "log"]
+- !private ["s23CustomStringConvertibleP", "on"]
 - !private ["s23CustomStringConvertibleP", "resume"]
 - !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "sound"]
 - !private ["s23CustomStringConvertibleP", "statusCode"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "subtitle"]
+- !private ["s23CustomStringConvertibleP", "title"]
 - !private ["s23CustomStringConvertibleP", "uploadTask"]
 - !private ["s23CustomStringConvertibleP", "utf8"]
 - !private ["s23CustomStringConvertibleP", "uuidString"]
 - !private ["10Foundation4DataV", "append"]
 - !private ["10Foundation4DataV", "init"]
+- !private ["Se", "Image"]
+- !private ["Se", "_getBuiltinLogicValue"]
 - !private ["Se", "append"]
 - !private ["Se", "data"]
+- !private ["Se", "decodeFromDict"]
 - ["Se", "init"]
 - ["Se", "init"]
+- !private ["Se", "message"]
+- !private ["Se", "receiver"]
+- !private ["Se", "sender"]
+- !private ["Se", "subscript"]
+- !private ["Se", "timeStamp"]
+- !private ["Se", "type"]
+- !private ["Se", "updateToFile"]
 - !private ["Se", "uuidString"]
+- !private ["SE", "Image"]
+- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "append"]
 - !private ["SE", "data"]
+- !private ["SE", "decodeFromDict"]
 - ["SE", "init"]
 - ["SE", "init"]
+- !private ["SE", "message"]
+- !private ["SE", "receiver"]
+- !private ["SE", "sender"]
+- !private ["SE", "subscript"]
+- !private ["SE", "timeStamp"]
+- !private ["SE", "type"]
+- !private ["SE", "updateToFile"]
 - !private ["SE", "uuidString"]
 - !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["SQ", "Image"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "add"]
 - !private ["SQ", "addValue"]
 - !private ["SQ", "append"]
+- !private ["SQ", "badge"]
+- !private ["SQ", "body"]
+- ["SQ", "compress"]
+- !private ["SQ", "connect"]
+- !private ["SQ", "current"]
 - !private ["SQ", "data"]
 - !private ["SQ", "dataTask"]
+- !private ["SQ", "default"]
+- !private ["SQ", "defaultSocket"]
+- !private ["SQ", "emit"]
 - !private ["SQ", "httpBody"]
 - !private ["SQ", "httpMethod"]
 - ["SQ", "init"]
 - ["SQ", "init"]
 - !private ["SQ", "jpegData"]
+- ["SQ", "log"]
+- !private ["SQ", "on"]
 - !private ["SQ", "resume"]
 - !private ["SQ", "shared"]
+- !private ["SQ", "sound"]
 - !private ["SQ", "statusCode"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "subtitle"]
+- !private ["SQ", "title"]
+- !private ["SQ", "updateToFile"]
 - !private ["SQ", "uploadTask"]
 - !private ["SQ", "utf8"]
 - !private ["SQ", "uuidString"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
@@ -136,109 +255,233 @@ depends-member:
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["14_019_ios_final6FriendV", "deinit"]
 - !private ["So17NSHTTPURLResponseC", "statusCode"]
+- !private ["SH", "Image"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "add"]
 - !private ["SH", "addValue"]
 - !private ["SH", "append"]
+- !private ["SH", "badge"]
+- !private ["SH", "body"]
+- !private ["SH", "connect"]
+- !private ["SH", "current"]
 - !private ["SH", "data"]
 - !private ["SH", "dataTask"]
+- !private ["SH", "default"]
+- !private ["SH", "defaultSocket"]
+- !private ["SH", "emit"]
 - !private ["SH", "httpBody"]
 - !private ["SH", "httpMethod"]
 - ["SH", "init"]
 - ["SH", "init"]
 - !private ["SH", "jpegData"]
+- !private ["SH", "on"]
 - !private ["SH", "resume"]
 - !private ["SH", "shared"]
+- !private ["SH", "sound"]
 - !private ["SH", "statusCode"]
+- !private ["SH", "subscript"]
+- !private ["SH", "subtitle"]
+- !private ["SH", "title"]
 - !private ["SH", "uploadTask"]
 - !private ["SH", "utf8"]
 - !private ["SH", "uuidString"]
+- !private ["14_019_ios_final5ImageV", "deinit"]
+- !private ["14_019_ios_final5ImageV", "init"]
+- !private ["14_019_ios_final5ImageV", "updateToFile"]
 - !private ["10Foundation11JSONDecoderC", "decode"]
 - !private ["10Foundation11JSONDecoderC", "init"]
 - !private ["10Foundation11JSONEncoderC", "encode"]
 - !private ["10Foundation11JSONEncoderC", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "data"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
+- !private ["14_019_ios_final7MessageV", "decodeFromDict"]
+- !private ["14_019_ios_final7MessageV", "message"]
+- !private ["14_019_ios_final7MessageV", "receiver"]
+- !private ["14_019_ios_final7MessageV", "sender"]
+- !private ["14_019_ios_final7MessageV", "timeStamp"]
+- !private ["14_019_ios_final7MessageV", "type"]
+- !private ["14_019_ios_final7MessageV", "updateToFile"]
 - !private ["s10MirrorPathP", "data"]
 - ["s10MirrorPathP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["SM", "append"]
 - !private ["SM", "init"]
+- !private ["SM", "subscript"]
+- !private ["So8NSCodingP", "badge"]
+- !private ["So8NSCodingP", "body"]
 - !private ["So8NSCodingP", "data"]
+- !private ["So8NSCodingP", "default"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "jpegData"]
+- !private ["So8NSCodingP", "sound"]
 - !private ["So8NSCodingP", "statusCode"]
+- !private ["So8NSCodingP", "subtitle"]
+- !private ["So8NSCodingP", "title"]
+- !private ["So9NSCopyingP", "badge"]
+- !private ["So9NSCopyingP", "body"]
 - !private ["So9NSCopyingP", "data"]
+- !private ["So9NSCopyingP", "default"]
+- !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "resume"]
+- !private ["So9NSCopyingP", "sound"]
 - !private ["So9NSCopyingP", "statusCode"]
+- !private ["So9NSCopyingP", "subtitle"]
+- !private ["So9NSCopyingP", "title"]
 - !private ["So21NSItemProviderReadingP", "data"]
 - !private ["So21NSItemProviderReadingP", "jpegData"]
 - !private ["So21NSItemProviderWritingP", "data"]
 - !private ["So21NSItemProviderWritingP", "jpegData"]
+- !private ["So16NSMutableCopyingP", "badge"]
+- !private ["So16NSMutableCopyingP", "body"]
 - !private ["So16NSMutableCopyingP", "data"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "sound"]
+- !private ["So16NSMutableCopyingP", "subtitle"]
+- !private ["So16NSMutableCopyingP", "title"]
+- !private ["So8NSObjectC", "add"]
+- !private ["So8NSObjectC", "badge"]
+- !private ["So8NSObjectC", "body"]
+- !private ["So8NSObjectC", "connect"]
+- !private ["So8NSObjectC", "current"]
 - !private ["So8NSObjectC", "data"]
 - !private ["So8NSObjectC", "dataTask"]
+- !private ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "defaultSocket"]
+- !private ["So8NSObjectC", "emit"]
+- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "jpegData"]
+- !private ["So8NSObjectC", "on"]
 - !private ["So8NSObjectC", "resume"]
 - !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "sound"]
 - !private ["So8NSObjectC", "statusCode"]
+- !private ["So8NSObjectC", "subtitle"]
+- !private ["So8NSObjectC", "title"]
 - !private ["So8NSObjectC", "uploadTask"]
+- !private ["So8NSObjectP", "add"]
+- !private ["So8NSObjectP", "badge"]
+- !private ["So8NSObjectP", "body"]
+- !private ["So8NSObjectP", "connect"]
+- !private ["So8NSObjectP", "current"]
 - !private ["So8NSObjectP", "data"]
 - !private ["So8NSObjectP", "dataTask"]
+- !private ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "defaultSocket"]
+- !private ["So8NSObjectP", "emit"]
+- ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "jpegData"]
+- !private ["So8NSObjectP", "on"]
 - !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "sound"]
 - !private ["So8NSObjectP", "statusCode"]
+- !private ["So8NSObjectP", "subtitle"]
+- !private ["So8NSObjectP", "title"]
 - !private ["So8NSObjectP", "uploadTask"]
+- !private ["So14NSSecureCodingP", "badge"]
+- !private ["So14NSSecureCodingP", "body"]
 - !private ["So14NSSecureCodingP", "data"]
+- !private ["So14NSSecureCodingP", "default"]
+- !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "jpegData"]
+- !private ["So14NSSecureCodingP", "sound"]
 - !private ["So14NSSecureCodingP", "statusCode"]
+- !private ["So14NSSecureCodingP", "subtitle"]
+- !private ["So14NSSecureCodingP", "title"]
 - !private ["So8NSStringC", "data"]
 - ["14_019_ios_final17NetworkControllerV", "API"]
+- !private ["14_019_ios_final17NetworkControllerV", "Chat"]
 - !private ["14_019_ios_final17NetworkControllerV", "Data"]
 - ["14_019_ios_final17NetworkControllerV", "Friend"]
 - !private ["14_019_ios_final17NetworkControllerV", "HTTPURLResponse"]
+- !private ["14_019_ios_final17NetworkControllerV", "Image"]
 - ["14_019_ios_final17NetworkControllerV", "Int"]
 - !private ["14_019_ios_final17NetworkControllerV", "JSONDecoder"]
 - !private ["14_019_ios_final17NetworkControllerV", "JSONEncoder"]
+- ["14_019_ios_final17NetworkControllerV", "Message"]
+- !private ["14_019_ios_final17NetworkControllerV", "NSDictionary"]
 - ["14_019_ios_final17NetworkControllerV", "NetworkController"]
+- ["14_019_ios_final17NetworkControllerV", "NetworkDelegate"]
 - ["14_019_ios_final17NetworkControllerV", "SendMessage"]
+- ["14_019_ios_final17NetworkControllerV", "SocketManager"]
 - ["14_019_ios_final17NetworkControllerV", "String"]
+- !private ["14_019_ios_final17NetworkControllerV", "Type"]
 - ["14_019_ios_final17NetworkControllerV", "UIImage"]
-- !private ["14_019_ios_final17NetworkControllerV", "URL"]
+- !private ["14_019_ios_final17NetworkControllerV", "UNMutableNotificationContent"]
+- !private ["14_019_ios_final17NetworkControllerV", "UNNotificationRequest"]
+- !private ["14_019_ios_final17NetworkControllerV", "UNNotificationSound"]
+- !private ["14_019_ios_final17NetworkControllerV", "UNTimeIntervalNotificationTrigger"]
+- !private ["14_019_ios_final17NetworkControllerV", "UNUserNotificationCenter"]
+- ["14_019_ios_final17NetworkControllerV", "URL"]
 - !private ["14_019_ios_final17NetworkControllerV", "URLRequest"]
 - !private ["14_019_ios_final17NetworkControllerV", "URLSession"]
 - !private ["14_019_ios_final17NetworkControllerV", "UUID"]
 - ["14_019_ios_final17NetworkControllerV", "User"]
 - ["14_019_ios_final17NetworkControllerV", "Void"]
+- ["14_019_ios_final17NetworkControllerV", "delegate"]
 - ["14_019_ios_final17NetworkControllerV", "getFriendList"]
 - ["14_019_ios_final17NetworkControllerV", "init"]
 - ["14_019_ios_final17NetworkControllerV", "login"]
+- ["14_019_ios_final17NetworkControllerV", "manager"]
 - !private ["14_019_ios_final17NetworkControllerV", "print"]
 - ["14_019_ios_final17NetworkControllerV", "sendImage"]
+- ["14_019_ios_final17NetworkControllerV", "sendNoti"]
 - ["14_019_ios_final17NetworkControllerV", "sendText"]
 - ["14_019_ios_final17NetworkControllerV", "shared"]
+- ["14_019_ios_final17NetworkControllerV", "socketConnect"]
+- ["14_019_ios_final15NetworkDelegateP", "Message"]
+- ["14_019_ios_final15NetworkDelegateP", "update"]
 - !private ["So19NSProgressReportingP", "resume"]
 - !private ["Sk", "append"]
 - !private ["Sk", "init"]
+- !private ["Sk", "subscript"]
 - !private ["Sm", "append"]
 - !private ["Sm", "data"]
 - ["Sm", "init"]
 - ["Sm", "init"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "Image"]
+- !private ["SY", "connect"]
 - !private ["SY", "utf8"]
 - !private ["10Foundation20ReferenceConvertibleP", "addValue"]
 - !private ["10Foundation20ReferenceConvertibleP", "append"]
 - !private ["10Foundation20ReferenceConvertibleP", "httpBody"]
 - !private ["10Foundation20ReferenceConvertibleP", "httpMethod"]
-- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "uuidString"]
 - !private ["14_019_ios_final11SendMessageV", "deinit"]
 - !private ["ST", "append"]
 - !private ["ST", "data"]
 - ["ST", "init"]
 - ["ST", "init"]
+- !private ["ST", "subscript"]
+- !private ["8SocketIO0A11ClientEventO", "connect"]
+- !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
 - !private ["8SocketIO0A4DataP", "append"]
 - !private ["8SocketIO0A4DataP", "data"]
 - ["8SocketIO0A4DataP", "init"]
 - ["8SocketIO0A4DataP", "init"]
+- !private ["8SocketIO0A4DataP", "subscript"]
+- !private ["8SocketIO0A14DataBufferableP", "defaultSocket"]
+- ["8SocketIO0A14DataBufferableP", "init"]
+- !private ["8SocketIO0A12EngineClientP", "defaultSocket"]
+- ["8SocketIO0A12EngineClientP", "init"]
+- !private ["8SocketIO0A8IOClientC", "connect"]
+- !private ["8SocketIO0A8IOClientC", "emit"]
+- !private ["8SocketIO0A8IOClientC", "on"]
+- ["8SocketIO0A14IOClientOptionO", "compress"]
+- ["8SocketIO0A14IOClientOptionO", "log"]
+- !private ["8SocketIO0A12IOClientSpecP", "connect"]
+- !private ["8SocketIO0A12IOClientSpecP", "emit"]
+- !private ["8SocketIO0A12IOClientSpecP", "on"]
+- !private ["8SocketIO0A7ManagerC", "defaultSocket"]
+- ["8SocketIO0A7ManagerC", "init"]
+- !private ["8SocketIO0A11ManagerSpecP", "defaultSocket"]
+- ["8SocketIO0A11ManagerSpecP", "init"]
+- !private ["8SocketIO0A8ParsableP", "defaultSocket"]
+- ["8SocketIO0A8ParsableP", "init"]
 - !private ["SS", "data"]
 - ["SS", "init"]
 - ["SS", "init"]
@@ -251,10 +494,30 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "data"]
 - ["s20TextOutputStreamableP", "init"]
 - ["s20TextOutputStreamableP", "init"]
+- !private ["14_019_ios_final4TypeO", "Image"]
+- !private ["14_019_ios_final4TypeO", "deinit"]
 - !private ["So29UIAccessibilityIdentificationP", "jpegData"]
 - !private ["So7UIImageC", "jpegData"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "jpegData"]
-- !private ["10Foundation3URLV", "init"]
+- !private ["So28UNMutableNotificationContentC", "badge"]
+- !private ["So28UNMutableNotificationContentC", "body"]
+- !private ["So28UNMutableNotificationContentC", "init"]
+- !private ["So28UNMutableNotificationContentC", "sound"]
+- !private ["So28UNMutableNotificationContentC", "subtitle"]
+- !private ["So28UNMutableNotificationContentC", "title"]
+- !private ["So21UNNotificationContentC", "badge"]
+- !private ["So21UNNotificationContentC", "body"]
+- !private ["So21UNNotificationContentC", "init"]
+- !private ["So21UNNotificationContentC", "sound"]
+- !private ["So21UNNotificationContentC", "subtitle"]
+- !private ["So21UNNotificationContentC", "title"]
+- !private ["So21UNNotificationRequestC", "init"]
+- !private ["So19UNNotificationSoundC", "default"]
+- !private ["So21UNNotificationTriggerC", "init"]
+- !private ["So33UNTimeIntervalNotificationTriggerC", "init"]
+- !private ["So24UNUserNotificationCenterC", "add"]
+- !private ["So24UNUserNotificationCenterC", "current"]
+- ["10Foundation3URLV", "init"]
 - !private ["10Foundation10URLRequestV", "addValue"]
 - !private ["10Foundation10URLRequestV", "httpBody"]
 - !private ["10Foundation10URLRequestV", "httpMethod"]
@@ -270,6 +533,9 @@ depends-member:
 - !private ["10Foundation4UUIDV", "uuidString"]
 - !private ["14_019_ios_final4UserV", "name"]
 - !private ["14_019_ios_final4UserV", "password"]
+- !private ["14_019_ios_final4UserV", "shared"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -282,19 +548,34 @@ depends-member:
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s26_ExpressibleByImageLiteralP", "jpegData"]
 - !private ["s33_ExpressibleByStringInterpolationP", "data"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "badge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "body"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "connect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultSocket"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "emit"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "jpegData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "on"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sound"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "statusCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subtitle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "uploadTask"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "addValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "data"]
@@ -302,16 +583,23 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "httpMethod"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "uuidString"]
 - !private ["s16_SwiftStringViewP", "data"]
 - ["s16_SwiftStringViewP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - "14_019_ios_final17NetworkControllerV3APIV"
+- !private "Sa"
+- !private "s13ArrayProtocolP"
 - "SK"
+- !private "Sb"
 - "s7CVarArgP"
+- !private "14_019_ios_final4ChatV"
+- "8SocketIO12ClientOptionP"
 - "Sl"
 - "SL"
+- "8SocketIO14ConfigSettableP"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
@@ -321,15 +609,19 @@ depends-nominal:
 - "SE"
 - !private "SS10FoundationE8EncodingV"
 - "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "14_019_ios_final6FriendV"
 - !private "So17NSHTTPURLResponseC"
 - "SH"
+- !private "14_019_ios_final5ImageV"
 - !private "10Foundation11JSONDecoderC"
 - !private "10Foundation11JSONEncoderC"
 - "s25LosslessStringConvertibleP"
+- !private "14_019_ios_final7MessageV"
 - "s10MirrorPathP"
 - !private "SM"
 - !private "So8NSCodingP"
@@ -338,26 +630,44 @@ depends-nominal:
 - !private "So21NSItemProviderWritingP"
 - !private "So16NSMutableCopyingP"
 - !private "So8NSObjectC"
-- !private "So8NSObjectP"
+- "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - "14_019_ios_final17NetworkControllerV"
+- "14_019_ios_final15NetworkDelegateP"
 - !private "So19NSProgressReportingP"
 - !private "Sk"
 - "Sm"
 - !private "SY"
-- !private "10Foundation20ReferenceConvertibleP"
+- "10Foundation20ReferenceConvertibleP"
 - !private "14_019_ios_final11SendMessageV"
 - "ST"
+- !private "8SocketIO0A11ClientEventO"
 - "8SocketIO0A4DataP"
+- "8SocketIO0A14DataBufferableP"
+- "8SocketIO0A12EngineClientP"
+- !private "8SocketIO0A8IOClientC"
+- "8SocketIO0A14IOClientOptionO"
+- !private "8SocketIO0A12IOClientSpecP"
+- "8SocketIO0A7ManagerC"
+- "8SocketIO0A11ManagerSpecP"
+- "8SocketIO0A8ParsableP"
 - "SS"
 - "Sy"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
+- !private "14_019_ios_final4TypeO"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So7UIImageC"
 - !private "So39UIItemProviderPresentationSizeProvidingP"
-- !private "10Foundation3URLV"
+- !private "So28UNMutableNotificationContentC"
+- !private "So21UNNotificationContentC"
+- !private "So21UNNotificationRequestC"
+- !private "So19UNNotificationSoundC"
+- !private "So21UNNotificationTriggerC"
+- !private "So33UNTimeIntervalNotificationTriggerC"
+- !private "So24UNUserNotificationCenterC"
+- "10Foundation3URLV"
 - !private "10Foundation10URLRequestV"
 - !private "So13NSURLResponseC"
 - !private "So12NSURLSessionC"
@@ -366,15 +676,17 @@ depends-nominal:
 - !private "So22NSURLSessionUploadTaskC"
 - !private "10Foundation4UUIDV"
 - !private "14_019_ios_final4UserV"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s34_ExpressibleByFileReferenceLiteralP"
+- "s34_ExpressibleByFileReferenceLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - "s33_ExpressibleByStringInterpolationP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
-- !private "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
 - "s16_SwiftStringViewP"
 depends-dynamic-lookup:
@@ -408,7 +720,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "7475bad20f070a0edfeeb52533e77eb9"
+interface-hash: "dd271997730742400840c7e9a2fec571"

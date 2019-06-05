@@ -8,45 +8,64 @@
 
 import Foundation
 import SocketIO
+import UserNotifications
 
-
+protocol NetworkDelegate: class {
+    func update(data: Message)
+}
 
 struct NetworkController {
-    
-    static let shared = NetworkController()
+    var delegate: NetworkDelegate?
 
+    static var shared = NetworkController()
     
-    
+    let manager = SocketManager(socketURL: URL(string: "http://140.121.197.197:6700")!, config: [.log(true), .compress])
+
     struct API {
         static let login = "http://140.121.197.197:6700/login"
-        static let getFriendList = "http://140.121.197.197:6700/get_friends"
-        static let uploadImage = "http://140.121.197.197:6700/send_image"
         static let sendText = "http://140.121.197.197:6700/send_text"
+        static let uploadImage = "http://140.121.197.197:6700/send_image"
+        static let getFriendList = "http://140.121.197.197:6700/get_friends"
     }
-    
-    
-    
-    /*func socketConnect(sender: String) {
-        let socket = manager.defaultSocket
+
+    func socketConnect(sender: String) {
+        let socket = self.manager.defaultSocket
+        
         socket.on(clientEvent: .connect) { data, ack in
-            socket.emit("post name", ["sender": sender])
+            socket.emit("post name", ["sender": User.shared.name])
+            socket.emit("get history", ["sender": User.shared.name])
         }
-        socket.on("get msg") { data, ack in
-            if let data = data[0] as? NSDictionary {
-                let msg = self.jsonToMessage(data: data)
-                if data["receiver"] as! String == ChatViewController.receiver.name {
-                    ChatViewController.chatHistory.append(msg)
-                    if let topVC = UIApplication.topViewController() {
-                        if topVC == ChatViewController {
-                            topVC.
-                        }
-                    }
+        
+        socket.on("get msg") { rawData, ack in
+            if let data = rawData[0] as? NSDictionary {
+                let message = Message.decodeFromDict(data: data)
+                socket.emit("get msg success", [
+                    "sender": User.shared.name,
+                    "timeStamp": message.timeStamp
+                ])
+                // get receiver name
+                var receiver: String = ""
+                if message.receiver == User.shared.name {
+                    receiver = message.sender
+                } else {
+                    receiver = message.receiver
                 }
-                
+                // start update
+                Message.updateToFile(receiver: receiver, data: message)
+                Chat.updateToFile(receiver: receiver, data: message)
+                if message.type == Type.Image {
+                    Image.updateToFile(receiver: receiver, data: Image(imageName: message.message))
+                }
+                if let tmpDelegate = NetworkController.shared.delegate {
+                    tmpDelegate.update(data: message)
+
+                } else {
+                    print("no delegate")
+                }
             }
         }
         socket.connect()
-    }*/
+    }
     
     func sendText(message: SendMessage) {
         if let url = URL(string: API.sendText){
@@ -62,7 +81,7 @@ struct NetworkController {
             task.resume()
         }
     }
-    
+
     func sendImage(sender: String, receiver: String, image: UIImage) {
         let boundary = UUID().uuidString
         
@@ -114,23 +133,30 @@ struct NetworkController {
                 if let data = data {
                     let friendList = try? JSONDecoder().decode([Friend].self, from: data)
                     completion(friendList)
-
                 }
-                
             }
             task.resume()
         }
     }
     
 }
-extension NetworkController {
-    /*func jsonToMessage(data: NSDictionary) -> Message{
-        let type = Type.Text
-        var sender = Sender.User
-        if data["sender"] as! String != User.shared.name {
-            sender = Sender.Opposite
-        }
-        return Message(type: type, sender: sender, image: "", text: data["msg"] as! String)
-    }*/
-}
 
+extension NetworkController {
+    func sendNoti(data: Message) {
+        let content = UNMutableNotificationContent()
+        content.title = "title：測試本地通知"
+        content.subtitle = "subtitle：法蘭克"
+        content.body = "body：法蘭克的 iOS 世界"
+        content.badge = 1
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in
+            print("成功建立通知...")
+        })
+    }
+    
+}

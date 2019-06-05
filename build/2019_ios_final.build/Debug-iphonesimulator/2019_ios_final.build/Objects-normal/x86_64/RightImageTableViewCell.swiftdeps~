@@ -12,7 +12,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - "Bool"
 - "RightImageTableViewCell"
-- "UIButton"
+- "UIImageView"
 - "UITableViewCell"
 depends-member:
 - ["So15CALayerDelegateP", ""]
@@ -51,7 +51,7 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "setSelected"]
 - ["So8NSObjectC", "Bool"]
-- ["So8NSObjectC", "UIButton"]
+- ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "awakeFromNib"]
 - ["So8NSObjectC", "imageButton"]
 - ["So8NSObjectC", "init"]
@@ -63,7 +63,7 @@ depends-member:
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "setSelected"]
 - ["14_019_ios_final23RightImageTableViewCellC", "Bool"]
-- ["14_019_ios_final23RightImageTableViewCellC", "UIButton"]
+- ["14_019_ios_final23RightImageTableViewCellC", "UIImageView"]
 - ["14_019_ios_final23RightImageTableViewCellC", "awakeFromNib"]
 - ["14_019_ios_final23RightImageTableViewCellC", "imageButton"]
 - ["14_019_ios_final23RightImageTableViewCellC", "init"]
@@ -119,7 +119,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So11UIResponderC", "Bool"]
-- ["So11UIResponderC", "UIButton"]
+- ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "awakeFromNib"]
 - ["So11UIResponderC", "imageButton"]
 - ["So11UIResponderC", "init"]
@@ -131,7 +131,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So15UITableViewCellC", "Bool"]
-- ["So15UITableViewCellC", "UIButton"]
+- ["So15UITableViewCellC", "UIImageView"]
 - ["So15UITableViewCellC", ""]
 - ["So15UITableViewCellC", "awakeFromNib"]
 - ["So15UITableViewCellC", "imageButton"]
@@ -149,7 +149,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "setSelected"]
 - ["So6UIViewC", "Bool"]
-- ["So6UIViewC", "UIButton"]
+- ["So6UIViewC", "UIImageView"]
 - ["So6UIViewC", "awakeFromNib"]
 - ["So6UIViewC", "imageButton"]
 - ["So6UIViewC", "init"]
@@ -225,7 +225,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "f1d7466867bab339142fa5a848b76584"
+interface-hash: "cd629d64d97aa352d041022ea2f1cf1b"

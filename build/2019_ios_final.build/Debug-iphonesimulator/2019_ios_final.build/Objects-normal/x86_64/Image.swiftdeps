@@ -8,6 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "=="
+- !private "Array"
 - "Codable"
 - !private "Data"
 - "FileManager"
@@ -23,14 +24,18 @@ depends-top-level:
 - !private "User"
 - !private "~="
 depends-member:
+- !private ["Sa", "append"]
 - ["Sa", "first"]
+- !private ["s13ArrayProtocolP", "append"]
 - ["s13ArrayProtocolP", "first"]
+- !private ["SK", "append"]
 - ["SK", "first"]
 - !private ["SK", "init"]
 - !private ["SK", "init"]
 - !private ["SK", "write"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
 - ["s7CVarArgP", "default"]
 - ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "init"]
@@ -44,6 +49,7 @@ depends-member:
 - ["s9CodingKeyP", "init"]
 - ["s9CodingKeyP", "intValue"]
 - ["s9CodingKeyP", "stringValue"]
+- !private ["Sl", "append"]
 - ["Sl", "first"]
 - !private ["Sl", "init"]
 - !private ["Sl", "init"]
@@ -51,6 +57,7 @@ depends-member:
 - !private ["SL", "init"]
 - !private ["SL", "init"]
 - !private ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
 - !private ["s28CustomDebugStringConvertibleP", "appendingPathExtension"]
 - ["s28CustomDebugStringConvertibleP", "debugDescription"]
@@ -73,12 +80,14 @@ depends-member:
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "path"]
 - !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
 - ["s17CustomReflectableP", "first"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "write"]
 - !private ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "appendingPathComponent"]
 - !private ["s23CustomStringConvertibleP", "appendingPathExtension"]
 - ["s23CustomStringConvertibleP", "debugDescription"]
@@ -108,6 +117,7 @@ depends-member:
 - !private ["Se", "User"]
 - ["Se", ""]
 - !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "append"]
 - !private ["Se", "appendingPathComponent"]
 - !private ["Se", "appendingPathExtension"]
 - !private ["Se", "documentDirectory"]
@@ -118,6 +128,8 @@ depends-member:
 - ["Se", "init"]
 - !private ["Se", "init"]
 - !private ["Se", "path"]
+- !private ["Se", "readImagesNameFromFile"]
+- !private ["Se", "saveImagesNameToFile"]
 - !private ["Se", "write"]
 - !private ["s7DecoderP", "container"]
 - !private ["SE", "Data"]
@@ -132,6 +144,7 @@ depends-member:
 - !private ["SE", "User"]
 - ["SE", ""]
 - !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "append"]
 - !private ["SE", "appendingPathComponent"]
 - !private ["SE", "appendingPathExtension"]
 - !private ["SE", "documentDirectory"]
@@ -142,10 +155,13 @@ depends-member:
 - ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "path"]
+- !private ["SE", "readImagesNameFromFile"]
+- !private ["SE", "saveImagesNameToFile"]
 - !private ["SE", "write"]
 - !private ["s7EncoderP", "container"]
 - !private ["SQ", ""]
 - !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "append"]
 - !private ["SQ", "appendingPathComponent"]
 - !private ["SQ", "appendingPathExtension"]
 - ["SQ", "debugDescription"]
@@ -163,6 +179,7 @@ depends-member:
 - ["SQ", "urls"]
 - ["SQ", "userDomainMask"]
 - !private ["SQ", "write"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
 - ["s25ExpressibleByArrayLiteralP", "first"]
 - ["s25ExpressibleByArrayLiteralP", "userDomainMask"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
@@ -177,6 +194,7 @@ depends-member:
 - !private ["14_019_ios_final6FriendV", "documentsDirectory"]
 - !private ["SH", ""]
 - !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "append"]
 - !private ["SH", "appendingPathComponent"]
 - !private ["SH", "appendingPathExtension"]
 - ["SH", "debugDescription"]
@@ -213,6 +231,7 @@ depends-member:
 - ["14_019_ios_final5ImageV", "init"]
 - ["14_019_ios_final5ImageV", "readImagesNameFromFile"]
 - ["14_019_ios_final5ImageV", "saveImagesNameToFile"]
+- ["14_019_ios_final5ImageV", "updateToFile"]
 - !private ["s22KeyedDecodingContainerV", "decode"]
 - !private ["s30KeyedDecodingContainerProtocolP", "decode"]
 - !private ["s22KeyedEncodingContainerV", "encode"]
@@ -223,6 +242,7 @@ depends-member:
 - !private ["14_019_ios_final7MessageV", "documentDirectory"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
 - ["SM", "first"]
 - !private ["SM", "init"]
 - !private ["SM", "write"]
@@ -241,9 +261,11 @@ depends-member:
 - !private ["10Foundation19PropertyListDecoderC", "init"]
 - !private ["10Foundation19PropertyListEncoderC", "encode"]
 - !private ["10Foundation19PropertyListEncoderC", "init"]
+- !private ["Sk", "append"]
 - ["Sk", "first"]
 - !private ["Sk", "init"]
 - !private ["Sk", "write"]
+- !private ["Sm", "append"]
 - ["Sm", "first"]
 - !private ["Sm", "init"]
 - !private ["Sm", "init"]
@@ -257,12 +279,14 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "write"]
 - ["So21NSSearchPathDirectoryV", "documentDirectory"]
 - ["So22NSSearchPathDomainMaskV", "userDomainMask"]
+- !private ["ST", "append"]
 - ["ST", "first"]
 - !private ["ST", "init"]
 - !private ["ST", "init"]
 - !private ["ST", "write"]
 - ["s10SetAlgebraP", "userDomainMask"]
 - !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
+- !private ["8SocketIO0A4DataP", "append"]
 - ["8SocketIO0A4DataP", "first"]
 - !private ["8SocketIO0A4DataP", "init"]
 - !private ["8SocketIO0A4DataP", "init"]
@@ -284,6 +308,7 @@ depends-member:
 - !private ["10Foundation3URLV", "path"]
 - !private ["14_019_ios_final4UserV", "name"]
 - !private ["14_019_ios_final4UserV", "shared"]
+- !private ["s24_DestructorSafeContainerP", "append"]
 - ["s24_DestructorSafeContainerP", "first"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -301,11 +326,13 @@ depends-member:
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "default"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "urls"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
 - !private ["s21_ObjectiveCBridgeableP", "appendingPathExtension"]
 - ["s21_ObjectiveCBridgeableP", "first"]
@@ -423,7 +450,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "18610ed6653f32cffe71ad0605e963cb"
+interface-hash: "9377bbe28ac755e8f99a3f5fec15e376"
