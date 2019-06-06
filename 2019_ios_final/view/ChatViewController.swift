@@ -124,17 +124,15 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewDidLoad() {
-        print("view did load!")
         super.viewDidLoad()
         chatTable.delegate = self
         chatTable.dataSource = self
-
-        NetworkController.shared.delegate = self
 
         nameLabel.title = receiver.name
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        NetworkController.shared.delegate = self
         if first {
             first = false
             let leftCell = chatTable.cellForRow(at: IndexPath(row: 0, section: 0)) as! LeftImageTableViewCell
@@ -160,15 +158,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func update(data: Message) {
-        print("update!")
-        print(data)
+        print("update by chat view")
         if data.sender == receiver.name || data.receiver == receiver.name {
             self.chatHistory.append(data)
             let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
             self.chatTable.insertRows(at: [indexPath], with: .automatic)
             self.scrollToBottom()
         } else {
-            NetworkController.shared.sendNoti(data: data)
+            NetworkController.shared.sendNotification(data: data)
         }
     }
 
@@ -183,7 +180,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 }
 extension ChatViewController {
-
 
     func scrollToBottom() {
         if chatHistory.count >= 1 {

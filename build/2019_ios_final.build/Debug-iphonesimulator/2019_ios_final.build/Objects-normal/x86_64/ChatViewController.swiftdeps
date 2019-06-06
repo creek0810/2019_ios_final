@@ -1179,7 +1179,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "withAlignmentRectInsets"]
 - !private ["14_019_ios_final17NetworkControllerV", "delegate"]
 - !private ["14_019_ios_final17NetworkControllerV", "sendImage"]
-- !private ["14_019_ios_final17NetworkControllerV", "sendNoti"]
+- !private ["14_019_ios_final17NetworkControllerV", "sendNotification"]
 - !private ["14_019_ios_final17NetworkControllerV", "sendText"]
 - !private ["14_019_ios_final17NetworkControllerV", "shared"]
 - ["14_019_ios_final15NetworkDelegateP", "CGFloat"]

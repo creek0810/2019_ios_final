@@ -58,10 +58,14 @@ struct NetworkController {
                 }
                 if let tmpDelegate = NetworkController.shared.delegate {
                     tmpDelegate.update(data: message)
-
                 } else {
-                    print("no delegate")
+                    if message.sender != User.shared.name {
+                        print("no delagate")
+                        self.sendNotification(data: message)
+                    }
                 }
+                
+    
             }
         }
         socket.connect()
@@ -142,17 +146,18 @@ struct NetworkController {
 }
 
 extension NetworkController {
-    func sendNoti(data: Message) {
+    func sendNotification(data: Message) {
         let content = UNMutableNotificationContent()
-        content.title = "title：測試本地通知"
-        content.subtitle = "subtitle：法蘭克"
-        content.body = "body：法蘭克的 iOS 世界"
+        content.title = "\(data.sender)"
+        if data.type == Type.Image {
+            content.body = "Photo"
+        } else {
+            content.body = "\(data.message)"
+        }
         content.badge = 1
         content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: nil)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in
             print("成功建立通知...")

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NetworkDelegate {
     
     var chatList: [Chat] = [Chat]()
     
@@ -71,6 +71,7 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        NetworkController.shared.delegate = self
         if let chatHistory = Chat.readFromFile() {
             chatList = chatHistory
             chatMenuTable.reloadData()
@@ -78,7 +79,20 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    // MARK: - Navigation
+    override func viewDidDisappear(_ animated: Bool) {
+        NetworkController.shared.delegate = nil
+    }
+    
+    func update(data: Message) {
+        print("update by chat menu")
+        if data.sender != User.shared.name {
+            NetworkController.shared.sendNotification(data: data)
+        }
+        if let chatHistory = Chat.readFromFile() {
+            chatList = chatHistory
+            chatMenuTable.reloadData()
+        }
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

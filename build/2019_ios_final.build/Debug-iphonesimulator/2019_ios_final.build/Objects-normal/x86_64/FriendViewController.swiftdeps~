@@ -624,8 +624,6 @@ depends-member:
 - !private ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "viewForZooming"]
 - ["So8NSObjectP", "viewForZoomingInScrollView"]
-- !private ["14_019_ios_final17NetworkControllerV", "checkDelegate"]
-- !private ["14_019_ios_final17NetworkControllerV", "delegate"]
 - !private ["14_019_ios_final17NetworkControllerV", "getFriendList"]
 - !private ["14_019_ios_final17NetworkControllerV", "shared"]
 - !private ["14_019_ios_final15NetworkDelegateP", "receiver"]

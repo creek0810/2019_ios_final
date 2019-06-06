@@ -10,9 +10,10 @@ provides-member:
 - ["14_019_ios_final15NetworkDelegateP", ""]
 - ["14_019_ios_final17NetworkControllerV", ""]
 - ["14_019_ios_final17NetworkControllerV3APIV", ""]
-- ["14_019_ios_final17NetworkControllerV", "sendNoti"]
+- ["14_019_ios_final17NetworkControllerV", "sendNotification"]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!="
 - !private "=="
 - "AnyObject"
 - "Array"
@@ -21,7 +22,7 @@ depends-top-level:
 - !private "CastingPrecedence"
 - !private "Chat"
 - !private "Data"
-- !private "Dictionary"
+- "Dictionary"
 - !private "ExtendedGraphemeClusterType"
 - "FloatLiteralType"
 - "Friend"
@@ -44,7 +45,6 @@ depends-top-level:
 - !private "UNMutableNotificationContent"
 - !private "UNNotificationRequest"
 - !private "UNNotificationSound"
-- !private "UNTimeIntervalNotificationTrigger"
 - !private "UNUserNotificationCenter"
 - "URL"
 - !private "URLRequest"
@@ -87,7 +87,6 @@ depends-member:
 - !private ["s7CVarArgP", "sound"]
 - !private ["s7CVarArgP", "statusCode"]
 - !private ["s7CVarArgP", "subscript"]
-- !private ["s7CVarArgP", "subtitle"]
 - !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "uploadTask"]
 - !private ["14_019_ios_final4ChatV", "updateToFile"]
@@ -127,7 +126,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "sound"]
 - !private ["s28CustomDebugStringConvertibleP", "statusCode"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
-- !private ["s28CustomDebugStringConvertibleP", "subtitle"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s28CustomDebugStringConvertibleP", "uploadTask"]
 - !private ["s28CustomDebugStringConvertibleP", "uuidString"]
@@ -171,7 +169,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "sound"]
 - !private ["s23CustomStringConvertibleP", "statusCode"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "subtitle"]
 - !private ["s23CustomStringConvertibleP", "title"]
 - !private ["s23CustomStringConvertibleP", "uploadTask"]
 - !private ["s23CustomStringConvertibleP", "utf8"]
@@ -236,7 +233,6 @@ depends-member:
 - !private ["SQ", "sound"]
 - !private ["SQ", "statusCode"]
 - !private ["SQ", "subscript"]
-- !private ["SQ", "subtitle"]
 - !private ["SQ", "title"]
 - !private ["SQ", "updateToFile"]
 - !private ["SQ", "uploadTask"]
@@ -280,7 +276,6 @@ depends-member:
 - !private ["SH", "sound"]
 - !private ["SH", "statusCode"]
 - !private ["SH", "subscript"]
-- !private ["SH", "subtitle"]
 - !private ["SH", "title"]
 - !private ["SH", "uploadTask"]
 - !private ["SH", "utf8"]
@@ -317,7 +312,6 @@ depends-member:
 - !private ["So8NSCodingP", "jpegData"]
 - !private ["So8NSCodingP", "sound"]
 - !private ["So8NSCodingP", "statusCode"]
-- !private ["So8NSCodingP", "subtitle"]
 - !private ["So8NSCodingP", "title"]
 - !private ["So9NSCopyingP", "badge"]
 - !private ["So9NSCopyingP", "body"]
@@ -327,7 +321,6 @@ depends-member:
 - !private ["So9NSCopyingP", "resume"]
 - !private ["So9NSCopyingP", "sound"]
 - !private ["So9NSCopyingP", "statusCode"]
-- !private ["So9NSCopyingP", "subtitle"]
 - !private ["So9NSCopyingP", "title"]
 - !private ["So21NSItemProviderReadingP", "data"]
 - !private ["So21NSItemProviderReadingP", "jpegData"]
@@ -338,7 +331,6 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "data"]
 - !private ["So16NSMutableCopyingP", "init"]
 - !private ["So16NSMutableCopyingP", "sound"]
-- !private ["So16NSMutableCopyingP", "subtitle"]
 - !private ["So16NSMutableCopyingP", "title"]
 - !private ["So8NSObjectC", "add"]
 - !private ["So8NSObjectC", "badge"]
@@ -357,7 +349,6 @@ depends-member:
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "sound"]
 - !private ["So8NSObjectC", "statusCode"]
-- !private ["So8NSObjectC", "subtitle"]
 - !private ["So8NSObjectC", "title"]
 - !private ["So8NSObjectC", "uploadTask"]
 - !private ["So8NSObjectP", "add"]
@@ -377,7 +368,6 @@ depends-member:
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "sound"]
 - !private ["So8NSObjectP", "statusCode"]
-- !private ["So8NSObjectP", "subtitle"]
 - !private ["So8NSObjectP", "title"]
 - !private ["So8NSObjectP", "uploadTask"]
 - !private ["So14NSSecureCodingP", "badge"]
@@ -388,7 +378,6 @@ depends-member:
 - !private ["So14NSSecureCodingP", "jpegData"]
 - !private ["So14NSSecureCodingP", "sound"]
 - !private ["So14NSSecureCodingP", "statusCode"]
-- !private ["So14NSSecureCodingP", "subtitle"]
 - !private ["So14NSSecureCodingP", "title"]
 - !private ["So8NSStringC", "data"]
 - ["14_019_ios_final17NetworkControllerV", "API"]
@@ -412,7 +401,6 @@ depends-member:
 - !private ["14_019_ios_final17NetworkControllerV", "UNMutableNotificationContent"]
 - !private ["14_019_ios_final17NetworkControllerV", "UNNotificationRequest"]
 - !private ["14_019_ios_final17NetworkControllerV", "UNNotificationSound"]
-- !private ["14_019_ios_final17NetworkControllerV", "UNTimeIntervalNotificationTrigger"]
 - !private ["14_019_ios_final17NetworkControllerV", "UNUserNotificationCenter"]
 - ["14_019_ios_final17NetworkControllerV", "URL"]
 - !private ["14_019_ios_final17NetworkControllerV", "URLRequest"]
@@ -427,7 +415,7 @@ depends-member:
 - ["14_019_ios_final17NetworkControllerV", "manager"]
 - !private ["14_019_ios_final17NetworkControllerV", "print"]
 - ["14_019_ios_final17NetworkControllerV", "sendImage"]
-- ["14_019_ios_final17NetworkControllerV", "sendNoti"]
+- ["14_019_ios_final17NetworkControllerV", "sendNotification"]
 - ["14_019_ios_final17NetworkControllerV", "sendText"]
 - ["14_019_ios_final17NetworkControllerV", "shared"]
 - ["14_019_ios_final17NetworkControllerV", "socketConnect"]
@@ -503,18 +491,14 @@ depends-member:
 - !private ["So28UNMutableNotificationContentC", "body"]
 - !private ["So28UNMutableNotificationContentC", "init"]
 - !private ["So28UNMutableNotificationContentC", "sound"]
-- !private ["So28UNMutableNotificationContentC", "subtitle"]
 - !private ["So28UNMutableNotificationContentC", "title"]
 - !private ["So21UNNotificationContentC", "badge"]
 - !private ["So21UNNotificationContentC", "body"]
 - !private ["So21UNNotificationContentC", "init"]
 - !private ["So21UNNotificationContentC", "sound"]
-- !private ["So21UNNotificationContentC", "subtitle"]
 - !private ["So21UNNotificationContentC", "title"]
 - !private ["So21UNNotificationRequestC", "init"]
 - !private ["So19UNNotificationSoundC", "default"]
-- !private ["So21UNNotificationTriggerC", "init"]
-- !private ["So33UNTimeIntervalNotificationTriggerC", "init"]
 - !private ["So24UNUserNotificationCenterC", "add"]
 - !private ["So24UNUserNotificationCenterC", "current"]
 - ["10Foundation3URLV", "init"]
@@ -572,7 +556,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sound"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "statusCode"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "subtitle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "uploadTask"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
@@ -664,8 +647,6 @@ depends-nominal:
 - !private "So21UNNotificationContentC"
 - !private "So21UNNotificationRequestC"
 - !private "So19UNNotificationSoundC"
-- !private "So21UNNotificationTriggerC"
-- !private "So33UNTimeIntervalNotificationTriggerC"
 - !private "So24UNUserNotificationCenterC"
 - "10Foundation3URLV"
 - !private "10Foundation10URLRequestV"
@@ -724,4 +705,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "dd271997730742400840c7e9a2fec571"
+interface-hash: "d9d2f0ed1822faea1d8332377c1c62e7"
