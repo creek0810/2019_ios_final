@@ -184,13 +184,40 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class UITextField;
+@class UIStoryboardSegue;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC14_019_ios_final27AddFriendMenuViewController")
+@interface AddFriendMenuViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified idText;
+- (IBAction)showQR:(id _Nonnull)sender;
+- (IBAction)searchByID:(id _Nonnull)sender;
+- (IBAction)searchByQR:(id _Nonnull)sender;
+- (void)viewDidLoad;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIImageView;
+@class UILabel;
+
+SWIFT_CLASS("_TtC14_019_ios_final23AddFriendViewController")
+@interface AddFriendViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified propicImage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified idText;
+- (IBAction)addFriend:(id _Nonnull)sender;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UICollectionView;
 @class UICollectionViewFlowLayout;
 @class UICollectionViewCell;
 @class UICollectionViewLayout;
-@class UIStoryboardSegue;
-@class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC14_019_ios_final23AllImagesViewController")
 @interface AllImagesViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
@@ -234,15 +261,13 @@ SWIFT_CLASS("_TtC14_019_ios_final22ChatMenuViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIImageView;
-@class UILabel;
 
 SWIFT_CLASS("_TtC14_019_ios_final17ChatTableViewCell")
 @interface ChatTableViewCell : UITableViewCell
@@ -256,7 +281,6 @@ SWIFT_CLASS("_TtC14_019_ios_final17ChatTableViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITextField;
 @class UINavigationItem;
 @class UIView;
 @class UIImagePickerController;
@@ -393,16 +417,6 @@ SWIFT_CLASS("_TtC14_019_ios_final25SingalImageViewController")
 @end
 
 
-
-@class UIButton;
-
-SWIFT_CLASS("_TtC14_019_ios_final18testViewController")
-@interface testViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified imageButton;
-- (void)viewDidLoad;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

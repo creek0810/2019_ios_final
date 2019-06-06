@@ -13,7 +13,6 @@ depends-top-level:
 - !private "Array"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
-- "NetworkDelegate"
 - "SingalImage2ViewController"
 - !private "UIActivityViewController"
 - "UIImage"
@@ -30,7 +29,6 @@ depends-member:
 - !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "singalImage"]
 - !private ["s7CVarArgP", "tmpImage"]
-- ["s7CVarArgP", "update"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "UIActivityViewController"]
 - ["s28CustomDebugStringConvertibleP", "UIImage"]
@@ -41,7 +39,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "singalImage"]
 - !private ["s28CustomDebugStringConvertibleP", "tmpImage"]
-- ["s28CustomDebugStringConvertibleP", "update"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s17CustomReflectableP", "image"]
 - !private ["s23CustomStringConvertibleP", "UIActivityViewController"]
@@ -53,7 +50,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "singalImage"]
 - !private ["s23CustomStringConvertibleP", "tmpImage"]
-- ["s23CustomStringConvertibleP", "update"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["Se", "image"]
 - !private ["SE", "image"]
@@ -66,7 +62,6 @@ depends-member:
 - !private ["SQ", "present"]
 - !private ["SQ", "singalImage"]
 - !private ["SQ", "tmpImage"]
-- ["SQ", "update"]
 - !private ["SQ", "viewDidLoad"]
 - !private ["s23ExpressibleByNilLiteralP", "image"]
 - !private ["SH", "UIActivityViewController"]
@@ -78,7 +73,6 @@ depends-member:
 - !private ["SH", "present"]
 - !private ["SH", "singalImage"]
 - !private ["SH", "tmpImage"]
-- ["SH", "update"]
 - !private ["SH", "viewDidLoad"]
 - !private ["So8NSCodingP", "UIActivityViewController"]
 - ["So8NSCodingP", "UIImage"]
@@ -89,7 +83,6 @@ depends-member:
 - !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "singalImage"]
 - !private ["So8NSCodingP", "tmpImage"]
-- ["So8NSCodingP", "update"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So26NSExtensionRequestHandlingP", "UIActivityViewController"]
 - ["So26NSExtensionRequestHandlingP", "UIImage"]
@@ -99,7 +92,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So26NSExtensionRequestHandlingP", "singalImage"]
 - !private ["So26NSExtensionRequestHandlingP", "tmpImage"]
-- ["So26NSExtensionRequestHandlingP", "update"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So21NSItemProviderReadingP", "init"]
 - ["So21NSItemProviderWritingP", "init"]
@@ -113,7 +105,6 @@ depends-member:
 - !private ["So8NSObjectC", "present"]
 - ["So8NSObjectC", "singalImage"]
 - ["So8NSObjectC", "tmpImage"]
-- ["So8NSObjectC", "update"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "UIActivityViewController"]
 - ["So8NSObjectP", "UIImage"]
@@ -124,27 +115,17 @@ depends-member:
 - !private ["So8NSObjectP", "present"]
 - !private ["So8NSObjectP", "singalImage"]
 - !private ["So8NSObjectP", "tmpImage"]
-- ["So8NSObjectP", "update"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - ["So14NSSecureCodingP", "init"]
-- !private ["14_019_ios_final15NetworkDelegateP", "UIActivityViewController"]
-- ["14_019_ios_final15NetworkDelegateP", "UIImage"]
-- ["14_019_ios_final15NetworkDelegateP", ""]
-- !private ["14_019_ios_final15NetworkDelegateP", "present"]
-- !private ["14_019_ios_final15NetworkDelegateP", "singalImage"]
-- !private ["14_019_ios_final15NetworkDelegateP", "tmpImage"]
-- ["14_019_ios_final15NetworkDelegateP", "update"]
 - !private ["Sq", "image"]
 - !private ["14_019_ios_final26SingalImage2ViewControllerC", "UIActivityViewController"]
 - ["14_019_ios_final26SingalImage2ViewControllerC", "UIImage"]
 - ["14_019_ios_final26SingalImage2ViewControllerC", "UIImageView"]
-- ["14_019_ios_final26SingalImage2ViewControllerC", "deinit"]
 - ["14_019_ios_final26SingalImage2ViewControllerC", "download"]
 - ["14_019_ios_final26SingalImage2ViewControllerC", "init"]
 - !private ["14_019_ios_final26SingalImage2ViewControllerC", "present"]
 - ["14_019_ios_final26SingalImage2ViewControllerC", "singalImage"]
 - ["14_019_ios_final26SingalImage2ViewControllerC", "tmpImage"]
-- ["14_019_ios_final26SingalImage2ViewControllerC", "update"]
 - ["14_019_ios_final26SingalImage2ViewControllerC", "viewDidLoad"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - !private ["So29UIAccessibilityIdentificationP", "image"]
@@ -160,7 +141,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "singalImage"]
 - !private ["So21UIAppearanceContainerP", "tmpImage"]
-- ["So21UIAppearanceContainerP", "update"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So18UIContentContainerP", "UIActivityViewController"]
 - ["So18UIContentContainerP", "UIImage"]
@@ -170,7 +150,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "present"]
 - !private ["So18UIContentContainerP", "singalImage"]
 - !private ["So18UIContentContainerP", "tmpImage"]
-- ["So18UIContentContainerP", "update"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So17UICoordinateSpaceP", "image"]
 - !private ["So13UIDynamicItemP", "image"]
@@ -183,7 +162,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "singalImage"]
 - !private ["So18UIFocusEnvironmentP", "tmpImage"]
-- ["So18UIFocusEnvironmentP", "update"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So11UIFocusItemP", "image"]
 - !private ["So20UIFocusItemContainerP", "image"]
@@ -199,7 +177,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "singalImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "tmpImage"]
-- ["So30UIPasteConfigurationSupportingP", "update"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So11UIResponderC", "UIActivityViewController"]
 - ["So11UIResponderC", "UIImage"]
@@ -211,7 +188,6 @@ depends-member:
 - !private ["So11UIResponderC", "present"]
 - ["So11UIResponderC", "singalImage"]
 - ["So11UIResponderC", "tmpImage"]
-- ["So11UIResponderC", "update"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "UIActivityViewController"]
 - ["So30UIResponderStandardEditActionsP", "UIImage"]
@@ -222,7 +198,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "present"]
 - !private ["So30UIResponderStandardEditActionsP", "singalImage"]
 - !private ["So30UIResponderStandardEditActionsP", "tmpImage"]
-- ["So30UIResponderStandardEditActionsP", "update"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So16UIStateRestoringP", "UIActivityViewController"]
 - ["So16UIStateRestoringP", "UIImage"]
@@ -232,7 +207,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "present"]
 - !private ["So16UIStateRestoringP", "singalImage"]
 - !private ["So16UIStateRestoringP", "tmpImage"]
-- ["So16UIStateRestoringP", "update"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "UIActivityViewController"]
 - ["So18UITraitEnvironmentP", "UIImage"]
@@ -243,7 +217,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "singalImage"]
 - !private ["So18UITraitEnvironmentP", "tmpImage"]
-- ["So18UITraitEnvironmentP", "update"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "UIActivityViewController"]
 - ["So23UIUserActivityRestoringP", "UIImage"]
@@ -254,7 +227,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "present"]
 - !private ["So23UIUserActivityRestoringP", "singalImage"]
 - !private ["So23UIUserActivityRestoringP", "tmpImage"]
-- ["So23UIUserActivityRestoringP", "update"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So6UIViewC", "image"]
 - !private ["So16UIViewControllerC", "UIActivityViewController"]
@@ -267,7 +239,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "present"]
 - ["So16UIViewControllerC", "singalImage"]
 - ["So16UIViewControllerC", "tmpImage"]
-- ["So16UIViewControllerC", "update"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "image"]
 - ["s26_ExpressibleByImageLiteralP", "init"]
@@ -280,7 +251,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "singalImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tmpImage"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "update"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "image"]
 depends-nominal:
@@ -301,7 +271,6 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - "So14NSSecureCodingP"
-- "14_019_ios_final15NetworkDelegateP"
 - !private "Sq"
 - "14_019_ios_final26SingalImage2ViewControllerC"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -365,4 +334,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "30e740ccd6a1788a38e3f9da863d3557"
+interface-hash: "17fd689e76b775e2f92b4bd8cb572f4d"

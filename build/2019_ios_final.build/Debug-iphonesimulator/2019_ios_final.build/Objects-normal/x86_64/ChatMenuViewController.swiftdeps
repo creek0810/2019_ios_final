@@ -13,14 +13,15 @@ provides-dynamic-lookup:
 - "chatMenuTable"
 - "prepare"
 - "tableView"
+- "viewDidAppear"
 - "viewDidDisappear"
 - "viewDidLoad"
-- "viewWillAppear"
 depends-top-level:
 - !private "!="
 - !private "-"
 - !private "=="
 - !private "??"
+- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - "Calendar"
@@ -183,11 +184,11 @@ depends-member:
 - ["14_019_ios_final22ChatMenuViewControllerC", "sectionIndexTitlesForTableView"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "tableView"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "update"]
+- ["14_019_ios_final22ChatMenuViewControllerC", "viewDidAppear"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "viewDidDisappear"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "viewDidLoad"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "viewForZooming"]
 - ["14_019_ios_final22ChatMenuViewControllerC", "viewForZoomingInScrollView"]
-- ["14_019_ios_final22ChatMenuViewControllerC", "viewWillAppear"]
 - !private ["14_019_ios_final17ChatTableViewCellC", "dateLabel"]
 - !private ["14_019_ios_final17ChatTableViewCellC", "messageLabel"]
 - !private ["14_019_ios_final17ChatTableViewCellC", "nameLabel"]
@@ -764,11 +765,11 @@ depends-member:
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "update"]
+- ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidDisappear"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewForZooming"]
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
-- ["So8NSObjectC", "viewWillAppear"]
 - ["So8NSObjectP", "Chat"]
 - !private ["So8NSObjectP", "Date"]
 - !private ["So8NSObjectP", "DateFormatter"]
@@ -1231,11 +1232,11 @@ depends-member:
 - ["So11UIResponderC", "tableView"]
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "update"]
+- ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidDisappear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewForZooming"]
 - ["So11UIResponderC", "viewForZoomingInScrollView"]
-- ["So11UIResponderC", "viewWillAppear"]
 - ["So30UIResponderStandardEditActionsP", "Chat"]
 - !private ["So30UIResponderStandardEditActionsP", "Date"]
 - !private ["So30UIResponderStandardEditActionsP", "DateFormatter"]
@@ -1612,11 +1613,11 @@ depends-member:
 - ["So16UIViewControllerC", "sectionIndexTitlesForTableView"]
 - ["So16UIViewControllerC", "tableView"]
 - ["So16UIViewControllerC", "update"]
+- ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidDisappear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
 - ["So16UIViewControllerC", "viewForZoomingInScrollView"]
-- ["So16UIViewControllerC", "viewWillAppear"]
 - !private ["14_019_ios_final4UserV", "name"]
 - !private ["14_019_ios_final4UserV", "shared"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dataSource"]
@@ -1868,4 +1869,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "29bc5fd17ee73c7e9a10e4d65a44f5d0"
+interface-hash: "a71cc95561abf89181878d6075112e48"

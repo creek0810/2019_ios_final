@@ -16,12 +16,10 @@ depends-top-level:
 - !private "!="
 - !private "=="
 - "AnyObject"
-- "Array"
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
 - !private "CastingPrecedence"
 - !private "Chat"
-- !private "Data"
+- "Data"
 - "Dictionary"
 - !private "ExtendedGraphemeClusterType"
 - "FloatLiteralType"
@@ -55,6 +53,7 @@ depends-top-level:
 - !private "print"
 depends-member:
 - ["14_019_ios_final17NetworkControllerV3APIV", "getFriendList"]
+- ["14_019_ios_final17NetworkControllerV3APIV", "getProfile"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "init"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "login"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "sendText"]
@@ -382,7 +381,7 @@ depends-member:
 - !private ["So8NSStringC", "data"]
 - ["14_019_ios_final17NetworkControllerV", "API"]
 - !private ["14_019_ios_final17NetworkControllerV", "Chat"]
-- !private ["14_019_ios_final17NetworkControllerV", "Data"]
+- ["14_019_ios_final17NetworkControllerV", "Data"]
 - ["14_019_ios_final17NetworkControllerV", "Friend"]
 - !private ["14_019_ios_final17NetworkControllerV", "HTTPURLResponse"]
 - !private ["14_019_ios_final17NetworkControllerV", "Image"]
@@ -410,6 +409,7 @@ depends-member:
 - ["14_019_ios_final17NetworkControllerV", "Void"]
 - ["14_019_ios_final17NetworkControllerV", "delegate"]
 - ["14_019_ios_final17NetworkControllerV", "getFriendList"]
+- ["14_019_ios_final17NetworkControllerV", "getProfile"]
 - ["14_019_ios_final17NetworkControllerV", "init"]
 - ["14_019_ios_final17NetworkControllerV", "login"]
 - ["14_019_ios_final17NetworkControllerV", "manager"]
@@ -705,4 +705,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d9d2f0ed1822faea1d8332377c1c62e7"
+interface-hash: "adaf6c7a568053f0cbf451d5f98fbbfa"

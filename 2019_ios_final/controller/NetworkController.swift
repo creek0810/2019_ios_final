@@ -26,6 +26,7 @@ struct NetworkController {
         static let sendText = "http://140.121.197.197:6700/send_text"
         static let uploadImage = "http://140.121.197.197:6700/send_image"
         static let getFriendList = "http://140.121.197.197:6700/get_friends"
+        static let getProfile = "http://140.121.197.197:6700/profile"
     }
 
     func socketConnect(sender: String) {
@@ -137,6 +138,20 @@ struct NetworkController {
                 if let data = data {
                     let friendList = try? JSONDecoder().decode([Friend].self, from: data)
                     completion(friendList)
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    func getProfile(name: String, completion: @escaping (Int, Data?) -> Void) {
+        let urlString = "\(API.getProfile)?name=\(name)"
+        if let url = URL(string: urlString){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let response = response as? HTTPURLResponse {
+                    completion(response.statusCode, data)
                 }
             }
             task.resume()

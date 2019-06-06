@@ -70,13 +70,12 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         NetworkController.shared.delegate = self
         if let chatHistory = Chat.readFromFile() {
             chatList = chatHistory
             chatMenuTable.reloadData()
         }
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -85,12 +84,12 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
     
     func update(data: Message) {
         print("update by chat menu")
-        if data.sender != User.shared.name {
-            NetworkController.shared.sendNotification(data: data)
-        }
         if let chatHistory = Chat.readFromFile() {
             chatList = chatHistory
             chatMenuTable.reloadData()
+        }
+        if data.sender != User.shared.name {
+            NetworkController.shared.sendNotification(data: data)
         }
     }
 
