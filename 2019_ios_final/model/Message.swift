@@ -12,6 +12,7 @@ import UIKit
 enum Type: Int, Codable {
     case Image = 0
     case Text = 1
+    case AddFriend = 2
 }
 
 struct Message: Codable {
@@ -59,11 +60,8 @@ struct Message: Codable {
         let receiver = data["receiver"] as! String
         let message = data["message"] as! String
         let timeStamp = data["timeStamp"] as! String
-        if data["type"] as! Int == Type.Image.rawValue {
-            return Message(type: Type.Image, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
-        } else {
-            return Message(type: Type.Text, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
-        }
+        let type = Type(rawValue: data["type"] as! Int)!
+        return Message(type: type, sender: sender, receiver: receiver, message: message, timeStamp: timeStamp)
     }
 }
 

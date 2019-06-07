@@ -75,12 +75,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.80000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="174" y="349"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ghl-OA-nvS">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pEd-wO-hOp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="pEd-wO-hOp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hgK-KZ-RjW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -90,11 +90,12 @@
                     <connections>
                         <segue destination="PgH-ns-t5v" kind="relationship" relationship="viewControllers" id="dPH-cg-pUn"/>
                         <segue destination="r30-Qr-euR" kind="relationship" relationship="viewControllers" id="9Yq-YE-O9n"/>
+                        <segue destination="41S-SJ-DXY" kind="relationship" relationship="viewControllers" id="d6E-uC-VNO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbJ-4t-xob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.79999999999995" y="26.53673163418291"/>
+            <point key="canvasLocation" x="948" y="349"/>
         </scene>
         <!--好友-->
         <scene sceneID="AAo-1w-xYq">
@@ -105,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gbn-kz-zeA" customClass="Friend">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" rowHeight="86" id="ZGm-ub-fCE" customClass="FriendTableViewCell" customModule="_019_ios_final" customModuleProvider="target">
@@ -182,7 +183,7 @@
         <!--Name-->
         <scene sceneID="D9L-Ro-4xa">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Rbv-bf-RKa" customClass="ChatViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatView" hidesBottomBarWhenPushed="YES" id="Rbv-bf-RKa" customClass="ChatViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5AP-rH-YL1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -625,7 +626,7 @@
         <!--Add Friend View Controller-->
         <scene sceneID="w1j-Hh-x4E">
             <objects>
-                <viewController id="d8M-fB-dN3" customClass="AddFriendViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileView" id="d8M-fB-dN3" customClass="AddFriendViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kDT-6d-cS6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -671,6 +672,7 @@
                     <connections>
                         <outlet property="idText" destination="n5V-aw-RQC" id="Awa-WF-0Gv"/>
                         <outlet property="propicImage" destination="BGu-9k-2r5" id="CDM-f5-lib"/>
+                        <segue destination="Ec1-9B-Jbb" kind="show" identifier="backToFriendList" id="viZ-y5-RVK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYQ-29-Neg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -680,7 +682,7 @@
         <!--聊天-->
         <scene sceneID="o7Y-un-Nbh">
             <objects>
-                <viewController id="teU-5Z-pKr" customClass="ChatMenuViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatMenu" id="teU-5Z-pKr" customClass="ChatMenuViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F0V-Q4-XNY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -791,7 +793,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgx-tp-tsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877.5999999999999" y="-290.10494752623691"/>
+            <point key="canvasLocation" x="1878" y="-295"/>
         </scene>
         <!--聊天-->
         <scene sceneID="9iM-Sz-Cnz">
@@ -814,6 +816,22 @@
             </objects>
             <point key="canvasLocation" x="1878" y="350"/>
         </scene>
+        <!--設定-->
+        <scene sceneID="zjt-rs-hkN">
+            <objects>
+                <viewController id="41S-SJ-DXY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBl-x5-hEb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Ax-2H-dJn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="設定" image="settings" id="516-gE-vwk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBF-QE-jdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="992"/>
+        </scene>
     </scenes>
     <resources>
         <image name="all" width="40" height="40"/>
@@ -821,8 +839,10 @@
         <image name="download" width="37.5" height="37.5"/>
         <image name="friend" width="40" height="40"/>
         <image name="image" width="37.5" height="37.5"/>
+        <image name="settings" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nab-jo-ogv"/>
+        <segue reference="Bg5-7i-p8k"/>
+        <segue reference="viZ-y5-RVK"/>
     </inferredMetricsTieBreakers>
 </document>

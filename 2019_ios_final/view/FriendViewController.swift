@@ -50,6 +50,19 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        NetworkController.shared.getFriendList { (friendList: [Friend]?) in
+            if let friendList = friendList {
+                self.friendList = friendList
+            } else if let friendList = Friend.readFromFile() {
+                self.friendList = friendList
+            }
+            DispatchQueue.main.async {
+                self.friendTable.reloadData()
+                Friend.saveTofile(friends: self.friendList)
+            }
+        }
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startChat", let receiver = sender as? Friend {

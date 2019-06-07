@@ -24,6 +24,7 @@ depends-top-level:
 - "IntegerLiteralType"
 - !private "JSONDecoder"
 - !private "NetworkController"
+- "StringLiteralType"
 - "UIStoryboardSegue"
 - "UITextField"
 - "UIViewController"

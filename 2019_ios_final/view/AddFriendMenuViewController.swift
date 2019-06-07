@@ -13,6 +13,7 @@ class AddFriendMenuViewController: UIViewController {
     
     
     @IBAction func showQR(_ sender: Any) {
+        
     }
     
     @IBAction func searchByID(_ sender: Any) {
@@ -27,20 +28,17 @@ class AddFriendMenuViewController: UIViewController {
                 }
             }
         })
-        
     }
     
     @IBAction func searchByQR(_ sender: Any) {
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-    
-    
-    
-    // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,6 +47,5 @@ class AddFriendMenuViewController: UIViewController {
             controller.target = sender as? Friend
         }
     }
-    
-    
+
 }

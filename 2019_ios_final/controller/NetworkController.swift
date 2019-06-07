@@ -27,6 +27,7 @@ struct NetworkController {
         static let uploadImage = "http://140.121.197.197:6700/send_image"
         static let getFriendList = "http://140.121.197.197:6700/get_friends"
         static let getProfile = "http://140.121.197.197:6700/profile"
+        static let addFriend = "http://140.121.197.197:6700/add_friend"
     }
 
     func socketConnect(sender: String) {
@@ -158,6 +159,20 @@ struct NetworkController {
         }
     }
     
+    func addFriend(name: String, completion: @escaping () -> Void){
+        let urlString = "\(API.addFriend)?sender=\(User.shared.name)&name=\(name)"
+        if let url = URL(string: urlString){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let response = response as? HTTPURLResponse {
+                    completion()
+                }
+            }
+            task.resume()
+        }
+    }
+    
 }
 
 extension NetworkController {
@@ -166,17 +181,44 @@ extension NetworkController {
         content.title = "\(data.sender)"
         if data.type == Type.Image {
             content.body = "Photo"
-        } else {
+        } else if data.type == Type.Text {
             content.body = "\(data.message)"
+        } else if data.type == Type.AddFriend {
+            content.body = "\(data.sender)想新增你為好友"
         }
         content.badge = 1
         content.sound = UNNotificationSound.default
+        content.userInfo = [
+            "type": data.type.rawValue,
+            "sender": data.sender,
+        ]
+        if data.type == Type.AddFriend {
+            let request = UNNotificationRequest(identifier: "addFriend", content: content, trigger: nil)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: { data in
+                print("成功建立通知... from friend")
+            })
+        } else {
+            let request = UNNotificationRequest(identifier: "message", content: content, trigger: nil)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in
+                print("成功建立通知... from another")
+            })
+        }
         
-        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: nil)
-        
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in
-            print("成功建立通知...")
-        })
+
+    }
+    
+    func showAddFriendRequest(curController: UIViewController, message: Message) {
+        let controller = UIAlertController(title: "加入好友", message: "是否新增\(message.sender)為好友", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "好的", style: .default) { (_) in
+            print("在行事曆裡加入送宵夜的提醒")
+        }
+        controller.addAction(okAction)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        controller.addAction(cancelAction)
+        DispatchQueue.main.async {
+            curController.present(controller, animated: true, completion: nil)
+        }
     }
     
 }

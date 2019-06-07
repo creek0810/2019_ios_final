@@ -9,10 +9,12 @@ provides-dynamic-lookup:
 - "friendTable"
 - "prepare"
 - "tableView"
+- "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
+- "Bool"
 - "CastingPrecedence"
 - !private "ChatViewController"
 - !private "DispatchQueue"
@@ -345,6 +347,7 @@ depends-member:
 - !private ["14_019_ios_final6FriendV", "saveTofile"]
 - !private ["14_019_ios_final19FriendTableViewCellC", "nameLabel"]
 - !private ["14_019_ios_final19FriendTableViewCellC", "propic"]
+- ["14_019_ios_final20FriendViewControllerC", "Bool"]
 - !private ["14_019_ios_final20FriendViewControllerC", "ChatViewController"]
 - !private ["14_019_ios_final20FriendViewControllerC", "DispatchQueue"]
 - ["14_019_ios_final20FriendViewControllerC", "Friend"]
@@ -382,6 +385,7 @@ depends-member:
 - ["14_019_ios_final20FriendViewControllerC", "sectionIndexTitles"]
 - ["14_019_ios_final20FriendViewControllerC", "sectionIndexTitlesForTableView"]
 - ["14_019_ios_final20FriendViewControllerC", "tableView"]
+- ["14_019_ios_final20FriendViewControllerC", "viewDidAppear"]
 - ["14_019_ios_final20FriendViewControllerC", "viewDidLoad"]
 - ["14_019_ios_final20FriendViewControllerC", "viewForZooming"]
 - ["14_019_ios_final20FriendViewControllerC", "viewForZoomingInScrollView"]
@@ -525,6 +529,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", "viewForZooming"]
 - ["So26NSExtensionRequestHandlingP", "viewForZoomingInScrollView"]
+- ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "ChatViewController"]
 - !private ["So8NSObjectC", "DispatchQueue"]
 - ["So8NSObjectC", "Friend"]
@@ -575,6 +580,7 @@ depends-member:
 - ["So8NSObjectC", "sectionIndexTitlesForTableView"]
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewForZooming"]
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
@@ -891,6 +897,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZooming"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZoomingInScrollView"]
+- ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "ChatViewController"]
 - !private ["So11UIResponderC", "DispatchQueue"]
 - ["So11UIResponderC", "Friend"]
@@ -937,6 +944,7 @@ depends-member:
 - ["So11UIResponderC", "sectionIndexTitlesForTableView"]
 - ["So11UIResponderC", "tableView"]
 - !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewForZooming"]
 - ["So11UIResponderC", "viewForZoomingInScrollView"]
@@ -1217,6 +1225,7 @@ depends-member:
 - !private ["So6UIViewC", "propic"]
 - !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "ChatViewController"]
 - !private ["So16UIViewControllerC", "DispatchQueue"]
 - ["So16UIViewControllerC", "Friend"]
@@ -1256,6 +1265,7 @@ depends-member:
 - ["So16UIViewControllerC", "sectionIndexTitles"]
 - ["So16UIViewControllerC", "sectionIndexTitlesForTableView"]
 - ["So16UIViewControllerC", "tableView"]
+- ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewForZooming"]
 - ["So16UIViewControllerC", "viewForZoomingInScrollView"]
@@ -1478,4 +1488,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "45595a75167acbb46c40dac9adf830aa"
+interface-hash: "667492268537def47c6db986cd0952ad"

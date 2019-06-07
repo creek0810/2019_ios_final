@@ -235,11 +235,9 @@ SWIFT_CLASS("_TtC14_019_ios_final23AllImagesViewController")
 
 @class UIWindow;
 @class UIApplication;
-@class UNUserNotificationCenter;
-@class UNNotification;
 
 SWIFT_CLASS("_TtC14_019_ios_final11AppDelegate")
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
@@ -247,8 +245,16 @@ SWIFT_CLASS("_TtC14_019_ios_final11AppDelegate")
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
-- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresentNotification:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UNUserNotificationCenter;
+@class UNNotification;
+@class UNNotificationResponse;
+
+@interface AppDelegate (SWIFT_EXTENSION(_019_ios_final)) <UNUserNotificationCenterDelegate>
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresentNotification:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 @end
 
 @class UITableView;
@@ -326,6 +332,7 @@ SWIFT_CLASS("_TtC14_019_ios_final20FriendViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -415,8 +422,6 @@ SWIFT_CLASS("_TtC14_019_ios_final25SingalImageViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

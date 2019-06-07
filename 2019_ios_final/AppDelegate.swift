@@ -11,7 +11,7 @@ import UserNotifications
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UNUserNotificationCenter.current().delegate = self
 
-        
         return true
 
     }
@@ -54,29 +53,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("在前景收到通知...")
         completionHandler([.badge, .sound, .alert])
     }
-}
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler:  @escaping () -> Void) {
+        
+        let content = response.notification.request.content
+        let identifier = response.notification.request.identifier
+        if identifier == "message" {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let destinationViewController1 = storyboard.instantiateViewController(withIdentifier: "ChatMenu") as! ChatMenuViewController
+            let destinationViewController2 = storyboard.instantiateViewController(withIdentifier: "ChatView") as! ChatViewController
+            let propicName = Friend.getPropic(name: content.userInfo["sender"] as! String) ?? ""
+            destinationViewController2.receiver = Friend(propic: propicName, name: content.userInfo["sender"] as! String)
+            
+            
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+            tabBarController.selectedIndex = 1
+            let navigationController = tabBarController.selectedViewController as! UINavigationController
+            
+            navigationController.pushViewController(destinationViewController1, animated: false)
+            navigationController.pushViewController(destinationViewController2, animated: false)
+            self.window?.rootViewController =  tabBarController
+            
+            
+            
+        } else {
 
-extension UIWindow {
-    func topViewController() -> UIViewController? {
-        var top = self.rootViewController
-        while true {
-            if let presented = top?.presentedViewController {
-                top = presented
-            } else if let nav = top as? UINavigationController {
-                top = nav.visibleViewController
-            } else if let tab = top as? UITabBarController {
-                top = tab.selectedViewController
-            } else {
-                break
-            }
+            NetworkController.shared.getProfile(name: content.userInfo["sender"] as! String, completion: { status, data in
+                if let data = data, let profile = try? JSONDecoder().decode(Friend.self, from: data) {
+                    DispatchQueue.main.async {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ProfileView") as! AddFriendViewController
+                        destinationViewController.target = profile
+                        
+                        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+                        tabBarController.selectedIndex = 0
+                        let navigationController = tabBarController.selectedViewController as! UINavigationController
+                        navigationController.pushViewController(destinationViewController, animated: false)
+                        self.window?.rootViewController =  tabBarController
+
+
+                    }
+                }
+            })
         }
-        return top
+        
+        completionHandler()
     }
 }
-
 
