@@ -21,7 +21,6 @@ depends-top-level:
 - !private "-"
 - !private "=="
 - !private "??"
-- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - "Calendar"

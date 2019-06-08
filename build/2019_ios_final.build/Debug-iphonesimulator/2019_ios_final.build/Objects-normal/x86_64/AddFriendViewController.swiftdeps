@@ -17,7 +17,6 @@ depends-top-level:
 - "Friend"
 - !private "Image"
 - !private "NetworkController"
-- !private "StringLiteralType"
 - "UIImageView"
 - "UILabel"
 - "UIViewController"

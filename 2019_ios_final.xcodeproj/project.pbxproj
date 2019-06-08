@@ -14,6 +14,7 @@
 		5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A622A14BD5007F5CE1 /* Chat.swift */; };
 		5782F6A922A15F9B007F5CE1 /* LeftImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */; };
 		5782F6AB22A244D7007F5CE1 /* SingalImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6AA22A244D7007F5CE1 /* SingalImageViewController.swift */; };
+		57AAAA3422AB4A1C0050C718 /* ShowQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AAAA3322AB4A1C0050C718 /* ShowQRViewController.swift */; };
 		57B3F76422A417D3002420D7 /* RightImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3F76322A417D3002420D7 /* RightImageTableViewCell.swift */; };
 		57B3F76622A4216A002420D7 /* AllImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3F76522A4216A002420D7 /* AllImagesViewController.swift */; };
 		57B3F76822A42372002420D7 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3F76722A42372002420D7 /* ImageCollectionViewCell.swift */; };
@@ -66,6 +67,7 @@
 		5782F6A622A14BD5007F5CE1 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImageTableViewCell.swift; sourceTree = "<group>"; };
 		5782F6AA22A244D7007F5CE1 /* SingalImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingalImageViewController.swift; sourceTree = "<group>"; };
+		57AAAA3322AB4A1C0050C718 /* ShowQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowQRViewController.swift; sourceTree = "<group>"; };
 		57B3F76322A417D3002420D7 /* RightImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightImageTableViewCell.swift; sourceTree = "<group>"; };
 		57B3F76522A4216A002420D7 /* AllImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImagesViewController.swift; sourceTree = "<group>"; };
 		57B3F76722A42372002420D7 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		57E67F0422A0249C00D12CDA /* view */ = {
 			isa = PBXGroup;
 			children = (
+				57AAAA3322AB4A1C0050C718 /* ShowQRViewController.swift */,
 				57B3F76522A4216A002420D7 /* AllImagesViewController.swift */,
 				5782F6AA22A244D7007F5CE1 /* SingalImageViewController.swift */,
 				5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */,
@@ -489,6 +492,7 @@
 				57E67F0D22A031B500D12CDA /* ChatViewController.swift in Sources */,
 				57E67F1622A1270F00D12CDA /* FriendTableViewCell.swift in Sources */,
 				57E67F1122A0DAC200D12CDA /* LeftMessageTableViewCell.swift in Sources */,
+				57AAAA3422AB4A1C0050C718 /* ShowQRViewController.swift in Sources */,
 				57BDD21F22A97FE200DF2DA3 /* AddFriendViewController.swift in Sources */,
 				5782F6A922A15F9B007F5CE1 /* LeftImageTableViewCell.swift in Sources */,
 				5707906622A6DA11001C85A5 /* Image.swift in Sources */,

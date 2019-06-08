@@ -607,7 +607,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="show my qr"/>
                                 <connections>
-                                    <action selector="showQR:" destination="COX-uN-0fG" eventType="touchUpInside" id="RoM-XH-Lgw"/>
+                                    <action selector="showQR:" destination="COX-uN-0fG" eventType="touchUpInside" id="pwC-bu-2qy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -617,11 +617,43 @@
                     <connections>
                         <outlet property="idText" destination="51h-QL-GD9" id="wYz-sg-7ur"/>
                         <segue destination="d8M-fB-dN3" kind="show" identifier="showProfile" id="CbL-1w-vqr"/>
+                        <segue destination="qG5-aL-zWJ" kind="show" identifier="showQR" id="rBk-xn-dK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omh-JM-keK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3905" y="-707"/>
+        </scene>
+        <!--ShowQR View Controller-->
+        <scene sceneID="6vA-R5-bpo">
+            <objects>
+                <viewController id="qG5-aL-zWJ" customClass="ShowQRViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOv-Rc-KYt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qQh-sb-Q2a">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qQh-sb-Q2a" secondAttribute="height" multiplier="1:1" id="pYZ-Xc-zDv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qQh-sb-Q2a" firstAttribute="trailing" secondItem="LV1-P6-ZCe" secondAttribute="trailing" id="1Ed-KS-j20"/>
+                            <constraint firstItem="qQh-sb-Q2a" firstAttribute="leading" secondItem="LV1-P6-ZCe" secondAttribute="leading" id="S8q-u5-yxG"/>
+                            <constraint firstItem="qQh-sb-Q2a" firstAttribute="centerY" secondItem="XOv-Rc-KYt" secondAttribute="centerY" id="d0p-Tw-Apa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LV1-P6-ZCe"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrImage" destination="qQh-sb-Q2a" id="bxw-PS-TMZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMn-UH-XJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4669.6000000000004" y="-1352.473763118441"/>
         </scene>
         <!--Add Friend View Controller-->
         <scene sceneID="w1j-Hh-x4E">

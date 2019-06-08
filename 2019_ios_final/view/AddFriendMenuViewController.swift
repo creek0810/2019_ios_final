@@ -8,12 +8,19 @@
 
 import UIKit
 
-class AddFriendMenuViewController: UIViewController {
+class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var idText: UITextField!
     
     
     @IBAction func showQR(_ sender: Any) {
-        
+        let name = User.shared.name
+        let data = name.data(using: String.Encoding.utf8)
+        let qrFilter = CIFilter(name: "CIQRCodeGenerator")
+        qrFilter!.setValue(data, forKey: "inputMessage")
+        let qrImage = qrFilter!.outputImage
+        let transform = CGAffineTransform(scaleX: 10, y: 10)
+        let scaledQrImage = qrImage!.transformed(by: transform)
+        self.performSegue(withIdentifier: "showQR", sender: scaledQrImage)
     }
     
     @IBAction func searchByID(_ sender: Any) {
@@ -31,7 +38,36 @@ class AddFriendMenuViewController: UIViewController {
     }
     
     @IBAction func searchByQR(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let qrcodeImg = info[.originalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        let detector: CIDetector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
+        let ciImage: CIImage = CIImage(image:qrcodeImg)!
+        var qrCodeLink = ""
         
+        let features = detector.features(in: ciImage)
+        for feature in features as! [CIQRCodeFeature] {
+            qrCodeLink += feature.messageString!
+        }
+        dismiss(animated: true, completion: nil)
+        NetworkController.shared.getProfile(name: qrCodeLink) { (status, data) in
+            if status == 204 {
+                print("can't find")
+            } else if status == 200 {
+                if let data = data, let profile = try? JSONDecoder().decode(Friend.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "showProfile", sender: profile)
+                    }
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -45,6 +81,11 @@ class AddFriendMenuViewController: UIViewController {
         if segue.identifier == "showProfile" {
             let controller = segue.destination as! AddFriendViewController
             controller.target = sender as? Friend
+        } else if segue.identifier == "showQR" {
+            let controller = segue.destination as! ShowQRViewController
+            if let image = sender as? CIImage {
+                controller.tmpImage = image
+            }
         }
     }
 

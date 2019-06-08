@@ -185,16 +185,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class UITextField;
+@class UIImagePickerController;
 @class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC14_019_ios_final27AddFriendMenuViewController")
-@interface AddFriendMenuViewController : UIViewController
+@interface AddFriendMenuViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified idText;
 - (IBAction)showQR:(id _Nonnull)sender;
 - (IBAction)searchByID:(id _Nonnull)sender;
 - (IBAction)searchByQR:(id _Nonnull)sender;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 - (void)viewDidLoad;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -289,7 +291,6 @@ SWIFT_CLASS("_TtC14_019_ios_final17ChatTableViewCell")
 
 @class UINavigationItem;
 @class UIView;
-@class UIImagePickerController;
 
 SWIFT_CLASS("_TtC14_019_ios_final18ChatViewController")
 @interface ChatViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -397,6 +398,15 @@ SWIFT_CLASS("_TtC14_019_ios_final25RightMessageTableViewCell")
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14_019_ios_final20ShowQRViewController")
+@interface ShowQRViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified qrImage;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 

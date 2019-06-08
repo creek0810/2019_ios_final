@@ -25,7 +25,6 @@ depends-top-level:
 - "IntegerLiteralType"
 - "Message"
 - "NSDictionary"
-- "NilCoalescingPrecedence"
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "SendMessage"

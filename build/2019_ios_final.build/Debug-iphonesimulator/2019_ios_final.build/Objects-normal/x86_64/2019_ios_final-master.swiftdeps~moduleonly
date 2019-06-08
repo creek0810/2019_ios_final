@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "f13915dfcf46ae4647bf4e5825a110e1"
-build_time: [1559909858, 558436000]
+build_time: [1559961100, 576968000]
 inputs:
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/User.swift": [1559294347, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/LoginViewController.swift": [1559748016, 0]
@@ -10,11 +10,12 @@ inputs:
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/ChatViewController.swift": [1559873425, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/FriendTableViewCell.swift": [1559294325, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/LeftMessageTableViewCell.swift": [1559303047, 0]
-  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/AddFriendViewController.swift": [1559909858, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/ShowQRViewController.swift": [1559959286, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/AddFriendViewController.swift": [1559909952, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/LeftImageTableViewCell.swift": [1559734004, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/Image.swift": [1559747195, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/ChatMenuViewController.swift": [1559873400, 0]
-  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/AddFriendMenuViewController.swift": [1559906788, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/AddFriendMenuViewController.swift": [1559961099, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/Message.swift": [1559902366, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/RightImageTableViewCell.swift": [1559733359, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/SingalImageViewController.swift": [1559873431, 0]

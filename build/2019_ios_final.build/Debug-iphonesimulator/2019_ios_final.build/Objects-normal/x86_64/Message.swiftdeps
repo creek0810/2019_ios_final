@@ -29,6 +29,7 @@ depends-top-level:
 - !private "PropertyListEncoder"
 - "SendMessage"
 - "String"
+- !private "StringLiteralType"
 - "Type"
 - !private "UnicodeScalarType"
 - !private "User"
