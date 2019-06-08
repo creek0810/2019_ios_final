@@ -11,7 +11,7 @@ import UIKit
 class AllImagesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var images: [Image] = [Image]()
-    var receiver: Friend = Friend(propic: "test", name: "")
+    var receiver: Friend = Friend(propic: "test", name: "", id: "")
     let fullScreenSize = UIScreen.main.bounds.size
     let spacing:CGFloat = 1
 
@@ -64,7 +64,7 @@ class AllImagesViewController: UIViewController, UICollectionViewDataSource, UIC
         layout.minimumInteritemSpacing = spacing
         self.imagesCollection?.collectionViewLayout = layout
         
-        if let data = Image.readImagesNameFromFile(receiver: receiver.name) {
+        if let data = Image.readImagesNameFromFile(receiver: receiver.id) {
             images = data
             imagesCollection.reloadData()
         }

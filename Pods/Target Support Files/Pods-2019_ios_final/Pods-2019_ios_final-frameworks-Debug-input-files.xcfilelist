@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-2019_ios_final/Pods-2019_ios_final-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework
 ${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework
 ${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework

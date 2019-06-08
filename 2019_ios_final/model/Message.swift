@@ -27,7 +27,7 @@ struct Message: Codable {
     static func saveMessagesToFile(receiver: String, msgs: [Message]) {
         let encoder = PropertyListEncoder()
         if let data = try? encoder.encode(msgs) {
-            let fileName = "\(User.shared.name)-\(receiver)-messageHistory"
+            let fileName = "\(User.shared.id)-\(receiver)-messageHistory"
             let url = Message.documentDirectory.appendingPathComponent(fileName).appendingPathExtension("plist")
             try? data.write(to: url)
         }
@@ -35,7 +35,7 @@ struct Message: Codable {
     
     static func readMessagesFromFile(receiver: String) -> [Message]? {
         let decoder = PropertyListDecoder()
-        let fileName = "\(User.shared.name)-\(receiver)-messageHistory"
+        let fileName = "\(User.shared.id)-\(receiver)-messageHistory"
         let url = Friend.documentsDirectory.appendingPathComponent(fileName).appendingPathExtension("plist")
         if let data = try? Data(contentsOf: url), let history = try? decoder.decode([Message].self, from: data) {
             return history

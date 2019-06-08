@@ -165,6 +165,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import CoreGraphics;
 @import Foundation;
+@import ImagePicker;
 @import UIKit;
 @import UserNotifications;
 #endif
@@ -291,19 +292,23 @@ SWIFT_CLASS("_TtC14_019_ios_final17ChatTableViewCell")
 
 @class UINavigationItem;
 @class UIView;
+@class ImagePickerController;
+@class UIImage;
 
 SWIFT_CLASS("_TtC14_019_ios_final18ChatViewController")
-@interface ChatViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ChatViewController : UIViewController <ImagePickerDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified inputMessage;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified chatTable;
 @property (nonatomic, weak) IBOutlet UINavigationItem * _Null_unspecified nameLabel;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified maskView;
 - (IBAction)sendMessage:(id _Nonnull)sender;
+- (void)wrapperDidPress:(ImagePickerController * _Nonnull)imagePicker images:(NSArray<UIImage *> * _Nonnull)images;
+- (void)doneButtonDidPress:(ImagePickerController * _Nonnull)imagePicker images:(NSArray<UIImage *> * _Nonnull)images;
+- (void)cancelButtonDidPress:(ImagePickerController * _Nonnull)imagePicker;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (IBAction)pickImage:(id _Nonnull)sender;
-- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;

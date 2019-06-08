@@ -13,7 +13,7 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
     
     
     @IBAction func showQR(_ sender: Any) {
-        let name = User.shared.name
+        let name = User.shared.id
         let data = name.data(using: String.Encoding.utf8)
         let qrFilter = CIFilter(name: "CIQRCodeGenerator")
         qrFilter!.setValue(data, forKey: "inputMessage")
@@ -24,7 +24,7 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func searchByID(_ sender: Any) {
-        NetworkController.shared.getProfile(name: idText.text!, completion: { status, data in
+        NetworkController.shared.getProfile(id: idText.text!, completion: { status, data in
             if status == 204 {
                 print("can't find")
             } else if status == 200 {
@@ -57,7 +57,7 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
             qrCodeLink += feature.messageString!
         }
         dismiss(animated: true, completion: nil)
-        NetworkController.shared.getProfile(name: qrCodeLink) { (status, data) in
+        NetworkController.shared.getProfile(id: qrCodeLink) { (status, data) in
             if status == 204 {
                 print("can't find")
             } else if status == 200 {

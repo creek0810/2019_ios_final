@@ -12,15 +12,16 @@
 
 import UIKit
 import SocketIO
+import ImagePicker
 import UserNotifications
 
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NetworkDelegate {
+class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ImagePickerDelegate ,NetworkDelegate {
     
-    var receiver: Friend = Friend(propic: "test", name: "")
+    var receiver: Friend = Friend(propic: "test", name: "", id: "")
     var chatHistory: [Message] = [
-        Message(type: Type.Image, sender: "", receiver: User.shared.name, message: "", timeStamp: ""),
-        Message(type: Type.Image, sender: User.shared.name, receiver: "", message: "", timeStamp: "")
+        Message(type: Type.Image, sender: "", receiver: User.shared.id, message: "", timeStamp: ""),
+        Message(type: Type.Image, sender: User.shared.id, receiver: "", message: "", timeStamp: "")
     ]
     var first = true
     
@@ -37,11 +38,27 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func sendMessage(_ sender: Any) {
         let messageText = inputMessage.text!
-        let message = SendMessage(sender: User.shared.name, receiver: receiver.name, message: messageText)
-        NetworkController.shared.sendText(message: message)
-        inputMessage.text! = ""
+        if messageText != "" {
+            let message = SendMessage(sender: User.shared.id, receiver: receiver.id, message: messageText)
+            NetworkController.shared.sendText(message: message)
+            inputMessage.text! = ""
+        }
     }
     
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        print("wrapper")
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        for image in images {
+            NetworkController.shared.sendImage(sender: User.shared.id, receiver: receiver.id, image: image)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chatHistory.count
@@ -50,7 +67,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let curMessage = chatHistory[indexPath.row]
         if curMessage.type == Type.Text {
-            if curMessage.sender == User.shared.name {
+            if curMessage.sender == User.shared.id {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RightChatCell", for: indexPath) as! RightMessageTableViewCell
                 cell.messageLabel.text = chatHistory[indexPath.row].message
                 return cell
@@ -63,7 +80,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 return cell
             }
         } else {
-            if curMessage.sender == User.shared.name {
+            if curMessage.sender == User.shared.id {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RightImageCell", for: indexPath) as! RightImageTableViewCell
                 if let image = Image.getImage(imageName: chatHistory[indexPath.row].message) {
                     cell.imageButton.image = image
@@ -109,18 +126,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func pickImage(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        self.present(imagePicker, animated: true)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-        NetworkController.shared.sendImage(sender: User.shared.name, receiver: receiver.name, image: selectedImage)
-        dismiss(animated: true, completion: nil)
+        let imagePickerController = ImagePickerController()
+        imagePickerController.imageLimit = 5
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -141,13 +150,13 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let rightCell = chatTable.cellForRow(at: IndexPath(row: 1, section: 0)) as! RightImageTableViewCell
             rightFrameWidth = rightCell.imageButton.frame.width
             
-            if let history = Message.readMessagesFromFile(receiver: receiver.name) {
+            if let history = Message.readMessagesFromFile(receiver: receiver.id) {
                 chatHistory = history
             } else {
                 chatHistory = [Message]()
             }
             chatTable.reloadData()
-            Message.saveMessagesToFile(receiver: receiver.name, msgs: chatHistory)
+            Message.saveMessagesToFile(receiver: receiver.id, msgs: chatHistory)
             scrollToBottom()
             
             maskView.removeFromSuperview()
@@ -159,7 +168,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func update(data: Message) {
         print("update by chat view")
-        if data.sender == receiver.name || data.receiver == receiver.name {
+        if data.sender == receiver.id || data.receiver == receiver.id {
             self.chatHistory.append(data)
             let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
             self.chatTable.insertRows(at: [indexPath], with: .automatic)

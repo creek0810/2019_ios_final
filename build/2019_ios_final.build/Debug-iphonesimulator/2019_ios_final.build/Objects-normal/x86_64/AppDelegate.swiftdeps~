@@ -16,7 +16,6 @@ provides-dynamic-lookup:
 - "window"
 depends-top-level:
 - !private "=="
-- !private "??"
 - !private "AddFriendViewController"
 - "AppDelegate"
 - !private "Array"
@@ -115,6 +114,7 @@ depends-member:
 - !private ["s7CVarArgP", "content"]
 - !private ["s7CVarArgP", "current"]
 - !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "hidesBottomBarWhenPushed"]
 - !private ["s7CVarArgP", "identifier"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
@@ -134,6 +134,7 @@ depends-member:
 - !private ["s7CVarArgP", "userInfo"]
 - ["s7CVarArgP", "userNotificationCenter"]
 - ["s7CVarArgP", "window"]
+- !private ["14_019_ios_final18ChatViewControllerC", "hidesBottomBarWhenPushed"]
 - !private ["14_019_ios_final18ChatViewControllerC", "receiver"]
 - !private ["Sl", "init"]
 - !private ["Sl", "init"]
@@ -164,6 +165,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "content"]
 - !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "hidesBottomBarWhenPushed"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
@@ -215,6 +217,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "content"]
 - !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "hidesBottomBarWhenPushed"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
@@ -235,7 +238,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "userNotificationCenter"]
 - ["s23CustomStringConvertibleP", "window"]
 - !private ["Se", "_getBuiltinLogicValue"]
-- !private ["Se", "getPropic"]
+- !private ["Se", "getProfile"]
 - !private ["Se", "init"]
 - !private ["Se", "init"]
 - !private ["Se", "subscript"]
@@ -245,7 +248,7 @@ depends-member:
 - !private ["So17OS_dispatch_queueC", "async"]
 - !private ["So17OS_dispatch_queueC", "main"]
 - !private ["SE", "_getBuiltinLogicValue"]
-- !private ["SE", "getPropic"]
+- !private ["SE", "getProfile"]
 - !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "subscript"]
@@ -277,6 +280,7 @@ depends-member:
 - !private ["SQ", "content"]
 - !private ["SQ", "current"]
 - !private ["SQ", "delegate"]
+- !private ["SQ", "hidesBottomBarWhenPushed"]
 - !private ["SQ", "identifier"]
 - !private ["SQ", "init"]
 - !private ["SQ", "init"]
@@ -310,8 +314,7 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["14_019_ios_final6FriendV", "deinit"]
-- !private ["14_019_ios_final6FriendV", "getPropic"]
-- !private ["14_019_ios_final6FriendV", "init"]
+- !private ["14_019_ios_final6FriendV", "getProfile"]
 - !private ["SH", "DispatchQueue"]
 - !private ["SH", "Friend"]
 - !private ["SH", "JSONDecoder"]
@@ -337,6 +340,7 @@ depends-member:
 - !private ["SH", "content"]
 - !private ["SH", "current"]
 - !private ["SH", "delegate"]
+- !private ["SH", "hidesBottomBarWhenPushed"]
 - !private ["SH", "identifier"]
 - !private ["SH", "init"]
 - !private ["SH", "init"]
@@ -356,6 +360,8 @@ depends-member:
 - !private ["SH", "userInfo"]
 - ["SH", "userNotificationCenter"]
 - ["SH", "window"]
+- !private ["11ImagePicker0aB8DelegateP", "hidesBottomBarWhenPushed"]
+- !private ["11ImagePicker0aB8DelegateP", "receiver"]
 - !private ["10Foundation11JSONDecoderC", "decode"]
 - !private ["10Foundation11JSONDecoderC", "init"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
@@ -364,6 +370,7 @@ depends-member:
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "content"]
+- !private ["So8NSCodingP", "hidesBottomBarWhenPushed"]
 - !private ["So8NSCodingP", "identifier"]
 - !private ["So8NSCodingP", "notification"]
 - !private ["So8NSCodingP", "pushViewController"]
@@ -379,6 +386,7 @@ depends-member:
 - !private ["So9NSCopyingP", "notification"]
 - !private ["So9NSCopyingP", "request"]
 - !private ["So9NSCopyingP", "userInfo"]
+- !private ["So26NSExtensionRequestHandlingP", "hidesBottomBarWhenPushed"]
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "receiver"]
 - !private ["So26NSExtensionRequestHandlingP", "selectedIndex"]
@@ -421,6 +429,7 @@ depends-member:
 - !private ["So8NSObjectC", "content"]
 - !private ["So8NSObjectC", "current"]
 - !private ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "hidesBottomBarWhenPushed"]
 - !private ["So8NSObjectC", "identifier"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
@@ -463,6 +472,7 @@ depends-member:
 - !private ["So8NSObjectP", "content"]
 - !private ["So8NSObjectP", "current"]
 - !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "hidesBottomBarWhenPushed"]
 - !private ["So8NSObjectP", "identifier"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
@@ -488,6 +498,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "userInfo"]
 - !private ["14_019_ios_final17NetworkControllerV", "getProfile"]
 - !private ["14_019_ios_final17NetworkControllerV", "shared"]
+- !private ["14_019_ios_final15NetworkDelegateP", "hidesBottomBarWhenPushed"]
 - !private ["14_019_ios_final15NetworkDelegateP", "receiver"]
 - !private ["So9OS_objectC", "async"]
 - !private ["So9OS_objectC", "main"]
@@ -522,6 +533,7 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
 - !private ["So12UIAppearanceP", "rootViewController"]
+- !private ["So21UIAppearanceContainerP", "hidesBottomBarWhenPushed"]
 - !private ["So21UIAppearanceContainerP", "pushViewController"]
 - !private ["So21UIAppearanceContainerP", "receiver"]
 - !private ["So21UIAppearanceContainerP", "rootViewController"]
@@ -551,6 +563,7 @@ depends-member:
 - !private ["So21UIApplicationDelegateP", "print"]
 - ["So21UIApplicationDelegateP", "userNotificationCenter"]
 - ["So21UIApplicationDelegateP", "window"]
+- !private ["So18UIContentContainerP", "hidesBottomBarWhenPushed"]
 - !private ["So18UIContentContainerP", "pushViewController"]
 - !private ["So18UIContentContainerP", "receiver"]
 - !private ["So18UIContentContainerP", "selectedIndex"]
@@ -558,6 +571,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "target"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
 - !private ["So13UIDynamicItemP", "rootViewController"]
+- !private ["So18UIFocusEnvironmentP", "hidesBottomBarWhenPushed"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "receiver"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
@@ -566,9 +580,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "target"]
 - !private ["So11UIFocusItemP", "rootViewController"]
 - !private ["So20UIFocusItemContainerP", "rootViewController"]
-- !private ["So31UIImagePickerControllerDelegateP", "receiver"]
 - !private ["So22UINavigationControllerC", "pushViewController"]
-- !private ["So30UINavigationControllerDelegateP", "receiver"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "Friend"]
 - !private ["So30UIPasteConfigurationSupportingP", "JSONDecoder"]
@@ -589,6 +601,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "applicationWillEnterForeground"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillResignActive"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
+- !private ["So30UIPasteConfigurationSupportingP", "hidesBottomBarWhenPushed"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
@@ -633,6 +646,7 @@ depends-member:
 - ["So11UIResponderC", "applicationWillEnterForeground"]
 - ["So11UIResponderC", "applicationWillResignActive"]
 - ["So11UIResponderC", "applicationWillTerminate"]
+- !private ["So11UIResponderC", "hidesBottomBarWhenPushed"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "print"]
@@ -664,6 +678,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "applicationWillEnterForeground"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillResignActive"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
+- !private ["So30UIResponderStandardEditActionsP", "hidesBottomBarWhenPushed"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
@@ -675,7 +690,9 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "target"]
 - ["So30UIResponderStandardEditActionsP", "userNotificationCenter"]
 - ["So30UIResponderStandardEditActionsP", "window"]
+- !private ["So20UIScrollViewDelegateP", "hidesBottomBarWhenPushed"]
 - !private ["So20UIScrollViewDelegateP", "receiver"]
+- !private ["So16UIStateRestoringP", "hidesBottomBarWhenPushed"]
 - !private ["So16UIStateRestoringP", "pushViewController"]
 - !private ["So16UIStateRestoringP", "receiver"]
 - !private ["So16UIStateRestoringP", "selectedIndex"]
@@ -687,8 +704,11 @@ depends-member:
 - !private ["So18UITabBarControllerC", "selectedViewController"]
 - !private ["So16UITabBarDelegateP", "selectedIndex"]
 - !private ["So16UITabBarDelegateP", "selectedViewController"]
+- !private ["So21UITableViewDataSourceP", "hidesBottomBarWhenPushed"]
 - !private ["So21UITableViewDataSourceP", "receiver"]
+- !private ["So19UITableViewDelegateP", "hidesBottomBarWhenPushed"]
 - !private ["So19UITableViewDelegateP", "receiver"]
+- !private ["So18UITraitEnvironmentP", "hidesBottomBarWhenPushed"]
 - !private ["So18UITraitEnvironmentP", "pushViewController"]
 - !private ["So18UITraitEnvironmentP", "receiver"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
@@ -715,6 +735,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "applicationWillEnterForeground"]
 - ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
 - ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
+- !private ["So23UIUserActivityRestoringP", "hidesBottomBarWhenPushed"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "print"]
@@ -727,6 +748,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "userNotificationCenter"]
 - ["So23UIUserActivityRestoringP", "window"]
 - !private ["So6UIViewC", "rootViewController"]
+- !private ["So16UIViewControllerC", "hidesBottomBarWhenPushed"]
 - !private ["So16UIViewControllerC", "pushViewController"]
 - !private ["So16UIViewControllerC", "receiver"]
 - !private ["So16UIViewControllerC", "selectedIndex"]
@@ -807,6 +829,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "content"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hidesBottomBarWhenPushed"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -859,6 +882,7 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "14_019_ios_final6FriendV"
 - "SH"
+- !private "11ImagePicker0aB8DelegateP"
 - !private "10Foundation11JSONDecoderC"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
@@ -893,9 +917,7 @@ depends-nominal:
 - !private "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
-- !private "So31UIImagePickerControllerDelegateP"
 - !private "So22UINavigationControllerC"
-- !private "So30UINavigationControllerDelegateP"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
@@ -935,34 +957,52 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/SocketIO.swiftmodule/x86_64.swiftmodule"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/Starscream.swiftmodule/x86_64.swiftmodule"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Modules/ImagePicker.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MediaPlayer.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Photos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-umbrella.h"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Headers/ImagePicker-umbrella.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/Socket.IO-Client-Swift-umbrella.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/SocketIO-Swift.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-Swift.h"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Headers/ImagePicker-Swift.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/module.modulemap"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/module.modulemap"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "eec9506057ebe639c7b5e285b1038050"

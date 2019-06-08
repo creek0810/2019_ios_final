@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func login(_ sender: Any) {
-        User.shared = User(name: nameTextField.text!, password: passwordTextField.text!)
+        User.shared = User(id: nameTextField.text!, password: passwordTextField.text!)
         NetworkController.shared.login(user: User.shared) { (status) in
             if status == 200 {
                 DispatchQueue.main.async {
@@ -43,6 +43,6 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        NetworkController.shared.socketConnect(sender: User.shared.name)
+        NetworkController.shared.socketConnect(sender: User.shared.id)
     }
 }

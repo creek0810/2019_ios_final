@@ -11,7 +11,7 @@ import UIKit
 class SingalImageViewController: UIViewController {
     
     var tmpImage: UIImage = UIImage()
-    var receiver: Friend = Friend(propic: "test", name: "")
+    var receiver: Friend = Friend(propic: "test", name: "", id: "")
 
     
     @IBOutlet weak var nameLabel: UINavigationItem!

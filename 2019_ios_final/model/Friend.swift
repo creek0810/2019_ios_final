@@ -12,6 +12,7 @@ import UIKit
 struct Friend: Codable {
     var propic: String
     var name: String
+    var id: String
     
     static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     
@@ -33,11 +34,11 @@ struct Friend: Codable {
         }
     }
     
-    static func getPropic(name: String) -> String? {
+    static func getProfile(id: String) -> Friend? {
         if let friends = readFromFile() {
             for friend in friends {
-                if friend.name == name {
-                    return friend.propic
+                if friend.id == id {
+                    return friend
                 }
                 
             }

@@ -9,7 +9,7 @@
 import Foundation
 
 struct User{
-    static var shared = User(name: "", password: "")
-    var name: String
+    static var shared = User(id: "", password: "")
+    var id: String
     var password: String
 }

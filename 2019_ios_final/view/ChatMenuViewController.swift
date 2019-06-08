@@ -21,7 +21,6 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let curChat = chatList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatTableViewCell
-        cell.nameLabel.text = curChat.name
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyy-MM-dd HH:mm:ss"
         if let lastTime = dateFormatter.date(from: curChat.message.timeStamp){
@@ -48,8 +47,11 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
         } else {
             cell.messageLabel.text = curChat.message.message
         }
-        if let image = Image.getImage(imageName: Friend.getPropic(name: curChat.name) ?? "") {
-            cell.propic.image = image
+        if let profile = Friend.getProfile(id: curChat.id) {
+            cell.nameLabel.text = profile.name
+            if let image = Image.getImage(imageName: profile.propic) {
+                cell.propic.image = image
+            }
         }
         return cell
     }
@@ -88,7 +90,7 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
             chatList = chatHistory
             chatMenuTable.reloadData()
         }
-        if data.sender != User.shared.name {
+        if data.sender != User.shared.id {
             NetworkController.shared.sendNotification(data: data)
         }
     }
@@ -97,7 +99,10 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showChat", let receiver = sender as? Chat {
             let controller = segue.destination as! ChatViewController
-            controller.receiver = Friend(propic: Friend.getPropic(name: receiver.name) ?? "", name: receiver.name)
+            if let friend = Friend.getProfile(id: receiver.id) {
+                controller.receiver = friend
+            }
+            
         }
     }
 }

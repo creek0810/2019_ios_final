@@ -7,6 +7,7 @@ target '2019_ios_final' do
 
   # Pods for 2019_ios_final
   pod 'Socket.IO-Client-Swift', '~> 15.1.0'
+  pod 'ImagePicker'
 
   target '2019_ios_finalTests' do
     inherit! :search_paths

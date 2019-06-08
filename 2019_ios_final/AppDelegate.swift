@@ -71,23 +71,26 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             
             let destinationViewController1 = storyboard.instantiateViewController(withIdentifier: "ChatMenu") as! ChatMenuViewController
             let destinationViewController2 = storyboard.instantiateViewController(withIdentifier: "ChatView") as! ChatViewController
-            let propicName = Friend.getPropic(name: content.userInfo["sender"] as! String) ?? ""
-            destinationViewController2.receiver = Friend(propic: propicName, name: content.userInfo["sender"] as! String)
+            if let friend = Friend.getProfile(id: content.userInfo["sender"] as! String) {
+                destinationViewController2.receiver = friend
+            }
+            destinationViewController2.hidesBottomBarWhenPushed = true
             
-            
+
             let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
             tabBarController.selectedIndex = 1
+            self.window?.rootViewController =  tabBarController
+
             let navigationController = tabBarController.selectedViewController as! UINavigationController
             
             navigationController.pushViewController(destinationViewController1, animated: false)
             navigationController.pushViewController(destinationViewController2, animated: false)
-            self.window?.rootViewController =  tabBarController
             
             
             
         } else {
 
-            NetworkController.shared.getProfile(name: content.userInfo["sender"] as! String, completion: { status, data in
+            NetworkController.shared.getProfile(id: content.userInfo["sender"] as! String, completion: { status, data in
                 if let data = data, let profile = try? JSONDecoder().decode(Friend.self, from: data) {
                     DispatchQueue.main.async {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)

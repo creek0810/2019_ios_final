@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Chat: Codable {
-    var name: String
+    var id: String
     var message: Message
     
     static let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -19,14 +19,14 @@ struct Chat: Codable {
     static func saveTofile(chatHistory: [Chat]) {
         let encoder = PropertyListEncoder()
         if let data = try? encoder.encode(chatHistory) {
-            let url = Chat.documentDirectory.appendingPathComponent("\(User.shared.name)-chatHistory").appendingPathExtension("plist")
+            let url = Chat.documentDirectory.appendingPathComponent("\(User.shared.id)-chatHistory").appendingPathExtension("plist")
             try? data.write(to: url)
         }
     }
     
     static func readFromFile() -> [Chat]? {
         let decoder = PropertyListDecoder()
-        let url = Chat.documentDirectory.appendingPathComponent("\(User.shared.name)-chatHistory").appendingPathExtension("plist")
+        let url = Chat.documentDirectory.appendingPathComponent("\(User.shared.id)-chatHistory").appendingPathExtension("plist")
         if let data = try? Data(contentsOf: url), let chatHistory = try? decoder.decode([Chat].self, from: data) {
             return chatHistory
         } else {
@@ -38,18 +38,18 @@ struct Chat: Codable {
         if let chatHistory = Chat.readFromFile() {
             var tmpChatHistory = chatHistory
             for i in 0...tmpChatHistory.count - 1 {
-                if tmpChatHistory[i].name == receiver {
+                if tmpChatHistory[i].id == receiver {
                     tmpChatHistory[i].message = data
                     tmpChatHistory.sort(by: <)
                     Chat.saveTofile(chatHistory: tmpChatHistory)
                     return
                 }
             }
-            tmpChatHistory.append(Chat(name: receiver, message: data))
+            tmpChatHistory.append(Chat(id: receiver, message: data))
             tmpChatHistory.sort(by: <)
             Chat.saveTofile(chatHistory: tmpChatHistory)
         } else {
-            let chatHistory = [Chat(name: receiver, message: data)]
+            let chatHistory = [Chat(id: receiver, message: data)]
             Chat.saveTofile(chatHistory: chatHistory)
         }
     }

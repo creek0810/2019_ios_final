@@ -34,20 +34,21 @@ struct NetworkController {
         let socket = self.manager.defaultSocket
         
         socket.on(clientEvent: .connect) { data, ack in
-            socket.emit("post name", ["sender": User.shared.name])
-            socket.emit("get history", ["sender": User.shared.name])
+
+            socket.emit("post name", ["sender": User.shared.id])
+            socket.emit("get history", ["sender": User.shared.id])
         }
         
         socket.on("get msg") { rawData, ack in
             if let data = rawData[0] as? NSDictionary {
                 let message = Message.decodeFromDict(data: data)
                 socket.emit("get msg success", [
-                    "sender": User.shared.name,
+                    "sender": User.shared.id,
                     "timeStamp": message.timeStamp
                 ])
                 // get receiver name
                 var receiver: String = ""
-                if message.receiver == User.shared.name {
+                if message.receiver == User.shared.id {
                     receiver = message.sender
                 } else {
                     receiver = message.receiver
@@ -61,7 +62,7 @@ struct NetworkController {
                 if let tmpDelegate = NetworkController.shared.delegate {
                     tmpDelegate.update(data: message)
                 } else {
-                    if message.sender != User.shared.name {
+                    if message.sender != User.shared.id {
                         print("no delagate")
                         self.sendNotification(data: message)
                     }
@@ -100,7 +101,7 @@ struct NetworkController {
             data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
             data.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(boundary)\"\r\n".data(using: .utf8)!)
             data.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
-            data.append(image.jpegData(compressionQuality: 0.5)!)
+            data.append(image.jpegData(compressionQuality: 0.3)!)
             
             data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
             data.append("Content-Disposition: form-data; name=\"receiver\"\r\n\r\n".data(using: .utf8)!)
@@ -111,8 +112,6 @@ struct NetworkController {
             data.append("\(sender)".data(using: .utf8)!)
 
             data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
-            
-            
             let task = URLSession.shared.uploadTask(with: request, from: data)
             task.resume()
         }
@@ -121,7 +120,7 @@ struct NetworkController {
     func login(user: User, completion: @escaping (Int) -> Void) {
         if let url = URL(string: API.login){
             var request = URLRequest(url: url)
-            let userString = "name=\(user.name)&password=\(user.password)"
+            let userString = "id=\(user.id)&password=\(user.password)"
             request.httpMethod = "POST"
             request.httpBody = userString.data(using: .utf8)
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -145,8 +144,8 @@ struct NetworkController {
         }
     }
     
-    func getProfile(name: String, completion: @escaping (Int, Data?) -> Void) {
-        let urlString = "\(API.getProfile)?name=\(name)"
+    func getProfile(id: String, completion: @escaping (Int, Data?) -> Void) {
+        let urlString = "\(API.getProfile)?id=\(id)"
         if let url = URL(string: urlString){
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -159,8 +158,8 @@ struct NetworkController {
         }
     }
     
-    func addFriend(name: String, completion: @escaping () -> Void){
-        let urlString = "\(API.addFriend)?sender=\(User.shared.name)&name=\(name)"
+    func addFriend(id: String, completion: @escaping () -> Void){
+        let urlString = "\(API.addFriend)?sender=\(User.shared.id)&id=\(id)"
         if let url = URL(string: urlString){
             var request = URLRequest(url: url)
             request.httpMethod = "GET"

@@ -16,11 +16,13 @@ class AddFriendViewController: UIViewController {
     @IBOutlet weak var idText: UILabel!
     
     @IBAction func addFriend(_ sender: Any) {
-        NetworkController.shared.addFriend(name: idText.text!, completion: {
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "backToFriendList", sender: "")
-            }
-        })
+        if let target = target {
+            NetworkController.shared.addFriend(id: target.id, completion: {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "backToFriendList", sender: "")
+                }
+            })
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

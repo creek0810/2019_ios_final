@@ -4,6 +4,33 @@
   'roots': [
     {
       'type': 'directory',
+      'name': "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ImagePicker-Swift.h",
+          'external-contents': "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Headers/ImagePicker-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "ImagePicker-umbrella.h",
+          'external-contents': "/Users/river/Desktop/2019_ios_final/Pods/Target Support Files/ImagePicker/ImagePicker-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/river/Desktop/2019_ios_final/build/Pods.build/Debug-iphonesimulator/ImagePicker.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Pods_2019_ios_final.framework/Headers",
       'contents': [
         {

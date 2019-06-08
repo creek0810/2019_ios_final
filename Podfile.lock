@@ -1,20 +1,24 @@
 PODS:
+  - ImagePicker (3.1.0)
   - Socket.IO-Client-Swift (15.1.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.0)
 
 DEPENDENCIES:
+  - ImagePicker
   - Socket.IO-Client-Swift (~> 15.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ImagePicker
     - Socket.IO-Client-Swift
     - Starscream
 
 SPEC CHECKSUMS:
+  ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
   Socket.IO-Client-Swift: 7cb44c0ffb86e158cee32d0642d30ec5fdcf8f61
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
 
-PODFILE CHECKSUM: 9a6d2e702fe21d6b95c2b2e8cc800980b8541ad0
+PODFILE CHECKSUM: b41308ec860a33a9087195a689e2db4370fbae06
 
 COCOAPODS: 1.7.1

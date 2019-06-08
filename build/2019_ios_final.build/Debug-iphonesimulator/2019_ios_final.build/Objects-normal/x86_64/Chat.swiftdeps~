@@ -44,19 +44,19 @@ depends-member:
 - !private ["s13ArrayProtocolP", "append"]
 - !private ["s13ArrayProtocolP", "count"]
 - ["s13ArrayProtocolP", "first"]
+- !private ["s13ArrayProtocolP", "id"]
 - !private ["s13ArrayProtocolP", "message"]
-- !private ["s13ArrayProtocolP", "name"]
 - !private ["s13ArrayProtocolP", "sort"]
 - !private ["s13ArrayProtocolP", "subscript"]
+- !private ["s10ArraySliceV", "id"]
 - !private ["s10ArraySliceV", "message"]
-- !private ["s10ArraySliceV", "name"]
 - !private ["SK", "append"]
 - !private ["SK", "count"]
 - ["SK", "first"]
+- !private ["SK", "id"]
 - !private ["SK", "init"]
 - !private ["SK", "init"]
 - !private ["SK", "message"]
-- !private ["SK", "name"]
 - !private ["SK", "sort"]
 - !private ["SK", "subscript"]
 - !private ["SK", "write"]
@@ -88,9 +88,9 @@ depends-member:
 - ["14_019_ios_final4ChatV", "deinit"]
 - ["14_019_ios_final4ChatV", "documentDirectory"]
 - ["14_019_ios_final4ChatV", "encode"]
+- ["14_019_ios_final4ChatV", "id"]
 - ["14_019_ios_final4ChatV", "init"]
 - ["14_019_ios_final4ChatV", "message"]
-- ["14_019_ios_final4ChatV", "name"]
 - ["14_019_ios_final4ChatV", "readFromFile"]
 - ["14_019_ios_final4ChatV", "saveTofile"]
 - ["14_019_ios_final4ChatV", "updateToFile"]
@@ -105,10 +105,10 @@ depends-member:
 - !private ["Sl", "append"]
 - !private ["Sl", "count"]
 - ["Sl", "first"]
+- !private ["Sl", "id"]
 - !private ["Sl", "init"]
 - !private ["Sl", "init"]
 - !private ["Sl", "message"]
-- !private ["Sl", "name"]
 - !private ["Sl", "sort"]
 - !private ["Sl", "subscript"]
 - !private ["Sl", "write"]
@@ -122,10 +122,10 @@ depends-member:
 - ["SL", ""]
 - !private ["SL", "documentDirectory"]
 - ["SL", "encode"]
+- !private ["SL", "id"]
 - ["SL", "init"]
 - !private ["SL", "init"]
 - !private ["SL", "message"]
-- !private ["SL", "name"]
 - !private ["SL", "readFromFile"]
 - !private ["SL", "saveTofile"]
 - !private ["s28CustomDebugStringConvertibleP", ""]
@@ -141,11 +141,11 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "first"]
 - ["s28CustomDebugStringConvertibleP", "hash"]
 - ["s28CustomDebugStringConvertibleP", "hashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "id"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "intValue"]
 - !private ["s28CustomDebugStringConvertibleP", "message"]
-- !private ["s28CustomDebugStringConvertibleP", "name"]
 - !private ["s28CustomDebugStringConvertibleP", "sort"]
 - ["s28CustomDebugStringConvertibleP", "stringValue"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
@@ -160,10 +160,10 @@ depends-member:
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "count"]
 - ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "id"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "message"]
-- !private ["s17CustomReflectableP", "name"]
 - !private ["s17CustomReflectableP", "sort"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "write"]
@@ -181,11 +181,11 @@ depends-member:
 - ["s23CustomStringConvertibleP", "first"]
 - ["s23CustomStringConvertibleP", "hash"]
 - ["s23CustomStringConvertibleP", "hashValue"]
+- !private ["s23CustomStringConvertibleP", "id"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "intValue"]
 - !private ["s23CustomStringConvertibleP", "message"]
-- !private ["s23CustomStringConvertibleP", "name"]
 - !private ["s23CustomStringConvertibleP", "sort"]
 - ["s23CustomStringConvertibleP", "stringValue"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -212,10 +212,10 @@ depends-member:
 - !private ["Se", "documentDirectory"]
 - ["Se", "encode"]
 - ["Se", "first"]
+- !private ["Se", "id"]
 - ["Se", "init"]
 - !private ["Se", "init"]
 - !private ["Se", "message"]
-- !private ["Se", "name"]
 - !private ["Se", "readFromFile"]
 - !private ["Se", "saveTofile"]
 - !private ["Se", "sort"]
@@ -239,10 +239,10 @@ depends-member:
 - !private ["SE", "documentDirectory"]
 - ["SE", "encode"]
 - ["SE", "first"]
+- !private ["SE", "id"]
 - ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "message"]
-- !private ["SE", "name"]
 - !private ["SE", "readFromFile"]
 - !private ["SE", "saveTofile"]
 - !private ["SE", "sort"]
@@ -273,11 +273,11 @@ depends-member:
 - ["SQ", "first"]
 - ["SQ", "hash"]
 - ["SQ", "hashValue"]
+- !private ["SQ", "id"]
 - ["SQ", "init"]
 - !private ["SQ", "init"]
 - ["SQ", "intValue"]
 - !private ["SQ", "message"]
-- !private ["SQ", "name"]
 - !private ["SQ", "readFromFile"]
 - !private ["SQ", "saveTofile"]
 - !private ["SQ", "sort"]
@@ -289,8 +289,8 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "id"]
 - !private ["s25ExpressibleByArrayLiteralP", "message"]
-- !private ["s25ExpressibleByArrayLiteralP", "name"]
 - !private ["s25ExpressibleByArrayLiteralP", "sort"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - ["s25ExpressibleByArrayLiteralP", "userDomainMask"]
@@ -321,11 +321,11 @@ depends-member:
 - ["SH", "first"]
 - ["SH", "hash"]
 - ["SH", "hashValue"]
+- !private ["SH", "id"]
 - ["SH", "init"]
 - !private ["SH", "init"]
 - ["SH", "intValue"]
 - !private ["SH", "message"]
-- !private ["SH", "name"]
 - !private ["SH", "sort"]
 - ["SH", "stringValue"]
 - !private ["SH", "subscript"]
@@ -346,9 +346,9 @@ depends-member:
 - !private ["SM", "append"]
 - !private ["SM", "count"]
 - ["SM", "first"]
+- !private ["SM", "id"]
 - !private ["SM", "init"]
 - !private ["SM", "message"]
-- !private ["SM", "name"]
 - !private ["SM", "sort"]
 - !private ["SM", "subscript"]
 - !private ["SM", "write"]
@@ -376,19 +376,19 @@ depends-member:
 - !private ["Sk", "append"]
 - !private ["Sk", "count"]
 - ["Sk", "first"]
+- !private ["Sk", "id"]
 - !private ["Sk", "init"]
 - !private ["Sk", "message"]
-- !private ["Sk", "name"]
 - !private ["Sk", "sort"]
 - !private ["Sk", "subscript"]
 - !private ["Sk", "write"]
 - !private ["Sm", "append"]
 - !private ["Sm", "count"]
 - ["Sm", "first"]
+- !private ["Sm", "id"]
 - !private ["Sm", "init"]
 - !private ["Sm", "init"]
 - !private ["Sm", "message"]
-- !private ["Sm", "name"]
 - !private ["Sm", "sort"]
 - !private ["Sm", "subscript"]
 - !private ["Sm", "write"]
@@ -403,10 +403,10 @@ depends-member:
 - !private ["ST", "append"]
 - !private ["ST", "count"]
 - ["ST", "first"]
+- !private ["ST", "id"]
 - !private ["ST", "init"]
 - !private ["ST", "init"]
 - !private ["ST", "message"]
-- !private ["ST", "name"]
 - !private ["ST", "sort"]
 - !private ["ST", "subscript"]
 - !private ["ST", "write"]
@@ -430,13 +430,13 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["10Foundation3URLV", "appendingPathComponent"]
 - !private ["10Foundation3URLV", "appendingPathExtension"]
-- !private ["14_019_ios_final4UserV", "name"]
+- !private ["14_019_ios_final4UserV", "id"]
 - !private ["14_019_ios_final4UserV", "shared"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "count"]
 - ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "id"]
 - !private ["s24_DestructorSafeContainerP", "message"]
-- !private ["s24_DestructorSafeContainerP", "name"]
 - !private ["s24_DestructorSafeContainerP", "sort"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
@@ -553,34 +553,52 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/SocketIO.swiftmodule/x86_64.swiftmodule"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/Starscream.swiftmodule/x86_64.swiftmodule"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Modules/ImagePicker.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MediaPlayer.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Photos.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-umbrella.h"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Headers/ImagePicker-umbrella.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/Socket.IO-Client-Swift-umbrella.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/SocketIO-Swift.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-Swift.h"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Headers/ImagePicker-Swift.h"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/module.modulemap"
 - "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/module.modulemap"
+- "/Users/river/Desktop/2019_ios_final/build/Debug-iphonesimulator/ImagePicker/ImagePicker.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c2997e0408fbf44b3323e781ea7b9071"
+interface-hash: "c1dc4c16ccbaa532be4da9173eb10478"

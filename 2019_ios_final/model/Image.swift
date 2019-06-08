@@ -18,7 +18,7 @@ struct Image: Codable {
     static func saveImagesNameToFile(receiver: String, images: [Image]) {
         let encoder = PropertyListEncoder()
         if let data = try? encoder.encode(images) {
-            let fileName = "\(User.shared.name)-\(receiver)-imageHistory"
+            let fileName = "\(User.shared.id)-\(receiver)-imageHistory"
             let url = Message.documentDirectory.appendingPathComponent(fileName).appendingPathExtension("plist")
             try? data.write(to: url)
         }
@@ -26,7 +26,7 @@ struct Image: Codable {
     
     static func readImagesNameFromFile(receiver: String) -> [Image]? {
         let decoder = PropertyListDecoder()
-        let fileName = "\(User.shared.name)-\(receiver)-imageHistory"
+        let fileName = "\(User.shared.id)-\(receiver)-imageHistory"
         let url = Friend.documentsDirectory.appendingPathComponent(fileName).appendingPathExtension("plist")
         if let data = try? Data(contentsOf: url), let history = try? decoder.decode([Image].self, from: data) {
             return history
