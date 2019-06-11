@@ -323,6 +323,7 @@ SWIFT_CLASS("_TtC14_019_ios_final18ChatViewController")
 SWIFT_CLASS("_TtC14_019_ios_final19FriendTableViewCell")
 @interface FriendTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified propic;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified statusLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified nameLabel;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
@@ -387,6 +388,17 @@ SWIFT_CLASS("_TtC14_019_ios_final19LoginViewController")
 @end
 
 
+SWIFT_CLASS("_TtC14_019_ios_final24ProfileUITaTableViewCell")
+@interface ProfileUITaTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified contentLabel;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC14_019_ios_final23RightImageTableViewCell")
 @interface RightImageTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageButton;
@@ -433,6 +445,33 @@ SWIFT_CLASS("_TtC14_019_ios_final25SingalImageViewController")
 - (IBAction)showAllImages:(id _Nonnull)sender;
 - (IBAction)download:(id _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14_019_ios_final27UpdateProfileViewController")
+@interface UpdateProfileViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified inputTextField;
+- (IBAction)update:(id _Nonnull)sender;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14_019_ios_final25UserProfileViewController")
+@interface UserProfileViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified propic;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified profileTable;
+- (IBAction)changeImage:(id _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

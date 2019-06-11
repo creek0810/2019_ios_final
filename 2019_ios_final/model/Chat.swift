@@ -35,6 +35,7 @@ struct Chat: Codable {
     }
     
     static func updateToFile(receiver: String, data: Message) {
+        let chat = Chat(id: receiver, message: data)
         if let chatHistory = Chat.readFromFile() {
             var tmpChatHistory = chatHistory
             for i in 0...tmpChatHistory.count - 1 {
@@ -45,11 +46,11 @@ struct Chat: Codable {
                     return
                 }
             }
-            tmpChatHistory.append(Chat(id: receiver, message: data))
+            tmpChatHistory.append(chat)
             tmpChatHistory.sort(by: <)
             Chat.saveTofile(chatHistory: tmpChatHistory)
         } else {
-            let chatHistory = [Chat(id: receiver, message: data)]
+            let chatHistory = [chat]
             Chat.saveTofile(chatHistory: chatHistory)
         }
     }

@@ -28,6 +28,9 @@ struct NetworkController {
         static let getFriendList = "http://140.121.197.197:6700/get_friends"
         static let getProfile = "http://140.121.197.197:6700/profile"
         static let addFriend = "http://140.121.197.197:6700/add_friend"
+        static let updateName = "http://140.121.197.197:6700/update_name"
+        static let updatePropic = "http://140.121.197.197:6700/update_propic"
+        static let updateStatus = "http://140.121.197.197:6700/update_status"
     }
 
     func socketConnect(sender: String) {
@@ -171,7 +174,51 @@ struct NetworkController {
             task.resume()
         }
     }
+    func updateName(newName: String) {
+        let urlString = "\(API.updateName)?id=\(User.shared.id)&name=\(newName)"
+        if let url = URL(string: urlString) {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            let task = URLSession.shared.dataTask(with: request)
+            task.resume()
+        }
+    }
     
+    func updateStatus(status: String) {
+        let rawUrl = "\(API.updateStatus)?id=\(User.shared.id)&status=\(status)"
+        let urlString = rawUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+
+        if let urlString = urlString, let url = URL(string: urlString) {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            let task = URLSession.shared.dataTask(with: request)
+            task.resume()
+        }
+    }
+    
+    func updatePropic(propic: UIImage) {
+        let boundary = UUID().uuidString
+        
+        if let url = URL(string: API.updatePropic){
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "content-type")
+            var data = Data()
+            
+            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+            data.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(boundary)\"\r\n".data(using: .utf8)!)
+            data.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+            data.append(propic.jpegData(compressionQuality: 0.3)!)
+            
+            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+            data.append("Content-Disposition: form-data; name=\"id\"\r\n\r\n".data(using: .utf8)!)
+            data.append("\(User.shared.id)".data(using: .utf8)!)
+            
+            data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+            let task = URLSession.shared.uploadTask(with: request, from: data)
+            task.resume()
+        }
+    }
 }
 
 extension NetworkController {

@@ -1,9 +1,12 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "profileData"
 - "Friend"
 provides-nominal:
+- "14_019_ios_final11profileDataO"
 - "14_019_ios_final6FriendV"
 provides-member:
+- ["14_019_ios_final11profileDataO", ""]
 - ["14_019_ios_final6FriendV", ""]
 provides-dynamic-lookup:
 depends-top-level:
@@ -11,13 +14,15 @@ depends-top-level:
 - "Codable"
 - !private "Data"
 - "FileManager"
-- !private "FloatLiteralType"
+- "FloatLiteralType"
 - "Friend"
-- !private "IntegerLiteralType"
+- "Int"
+- "IntegerLiteralType"
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "String"
 - !private "StringLiteralType"
+- "profileData"
 - !private "~="
 depends-member:
 - ["Sa", "first"]
@@ -108,6 +113,7 @@ depends-member:
 - !private ["Se", "name"]
 - !private ["Se", "propic"]
 - !private ["Se", "readFromFile"]
+- !private ["Se", "status"]
 - !private ["Se", "write"]
 - !private ["s7DecoderP", "container"]
 - !private ["SE", "Data"]
@@ -128,9 +134,12 @@ depends-member:
 - !private ["SE", "name"]
 - !private ["SE", "propic"]
 - !private ["SE", "readFromFile"]
+- !private ["SE", "status"]
 - !private ["SE", "write"]
 - !private ["s7EncoderP", "container"]
-- !private ["SQ", ""]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
 - !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "appendingPathComponent"]
 - !private ["SQ", "appendingPathExtension"]
@@ -144,6 +153,7 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "init"]
 - ["SQ", "intValue"]
+- ["SQ", "rawValue"]
 - ["SQ", "stringValue"]
 - ["SQ", "urls"]
 - ["SQ", "userDomainMask"]
@@ -176,7 +186,10 @@ depends-member:
 - ["14_019_ios_final6FriendV", "propic"]
 - ["14_019_ios_final6FriendV", "readFromFile"]
 - ["14_019_ios_final6FriendV", "saveTofile"]
-- !private ["SH", ""]
+- ["14_019_ios_final6FriendV", "status"]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
 - !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "appendingPathComponent"]
 - !private ["SH", "appendingPathExtension"]
@@ -190,6 +203,7 @@ depends-member:
 - ["SH", "init"]
 - !private ["SH", "init"]
 - ["SH", "intValue"]
+- ["SH", "rawValue"]
 - ["SH", "stringValue"]
 - ["SH", "urls"]
 - !private ["SH", "write"]
@@ -222,7 +236,14 @@ depends-member:
 - !private ["Sm", "init"]
 - !private ["Sm", "init"]
 - !private ["Sm", "write"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
 - ["SY", "documentDirectory"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "rawValue"]
 - ["SY", "userDomainMask"]
 - !private ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
 - !private ["10Foundation20ReferenceConvertibleP", "appendingPathExtension"]
@@ -276,6 +297,15 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "write"]
 - !private ["s16_SwiftStringViewP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
+- ["14_019_ios_final11profileDataO", "RawValue"]
+- ["14_019_ios_final11profileDataO", "_Default_RawValue"]
+- ["14_019_ios_final11profileDataO", "deinit"]
+- ["14_019_ios_final11profileDataO", "hash"]
+- ["14_019_ios_final11profileDataO", "hashValue"]
+- ["14_019_ios_final11profileDataO", "init"]
+- ["14_019_ios_final11profileDataO", "name"]
+- ["14_019_ios_final11profileDataO", "rawValue"]
+- ["14_019_ios_final11profileDataO", "status"]
 depends-nominal:
 - "Sa"
 - "s13ArrayProtocolP"
@@ -342,6 +372,7 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
 - !private "s16_SwiftStringViewP"
+- "14_019_ios_final11profileDataO"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -395,4 +426,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "f01a0c452baa0d34e364708c83c96abb"
+interface-hash: "d2707700db5f9600b732315835ba7079"

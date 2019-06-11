@@ -11,6 +11,7 @@ import UIKit
 class FriendTableViewCell: UITableViewCell {
     
     @IBOutlet weak var propic: UIImageView!
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {

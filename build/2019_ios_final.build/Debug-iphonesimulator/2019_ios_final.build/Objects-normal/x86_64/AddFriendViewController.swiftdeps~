@@ -17,6 +17,7 @@ depends-top-level:
 - "Friend"
 - !private "Image"
 - !private "NetworkController"
+- !private "StringLiteralType"
 - "UIImageView"
 - "UILabel"
 - "UIViewController"
@@ -94,6 +95,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["Se", "getImage"]
+- !private ["Se", "id"]
 - !private ["Se", "image"]
 - !private ["Se", "init"]
 - !private ["Se", "init"]
@@ -105,6 +107,7 @@ depends-member:
 - !private ["So17OS_dispatch_queueC", "async"]
 - !private ["So17OS_dispatch_queueC", "main"]
 - !private ["SE", "getImage"]
+- !private ["SE", "id"]
 - !private ["SE", "image"]
 - !private ["SE", "init"]
 - !private ["SE", "init"]
@@ -134,6 +137,7 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["14_019_ios_final6FriendV", "id"]
 - !private ["14_019_ios_final6FriendV", "name"]
 - !private ["14_019_ios_final6FriendV", "propic"]
 - !private ["SH", "DispatchQueue"]

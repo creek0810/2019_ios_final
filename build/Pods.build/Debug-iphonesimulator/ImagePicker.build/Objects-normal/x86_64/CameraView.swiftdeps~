@@ -44,6 +44,7 @@ depends-top-level:
 - "CameraView"
 - "CameraViewDelegate"
 - "Configuration"
+- "Dictionary"
 - !private "DispatchQueue"
 - "FloatLiteralType"
 - "IntegerLiteralType"
@@ -327,6 +328,7 @@ depends-member:
 - !private ["s7CVarArgP", "setAttributedTitle"]
 - !private ["s7CVarArgP", "settingsButtonDidTap"]
 - !private ["s7CVarArgP", "settingsColor"]
+- !private ["s7CVarArgP", "settingsFont"]
 - !private ["s7CVarArgP", "settingsTitle"]
 - !private ["s7CVarArgP", "setupPreviewLayer"]
 - !private ["s7CVarArgP", "shared"]
@@ -537,6 +539,7 @@ depends-member:
 - !private ["11ImagePicker13ConfigurationC", "noCameraTitle"]
 - !private ["11ImagePicker13ConfigurationC", "recordLocation"]
 - !private ["11ImagePicker13ConfigurationC", "settingsColor"]
+- !private ["11ImagePicker13ConfigurationC", "settingsFont"]
 - !private ["11ImagePicker13ConfigurationC", "settingsTitle"]
 - !private ["s28CustomDebugStringConvertibleP", "AVCaptureVideoPreviewLayer"]
 - !private ["s28CustomDebugStringConvertibleP", "AVLayerVideoGravity"]
@@ -647,6 +650,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "setAttributedTitle"]
 - !private ["s28CustomDebugStringConvertibleP", "settingsButtonDidTap"]
 - !private ["s28CustomDebugStringConvertibleP", "settingsColor"]
+- !private ["s28CustomDebugStringConvertibleP", "settingsFont"]
 - !private ["s28CustomDebugStringConvertibleP", "settingsTitle"]
 - !private ["s28CustomDebugStringConvertibleP", "setupPreviewLayer"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
@@ -807,6 +811,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "setAttributedTitle"]
 - !private ["s23CustomStringConvertibleP", "settingsButtonDidTap"]
 - !private ["s23CustomStringConvertibleP", "settingsColor"]
+- !private ["s23CustomStringConvertibleP", "settingsFont"]
 - !private ["s23CustomStringConvertibleP", "settingsTitle"]
 - !private ["s23CustomStringConvertibleP", "setupPreviewLayer"]
 - !private ["s23CustomStringConvertibleP", "shared"]
@@ -992,6 +997,7 @@ depends-member:
 - !private ["SQ", "setAttributedTitle"]
 - !private ["SQ", "settingsButtonDidTap"]
 - !private ["SQ", "settingsColor"]
+- !private ["SQ", "settingsFont"]
 - !private ["SQ", "settingsTitle"]
 - !private ["SQ", "setupPreviewLayer"]
 - !private ["SQ", "shared"]
@@ -1024,6 +1030,7 @@ depends-member:
 - !private ["SQ", "zoomTo"]
 - !private ["So15UIControlEventsV", "touchUpInside"]
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
@@ -1161,6 +1168,7 @@ depends-member:
 - !private ["SH", "setAttributedTitle"]
 - !private ["SH", "settingsButtonDidTap"]
 - !private ["SH", "settingsColor"]
+- !private ["SH", "settingsFont"]
 - !private ["SH", "settingsTitle"]
 - !private ["SH", "setupPreviewLayer"]
 - !private ["SH", "shared"]
@@ -1199,6 +1207,7 @@ depends-member:
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["SM", "forEach"]
+- !private ["So18NSAttributedStringC", "init"]
 - !private ["So8NSCodingP", "AVCaptureVideoPreviewLayer"]
 - !private ["So8NSCodingP", "AVLayerVideoGravity"]
 - !private ["So8NSCodingP", "AssetManager"]
@@ -1379,9 +1388,12 @@ depends-member:
 - !private ["So21NSItemProviderReadingP", "black"]
 - !private ["So21NSItemProviderReadingP", "cgColor"]
 - !private ["So21NSItemProviderReadingP", "clear"]
+- !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "black"]
 - !private ["So21NSItemProviderWritingP", "cgColor"]
 - !private ["So21NSItemProviderWritingP", "clear"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
 - !private ["So8NSObjectC", "AVCaptureDevice"]
 - ["So8NSObjectC", "AVCaptureDeviceInput"]
 - ["So8NSObjectC", "AVCaptureVideoPreviewLayer"]
@@ -1503,6 +1515,7 @@ depends-member:
 - !private ["So8NSObjectC", "setAttributedTitle"]
 - ["So8NSObjectC", "settingsButtonDidTap"]
 - !private ["So8NSObjectC", "settingsColor"]
+- !private ["So8NSObjectC", "settingsFont"]
 - !private ["So8NSObjectC", "settingsTitle"]
 - ["So8NSObjectC", "setupPreviewLayer"]
 - !private ["So8NSObjectC", "shared"]
@@ -1634,6 +1647,7 @@ depends-member:
 - !private ["So8NSObjectP", "setAttributedTitle"]
 - !private ["So8NSObjectP", "settingsButtonDidTap"]
 - !private ["So8NSObjectP", "settingsColor"]
+- !private ["So8NSObjectP", "settingsFont"]
 - !private ["So8NSObjectP", "settingsTitle"]
 - !private ["So8NSObjectP", "setupPreviewLayer"]
 - !private ["So8NSObjectP", "shared"]
@@ -1673,6 +1687,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "videoGravity"]
 - !private ["So9OS_objectC", "async"]
 - !private ["So9OS_objectC", "main"]
+- !private ["s9OptionSetP", "init"]
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["Sq", "addGestureRecognizer"]
 - !private ["Sq", "addSubview"]
@@ -1691,6 +1706,7 @@ depends-member:
 - ["SY", "ended"]
 - !private ["SY", "font"]
 - !private ["SY", "foregroundColor"]
+- !private ["SY", "init"]
 - !private ["SY", "off"]
 - !private ["SY", "on"]
 - !private ["SY", "portrait"]
@@ -1702,10 +1718,12 @@ depends-member:
 - !private ["ST", "init"]
 - !private ["ST", "init"]
 - !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "init"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - ["So24UIGestureRecognizerStateV", "began"]
 - ["So24UIGestureRecognizerStateV", "changed"]
 - ["So24UIGestureRecognizerStateV", "ended"]
+- !private ["So14UIControlStateV", "init"]
 - !private ["s12StaticStringV", "init"]
 - !private ["s12StaticStringV", "init"]
 - !private ["SS", "init"]
@@ -3005,6 +3023,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setAttributedTitle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsButtonDidTap"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsFont"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "settingsTitle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setupPreviewLayer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
@@ -3109,11 +3128,13 @@ depends-nominal:
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "SM"
+- !private "So18NSAttributedStringC"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
@@ -3127,6 +3148,7 @@ depends-nominal:
 - !private "ST"
 - !private "s10SetAlgebraP"
 - "So24UIGestureRecognizerStateV"
+- !private "So14UIControlStateV"
 - !private "s12StaticStringV"
 - !private "SS"
 - !private "Sy"

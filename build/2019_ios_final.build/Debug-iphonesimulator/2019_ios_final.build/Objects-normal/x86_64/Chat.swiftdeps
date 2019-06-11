@@ -32,7 +32,6 @@ depends-top-level:
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "String"
-- !private "StringLiteralType"
 - !private "User"
 - !private "~="
 depends-member:

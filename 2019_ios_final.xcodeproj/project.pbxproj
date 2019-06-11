@@ -20,6 +20,9 @@
 		57B3F76822A42372002420D7 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3F76722A42372002420D7 /* ImageCollectionViewCell.swift */; };
 		57BDD21F22A97FE200DF2DA3 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BDD21E22A97FE200DF2DA3 /* AddFriendViewController.swift */; };
 		57BDD22322A9806100DF2DA3 /* AddFriendMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BDD22222A9806100DF2DA3 /* AddFriendMenuViewController.swift */; };
+		57D9C9C222AFF5F6009D0B26 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9C9C122AFF5F6009D0B26 /* UserProfileViewController.swift */; };
+		57D9C9C422AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9C9C322AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift */; };
+		57D9C9C622B0006D009D0B26 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9C9C522B0006D009D0B26 /* UpdateProfileViewController.swift */; };
 		57E67ED022A0216C00D12CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E67ECF22A0216C00D12CDA /* AppDelegate.swift */; };
 		57E67ED522A0216C00D12CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E67ED322A0216C00D12CDA /* Main.storyboard */; };
 		57E67ED722A0216E00D12CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E67ED622A0216E00D12CDA /* Assets.xcassets */; };
@@ -73,6 +76,9 @@
 		57B3F76722A42372002420D7 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		57BDD21E22A97FE200DF2DA3 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		57BDD22222A9806100DF2DA3 /* AddFriendMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendMenuViewController.swift; sourceTree = "<group>"; };
+		57D9C9C122AFF5F6009D0B26 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		57D9C9C322AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUITaTableViewCell.swift; sourceTree = "<group>"; };
+		57D9C9C522B0006D009D0B26 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		57E67ECC22A0216C00D12CDA /* 2019_ios_final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2019_ios_final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E67ECF22A0216C00D12CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E67ED422A0216C00D12CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +147,38 @@
 				715AB6F6F7A89FA5EC878993 /* Pods_2019_ios_finalUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57CC4A2B22B00E010091A361 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				57D9C9C122AFF5F6009D0B26 /* UserProfileViewController.swift */,
+				57D9C9C522B0006D009D0B26 /* UpdateProfileViewController.swift */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		57CC4A2C22B00E160091A361 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				57B3F76522A4216A002420D7 /* AllImagesViewController.swift */,
+				5782F6AA22A244D7007F5CE1 /* SingalImageViewController.swift */,
+				5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */,
+				57E67F0C22A031B500D12CDA /* ChatViewController.swift */,
+				57E67F0A22A0319F00D12CDA /* ChatMenuViewController.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		57CC4A2D22B00E220091A361 /* friend */ = {
+			isa = PBXGroup;
+			children = (
+				57E67F0822A02BCD00D12CDA /* FriendViewController.swift */,
+				57AAAA3322AB4A1C0050C718 /* ShowQRViewController.swift */,
+				57BDD21E22A97FE200DF2DA3 /* AddFriendViewController.swift */,
+				57BDD22222A9806100DF2DA3 /* AddFriendMenuViewController.swift */,
+			);
+			path = friend;
 			sourceTree = "<group>";
 		};
 		57E67EC322A0216C00D12CDA = {
@@ -214,16 +252,10 @@
 		57E67F0422A0249C00D12CDA /* view */ = {
 			isa = PBXGroup;
 			children = (
-				57AAAA3322AB4A1C0050C718 /* ShowQRViewController.swift */,
-				57B3F76522A4216A002420D7 /* AllImagesViewController.swift */,
-				5782F6AA22A244D7007F5CE1 /* SingalImageViewController.swift */,
-				5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */,
-				57E67F0C22A031B500D12CDA /* ChatViewController.swift */,
-				57E67F0A22A0319F00D12CDA /* ChatMenuViewController.swift */,
-				57E67F0822A02BCD00D12CDA /* FriendViewController.swift */,
+				57CC4A2D22B00E220091A361 /* friend */,
+				57CC4A2C22B00E160091A361 /* chat */,
+				57CC4A2B22B00E010091A361 /* setting */,
 				57E67EFD22A021C000D12CDA /* LoginViewController.swift */,
-				57BDD21E22A97FE200DF2DA3 /* AddFriendViewController.swift */,
-				57BDD22222A9806100DF2DA3 /* AddFriendMenuViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -239,6 +271,7 @@
 		57E67F1222A0DAD000D12CDA /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				57D9C9C322AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift */,
 				57B3F76722A42372002420D7 /* ImageCollectionViewCell.swift */,
 				57B3F76322A417D3002420D7 /* RightImageTableViewCell.swift */,
 				5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */,
@@ -485,7 +518,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E67F0222A0246400D12CDA /* User.swift in Sources */,
+				57D9C9C222AFF5F6009D0B26 /* UserProfileViewController.swift in Sources */,
 				57E67EFE22A021C000D12CDA /* LoginViewController.swift in Sources */,
+				57D9C9C622B0006D009D0B26 /* UpdateProfileViewController.swift in Sources */,
 				57B3F76622A4216A002420D7 /* AllImagesViewController.swift in Sources */,
 				57E67ED022A0216C00D12CDA /* AppDelegate.swift in Sources */,
 				57E67F1822A127FF00D12CDA /* Friend.swift in Sources */,
@@ -501,6 +536,7 @@
 				57E67F0F22A0CF4000D12CDA /* Message.swift in Sources */,
 				57B3F76422A417D3002420D7 /* RightImageTableViewCell.swift in Sources */,
 				5782F6AB22A244D7007F5CE1 /* SingalImageViewController.swift in Sources */,
+				57D9C9C422AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift in Sources */,
 				5730D60422A6D120001CA2F3 /* SingalImage2ViewController.swift in Sources */,
 				5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */,
 				57E67F0022A022C100D12CDA /* NetworkController.swift in Sources */,

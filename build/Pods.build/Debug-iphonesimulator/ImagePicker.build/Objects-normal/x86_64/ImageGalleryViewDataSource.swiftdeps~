@@ -30,6 +30,7 @@ depends-top-level:
 - !private "UIView"
 - !private "UIViewAnimationOptions"
 depends-member:
+- !private ["So22UIViewAnimationOptionsV", "init"]
 - !private ["Sa", "count"]
 - !private ["Sa", "isEmpty"]
 - !private ["Sa", "subscript"]
@@ -239,6 +240,7 @@ depends-member:
 - !private ["SQ", "transform"]
 - !private ["SQ", "useLowResolutionPreviewImage"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
@@ -410,6 +412,7 @@ depends-member:
 - !private ["So8NSObjectP", "transform"]
 - !private ["So8NSObjectP", "useLowResolutionPreviewImage"]
 - !private ["So14NSSecureCodingP", "row"]
+- !private ["s9OptionSetP", "init"]
 - !private ["So7PHAssetC", "duration"]
 - !private ["So8PHObjectC", "duration"]
 - !private ["Sk", "count"]
@@ -420,11 +423,13 @@ depends-member:
 - ["Sm", "init"]
 - !private ["Sm", "isEmpty"]
 - !private ["Sm", "subscript"]
+- !private ["SY", "init"]
 - !private ["ST", "count"]
 - ["ST", "init"]
 - ["ST", "init"]
 - !private ["ST", "isEmpty"]
 - !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "init"]
 - ["SS", "init"]
 - ["SS", "init"]
 - ["Sy", "init"]
@@ -979,6 +984,7 @@ depends-member:
 - ["s16_SwiftStringViewP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "So22UIViewAnimationOptionsV"
 - !private "Sa"
 - !private "s13ArrayProtocolP"
 - !private "11ImagePicker12AssetManagerC"
@@ -1017,11 +1023,14 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "s9OptionSetP"
 - !private "So7PHAssetC"
 - !private "So8PHObjectC"
 - !private "Sk"
 - "Sm"
+- !private "SY"
 - "ST"
+- !private "s10SetAlgebraP"
 - "SS"
 - "Sy"
 - "s16TextOutputStreamP"

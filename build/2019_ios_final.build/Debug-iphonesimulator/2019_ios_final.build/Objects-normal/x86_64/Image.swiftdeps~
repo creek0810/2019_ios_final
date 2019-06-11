@@ -18,6 +18,7 @@ depends-top-level:
 - !private "PropertyListDecoder"
 - !private "PropertyListEncoder"
 - "String"
+- !private "StringLiteralType"
 - "UIImage"
 - !private "URL"
 - !private "UnicodeScalarType"

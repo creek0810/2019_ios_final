@@ -436,6 +436,7 @@ depends-member:
 - !private ["SQ", "zero"]
 - !private ["So15UIControlEventsV", "touchUpInside"]
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
@@ -685,16 +686,20 @@ depends-member:
 - !private ["So14NSSecureCodingP", "clear"]
 - !private ["So14NSSecureCodingP", "cornerRadius"]
 - !private ["So14NSSecureCodingP", "white"]
+- !private ["s9OptionSetP", "init"]
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["Sk", "forEach"]
 - !private ["Sm", "forEach"]
 - !private ["Sm", "init"]
 - !private ["Sm", "init"]
+- !private ["SY", "init"]
 - !private ["SY", "touchUpInside"]
 - !private ["ST", "forEach"]
 - !private ["ST", "init"]
 - !private ["ST", "init"]
+- !private ["s10SetAlgebraP", "init"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
+- !private ["So14UIControlStateV", "init"]
 - !private ["s12StaticStringV", "init"]
 - !private ["s12StaticStringV", "init"]
 - !private ["SS", "init"]
@@ -1549,6 +1554,7 @@ depends-nominal:
 - !private "SY"
 - !private "ST"
 - !private "s10SetAlgebraP"
+- !private "So14UIControlStateV"
 - !private "s12StaticStringV"
 - !private "SS"
 - !private "Sy"

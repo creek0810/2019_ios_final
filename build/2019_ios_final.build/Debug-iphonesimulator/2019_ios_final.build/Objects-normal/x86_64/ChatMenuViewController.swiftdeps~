@@ -20,7 +20,6 @@ depends-top-level:
 - !private "!="
 - !private "-"
 - !private "=="
-- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - "Calendar"
@@ -393,6 +392,7 @@ depends-member:
 - ["Se", "init"]
 - !private ["Se", "init"]
 - !private ["Se", "message"]
+- !private ["Se", "name"]
 - !private ["Se", "propic"]
 - !private ["Se", "readFromFile"]
 - !private ["Se", "reloadData"]
@@ -421,6 +421,7 @@ depends-member:
 - ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "message"]
+- !private ["SE", "name"]
 - !private ["SE", "propic"]
 - !private ["SE", "readFromFile"]
 - !private ["SE", "reloadData"]
@@ -523,6 +524,7 @@ depends-member:
 - !private ["So11NSFormatterC", "init"]
 - !private ["So11NSFormatterC", "string"]
 - !private ["14_019_ios_final6FriendV", "getProfile"]
+- !private ["14_019_ios_final6FriendV", "name"]
 - !private ["14_019_ios_final6FriendV", "propic"]
 - !private ["SH", "Calendar"]
 - ["SH", "Chat"]

@@ -1,8 +1,8 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "8424dbcde289283fac52e73b90b992a2"
-build_time: [1559972791, 64285000]
+build_time: [1560180217, 656376000]
 inputs:
-  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/Compression.swift": [1559490133, 0]
-  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/SSLClientCertificate.swift": [1559490133, 0]
-  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/SSLSecurity.swift": [1559490133, 0]
-  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/WebSocket.swift": [1559490133, 0]
+  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/Compression.swift": [1560179055, 0]
+  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/SSLClientCertificate.swift": [1560179055, 0]
+  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/SSLSecurity.swift": [1560179055, 0]
+  "/Users/river/Desktop/2019_ios_final/Pods/Starscream/Sources/Starscream/WebSocket.swift": [1560179055, 0]

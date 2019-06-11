@@ -9,10 +9,16 @@
 import Foundation
 import UIKit
 
+enum profileData: Int {
+    case name = 1
+    case status = 2
+}
+
 struct Friend: Codable {
     var propic: String
     var name: String
     var id: String
+    var status: String
     
     static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     

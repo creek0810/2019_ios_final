@@ -224,7 +224,6 @@ depends-member:
 - ["14_019_ios_final25SingalImageViewControllerC", "UIImageView"]
 - ["14_019_ios_final25SingalImageViewControllerC", "UINavigationItem"]
 - ["14_019_ios_final25SingalImageViewControllerC", "UIStoryboardSegue"]
-- ["14_019_ios_final25SingalImageViewControllerC", "deinit"]
 - ["14_019_ios_final25SingalImageViewControllerC", "download"]
 - ["14_019_ios_final25SingalImageViewControllerC", "init"]
 - ["14_019_ios_final25SingalImageViewControllerC", "nameLabel"]
@@ -573,4 +572,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "594d6afbe94c9bca90b16fc74fd5c1e0"
+interface-hash: "2991f28af53742666185216c7ba13f36"

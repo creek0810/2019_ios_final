@@ -1257,6 +1257,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "filter"]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
 - !private ["s25ExpressibleByArrayLiteralP", "portrait"]
 - !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
@@ -2335,6 +2336,7 @@ depends-member:
 - !private ["Sj", "init"]
 - !private ["So9OS_objectC", "async"]
 - !private ["So9OS_objectC", "main"]
+- !private ["s9OptionSetP", "init"]
 - !private ["s9OptionSetP", "portrait"]
 - !private ["Sq", "addGestureRecognizer"]
 - !private ["Sq", "addSubview"]
@@ -2383,11 +2385,13 @@ depends-member:
 - !private ["ST", "isEmpty"]
 - !private ["ST", "removeAll"]
 - !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "init"]
 - !private ["s10SetAlgebraP", "portrait"]
 - !private ["SZ", "init"]
 - !private ["s13SignedNumericP", "init"]
 - !private ["So24UIGestureRecognizerStateV", "began"]
 - !private ["So24UIGestureRecognizerStateV", "ended"]
+- !private ["So14UIControlStateV", "init"]
 - !private ["Sx", "init"]
 - !private ["SS", "init"]
 - !private ["SS", "init"]
@@ -4538,6 +4542,7 @@ depends-nominal:
 - !private "SZ"
 - !private "s13SignedNumericP"
 - !private "So24UIGestureRecognizerStateV"
+- !private "So14UIControlStateV"
 - !private "Sx"
 - !private "SS"
 - !private "Sy"

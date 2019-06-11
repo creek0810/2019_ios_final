@@ -113,6 +113,7 @@ depends-member:
 - ["11ImagePicker0A5StackC", "PHAsset"]
 - ["11ImagePicker0A5StackC", "assets"]
 - ["11ImagePicker0A5StackC", "containsAsset"]
+- ["11ImagePicker0A5StackC", "deinit"]
 - ["11ImagePicker0A5StackC", "dropAsset"]
 - !private ["11ImagePicker0A5StackC", "imageKey"]
 - ["11ImagePicker0A5StackC", "init"]
