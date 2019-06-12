@@ -22,6 +22,7 @@ struct NetworkController {
     let manager = SocketManager(socketURL: URL(string: "http://140.121.197.197:6700")!, config: [.log(true), .compress])
 
     struct API {
+        // personal api
         static let login = "http://140.121.197.197:6700/login"
         static let sendText = "http://140.121.197.197:6700/send_text"
         static let uploadImage = "http://140.121.197.197:6700/send_image"
@@ -31,6 +32,9 @@ struct NetworkController {
         static let updateName = "http://140.121.197.197:6700/update_name"
         static let updatePropic = "http://140.121.197.197:6700/update_propic"
         static let updateStatus = "http://140.121.197.197:6700/update_status"
+        // open api
+        static let getCity = "https://works.ioa.tw/weather/api/all.json"
+        static let getWeather = "https://works.ioa.tw/weather/api/weathers/"
     }
 
     func socketConnect(sender: String) {
@@ -70,8 +74,6 @@ struct NetworkController {
                         self.sendNotification(data: message)
                     }
                 }
-                
-    
             }
         }
         socket.connect()
@@ -216,6 +218,35 @@ struct NetworkController {
             
             data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
             let task = URLSession.shared.uploadTask(with: request, from: data)
+            task.resume()
+        }
+    }
+    
+    func getCity(completion: @escaping ([City]) -> Void) {
+        let urlString = "\(API.getCity)"
+        if let url = URL(string: urlString) {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            let task = URLSession.shared.dataTask(with: url) { (data, res, err) in
+                print("start")
+                if let data = data, let result = try? JSONDecoder().decode([City].self, from: data) {
+                    completion(result)
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    func getWeather(townID: String, completion: @escaping (Weather) -> Void) {
+        let urlString = "\(API.getWeather)\(townID).json"
+        if let url = URL(string: urlString) {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            let task = URLSession.shared.dataTask(with: url) { (data, res, err) in
+                if let data = data, let result = try? JSONDecoder().decode(WeatherAll.self, from: data), let weather = result.histories {
+                    completion(weather[weather.count - 1])
+                }
+            }
             task.resume()
         }
     }

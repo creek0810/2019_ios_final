@@ -12,6 +12,7 @@ import UIKit
 struct Chat: Codable {
     var id: String
     var message: Message
+    var unread: Int
     
     static let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
@@ -35,12 +36,17 @@ struct Chat: Codable {
     }
     
     static func updateToFile(receiver: String, data: Message) {
-        let chat = Chat(id: receiver, message: data)
+        var unread = 0
+        if data.sender != User.shared.id {
+            unread = 1
+        }
+        let chat = Chat(id: receiver, message: data, unread: unread)
         if let chatHistory = Chat.readFromFile() {
             var tmpChatHistory = chatHistory
             for i in 0...tmpChatHistory.count - 1 {
                 if tmpChatHistory[i].id == receiver {
                     tmpChatHistory[i].message = data
+                    tmpChatHistory[i].unread += unread
                     tmpChatHistory.sort(by: <)
                     Chat.saveTofile(chatHistory: tmpChatHistory)
                     return
@@ -52,6 +58,19 @@ struct Chat: Codable {
         } else {
             let chatHistory = [chat]
             Chat.saveTofile(chatHistory: chatHistory)
+        }
+    }
+    
+    static func updateForRead(receiver: String, num: Int) {
+        if let chatHistory = Chat.readFromFile() {
+            var tmpChatHistory = chatHistory
+            for i in 0...tmpChatHistory.count - 1 {
+                if tmpChatHistory[i].id == receiver {
+                    tmpChatHistory[i].unread = 0
+                    Chat.saveTofile(chatHistory: tmpChatHistory)
+                    return
+                }
+            }
         }
     }
 }

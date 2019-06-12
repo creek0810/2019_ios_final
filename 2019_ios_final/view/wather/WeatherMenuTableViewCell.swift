@@ -1,20 +1,16 @@
 //
-//  ChatTableViewCell.swift
+//  WeatherMenuTableViewCell.swift
 //  2019_ios_final
 //
-//  Created by 王心妤 on 2019/5/31.
+//  Created by User15 on 2019/6/12.
 //  Copyright © 2019 river. All rights reserved.
 //
 
 import UIKit
 
-class ChatTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var propic: UIImageView!
+class WeatherMenuTableViewCell: UITableViewCell {
+
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var unreadLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

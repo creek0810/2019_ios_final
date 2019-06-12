@@ -164,6 +164,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     override func viewDidDisappear(_ animated: Bool) {
         NetworkController.shared.delegate = nil
+        Chat.updateForRead(receiver: receiver.id, num: 0)
     }
     
     func update(data: Message) {

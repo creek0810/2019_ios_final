@@ -53,6 +53,13 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
                 cell.propic.image = image
             }
         }
+        if curChat.unread == 0 {
+            cell.unreadLabel.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
+            cell.unreadLabel.text = ""
+        } else {
+            cell.unreadLabel.backgroundColor = UIColor(displayP3Red: 2/255.0, green: 132/255.0, blue: 255/255.0, alpha: 1)
+            cell.unreadLabel.text = curChat.unread.description
+        }
         return cell
     }
     

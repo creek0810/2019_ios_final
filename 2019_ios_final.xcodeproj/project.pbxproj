@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		10F9033A8B04777A66E5BC4F /* Pods_2019_ios_finalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715AB6F6F7A89FA5EC878993 /* Pods_2019_ios_finalUITests.framework */; };
 		2FE86378F6103B6CB98C8FC8 /* Pods_2019_ios_final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B2E9A83AD4EA1C93B39CB3 /* Pods_2019_ios_final.framework */; };
+		4BB3B32922B0CE3C006D87B0 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B32822B0CE3C006D87B0 /* WeatherViewController.swift */; };
+		4BB3B32C22B0E35E006D87B0 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B32B22B0E35E006D87B0 /* Weather.swift */; };
+		4BB3B32E22B0EC6A006D87B0 /* WeatherMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B32D22B0EC6A006D87B0 /* WeatherMenuViewController.swift */; };
+		4BB3B33022B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B32F22B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift */; };
+		4BB3B33222B0EF5A006D87B0 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B33122B0EF5A006D87B0 /* WeatherTableViewCell.swift */; };
 		5707906622A6DA11001C85A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707906522A6DA11001C85A5 /* Image.swift */; };
 		5730D60422A6D120001CA2F3 /* SingalImage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */; };
 		5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A622A14BD5007F5CE1 /* Chat.swift */; };
@@ -65,6 +70,11 @@
 		0173A9DB3DB13E9F295CAE8E /* Pods-2019_ios_final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2019_ios_final.release.xcconfig"; path = "Target Support Files/Pods-2019_ios_final/Pods-2019_ios_final.release.xcconfig"; sourceTree = "<group>"; };
 		03CEE921C79FD4191A53B46D /* Pods-2019_ios_finalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2019_ios_finalTests.release.xcconfig"; path = "Target Support Files/Pods-2019_ios_finalTests/Pods-2019_ios_finalTests.release.xcconfig"; sourceTree = "<group>"; };
 		2950C720A717BB4FDE56EF77 /* Pods_2019_ios_finalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2019_ios_finalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB3B32822B0CE3C006D87B0 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		4BB3B32B22B0E35E006D87B0 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../controller/Weather.swift; sourceTree = "<group>"; };
+		4BB3B32D22B0EC6A006D87B0 /* WeatherMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMenuViewController.swift; sourceTree = "<group>"; };
+		4BB3B32F22B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherMenuTableViewCell.swift; path = ../view/wather/WeatherMenuTableViewCell.swift; sourceTree = "<group>"; };
+		4BB3B33122B0EF5A006D87B0 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherTableViewCell.swift; path = ../WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		5707906522A6DA11001C85A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingalImage2ViewController.swift; sourceTree = "<group>"; };
 		5782F6A622A14BD5007F5CE1 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -147,6 +157,15 @@
 				715AB6F6F7A89FA5EC878993 /* Pods_2019_ios_finalUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BB3B32A22B0CE46006D87B0 /* wather */ = {
+			isa = PBXGroup;
+			children = (
+				4BB3B32822B0CE3C006D87B0 /* WeatherViewController.swift */,
+				4BB3B32D22B0EC6A006D87B0 /* WeatherMenuViewController.swift */,
+			);
+			path = wather;
 			sourceTree = "<group>";
 		};
 		57CC4A2B22B00E010091A361 /* setting */ = {
@@ -240,6 +259,7 @@
 		57E67F0322A0248D00D12CDA /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4BB3B32B22B0E35E006D87B0 /* Weather.swift */,
 				57E67F0E22A0CF4000D12CDA /* Message.swift */,
 				5707906522A6DA11001C85A5 /* Image.swift */,
 				57E67F0122A0246400D12CDA /* User.swift */,
@@ -252,6 +272,7 @@
 		57E67F0422A0249C00D12CDA /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4BB3B32A22B0CE46006D87B0 /* wather */,
 				57CC4A2D22B00E220091A361 /* friend */,
 				57CC4A2C22B00E160091A361 /* chat */,
 				57CC4A2B22B00E010091A361 /* setting */,
@@ -271,6 +292,8 @@
 		57E67F1222A0DAD000D12CDA /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				4BB3B33122B0EF5A006D87B0 /* WeatherTableViewCell.swift */,
+				4BB3B32F22B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift */,
 				57D9C9C322AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift */,
 				57B3F76722A42372002420D7 /* ImageCollectionViewCell.swift */,
 				57B3F76322A417D3002420D7 /* RightImageTableViewCell.swift */,
@@ -525,7 +548,10 @@
 				57E67ED022A0216C00D12CDA /* AppDelegate.swift in Sources */,
 				57E67F1822A127FF00D12CDA /* Friend.swift in Sources */,
 				57E67F0D22A031B500D12CDA /* ChatViewController.swift in Sources */,
+				4BB3B33222B0EF5A006D87B0 /* WeatherTableViewCell.swift in Sources */,
+				4BB3B32C22B0E35E006D87B0 /* Weather.swift in Sources */,
 				57E67F1622A1270F00D12CDA /* FriendTableViewCell.swift in Sources */,
+				4BB3B33022B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift in Sources */,
 				57E67F1122A0DAC200D12CDA /* LeftMessageTableViewCell.swift in Sources */,
 				57AAAA3422AB4A1C0050C718 /* ShowQRViewController.swift in Sources */,
 				57BDD21F22A97FE200DF2DA3 /* AddFriendViewController.swift in Sources */,
@@ -536,12 +562,14 @@
 				57E67F0F22A0CF4000D12CDA /* Message.swift in Sources */,
 				57B3F76422A417D3002420D7 /* RightImageTableViewCell.swift in Sources */,
 				5782F6AB22A244D7007F5CE1 /* SingalImageViewController.swift in Sources */,
+				4BB3B32E22B0EC6A006D87B0 /* WeatherMenuViewController.swift in Sources */,
 				57D9C9C422AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift in Sources */,
 				5730D60422A6D120001CA2F3 /* SingalImage2ViewController.swift in Sources */,
 				5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */,
 				57E67F0022A022C100D12CDA /* NetworkController.swift in Sources */,
 				57E67F1422A123A200D12CDA /* RightMessageTableViewCell.swift in Sources */,
 				57E67F1A22A14A1D00D12CDA /* ChatTableViewCell.swift in Sources */,
+				4BB3B32922B0CE3C006D87B0 /* WeatherViewController.swift in Sources */,
 				57E67F0922A02BCD00D12CDA /* FriendViewController.swift in Sources */,
 				57B3F76822A42372002420D7 /* ImageCollectionViewCell.swift in Sources */,
 			);
