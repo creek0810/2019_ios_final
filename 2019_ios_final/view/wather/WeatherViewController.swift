@@ -19,10 +19,10 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! WeatherTableViewCell
         cell.townLabel.text = town[indexPath.row].name
         NetworkController.shared.getWeather(townID: town[indexPath.row].id) { (weather) in
+            print(weather)
             if let felt_air_temp = weather.felt_air_temp {
                 DispatchQueue.main.async {
                     cell.realTempLabel.text = felt_air_temp.description
-
                 }
             }
         }

@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge, .carPlay], completionHandler: { (granted, error) in
@@ -25,11 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("不允許接收信息通知")
             }
         })
-        
         UNUserNotificationCenter.current().delegate = self
-
         return true
-
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -38,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        application.setMinimumBackgroundFetchInterval(5)
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
@@ -54,8 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
-
-
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -76,7 +71,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             }
             destinationViewController2.hidesBottomBarWhenPushed = true
             
-
             let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
             tabBarController.selectedIndex = 1
             self.window?.rootViewController =  tabBarController
@@ -85,11 +79,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             
             navigationController.pushViewController(destinationViewController1, animated: false)
             navigationController.pushViewController(destinationViewController2, animated: false)
-            
-            
-            
         } else {
-
             NetworkController.shared.getProfile(id: content.userInfo["sender"] as! String, completion: { status, data in
                 if let data = data, let profile = try? JSONDecoder().decode(Friend.self, from: data) {
                     DispatchQueue.main.async {
@@ -103,13 +93,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                         let navigationController = tabBarController.selectedViewController as! UINavigationController
                         navigationController.pushViewController(destinationViewController, animated: false)
                         self.window?.rootViewController =  tabBarController
-
-
                     }
                 }
             })
         }
-        
         completionHandler()
     }
 }

@@ -60,6 +60,7 @@ class ChatMenuViewController: UIViewController, UITableViewDelegate, UITableView
             cell.unreadLabel.backgroundColor = UIColor(displayP3Red: 2/255.0, green: 132/255.0, blue: 255/255.0, alpha: 1)
             cell.unreadLabel.text = curChat.unread.description
         }
+
         return cell
     }
     

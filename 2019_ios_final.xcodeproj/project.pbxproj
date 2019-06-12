@@ -15,6 +15,7 @@
 		4BB3B33022B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B32F22B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift */; };
 		4BB3B33222B0EF5A006D87B0 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B33122B0EF5A006D87B0 /* WeatherTableViewCell.swift */; };
 		5707906622A6DA11001C85A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707906522A6DA11001C85A5 /* Image.swift */; };
+		5713FDFF22B15D9A000618C0 /* MarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713FDFE22B15D9A000618C0 /* MarginLabel.swift */; };
 		5730D60422A6D120001CA2F3 /* SingalImage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */; };
 		5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A622A14BD5007F5CE1 /* Chat.swift */; };
 		5782F6A922A15F9B007F5CE1 /* LeftImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */; };
@@ -76,6 +77,7 @@
 		4BB3B32F22B0ECCD006D87B0 /* WeatherMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherMenuTableViewCell.swift; path = ../view/wather/WeatherMenuTableViewCell.swift; sourceTree = "<group>"; };
 		4BB3B33122B0EF5A006D87B0 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherTableViewCell.swift; path = ../WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		5707906522A6DA11001C85A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		5713FDFE22B15D9A000618C0 /* MarginLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginLabel.swift; sourceTree = "<group>"; };
 		5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingalImage2ViewController.swift; sourceTree = "<group>"; };
 		5782F6A622A14BD5007F5CE1 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				57E67ED622A0216E00D12CDA /* Assets.xcassets */,
 				57E67ED822A0216E00D12CDA /* LaunchScreen.storyboard */,
 				57E67EDB22A0216E00D12CDA /* Info.plist */,
+				5713FDFE22B15D9A000618C0 /* MarginLabel.swift */,
 			);
 			path = 2019_ios_final;
 			sourceTree = "<group>";
@@ -391,6 +394,11 @@
 				TargetAttributes = {
 					57E67ECB22A0216C00D12CDA = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					57E67EDF22A0216E00D12CDA = {
 						CreatedOnToolsVersion = 10.1;
@@ -543,6 +551,7 @@
 				57E67F0222A0246400D12CDA /* User.swift in Sources */,
 				57D9C9C222AFF5F6009D0B26 /* UserProfileViewController.swift in Sources */,
 				57E67EFE22A021C000D12CDA /* LoginViewController.swift in Sources */,
+				5713FDFF22B15D9A000618C0 /* MarginLabel.swift in Sources */,
 				57D9C9C622B0006D009D0B26 /* UpdateProfileViewController.swift in Sources */,
 				57B3F76622A4216A002420D7 /* AllImagesViewController.swift in Sources */,
 				57E67ED022A0216C00D12CDA /* AppDelegate.swift in Sources */,

@@ -29,6 +29,13 @@ struct Weather: Codable {
     var sunset: String?
     var at: String?
 }
+struct Special: Codable {
+    var title: String
+    var status: String
+    var at: String
+    var desc: String
+    var img: String
+}
 struct WeatherAll: Codable {
     var img: String?
     var dsec: String?
@@ -38,6 +45,6 @@ struct WeatherAll: Codable {
     var sunrise: String?
     var sunset: String?
     var at: String?
-    var specials: [Int]?
+    var specials: [Special]?
     var histories: [Weather]?
 }

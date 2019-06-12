@@ -179,8 +179,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
 
-
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSingalImage", let imageName = sender as? String, let image = Image.getImage(imageName: imageName) {
             let controller = segue.destination as! SingalImageViewController

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -351,8 +351,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyj-ew-OkG">
-                                                    <rect key="frame" x="75" y="21" width="69" height="20.5"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyj-ew-OkG" customClass="MarginLabel" customModule="_019_ios_final" customModuleProvider="target">
+                                                    <rect key="frame" x="75" y="21" width="79" height="30.5"/>
                                                     <color key="backgroundColor" red="0.54117647058823526" green="0.5490196078431373" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -360,6 +360,18 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                            <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -386,8 +398,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-uz-1y3">
-                                                    <rect key="frame" x="291" y="21" width="69" height="17"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-uz-1y3" customClass="MarginLabel" customModule="_019_ios_final" customModuleProvider="target">
+                                                    <rect key="frame" x="281" y="21" width="79" height="21"/>
                                                     <color key="backgroundColor" red="0.0078431372549019607" green="0.51764705882352935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -395,6 +407,18 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                            <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -546,7 +570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEw-aI-B8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3873" y="1"/>
+            <point key="canvasLocation" x="3872.8000000000002" y="0.44977511244377816"/>
         </scene>
         <!--Singal Image View Controller-->
         <scene sceneID="EtA-cM-ZKE">
@@ -889,7 +913,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wle-y3-sXG">
-                                                    <rect key="frame" x="75" y="47" width="275" height="20.5"/>
+                                                    <rect key="frame" x="75" y="47" width="69" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -900,12 +924,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unread" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofR-xp-ynR">
-                                                    <rect key="frame" x="304" y="47" width="56" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofR-xp-ynR" customClass="MarginLabel" customModule="_019_ios_final" customModuleProvider="target">
+                                                    <rect key="frame" x="318" y="47" width="42" height="20.5"/>
                                                     <color key="backgroundColor" red="0.0078431372549019607" green="0.51764705882352935" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -914,7 +949,7 @@
                                                 <constraint firstItem="ofR-xp-ynR" firstAttribute="top" secondItem="Su2-Jz-lkX" secondAttribute="bottom" constant="5" id="HQK-SM-BSf"/>
                                                 <constraint firstItem="Qfu-gm-uSJ" firstAttribute="leading" secondItem="e5q-g2-IrV" secondAttribute="leadingMargin" id="Nf8-XD-heT"/>
                                                 <constraint firstItem="fTz-CB-dCx" firstAttribute="leading" secondItem="Qfu-gm-uSJ" secondAttribute="trailing" constant="10" id="Tzr-gG-baM"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wle-y3-sXG" secondAttribute="trailing" constant="10" id="YAP-aF-GSR"/>
+                                                <constraint firstItem="wle-y3-sXG" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ofR-xp-ynR" secondAttribute="leadingMargin" constant="-10" id="YAP-aF-GSR"/>
                                                 <constraint firstItem="wle-y3-sXG" firstAttribute="leading" secondItem="Qfu-gm-uSJ" secondAttribute="trailing" constant="10" id="dHC-GI-13o"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ofR-xp-ynR" secondAttribute="trailing" id="kwp-70-FaE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Su2-Jz-lkX" secondAttribute="trailing" id="lKK-kR-LHu"/>
@@ -1170,13 +1205,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="all" width="25" height="25"/>
-        <image name="chat" width="25" height="25"/>
-        <image name="download" width="25" height="25"/>
-        <image name="friend" width="25" height="25"/>
-        <image name="image" width="25" height="25"/>
-        <image name="settings" width="25" height="25"/>
-        <image name="weather" width="25" height="25"/>
+        <image name="all" width="40" height="40"/>
+        <image name="chat" width="37.5" height="37.5"/>
+        <image name="download" width="37.5" height="37.5"/>
+        <image name="friend" width="40" height="40"/>
+        <image name="image" width="37.5" height="37.5"/>
+        <image name="settings" width="40" height="40"/>
+        <image name="weather" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Bg5-7i-p8k"/>

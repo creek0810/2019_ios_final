@@ -15,6 +15,7 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "!="
+- !private "-"
 - !private "=="
 - "AnyObject"
 - "Array"
@@ -22,6 +23,7 @@ depends-top-level:
 - "BooleanLiteralType"
 - !private "CastingPrecedence"
 - !private "Chat"
+- "City"
 - "Data"
 - "Dictionary"
 - !private "DispatchQueue"
@@ -57,11 +59,15 @@ depends-top-level:
 - !private "UUID"
 - "User"
 - "Void"
+- "Weather"
+- !private "WeatherAll"
 - !private "print"
 depends-member:
 - ["14_019_ios_final17NetworkControllerV3APIV", "addFriend"]
+- ["14_019_ios_final17NetworkControllerV3APIV", "getCity"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "getFriendList"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "getProfile"]
+- ["14_019_ios_final17NetworkControllerV3APIV", "getWeather"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "init"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "login"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "sendText"]
@@ -69,10 +75,13 @@ depends-member:
 - ["14_019_ios_final17NetworkControllerV3APIV", "updatePropic"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "updateStatus"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "uploadImage"]
+- !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "count"]
 - !private ["s13ArrayProtocolP", "subscript"]
 - !private ["SK", "addingPercentEncoding"]
 - !private ["SK", "append"]
+- !private ["SK", "count"]
 - !private ["SK", "data"]
 - ["SK", "init"]
 - ["SK", "init"]
@@ -86,6 +95,7 @@ depends-member:
 - !private ["s7CVarArgP", "badge"]
 - !private ["s7CVarArgP", "body"]
 - !private ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "current"]
 - !private ["s7CVarArgP", "data"]
 - !private ["s7CVarArgP", "dataTask"]
@@ -108,10 +118,12 @@ depends-member:
 - !private ["s7CVarArgP", "userInfo"]
 - !private ["10Foundation12CharacterSetV", "urlQueryAllowed"]
 - !private ["14_019_ios_final4ChatV", "updateToFile"]
+- !private ["14_019_ios_final4CityV", "deinit"]
 - ["8SocketIO12ClientOptionP", "compress"]
 - ["8SocketIO12ClientOptionP", "log"]
 - !private ["Sl", "addingPercentEncoding"]
 - !private ["Sl", "append"]
+- !private ["Sl", "count"]
 - !private ["Sl", "data"]
 - ["Sl", "init"]
 - ["Sl", "init"]
@@ -132,6 +144,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "badge"]
 - !private ["s28CustomDebugStringConvertibleP", "body"]
 - !private ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "data"]
 - !private ["s28CustomDebugStringConvertibleP", "dataTask"]
@@ -165,6 +178,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "addValue"]
 - !private ["s17CustomReflectableP", "addingPercentEncoding"]
 - !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "data"]
 - !private ["s17CustomReflectableP", "httpBody"]
 - !private ["s17CustomReflectableP", "httpMethod"]
@@ -183,6 +197,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "body"]
 - ["s23CustomStringConvertibleP", "compress"]
 - !private ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "data"]
 - !private ["s23CustomStringConvertibleP", "dataTask"]
@@ -217,8 +232,10 @@ depends-member:
 - !private ["Se", "_getBuiltinLogicValue"]
 - !private ["Se", "addingPercentEncoding"]
 - !private ["Se", "append"]
+- !private ["Se", "count"]
 - !private ["Se", "data"]
 - !private ["Se", "decodeFromDict"]
+- !private ["Se", "histories"]
 - ["Se", "init"]
 - ["Se", "init"]
 - !private ["Se", "message"]
@@ -241,8 +258,10 @@ depends-member:
 - !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "addingPercentEncoding"]
 - !private ["SE", "append"]
+- !private ["SE", "count"]
 - !private ["SE", "data"]
 - !private ["SE", "decodeFromDict"]
+- !private ["SE", "histories"]
 - ["SE", "init"]
 - ["SE", "init"]
 - !private ["SE", "message"]
@@ -272,6 +291,7 @@ depends-member:
 - !private ["SQ", "cancel"]
 - ["SQ", "compress"]
 - !private ["SQ", "connect"]
+- !private ["SQ", "count"]
 - !private ["SQ", "current"]
 - !private ["SQ", "data"]
 - !private ["SQ", "dataTask"]
@@ -300,6 +320,7 @@ depends-member:
 - !private ["SQ", "userInfo"]
 - !private ["SQ", "utf8"]
 - !private ["SQ", "uuidString"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "urlQueryAllowed"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
@@ -332,6 +353,7 @@ depends-member:
 - !private ["SH", "body"]
 - !private ["SH", "cancel"]
 - !private ["SH", "connect"]
+- !private ["SH", "count"]
 - !private ["SH", "current"]
 - !private ["SH", "data"]
 - !private ["SH", "dataTask"]
@@ -382,6 +404,7 @@ depends-member:
 - ["s10MirrorPathP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["SM", "append"]
+- !private ["SM", "count"]
 - !private ["SM", "init"]
 - !private ["SM", "subscript"]
 - !private ["So8NSCodingP", "addAction"]
@@ -490,6 +513,7 @@ depends-member:
 - !private ["So8NSStringC", "data"]
 - ["14_019_ios_final17NetworkControllerV", "API"]
 - !private ["14_019_ios_final17NetworkControllerV", "Chat"]
+- ["14_019_ios_final17NetworkControllerV", "City"]
 - ["14_019_ios_final17NetworkControllerV", "Data"]
 - !private ["14_019_ios_final17NetworkControllerV", "DispatchQueue"]
 - ["14_019_ios_final17NetworkControllerV", "Friend"]
@@ -520,10 +544,14 @@ depends-member:
 - !private ["14_019_ios_final17NetworkControllerV", "UUID"]
 - ["14_019_ios_final17NetworkControllerV", "User"]
 - ["14_019_ios_final17NetworkControllerV", "Void"]
+- ["14_019_ios_final17NetworkControllerV", "Weather"]
+- !private ["14_019_ios_final17NetworkControllerV", "WeatherAll"]
 - ["14_019_ios_final17NetworkControllerV", "addFriend"]
 - ["14_019_ios_final17NetworkControllerV", "delegate"]
+- ["14_019_ios_final17NetworkControllerV", "getCity"]
 - ["14_019_ios_final17NetworkControllerV", "getFriendList"]
 - ["14_019_ios_final17NetworkControllerV", "getProfile"]
+- ["14_019_ios_final17NetworkControllerV", "getWeather"]
 - ["14_019_ios_final17NetworkControllerV", "init"]
 - ["14_019_ios_final17NetworkControllerV", "login"]
 - ["14_019_ios_final17NetworkControllerV", "manager"]
@@ -543,10 +571,12 @@ depends-member:
 - !private ["So9OS_objectC", "main"]
 - !private ["So19NSProgressReportingP", "resume"]
 - !private ["Sk", "append"]
+- !private ["Sk", "count"]
 - !private ["Sk", "init"]
 - !private ["Sk", "subscript"]
 - !private ["Sm", "addingPercentEncoding"]
 - !private ["Sm", "append"]
+- !private ["Sm", "count"]
 - !private ["Sm", "data"]
 - ["Sm", "init"]
 - ["Sm", "init"]
@@ -570,6 +600,7 @@ depends-member:
 - !private ["14_019_ios_final11SendMessageV", "deinit"]
 - !private ["ST", "addingPercentEncoding"]
 - !private ["ST", "append"]
+- !private ["ST", "count"]
 - !private ["ST", "data"]
 - ["ST", "init"]
 - ["ST", "init"]
@@ -579,6 +610,7 @@ depends-member:
 - !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
 - !private ["8SocketIO0A4DataP", "addingPercentEncoding"]
 - !private ["8SocketIO0A4DataP", "append"]
+- !private ["8SocketIO0A4DataP", "count"]
 - !private ["8SocketIO0A4DataP", "data"]
 - ["8SocketIO0A4DataP", "init"]
 - ["8SocketIO0A4DataP", "init"]
@@ -696,6 +728,9 @@ depends-member:
 - !private ["14_019_ios_final4UserV", "id"]
 - !private ["14_019_ios_final4UserV", "password"]
 - !private ["14_019_ios_final4UserV", "shared"]
+- !private ["14_019_ios_final10WeatherAllV", "deinit"]
+- !private ["14_019_ios_final10WeatherAllV", "histories"]
+- !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "addingPercentEncoding"]
@@ -721,6 +756,7 @@ depends-member:
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "addingPercentEncoding"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
@@ -752,6 +788,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "addValue"]
 - !private ["s21_ObjectiveCBridgeableP", "addingPercentEncoding"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "data"]
 - !private ["s21_ObjectiveCBridgeableP", "httpBody"]
 - !private ["s21_ObjectiveCBridgeableP", "httpMethod"]
@@ -773,6 +810,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "10Foundation12CharacterSetV"
 - !private "14_019_ios_final4ChatV"
+- !private "14_019_ios_final4CityV"
 - "8SocketIO12ClientOptionP"
 - "Sl"
 - "SL"
@@ -871,6 +909,7 @@ depends-nominal:
 - !private "So22NSURLSessionUploadTaskC"
 - !private "10Foundation4UUIDV"
 - !private "14_019_ios_final4UserV"
+- !private "14_019_ios_final10WeatherAllV"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
@@ -937,4 +976,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c08f38f36a2bbad6bdfc6ff9201bbb36"
+interface-hash: "eab79309acf57aeb374f4b0d4677f665"

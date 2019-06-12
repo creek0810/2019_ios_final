@@ -26,7 +26,12 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
     @IBAction func searchByID(_ sender: Any) {
         NetworkController.shared.getProfile(id: idText.text!, completion: { status, data in
             if status == 204 {
-                print("can't find")
+                let controller = UIAlertController(title: "錯誤", message: "無法找到該用戶", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                controller.addAction(okAction)
+                DispatchQueue.main.async {
+                    self.present(controller, animated: true, completion: nil)
+                }
             } else if status == 200 {
                 if let data = data, let profile = try? JSONDecoder().decode(Friend.self, from: data) {
                     DispatchQueue.main.async {
@@ -59,7 +64,12 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
         dismiss(animated: true, completion: nil)
         NetworkController.shared.getProfile(id: qrCodeLink) { (status, data) in
             if status == 204 {
-                print("can't find")
+                let controller = UIAlertController(title: "錯誤", message: "無法找到該用戶", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                controller.addAction(okAction)
+                DispatchQueue.main.async {
+                    self.present(controller, animated: true, completion: nil)
+                }
             } else if status == 200 {
                 if let data = data, let profile = try? JSONDecoder().decode(Friend.self, from: data) {
                     DispatchQueue.main.async {
