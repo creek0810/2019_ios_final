@@ -19,10 +19,11 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! WeatherTableViewCell
         cell.townLabel.text = town[indexPath.row].name
         NetworkController.shared.getWeather(townID: town[indexPath.row].id) { (weather) in
-            print(weather)
-            if let felt_air_temp = weather.felt_air_temp {
+            if let feltTemp = weather.felt_air_temp, let realTemp = weather.temperature, let humidity = weather.humidity  {
                 DispatchQueue.main.async {
-                    cell.realTempLabel.text = felt_air_temp.description
+                    cell.feltTempLabel.text = feltTemp.description
+                    cell.realTempLabel.text = realTemp.description
+                    cell.humidityLabel.text = humidity.description
                 }
             }
         }
@@ -39,16 +40,4 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         weatherTable.dataSource = self
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

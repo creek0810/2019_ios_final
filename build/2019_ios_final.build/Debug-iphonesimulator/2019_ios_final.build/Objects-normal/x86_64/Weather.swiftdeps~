@@ -3,16 +3,19 @@ provides-top-level:
 - "City"
 - "Town"
 - "Weather"
+- "Special"
 - "WeatherAll"
 provides-nominal:
 - "14_019_ios_final4CityV"
 - "14_019_ios_final4TownV"
 - "14_019_ios_final7WeatherV"
+- "14_019_ios_final7SpecialV"
 - "14_019_ios_final10WeatherAllV"
 provides-member:
 - ["14_019_ios_final4CityV", ""]
 - ["14_019_ios_final4TownV", ""]
 - ["14_019_ios_final7WeatherV", ""]
+- ["14_019_ios_final7SpecialV", ""]
 - ["14_019_ios_final10WeatherAllV", ""]
 provides-dynamic-lookup:
 depends-top-level:
@@ -23,6 +26,7 @@ depends-top-level:
 - !private "FloatLiteralType"
 - "Int"
 - !private "IntegerLiteralType"
+- "Special"
 - "String"
 - !private "StringLiteralType"
 - "Town"
@@ -84,10 +88,12 @@ depends-member:
 - ["Se", ""]
 - !private ["Se", "_getBuiltinLogicValue"]
 - !private ["Se", "at"]
+- !private ["Se", "desc"]
 - !private ["Se", "dsec"]
 - ["Se", "encode"]
 - !private ["Se", "felt_air_temp"]
 - !private ["Se", "histories"]
+- !private ["Se", "humidity"]
 - !private ["Se", "id"]
 - !private ["Se", "img"]
 - ["Se", "init"]
@@ -95,18 +101,22 @@ depends-member:
 - !private ["Se", "name"]
 - !private ["Se", "rainfall"]
 - !private ["Se", "specials"]
+- !private ["Se", "status"]
 - !private ["Se", "sunrise"]
 - !private ["Se", "sunset"]
 - !private ["Se", "temperature"]
+- !private ["Se", "title"]
 - !private ["Se", "towns"]
 - !private ["s7DecoderP", "container"]
 - ["SE", ""]
 - !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "at"]
+- !private ["SE", "desc"]
 - !private ["SE", "dsec"]
 - ["SE", "encode"]
 - !private ["SE", "felt_air_temp"]
 - !private ["SE", "histories"]
+- !private ["SE", "humidity"]
 - !private ["SE", "id"]
 - !private ["SE", "img"]
 - ["SE", "init"]
@@ -114,9 +124,11 @@ depends-member:
 - !private ["SE", "name"]
 - !private ["SE", "rainfall"]
 - !private ["SE", "specials"]
+- !private ["SE", "status"]
 - !private ["SE", "sunrise"]
 - !private ["SE", "sunset"]
 - !private ["SE", "temperature"]
+- !private ["SE", "title"]
 - !private ["SE", "towns"]
 - !private ["s7EncoderP", "container"]
 - !private ["SQ", ""]
@@ -167,6 +179,15 @@ depends-member:
 - !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
 - !private ["8SocketIO0A4DataP", "init"]
 - !private ["8SocketIO0A4DataP", "init"]
+- ["14_019_ios_final7SpecialV", "String"]
+- ["14_019_ios_final7SpecialV", "at"]
+- ["14_019_ios_final7SpecialV", "deinit"]
+- ["14_019_ios_final7SpecialV", "desc"]
+- ["14_019_ios_final7SpecialV", "encode"]
+- ["14_019_ios_final7SpecialV", "img"]
+- ["14_019_ios_final7SpecialV", "init"]
+- ["14_019_ios_final7SpecialV", "status"]
+- ["14_019_ios_final7SpecialV", "title"]
 - !private ["SS", "init"]
 - !private ["SS", "init"]
 - !private ["Sy", "init"]
@@ -197,6 +218,7 @@ depends-member:
 - ["14_019_ios_final7WeatherV", "temperature"]
 - ["14_019_ios_final10WeatherAllV", "Double"]
 - ["14_019_ios_final10WeatherAllV", "Int"]
+- ["14_019_ios_final10WeatherAllV", "Special"]
 - ["14_019_ios_final10WeatherAllV", "String"]
 - ["14_019_ios_final10WeatherAllV", "Weather"]
 - ["14_019_ios_final10WeatherAllV", "at"]
@@ -205,6 +227,7 @@ depends-member:
 - ["14_019_ios_final10WeatherAllV", "encode"]
 - ["14_019_ios_final10WeatherAllV", "felt_air_temp"]
 - ["14_019_ios_final10WeatherAllV", "histories"]
+- ["14_019_ios_final10WeatherAllV", "humidity"]
 - ["14_019_ios_final10WeatherAllV", "img"]
 - ["14_019_ios_final10WeatherAllV", "init"]
 - ["14_019_ios_final10WeatherAllV", "rainfall"]
@@ -260,6 +283,7 @@ depends-nominal:
 - !private "Sm"
 - !private "ST"
 - !private "8SocketIO0A4DataP"
+- "14_019_ios_final7SpecialV"
 - !private "SS"
 - !private "Sy"
 - !private "s16TextOutputStreamP"
@@ -328,4 +352,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "22bb0fca5d93bdb37e82fbca2537cc03"
+interface-hash: "54f41d92931ac4beeb1fe46421684b79"

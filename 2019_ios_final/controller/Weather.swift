@@ -24,6 +24,7 @@ struct Weather: Codable {
     var dsec: String?
     var temperature: Int?
     var felt_air_temp: Int?
+    var humidity: Int?
     var rainfall: Double?
     var sunrise: String?
     var sunset: String?
@@ -41,6 +42,7 @@ struct WeatherAll: Codable {
     var dsec: String?
     var temperature: Int?
     var felt_air_temp: Int?
+    var humidity: Int?
     var rainfall: Double?
     var sunrise: String?
     var sunset: String?

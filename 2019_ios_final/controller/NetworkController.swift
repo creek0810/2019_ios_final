@@ -66,6 +66,7 @@ struct NetworkController {
                 if message.type == Type.Image {
                     Image.updateToFile(receiver: receiver, data: Image(imageName: message.message))
                 }
+                print(NetworkController.shared.delegate)
                 if let tmpDelegate = NetworkController.shared.delegate {
                     tmpDelegate.update(data: message)
                 } else {
@@ -177,8 +178,10 @@ struct NetworkController {
         }
     }
     func updateName(newName: String) {
-        let urlString = "\(API.updateName)?id=\(User.shared.id)&name=\(newName)"
-        if let url = URL(string: urlString) {
+        let rawUrl = "\(API.updateName)?id=\(User.shared.id)&name=\(newName)"
+        let urlString = rawUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+
+        if let urlString = urlString, let url = URL(string: urlString) {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             let task = URLSession.shared.dataTask(with: request)

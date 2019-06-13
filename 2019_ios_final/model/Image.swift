@@ -46,6 +46,7 @@ struct Image: Codable {
     }
     
     static func getImage(imageName: String) -> UIImage? {
+        print("getImage: \(imageName)")
         let localUrl = Image.documentDirectory.appendingPathComponent(imageName)
         let remoteUrl = "http://140.121.197.197:6700/image?path=\(imageName)"
         if let image = UIImage(contentsOfFile: localUrl.path) {

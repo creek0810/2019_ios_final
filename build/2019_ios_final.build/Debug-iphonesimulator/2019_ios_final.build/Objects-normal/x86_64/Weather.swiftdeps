@@ -93,6 +93,7 @@ depends-member:
 - ["Se", "encode"]
 - !private ["Se", "felt_air_temp"]
 - !private ["Se", "histories"]
+- !private ["Se", "humidity"]
 - !private ["Se", "id"]
 - !private ["Se", "img"]
 - ["Se", "init"]
@@ -115,6 +116,7 @@ depends-member:
 - ["SE", "encode"]
 - !private ["SE", "felt_air_temp"]
 - !private ["SE", "histories"]
+- !private ["SE", "humidity"]
 - !private ["SE", "id"]
 - !private ["SE", "img"]
 - ["SE", "init"]
@@ -208,6 +210,7 @@ depends-member:
 - ["14_019_ios_final7WeatherV", "dsec"]
 - ["14_019_ios_final7WeatherV", "encode"]
 - ["14_019_ios_final7WeatherV", "felt_air_temp"]
+- ["14_019_ios_final7WeatherV", "humidity"]
 - ["14_019_ios_final7WeatherV", "img"]
 - ["14_019_ios_final7WeatherV", "init"]
 - ["14_019_ios_final7WeatherV", "rainfall"]
@@ -225,6 +228,7 @@ depends-member:
 - ["14_019_ios_final10WeatherAllV", "encode"]
 - ["14_019_ios_final10WeatherAllV", "felt_air_temp"]
 - ["14_019_ios_final10WeatherAllV", "histories"]
+- ["14_019_ios_final10WeatherAllV", "humidity"]
 - ["14_019_ios_final10WeatherAllV", "img"]
 - ["14_019_ios_final10WeatherAllV", "init"]
 - ["14_019_ios_final10WeatherAllV", "rainfall"]
@@ -349,4 +353,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a2dd87ff7ea30283eeae4aa1699b898d"
+interface-hash: "b1fb85a58c28c07c74928a35b401fb14"

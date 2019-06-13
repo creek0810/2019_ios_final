@@ -9,6 +9,8 @@ provides-member:
 - ["14_019_ios_final4ChatV", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!="
+- !private "+="
 - !private "-"
 - !private "..."
 - "<"
@@ -27,6 +29,7 @@ depends-top-level:
 - !private "DateFormatter"
 - "FileManager"
 - !private "FloatLiteralType"
+- "Int"
 - !private "IntegerLiteralType"
 - "Message"
 - !private "PropertyListDecoder"
@@ -47,8 +50,10 @@ depends-member:
 - !private ["s13ArrayProtocolP", "message"]
 - !private ["s13ArrayProtocolP", "sort"]
 - !private ["s13ArrayProtocolP", "subscript"]
+- !private ["s13ArrayProtocolP", "unread"]
 - !private ["s10ArraySliceV", "id"]
 - !private ["s10ArraySliceV", "message"]
+- !private ["s10ArraySliceV", "unread"]
 - !private ["SK", "append"]
 - !private ["SK", "count"]
 - ["SK", "first"]
@@ -58,6 +63,7 @@ depends-member:
 - !private ["SK", "message"]
 - !private ["SK", "sort"]
 - !private ["SK", "subscript"]
+- !private ["SK", "unread"]
 - !private ["SK", "write"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
@@ -79,6 +85,7 @@ depends-member:
 - !private ["14_019_ios_final4ChatV", "Data"]
 - !private ["14_019_ios_final4ChatV", "DateFormatter"]
 - ["14_019_ios_final4ChatV", "FileManager"]
+- ["14_019_ios_final4ChatV", "Int"]
 - ["14_019_ios_final4ChatV", "Message"]
 - !private ["14_019_ios_final4ChatV", "PropertyListDecoder"]
 - !private ["14_019_ios_final4ChatV", "PropertyListEncoder"]
@@ -92,6 +99,8 @@ depends-member:
 - ["14_019_ios_final4ChatV", "message"]
 - ["14_019_ios_final4ChatV", "readFromFile"]
 - ["14_019_ios_final4ChatV", "saveTofile"]
+- ["14_019_ios_final4ChatV", "unread"]
+- ["14_019_ios_final4ChatV", "updateForRead"]
 - ["14_019_ios_final4ChatV", "updateToFile"]
 - !private ["s9CodingKeyP", ""]
 - ["s9CodingKeyP", "debugDescription"]
@@ -110,6 +119,7 @@ depends-member:
 - !private ["Sl", "message"]
 - !private ["Sl", "sort"]
 - !private ["Sl", "subscript"]
+- !private ["Sl", "unread"]
 - !private ["Sl", "write"]
 - !private ["SL", "Chat"]
 - !private ["SL", "Data"]
@@ -127,6 +137,7 @@ depends-member:
 - !private ["SL", "message"]
 - !private ["SL", "readFromFile"]
 - !private ["SL", "saveTofile"]
+- !private ["SL", "unread"]
 - !private ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
@@ -148,6 +159,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "sort"]
 - ["s28CustomDebugStringConvertibleP", "stringValue"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "unread"]
 - ["s28CustomDebugStringConvertibleP", "urls"]
 - !private ["s28CustomDebugStringConvertibleP", "write"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
@@ -165,6 +177,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "message"]
 - !private ["s17CustomReflectableP", "sort"]
 - !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "unread"]
 - !private ["s17CustomReflectableP", "write"]
 - !private ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
@@ -188,6 +201,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "sort"]
 - ["s23CustomStringConvertibleP", "stringValue"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "unread"]
 - ["s23CustomStringConvertibleP", "urls"]
 - !private ["s23CustomStringConvertibleP", "write"]
 - !private ["10Foundation4DataV", "init"]
@@ -217,9 +231,11 @@ depends-member:
 - !private ["Se", "message"]
 - !private ["Se", "readFromFile"]
 - !private ["Se", "saveTofile"]
+- !private ["Se", "sender"]
 - !private ["Se", "sort"]
 - !private ["Se", "subscript"]
 - !private ["Se", "timeStamp"]
+- !private ["Se", "unread"]
 - !private ["Se", "write"]
 - !private ["s7DecoderP", "container"]
 - !private ["SE", "Chat"]
@@ -244,9 +260,11 @@ depends-member:
 - !private ["SE", "message"]
 - !private ["SE", "readFromFile"]
 - !private ["SE", "saveTofile"]
+- !private ["SE", "sender"]
 - !private ["SE", "sort"]
 - !private ["SE", "subscript"]
 - !private ["SE", "timeStamp"]
+- !private ["SE", "unread"]
 - !private ["SE", "write"]
 - !private ["s7EncoderP", "container"]
 - !private ["SQ", "Chat"]
@@ -282,6 +300,7 @@ depends-member:
 - !private ["SQ", "sort"]
 - ["SQ", "stringValue"]
 - !private ["SQ", "subscript"]
+- !private ["SQ", "unread"]
 - ["SQ", "urls"]
 - ["SQ", "userDomainMask"]
 - !private ["SQ", "write"]
@@ -292,6 +311,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "message"]
 - !private ["s25ExpressibleByArrayLiteralP", "sort"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "unread"]
 - ["s25ExpressibleByArrayLiteralP", "userDomainMask"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
@@ -328,6 +348,7 @@ depends-member:
 - !private ["SH", "sort"]
 - ["SH", "stringValue"]
 - !private ["SH", "subscript"]
+- !private ["SH", "unread"]
 - ["SH", "urls"]
 - !private ["SH", "write"]
 - !private ["s6HasherV", "combine"]
@@ -339,6 +360,7 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - ["14_019_ios_final7MessageV", "deinit"]
+- !private ["14_019_ios_final7MessageV", "sender"]
 - !private ["14_019_ios_final7MessageV", "timeStamp"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
@@ -350,6 +372,7 @@ depends-member:
 - !private ["SM", "message"]
 - !private ["SM", "sort"]
 - !private ["SM", "subscript"]
+- !private ["SM", "unread"]
 - !private ["SM", "write"]
 - !private ["So8NSCodingP", "date"]
 - !private ["So8NSCodingP", "dateFormat"]
@@ -380,6 +403,7 @@ depends-member:
 - !private ["Sk", "message"]
 - !private ["Sk", "sort"]
 - !private ["Sk", "subscript"]
+- !private ["Sk", "unread"]
 - !private ["Sk", "write"]
 - !private ["Sm", "append"]
 - !private ["Sm", "count"]
@@ -390,6 +414,7 @@ depends-member:
 - !private ["Sm", "message"]
 - !private ["Sm", "sort"]
 - !private ["Sm", "subscript"]
+- !private ["Sm", "unread"]
 - !private ["Sm", "write"]
 - ["SY", "documentDirectory"]
 - ["SY", "userDomainMask"]
@@ -408,6 +433,7 @@ depends-member:
 - !private ["ST", "message"]
 - !private ["ST", "sort"]
 - !private ["ST", "subscript"]
+- !private ["ST", "unread"]
 - !private ["ST", "write"]
 - ["s10SetAlgebraP", "userDomainMask"]
 - !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
@@ -438,6 +464,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "message"]
 - !private ["s24_DestructorSafeContainerP", "sort"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "unread"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -600,4 +627,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c1dc4c16ccbaa532be4da9173eb10478"
+interface-hash: "39dc7418c09b644a8e44c1b89db0b367"

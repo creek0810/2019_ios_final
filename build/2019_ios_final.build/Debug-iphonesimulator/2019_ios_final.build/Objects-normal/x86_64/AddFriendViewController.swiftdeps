@@ -17,6 +17,7 @@ depends-top-level:
 - "Friend"
 - !private "Image"
 - !private "NetworkController"
+- !private "StringLiteralType"
 - "UIImageView"
 - "UILabel"
 - "UIViewController"
@@ -28,6 +29,7 @@ depends-member:
 - ["14_019_ios_final23AddFriendViewControllerC", "UIImageView"]
 - ["14_019_ios_final23AddFriendViewControllerC", "UILabel"]
 - ["14_019_ios_final23AddFriendViewControllerC", "addFriend"]
+- ["14_019_ios_final23AddFriendViewControllerC", "deinit"]
 - ["14_019_ios_final23AddFriendViewControllerC", "idText"]
 - ["14_019_ios_final23AddFriendViewControllerC", "init"]
 - !private ["14_019_ios_final23AddFriendViewControllerC", "performSegue"]

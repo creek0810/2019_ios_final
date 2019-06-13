@@ -12,6 +12,7 @@ provides-dynamic-lookup:
 - "searchByID"
 - "searchByQR"
 - "showQR"
+- "userIDLabel"
 - "viewDidLoad"
 depends-top-level:
 - !private "+="
@@ -19,7 +20,6 @@ depends-top-level:
 - "AddFriendMenuViewController"
 - !private "AddFriendViewController"
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
 - !private "CGAffineTransform"
 - !private "CIDetector"
 - !private "CIDetectorAccuracy"
@@ -43,6 +43,7 @@ depends-top-level:
 - !private "UIImage"
 - "UIImagePickerController"
 - "UIImagePickerControllerDelegate"
+- "UILabel"
 - "UINavigationControllerDelegate"
 - "UIStoryboardSegue"
 - "UITextField"
@@ -69,6 +70,7 @@ depends-member:
 - !private ["14_019_ios_final27AddFriendMenuViewControllerC", "UIAlertController"]
 - !private ["14_019_ios_final27AddFriendMenuViewControllerC", "UIImage"]
 - ["14_019_ios_final27AddFriendMenuViewControllerC", "UIImagePickerController"]
+- ["14_019_ios_final27AddFriendMenuViewControllerC", "UILabel"]
 - ["14_019_ios_final27AddFriendMenuViewControllerC", "UIStoryboardSegue"]
 - ["14_019_ios_final27AddFriendMenuViewControllerC", "UITextField"]
 - !private ["14_019_ios_final27AddFriendMenuViewControllerC", "User"]
@@ -88,6 +90,7 @@ depends-member:
 - ["14_019_ios_final27AddFriendMenuViewControllerC", "searchByID"]
 - ["14_019_ios_final27AddFriendMenuViewControllerC", "searchByQR"]
 - ["14_019_ios_final27AddFriendMenuViewControllerC", "showQR"]
+- ["14_019_ios_final27AddFriendMenuViewControllerC", "userIDLabel"]
 - ["14_019_ios_final27AddFriendMenuViewControllerC", "viewDidLoad"]
 - !private ["14_019_ios_final23AddFriendViewControllerC", "target"]
 - !private ["SK", "Encoding"]
@@ -156,6 +159,7 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "tmpImage"]
 - !private ["s7CVarArgP", "transformed"]
+- !private ["s7CVarArgP", "userIDLabel"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["Sl", "Encoding"]
 - !private ["Sl", "data"]
@@ -217,6 +221,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "tmpImage"]
 - !private ["s28CustomDebugStringConvertibleP", "transformed"]
+- !private ["s28CustomDebugStringConvertibleP", "userIDLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s29CustomPlaygroundQuickLookableP", "Encoding"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
@@ -281,6 +286,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "tmpImage"]
 - !private ["s23CustomStringConvertibleP", "transformed"]
+- !private ["s23CustomStringConvertibleP", "userIDLabel"]
 - !private ["s23CustomStringConvertibleP", "utf8"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["Se", "Encoding"]
@@ -356,6 +362,7 @@ depends-member:
 - !private ["SQ", "text"]
 - !private ["SQ", "tmpImage"]
 - !private ["SQ", "transformed"]
+- !private ["SQ", "userIDLabel"]
 - !private ["SQ", "utf8"]
 - !private ["SQ", "viewDidLoad"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
@@ -427,6 +434,7 @@ depends-member:
 - !private ["SH", "text"]
 - !private ["SH", "tmpImage"]
 - !private ["SH", "transformed"]
+- !private ["SH", "userIDLabel"]
 - !private ["SH", "utf8"]
 - !private ["SH", "viewDidLoad"]
 - !private ["SD5IndexV", "originalImage"]
@@ -483,6 +491,7 @@ depends-member:
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "tmpImage"]
 - !private ["So8NSCodingP", "transformed"]
+- !private ["So8NSCodingP", "userIDLabel"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So9NSCopyingP", "data"]
 - !private ["So9NSCopyingP", "init"]
@@ -525,6 +534,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "sourceType"]
 - !private ["So26NSExtensionRequestHandlingP", "target"]
 - !private ["So26NSExtensionRequestHandlingP", "tmpImage"]
+- !private ["So26NSExtensionRequestHandlingP", "userIDLabel"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So21NSItemProviderReadingP", "data"]
 - !private ["So21NSItemProviderWritingP", "data"]
@@ -549,6 +559,7 @@ depends-member:
 - !private ["So8NSObjectC", "UIAlertController"]
 - !private ["So8NSObjectC", "UIImage"]
 - ["So8NSObjectC", "UIImagePickerController"]
+- ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "UIStoryboardSegue"]
 - ["So8NSObjectC", "UITextField"]
 - !private ["So8NSObjectC", "User"]
@@ -584,6 +595,7 @@ depends-member:
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "tmpImage"]
 - !private ["So8NSObjectC", "transformed"]
+- ["So8NSObjectC", "userIDLabel"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "CGAffineTransform"]
 - !private ["So8NSObjectP", "CIDetector"]
@@ -631,6 +643,7 @@ depends-member:
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "tmpImage"]
 - !private ["So8NSObjectP", "transformed"]
+- !private ["So8NSObjectP", "userIDLabel"]
 - !private ["So8NSObjectP", "viewDidLoad"]
 - !private ["So14NSSecureCodingP", "data"]
 - !private ["So14NSSecureCodingP", "init"]
@@ -731,6 +744,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "target"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "tmpImage"]
+- !private ["So21UIAppearanceContainerP", "userIDLabel"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So18UIContentContainerP", "CGAffineTransform"]
 - !private ["So18UIContentContainerP", "CIDetector"]
@@ -767,6 +781,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "sourceType"]
 - !private ["So18UIContentContainerP", "target"]
 - !private ["So18UIContentContainerP", "tmpImage"]
+- !private ["So18UIContentContainerP", "userIDLabel"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So9UIControlC", "text"]
@@ -808,6 +823,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "target"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "tmpImage"]
+- !private ["So18UIFocusEnvironmentP", "userIDLabel"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So20UIFocusItemContainerP", "text"]
@@ -842,7 +858,9 @@ depends-member:
 - ["So31UIImagePickerControllerDelegateP", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["So31UIImagePickerControllerDelegateP", "performSegue"]
 - !private ["So31UIImagePickerControllerDelegateP", "present"]
+- !private ["So31UIImagePickerControllerDelegateP", "userIDLabel"]
 - !private ["So10UIKeyInputP", "text"]
+- !private ["So7UILabelC", "text"]
 - ["So22UINavigationControllerC", "InfoKey"]
 - !private ["So22UINavigationControllerC", "delegate"]
 - !private ["So22UINavigationControllerC", "init"]
@@ -874,6 +892,7 @@ depends-member:
 - ["So30UINavigationControllerDelegateP", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["So30UINavigationControllerDelegateP", "performSegue"]
 - !private ["So30UINavigationControllerDelegateP", "present"]
+- !private ["So30UINavigationControllerDelegateP", "userIDLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGAffineTransform"]
 - !private ["So30UIPasteConfigurationSupportingP", "CIDetector"]
 - !private ["So30UIPasteConfigurationSupportingP", "CIDetectorAccuracy"]
@@ -910,6 +929,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "target"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "tmpImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "userIDLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So11UIResponderC", "AddFriendViewController"]
 - !private ["So11UIResponderC", "CGAffineTransform"]
@@ -931,6 +951,7 @@ depends-member:
 - !private ["So11UIResponderC", "UIAlertController"]
 - !private ["So11UIResponderC", "UIImage"]
 - ["So11UIResponderC", "UIImagePickerController"]
+- ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "UIStoryboardSegue"]
 - ["So11UIResponderC", "UITextField"]
 - !private ["So11UIResponderC", "User"]
@@ -956,6 +977,7 @@ depends-member:
 - !private ["So11UIResponderC", "target"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "tmpImage"]
+- ["So11UIResponderC", "userIDLabel"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "CGAffineTransform"]
 - !private ["So30UIResponderStandardEditActionsP", "CIDetector"]
@@ -993,6 +1015,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "target"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "tmpImage"]
+- !private ["So30UIResponderStandardEditActionsP", "userIDLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
@@ -1031,6 +1054,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "sourceType"]
 - !private ["So16UIStateRestoringP", "target"]
 - !private ["So16UIStateRestoringP", "tmpImage"]
+- !private ["So16UIStateRestoringP", "userIDLabel"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So17UIStoryboardSegueC", "destination"]
 - !private ["So17UIStoryboardSegueC", "identifier"]
@@ -1076,6 +1100,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "target"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "tmpImage"]
+- !private ["So18UITraitEnvironmentP", "userIDLabel"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "CGAffineTransform"]
 - !private ["So23UIUserActivityRestoringP", "CIDetector"]
@@ -1113,6 +1138,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "target"]
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "tmpImage"]
+- !private ["So23UIUserActivityRestoringP", "userIDLabel"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So6UIViewC", "text"]
 - !private ["So16UIViewControllerC", "AddFriendViewController"]
@@ -1135,6 +1161,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "UIAlertController"]
 - !private ["So16UIViewControllerC", "UIImage"]
 - ["So16UIViewControllerC", "UIImagePickerController"]
+- ["So16UIViewControllerC", "UILabel"]
 - ["So16UIViewControllerC", "UIStoryboardSegue"]
 - ["So16UIViewControllerC", "UITextField"]
 - !private ["So16UIViewControllerC", "User"]
@@ -1160,6 +1187,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "sourceType"]
 - !private ["So16UIViewControllerC", "target"]
 - !private ["So16UIViewControllerC", "tmpImage"]
+- ["So16UIViewControllerC", "userIDLabel"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["14_019_ios_final4UserV", "id"]
 - !private ["14_019_ios_final4UserV", "shared"]
@@ -1234,6 +1262,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tmpImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "transformed"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userIDLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "Encoding"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
@@ -1332,6 +1361,7 @@ depends-nominal:
 - "So23UIImagePickerControllerC"
 - "So31UIImagePickerControllerDelegateP"
 - !private "So10UIKeyInputP"
+- !private "So7UILabelC"
 - "So22UINavigationControllerC"
 - "So30UINavigationControllerDelegateP"
 - "So30UIPasteConfigurationSupportingP"
@@ -1416,4 +1446,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "798e1053ba76d466e3f83af21e70c1f4"
+interface-hash: "16b690acfd297a39655c1057a77effcd"

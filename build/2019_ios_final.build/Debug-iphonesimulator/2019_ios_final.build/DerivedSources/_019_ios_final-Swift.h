@@ -186,6 +186,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class UITextField;
+@class UILabel;
 @class UIImagePickerController;
 @class UIStoryboardSegue;
 @class NSBundle;
@@ -194,6 +195,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC14_019_ios_final27AddFriendMenuViewController")
 @interface AddFriendMenuViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified idText;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified userIDLabel;
 - (IBAction)showQR:(id _Nonnull)sender;
 - (IBAction)searchByID:(id _Nonnull)sender;
 - (IBAction)searchByQR:(id _Nonnull)sender;
@@ -205,7 +207,6 @@ SWIFT_CLASS("_TtC14_019_ios_final27AddFriendMenuViewController")
 @end
 
 @class UIImageView;
-@class UILabel;
 
 SWIFT_CLASS("_TtC14_019_ios_final23AddFriendViewController")
 @interface AddFriendViewController : UIViewController
@@ -518,9 +519,11 @@ SWIFT_CLASS("_TtC14_019_ios_final25WeatherMenuViewController")
 
 SWIFT_CLASS("_TtC14_019_ios_final20WeatherTableViewCell")
 @interface WeatherTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified weatherImage;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified townLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified feltTempLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified realTempLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified humidityLabel;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);

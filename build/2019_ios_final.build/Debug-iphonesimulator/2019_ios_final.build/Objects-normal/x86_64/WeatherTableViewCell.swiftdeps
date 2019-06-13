@@ -8,11 +8,14 @@ provides-member:
 provides-dynamic-lookup:
 - "awakeFromNib"
 - "feltTempLabel"
+- "humidityLabel"
 - "realTempLabel"
 - "setSelected"
 - "townLabel"
+- "weatherImage"
 depends-top-level:
 - "Bool"
+- "UIImageView"
 - "UILabel"
 - "UITableViewCell"
 - "WeatherTableViewCell"
@@ -53,14 +56,17 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "setSelected"]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "awakeFromNib"]
 - ["So8NSObjectC", "feltTempLabel"]
+- ["So8NSObjectC", "humidityLabel"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "realTempLabel"]
 - ["So8NSObjectC", "setSelected"]
 - ["So8NSObjectC", "townLabel"]
+- ["So8NSObjectC", "weatherImage"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "awakeFromNib"]
 - !private ["So8NSObjectP", "init"]
@@ -117,29 +123,35 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "awakeFromNib"]
 - ["So11UIResponderC", "feltTempLabel"]
+- ["So11UIResponderC", "humidityLabel"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "realTempLabel"]
 - ["So11UIResponderC", "setSelected"]
 - ["So11UIResponderC", "townLabel"]
+- ["So11UIResponderC", "weatherImage"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So15UITableViewCellC", "Bool"]
+- ["So15UITableViewCellC", "UIImageView"]
 - ["So15UITableViewCellC", "UILabel"]
 - ["So15UITableViewCellC", ""]
 - ["So15UITableViewCellC", "awakeFromNib"]
 - ["So15UITableViewCellC", "feltTempLabel"]
+- ["So15UITableViewCellC", "humidityLabel"]
 - ["So15UITableViewCellC", "init"]
 - !private ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "realTempLabel"]
 - ["So15UITableViewCellC", "setSelected"]
 - ["So15UITableViewCellC", "townLabel"]
+- ["So15UITableViewCellC", "weatherImage"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "awakeFromNib"]
 - !private ["So18UITraitEnvironmentP", "init"]
@@ -151,22 +163,28 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "setSelected"]
 - ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "UIImageView"]
 - ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "awakeFromNib"]
 - ["So6UIViewC", "feltTempLabel"]
+- ["So6UIViewC", "humidityLabel"]
 - ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "init"]
 - ["So6UIViewC", "realTempLabel"]
 - ["So6UIViewC", "setSelected"]
 - ["So6UIViewC", "townLabel"]
+- ["So6UIViewC", "weatherImage"]
 - ["14_019_ios_final20WeatherTableViewCellC", "Bool"]
+- ["14_019_ios_final20WeatherTableViewCellC", "UIImageView"]
 - ["14_019_ios_final20WeatherTableViewCellC", "UILabel"]
 - ["14_019_ios_final20WeatherTableViewCellC", "awakeFromNib"]
 - ["14_019_ios_final20WeatherTableViewCellC", "feltTempLabel"]
+- ["14_019_ios_final20WeatherTableViewCellC", "humidityLabel"]
 - ["14_019_ios_final20WeatherTableViewCellC", "init"]
 - ["14_019_ios_final20WeatherTableViewCellC", "realTempLabel"]
 - ["14_019_ios_final20WeatherTableViewCellC", "setSelected"]
 - ["14_019_ios_final20WeatherTableViewCellC", "townLabel"]
+- ["14_019_ios_final20WeatherTableViewCellC", "weatherImage"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
@@ -259,4 +277,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c1e43d6f019322ae0a5e2f55f6ea4eb5"
+interface-hash: "6785f79712dfb7d80b6a4eee87ea5c50"

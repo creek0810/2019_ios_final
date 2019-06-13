@@ -12,6 +12,7 @@ provides-dynamic-lookup:
 - "nameLabel"
 - "propic"
 - "setSelected"
+- "unreadLabel"
 depends-top-level:
 - "Bool"
 - "ChatTableViewCell"
@@ -39,6 +40,7 @@ depends-member:
 - ["14_019_ios_final17ChatTableViewCellC", "nameLabel"]
 - ["14_019_ios_final17ChatTableViewCellC", "propic"]
 - ["14_019_ios_final17ChatTableViewCellC", "setSelected"]
+- ["14_019_ios_final17ChatTableViewCellC", "unreadLabel"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "awakeFromNib"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
@@ -75,6 +77,7 @@ depends-member:
 - ["So8NSObjectC", "nameLabel"]
 - ["So8NSObjectC", "propic"]
 - ["So8NSObjectC", "setSelected"]
+- ["So8NSObjectC", "unreadLabel"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "awakeFromNib"]
 - !private ["So8NSObjectP", "init"]
@@ -141,6 +144,7 @@ depends-member:
 - ["So11UIResponderC", "nameLabel"]
 - ["So11UIResponderC", "propic"]
 - ["So11UIResponderC", "setSelected"]
+- ["So11UIResponderC", "unreadLabel"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
@@ -158,6 +162,7 @@ depends-member:
 - ["So15UITableViewCellC", "nameLabel"]
 - ["So15UITableViewCellC", "propic"]
 - ["So15UITableViewCellC", "setSelected"]
+- ["So15UITableViewCellC", "unreadLabel"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "awakeFromNib"]
 - !private ["So18UITraitEnvironmentP", "init"]
@@ -179,6 +184,7 @@ depends-member:
 - ["So6UIViewC", "nameLabel"]
 - ["So6UIViewC", "propic"]
 - ["So6UIViewC", "setSelected"]
+- ["So6UIViewC", "unreadLabel"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
@@ -271,4 +277,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0f87d75c235b6ebd368cce80240b85e6"
+interface-hash: "e93c787a6b14e4aa405b0bad588668ae"

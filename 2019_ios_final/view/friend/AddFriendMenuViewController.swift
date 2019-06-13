@@ -9,7 +9,9 @@
 import UIKit
 
 class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var idText: UITextField!
+    @IBOutlet weak var userIDLabel: UILabel!
     
     
     @IBAction func showQR(_ sender: Any) {
@@ -82,6 +84,7 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userIDLabel.text = User.shared.id
         
         // Do any additional setup after loading the view.
     }

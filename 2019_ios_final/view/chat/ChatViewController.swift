@@ -50,10 +50,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        for image in images {
-            NetworkController.shared.sendImage(sender: User.shared.id, receiver: receiver.id, image: image)
-        }
         dismiss(animated: true, completion: nil)
+        for image in images {
+            NetworkController.shared.sendImage(sender: User.shared.id, receiver: self.receiver.id, image: image)
+        }
     }
     
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
@@ -89,7 +89,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     if widthRatio < heightRatio {
                         let delta = (rightFrameHeight - widthRatio * image.size.height) / 2
                         cell.imageButton.image = image.withAlignmentRectInsets(UIEdgeInsets(top: -delta, left: 0, bottom: delta, right: 0))
-
                     } else {
                         let delta = (rightFrameWidth - heightRatio * image.size.width) / 2
                         cell.imageButton.image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -delta, bottom: 0, right: delta))
@@ -149,18 +148,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let rightCell = chatTable.cellForRow(at: IndexPath(row: 1, section: 0)) as! RightImageTableViewCell
             rightFrameWidth = rightCell.imageButton.frame.width
-            
-            if let history = Message.readMessagesFromFile(receiver: receiver.id) {
-                chatHistory = history
-            } else {
-                chatHistory = [Message]()
-            }
-            chatTable.reloadData()
-            Message.saveMessagesToFile(receiver: receiver.id, msgs: chatHistory)
-            scrollToBottom()
-            
             maskView.removeFromSuperview()
         }
+        if let history = Message.readMessagesFromFile(receiver: receiver.id) {
+            chatHistory = history
+        } else {
+            chatHistory = [Message]()
+        }
+        chatTable.reloadData()
+        Message.saveMessagesToFile(receiver: receiver.id, msgs: chatHistory)
+        scrollToBottom()
     }
     override func viewDidDisappear(_ animated: Bool) {
         NetworkController.shared.delegate = nil
@@ -168,7 +165,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func update(data: Message) {
-        print("update by chat view")
         if data.sender == receiver.id || data.receiver == receiver.id {
             self.chatHistory.append(data)
             let indexPath = IndexPath(row: self.chatHistory.count - 1, section: 0)
