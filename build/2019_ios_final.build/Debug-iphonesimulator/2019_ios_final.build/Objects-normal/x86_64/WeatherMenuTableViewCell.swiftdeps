@@ -152,6 +152,7 @@ depends-member:
 - ["14_019_ios_final24WeatherMenuTableViewCellC", "Bool"]
 - ["14_019_ios_final24WeatherMenuTableViewCellC", "UILabel"]
 - ["14_019_ios_final24WeatherMenuTableViewCellC", "awakeFromNib"]
+- ["14_019_ios_final24WeatherMenuTableViewCellC", "deinit"]
 - ["14_019_ios_final24WeatherMenuTableViewCellC", "init"]
 - ["14_019_ios_final24WeatherMenuTableViewCellC", "nameLabel"]
 - ["14_019_ios_final24WeatherMenuTableViewCellC", "setSelected"]

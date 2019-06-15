@@ -67,6 +67,7 @@ depends-member:
 - ["14_019_ios_final17NetworkControllerV3APIV", "getCity"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "getFriendList"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "getProfile"]
+- ["14_019_ios_final17NetworkControllerV3APIV", "getWeaterImage"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "getWeather"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "init"]
 - ["14_019_ios_final17NetworkControllerV3APIV", "login"]
@@ -236,6 +237,7 @@ depends-member:
 - !private ["Se", "data"]
 - !private ["Se", "decodeFromDict"]
 - !private ["Se", "histories"]
+- !private ["Se", "img"]
 - ["Se", "init"]
 - ["Se", "init"]
 - !private ["Se", "message"]
@@ -262,6 +264,7 @@ depends-member:
 - !private ["SE", "data"]
 - !private ["SE", "decodeFromDict"]
 - !private ["SE", "histories"]
+- !private ["SE", "img"]
 - ["SE", "init"]
 - ["SE", "init"]
 - !private ["SE", "message"]
@@ -436,9 +439,11 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So21NSItemProviderReadingP", "addingPercentEncoding"]
 - !private ["So21NSItemProviderReadingP", "data"]
+- !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderReadingP", "jpegData"]
 - !private ["So21NSItemProviderWritingP", "addingPercentEncoding"]
 - !private ["So21NSItemProviderWritingP", "data"]
+- !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So21NSItemProviderWritingP", "jpegData"]
 - !private ["So16NSMutableCopyingP", "addingPercentEncoding"]
 - !private ["So16NSMutableCopyingP", "badge"]
@@ -552,6 +557,7 @@ depends-member:
 - ["14_019_ios_final17NetworkControllerV", "getFriendList"]
 - ["14_019_ios_final17NetworkControllerV", "getProfile"]
 - ["14_019_ios_final17NetworkControllerV", "getWeather"]
+- ["14_019_ios_final17NetworkControllerV", "getWeatherImage"]
 - ["14_019_ios_final17NetworkControllerV", "init"]
 - ["14_019_ios_final17NetworkControllerV", "login"]
 - ["14_019_ios_final17NetworkControllerV", "manager"]
@@ -657,6 +663,7 @@ depends-member:
 - !private ["14_019_ios_final4TypeO", "Text"]
 - !private ["14_019_ios_final4TypeO", "deinit"]
 - !private ["14_019_ios_final4TypeO", "rawValue"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "jpegData"]
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
@@ -670,7 +677,9 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "addAction"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "present"]
+- !private ["So7UIImageC", "init"]
 - !private ["So7UIImageC", "jpegData"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "jpegData"]
 - !private ["So30UIPasteConfigurationSupportingP", "addAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
@@ -728,6 +737,7 @@ depends-member:
 - !private ["14_019_ios_final4UserV", "id"]
 - !private ["14_019_ios_final4UserV", "password"]
 - !private ["14_019_ios_final4UserV", "shared"]
+- !private ["14_019_ios_final7WeatherV", "img"]
 - !private ["14_019_ios_final10WeatherAllV", "deinit"]
 - !private ["14_019_ios_final10WeatherAllV", "histories"]
 - !private ["s24_DestructorSafeContainerP", "count"]
@@ -750,6 +760,7 @@ depends-member:
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s26_ExpressibleByImageLiteralP", "jpegData"]
 - !private ["s33_ExpressibleByStringInterpolationP", "addingPercentEncoding"]
 - !private ["s33_ExpressibleByStringInterpolationP", "data"]
@@ -909,6 +920,7 @@ depends-nominal:
 - !private "So22NSURLSessionUploadTaskC"
 - !private "10Foundation4UUIDV"
 - !private "14_019_ios_final4UserV"
+- !private "14_019_ios_final7WeatherV"
 - !private "14_019_ios_final10WeatherAllV"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -976,4 +988,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "eab79309acf57aeb374f4b0d4677f665"
+interface-hash: "05a48d935746760a687775febb91aff2"

@@ -35,6 +35,7 @@ struct NetworkController {
         // open api
         static let getCity = "https://works.ioa.tw/weather/api/all.json"
         static let getWeather = "https://works.ioa.tw/weather/api/weathers/"
+        static let getWeaterImage = "https://works.ioa.tw/weather/img/weathers/zeusdesign/"
     }
 
     func socketConnect(sender: String) {
@@ -240,18 +241,33 @@ struct NetworkController {
         }
     }
     
-    func getWeather(townID: String, completion: @escaping (Weather) -> Void) {
+    func getWeather(townID: String, completion: @escaping (Weather, UIImage?) -> Void) {
         let urlString = "\(API.getWeather)\(townID).json"
         if let url = URL(string: urlString) {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             let task = URLSession.shared.dataTask(with: url) { (data, res, err) in
                 if let data = data, let result = try? JSONDecoder().decode(WeatherAll.self, from: data), let weather = result.histories {
-                    completion(weather[weather.count - 1])
+                    let curWeather = weather[weather.count - 1]
+                    if let imgName = curWeather.img {
+                        let image = NetworkController.shared.getWeatherImage(imageName: imgName)
+                        completion(curWeather, image)
+                    }
                 }
             }
             task.resume()
         }
+    }
+    
+    func getWeatherImage(imageName: String) -> UIImage? {
+        let remoteUrl = "\(API.getWeaterImage)\(imageName)"
+        if let url = URL(string: remoteUrl) {
+            let data = try? Data(contentsOf: url)
+            if let imageData = data, let image = UIImage(data: imageData) {
+                return image
+            }
+        }
+        return nil
     }
 }
 

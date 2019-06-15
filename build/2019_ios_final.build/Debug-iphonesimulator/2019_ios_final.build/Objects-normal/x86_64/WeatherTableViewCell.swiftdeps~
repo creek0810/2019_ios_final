@@ -8,6 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 - "awakeFromNib"
 - "feltTempLabel"
+- "humidityLabel"
 - "realTempLabel"
 - "setSelected"
 - "townLabel"
@@ -59,6 +60,7 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "awakeFromNib"]
 - ["So8NSObjectC", "feltTempLabel"]
+- ["So8NSObjectC", "humidityLabel"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "realTempLabel"]
@@ -125,6 +127,7 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "awakeFromNib"]
 - ["So11UIResponderC", "feltTempLabel"]
+- ["So11UIResponderC", "humidityLabel"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "realTempLabel"]
@@ -142,6 +145,7 @@ depends-member:
 - ["So15UITableViewCellC", ""]
 - ["So15UITableViewCellC", "awakeFromNib"]
 - ["So15UITableViewCellC", "feltTempLabel"]
+- ["So15UITableViewCellC", "humidityLabel"]
 - ["So15UITableViewCellC", "init"]
 - !private ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "realTempLabel"]
@@ -163,6 +167,7 @@ depends-member:
 - ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "awakeFromNib"]
 - ["So6UIViewC", "feltTempLabel"]
+- ["So6UIViewC", "humidityLabel"]
 - ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "init"]
 - ["So6UIViewC", "realTempLabel"]
@@ -174,6 +179,7 @@ depends-member:
 - ["14_019_ios_final20WeatherTableViewCellC", "UILabel"]
 - ["14_019_ios_final20WeatherTableViewCellC", "awakeFromNib"]
 - ["14_019_ios_final20WeatherTableViewCellC", "feltTempLabel"]
+- ["14_019_ios_final20WeatherTableViewCellC", "humidityLabel"]
 - ["14_019_ios_final20WeatherTableViewCellC", "init"]
 - ["14_019_ios_final20WeatherTableViewCellC", "realTempLabel"]
 - ["14_019_ios_final20WeatherTableViewCellC", "setSelected"]
@@ -271,4 +277,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c1fa613cbf23b6d5320e50273a28097d"
+interface-hash: "6785f79712dfb7d80b6a4eee87ea5c50"

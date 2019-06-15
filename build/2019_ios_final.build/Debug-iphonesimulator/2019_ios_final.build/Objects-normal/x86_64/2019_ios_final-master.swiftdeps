@@ -1,18 +1,17 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "31d27dad6992979811cdd8e07e2aa5da"
-build_time: [1560416639, 652017000]
+options: "bd4b350af3988326c1fae178f04c3353"
+build_time: [1560622938, 11215000]
 inputs:
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/User.swift": [1560179055, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/setting/UserProfileViewController.swift": [1560394519, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/LoginViewController.swift": [1560179055, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/MarginLabel.swift": [1560359034, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/setting/UpdateProfileViewController.swift": [1560271446, 0]
-  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/weather/WeatherViewController.swift": [1560416639, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/weather/WeatherViewController.swift": [1560622646, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/chat/AllImagesViewController.swift": [1560265499, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/AppDelegate.swift": [1560353461, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/Friend.swift": [1560267597, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/chat/ChatViewController.swift": [1560415008, 0]
-  "/Users/river/Desktop/2019_ios_final/2019_ios_final/controller/Weather.swift": [1560416625, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/FriendTableViewCell.swift": [1560270144, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/LeftMessageTableViewCell.swift": [1560179055, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/friend/ShowQRViewController.swift": [1560179055, 0]
@@ -28,9 +27,10 @@ inputs:
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/ProfileUITaTableViewCell.swift": [1560270157, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/chat/SingalImage2ViewController.swift": [1560344962, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/WeatherMenuTableViewCell.swift": [1560344962, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/Weather.swift": [1560416625, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/Chat.swift": [1560344962, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/WeatherTableViewCell.swift": [1560416507, 0]
-  "/Users/river/Desktop/2019_ios_final/2019_ios_final/controller/NetworkController.swift": [1560405063, 0]
+  "/Users/river/Desktop/2019_ios_final/2019_ios_final/controller/NetworkController.swift": [1560622854, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/RightMessageTableViewCell.swift": [1560179055, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/TableCell/ChatTableViewCell.swift": [1560344962, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/friend/FriendViewController.swift": [1560270181, 0]

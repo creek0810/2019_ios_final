@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		10F9033A8B04777A66E5BC4F /* Pods_2019_ios_finalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715AB6F6F7A89FA5EC878993 /* Pods_2019_ios_finalUITests.framework */; };
 		2FE86378F6103B6CB98C8FC8 /* Pods_2019_ios_final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B2E9A83AD4EA1C93B39CB3 /* Pods_2019_ios_final.framework */; };
-		4BB3B32C22B0E35E006D87B0 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3B32B22B0E35E006D87B0 /* Weather.swift */; };
 		5707906622A6DA11001C85A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707906522A6DA11001C85A5 /* Image.swift */; };
 		5713FDFF22B15D9A000618C0 /* MarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713FDFE22B15D9A000618C0 /* MarginLabel.swift */; };
 		5730D60422A6D120001CA2F3 /* SingalImage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */; };
+		5766AB3222B56ED9006FEAB2 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766AB3122B56ED9006FEAB2 /* Weather.swift */; };
 		5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A622A14BD5007F5CE1 /* Chat.swift */; };
 		5782F6A922A15F9B007F5CE1 /* LeftImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */; };
 		5782F6AB22A244D7007F5CE1 /* SingalImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5782F6AA22A244D7007F5CE1 /* SingalImageViewController.swift */; };
@@ -71,10 +71,10 @@
 		0173A9DB3DB13E9F295CAE8E /* Pods-2019_ios_final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2019_ios_final.release.xcconfig"; path = "Target Support Files/Pods-2019_ios_final/Pods-2019_ios_final.release.xcconfig"; sourceTree = "<group>"; };
 		03CEE921C79FD4191A53B46D /* Pods-2019_ios_finalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2019_ios_finalTests.release.xcconfig"; path = "Target Support Files/Pods-2019_ios_finalTests/Pods-2019_ios_finalTests.release.xcconfig"; sourceTree = "<group>"; };
 		2950C720A717BB4FDE56EF77 /* Pods_2019_ios_finalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2019_ios_finalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BB3B32B22B0E35E006D87B0 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../controller/Weather.swift; sourceTree = "<group>"; };
 		5707906522A6DA11001C85A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5713FDFE22B15D9A000618C0 /* MarginLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginLabel.swift; sourceTree = "<group>"; };
 		5730D60322A6D120001CA2F3 /* SingalImage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingalImage2ViewController.swift; sourceTree = "<group>"; };
+		5766AB3122B56ED9006FEAB2 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		5782F6A622A14BD5007F5CE1 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5782F6A822A15F9B007F5CE1 /* LeftImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImageTableViewCell.swift; sourceTree = "<group>"; };
 		5782F6AA22A244D7007F5CE1 /* SingalImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingalImageViewController.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		57E67F0322A0248D00D12CDA /* model */ = {
 			isa = PBXGroup;
 			children = (
-				4BB3B32B22B0E35E006D87B0 /* Weather.swift */,
+				5766AB3122B56ED9006FEAB2 /* Weather.swift */,
 				57E67F0E22A0CF4000D12CDA /* Message.swift */,
 				5707906522A6DA11001C85A5 /* Image.swift */,
 				57E67F0122A0246400D12CDA /* User.swift */,
@@ -558,7 +558,6 @@
 				57E67ED022A0216C00D12CDA /* AppDelegate.swift in Sources */,
 				57E67F1822A127FF00D12CDA /* Friend.swift in Sources */,
 				57E67F0D22A031B500D12CDA /* ChatViewController.swift in Sources */,
-				4BB3B32C22B0E35E006D87B0 /* Weather.swift in Sources */,
 				57E67F1622A1270F00D12CDA /* FriendTableViewCell.swift in Sources */,
 				57E67F1122A0DAC200D12CDA /* LeftMessageTableViewCell.swift in Sources */,
 				57AAAA3422AB4A1C0050C718 /* ShowQRViewController.swift in Sources */,
@@ -574,6 +573,7 @@
 				57D9C9C422AFF8AF009D0B26 /* ProfileUITaTableViewCell.swift in Sources */,
 				5730D60422A6D120001CA2F3 /* SingalImage2ViewController.swift in Sources */,
 				57C6898E22B1F7060001A22F /* WeatherMenuTableViewCell.swift in Sources */,
+				5766AB3222B56ED9006FEAB2 /* Weather.swift in Sources */,
 				5782F6A722A14BD5007F5CE1 /* Chat.swift in Sources */,
 				57C6898F22B1F7060001A22F /* WeatherTableViewCell.swift in Sources */,
 				57E67F0022A022C100D12CDA /* NetworkController.swift in Sources */,

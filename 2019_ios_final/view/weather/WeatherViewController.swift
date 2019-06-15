@@ -10,6 +10,8 @@ import UIKit
 
 class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var town: [Town] = [Town]()
+    var townWeather: [Weather] = [Weather]()
+    var weaterPic: [UIImage] = [UIImage]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return town.count
@@ -18,14 +20,16 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! WeatherTableViewCell
         cell.townLabel.text = town[indexPath.row].name
-        NetworkController.shared.getWeather(townID: town[indexPath.row].id) { (weather) in
-            if let feltTemp = weather.felt_air_temp, let realTemp = weather.temperature, let humidity = weather.humidity  {
-                DispatchQueue.main.async {
+        NetworkController.shared.getWeather(townID: town[indexPath.row].id) { (weather, image) in
+            DispatchQueue.main.async {
+                cell.weatherImage.image = image
+                if let humidity = weather.humidity, let feltTemp = weather.felt_air_temp, let realTemp = weather.temperature {
+                    cell.humidityLabel.text = humidity.description
                     cell.feltTempLabel.text = feltTemp.description
                     cell.realTempLabel.text = realTemp.description
-                    cell.humidityLabel.text = humidity.description
                 }
             }
+            
         }
         return cell
     }
@@ -38,6 +42,5 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         weatherTable.delegate = self
         weatherTable.dataSource = self
-        
     }
 }

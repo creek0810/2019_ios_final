@@ -23,6 +23,7 @@ depends-top-level:
 - !private "URL"
 - !private "UnicodeScalarType"
 - !private "User"
+- !private "print"
 - !private "~="
 depends-member:
 - !private ["Sa", "append"]
@@ -129,6 +130,7 @@ depends-member:
 - ["Se", "init"]
 - !private ["Se", "init"]
 - !private ["Se", "path"]
+- !private ["Se", "print"]
 - !private ["Se", "readImagesNameFromFile"]
 - !private ["Se", "saveImagesNameToFile"]
 - !private ["Se", "write"]
@@ -156,6 +158,7 @@ depends-member:
 - ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "path"]
+- !private ["SE", "print"]
 - !private ["SE", "readImagesNameFromFile"]
 - !private ["SE", "saveImagesNameToFile"]
 - !private ["SE", "write"]
@@ -230,6 +233,7 @@ depends-member:
 - ["14_019_ios_final5ImageV", "getImage"]
 - ["14_019_ios_final5ImageV", "imageName"]
 - ["14_019_ios_final5ImageV", "init"]
+- !private ["14_019_ios_final5ImageV", "print"]
 - ["14_019_ios_final5ImageV", "readImagesNameFromFile"]
 - ["14_019_ios_final5ImageV", "saveImagesNameToFile"]
 - ["14_019_ios_final5ImageV", "updateToFile"]

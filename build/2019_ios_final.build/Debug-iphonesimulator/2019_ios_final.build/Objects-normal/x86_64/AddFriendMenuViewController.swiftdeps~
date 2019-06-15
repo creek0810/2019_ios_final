@@ -39,7 +39,6 @@ depends-top-level:
 - !private "NetworkController"
 - !private "ShowQRViewController"
 - !private "String"
-- !private "StringLiteralType"
 - !private "UIAlertAction"
 - !private "UIAlertController"
 - !private "UIImage"
