@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "bd4b350af3988326c1fae178f04c3353"
-build_time: [1560622938, 11215000]
+options: "31d27dad6992979811cdd8e07e2aa5da"
+build_time: [1560864344, 574309000]
 inputs:
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/model/User.swift": [1560179055, 0]
   "/Users/river/Desktop/2019_ios_final/2019_ios_final/view/setting/UserProfileViewController.swift": [1560394519, 0]
