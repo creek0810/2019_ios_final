@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weather Menu View Controller-->
+        <!--今日天氣-->
         <scene sceneID="EKq-lb-5G0">
             <objects>
                 <viewController id="8oi-L2-bq4" customClass="WeatherMenuViewController" customModule="_019_ios_final" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Hb-PU-Ygo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GpQ-sp-Tma"/>
+                    <navigationItem key="navigationItem" title="今日天氣" id="GpQ-sp-Tma"/>
                     <connections>
                         <outlet property="cityTable" destination="fGF-5Q-nB4" id="120-Pi-dml"/>
                         <segue destination="gNk-TY-xwF" kind="show" identifier="showWeather" id="LGI-w5-CjH"/>
@@ -1087,6 +1087,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yMB-J8-1z0">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1870662253" green="0.39315352129999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.2445891201" green="0.29383733870000001" blue="0.4763417244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1108,6 +1113,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="omy-hg-oQR">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1870662253" green="0.39315352129999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.2445891201" green="0.29383733870000001" blue="0.4763417244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1258,6 +1268,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eoF-VT-jFz">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.24458912014961243" green="0.29383733868598938" blue="0.47634172439575195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1277,6 +1291,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LKk-Dw-H56">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2445891201" green="0.29383733870000001" blue="0.4763417244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1289,14 +1307,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="all" width="40" height="40"/>
-        <image name="chat" width="37.5" height="37.5"/>
-        <image name="download" width="37.5" height="37.5"/>
-        <image name="friend" width="40" height="40"/>
-        <image name="image" width="37.5" height="37.5"/>
-        <image name="qr" width="37.5" height="37.5"/>
-        <image name="settings" width="40" height="40"/>
-        <image name="weather" width="40" height="40"/>
+        <image name="all" width="25" height="25"/>
+        <image name="chat" width="25" height="25"/>
+        <image name="download" width="25" height="25"/>
+        <image name="friend" width="25" height="25"/>
+        <image name="image" width="25" height="25"/>
+        <image name="qr" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="weather" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nab-jo-ogv"/>

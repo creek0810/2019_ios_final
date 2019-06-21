@@ -33,14 +33,13 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         return cell
     }
-    
-    
-    
+
     @IBOutlet weak var weatherTable: UITableView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
         weatherTable.delegate = self
         weatherTable.dataSource = self
+        super.viewDidLoad()
     }
 }

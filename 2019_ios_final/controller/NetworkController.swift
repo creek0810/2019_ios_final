@@ -61,13 +61,13 @@ struct NetworkController {
                 } else {
                     receiver = message.receiver
                 }
-                // start update
-                Message.updateToFile(receiver: receiver, data: message)
-                Chat.updateToFile(receiver: receiver, data: message)
+                if message.type != Type.AddFriend {
+                    Message.updateToFile(receiver: receiver, data: message)
+                    Chat.updateToFile(receiver: receiver, data: message)
+                }
                 if message.type == Type.Image {
                     Image.updateToFile(receiver: receiver, data: Image(imageName: message.message))
                 }
-                print(NetworkController.shared.delegate)
                 if let tmpDelegate = NetworkController.shared.delegate {
                     tmpDelegate.update(data: message)
                 } else {
