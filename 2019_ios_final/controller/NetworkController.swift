@@ -306,9 +306,7 @@ extension NetworkController {
     
     func showAddFriendRequest(curController: UIViewController, message: Message) {
         let controller = UIAlertController(title: "加入好友", message: "是否新增\(message.sender)為好友", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "好的", style: .default) { (_) in
-            print("在行事曆裡加入送宵夜的提醒")
-        }
+        let okAction = UIAlertAction(title: "好的", style: .default, handler: nil)
         controller.addAction(okAction)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         controller.addAction(cancelAction)

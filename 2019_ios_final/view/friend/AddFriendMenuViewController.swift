@@ -12,8 +12,7 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var idText: UITextField!
     @IBOutlet weak var userIDLabel: UILabel!
-    
-    
+
     @IBAction func showQR(_ sender: Any) {
         let name = User.shared.id
         let data = name.data(using: String.Encoding.utf8)
@@ -85,11 +84,8 @@ class AddFriendMenuViewController: UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         userIDLabel.text = User.shared.id
-        
-        // Do any additional setup after loading the view.
     }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showProfile" {
             let controller = segue.destination as! AddFriendViewController
